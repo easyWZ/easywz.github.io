@@ -16,12 +16,12 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 前置安装 node git  初始化hexo 新建一个文件夹用来存放 Hexo 的程序文件 npm install -g hexo-cli mac需要管理员权限（sudo）   初始化&amp;本地预览 hexo init #初始化 npm insta">
+    <meta name="description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo的安装及git部署">
 <meta property="og:url" content="https://easywz.github.io/2023/11/15/hexo-stall/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 前置安装 node git  初始化hexo 新建一个文件夹用来存放 Hexo 的程序文件 npm install -g hexo-cli mac需要管理员权限（sudo）   初始化&amp;本地预览 hexo init #初始化 npm insta">
+<meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
 <meta property="article:published_time" content="2023-11-15T09:35:51.000Z">
@@ -331,14 +331,14 @@
 <li><p>修改 _config.yml 文件末尾的 Deployment 部分</p>
  <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repository:</span> git@github.com:用户名/用户名.github.io.git<br><span class="hljs-symbol">  branch:</span> master <br></code></pre></td></tr></table></figure>
 <ol start="2">
-<li><p>用户名一致，都为git账户名称</p>
+<li><p><strong>用户名一致，都为git账户名称</strong></p>
 </li>
-<li><p>branch为上传分支，git新建项目时默认为main需切换分支或改为main</p>
+<li><p><strong>branch为上传分支，git新建项目时默认为main需切换分支或改为main</strong></p>
 <ol>
 <li><img src="/img/hexo/17001017178769.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>确认git发布分支是否为当前上传分支，不是则切换</p>
+<li><p><strong>确认git发布分支是否为当前上传分支，不是则切换</strong></p>
 <ol>
 <li><img src="/img/hexo/17001017531171.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
@@ -441,6 +441,12 @@
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/11/15/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
