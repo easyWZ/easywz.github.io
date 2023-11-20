@@ -16,24 +16,24 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ps">
+    <meta name="description" content="日常中多次使用的css属性,如超出省略号，滚动条自定义样式等">
 <meta property="og:type" content="article">
-<meta property="og:title" content="photoshopStart">
-<meta property="og:url" content="https://easywz.github.io/2023/11/17/photoshopStart/index.html">
+<meta property="og:title" content="常用CSS">
+<meta property="og:url" content="https://easywz.github.io/2023/11/20/CSSofCommonlyUsed/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
-<meta property="og:description" content="ps">
+<meta property="og:description" content="日常中多次使用的css属性,如超出省略号，滚动条自定义样式等">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://easywz.github.io/img/index/ps.jpeg">
-<meta property="article:published_time" content="2023-11-17T06:31:38.000Z">
-<meta property="article:modified_time" content="2023-11-17T09:49:02.649Z">
+<meta property="og:image" content="https://easywz.github.io/img/index/css.jpeg">
+<meta property="article:published_time" content="2023-11-20T03:16:14.000Z">
+<meta property="article:modified_time" content="2023-11-20T05:41:04.849Z">
 <meta property="article:author" content="wang zou">
-<meta property="article:tag" content="ps">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://easywz.github.io/img/index/ps.jpeg">
+<meta name="twitter:image" content="https://easywz.github.io/img/index/css.jpeg">
   
   
   
-  <title>photoshopStart - WZ&#39;s blog</title>
+  <title>常用CSS - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,13 +193,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/index/view-2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/index/home-1.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="photoshopStart"></span>
+            <span id="subtitle" data-typed-text="常用CSS"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-17 14:31" pubdate>
-          2023年11月17日 下午
+        <time datetime="2023-11-20 11:16" pubdate>
+          2023年11月20日 上午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          450 字
+          1.2k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          4 分钟
+          11 分钟
         
       </span>
     
@@ -270,103 +270,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">photoshopStart</h1>
+            <h1 id="seo-header">常用CSS</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="认识界面"><a href="#认识界面" class="headerlink" title="认识界面"></a>认识界面</h3><ol>
-<li><h4 id="油漆桶（更改背景色）"><a href="#油漆桶（更改背景色）" class="headerlink" title="油漆桶（更改背景色）"></a>油漆桶（更改背景色）</h4><ol>
-<li><p>上面的代表前景色 下面的是背景色 左上角可重置颜色 右上角可颜色互换</p>
-<ol>
-<li><img src="/img/ps/17002063180368.jpg" srcset="/img/loading.gif" lazyload></li>
-<li>点击背景色弹出拾色器窗口，可以从中选择</li>
+                <h3 id="文字超出隐藏并显示省略号"><a href="#文字超出隐藏并显示省略号" class="headerlink" title="文字超出隐藏并显示省略号"></a>文字超出隐藏并显示省略号</h3><ol>
+<li>单行实现文本溢出显示省略号：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">span</span>&#123;<br><span class="hljs-attribute">white-space</span>: nowrap;      <span class="hljs-comment">/*超出的空白区域不换行*/</span><br><span class="hljs-attribute">overflow</span>: hidden;         <span class="hljs-comment">/*超出隐藏*/</span><br><span class="hljs-attribute">text-overflow</span>: ellipsis;  <span class="hljs-comment">/*文本超出显示省略号*/</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>两行实现文本溢出显示省略号：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">span</span>&#123;<br>    <span class="hljs-attribute">display</span>: -webkit-box;             <span class="hljs-comment">/*将对象转为弹性盒模型展示*/</span><br>    -webkit-box-orient: vertical;     <span class="hljs-comment">/*设置弹性盒模型子元素的排列方式*/</span><br>    -webkit-line-clamp: <span class="hljs-number">2</span>;            <span class="hljs-comment">/*限制文本行数*/</span><br>    <span class="hljs-attribute">overflow</span>: hidden;                 <span class="hljs-comment">/*超出隐藏*/</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>多行实现文本溢出显示省略号：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">span</span>&#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.4em</span>;        <span class="hljs-comment">/*行高和height成倍数，这里以三行文本超出隐藏举例*/</span><br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">4.2em</span>;<br>    <span class="hljs-attribute">overflow</span>: hidden;<br>&#125;<br><span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">::after</span>&#123;         <span class="hljs-comment">/*若要兼容IE8需用:after*/</span><br>    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;...&quot;</span>;          <span class="hljs-comment">/*替换内容比较灵活*/</span><br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">2px</span>;<br>    <span class="hljs-attribute">right</span>:<span class="hljs-number">5px</span>;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">3px</span>;<br>    <span class="hljs-attribute">background</span>:<span class="hljs-number">#fff</span>;         <span class="hljs-comment">/*颜色和文字背景保持一致*/</span><br>    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">#fff</span>;  <span class="hljs-comment">/*边缘处理*/</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
-</li>
-<li><p>选好颜色后shift+左键渲染工作面</p>
-<ol>
-<li><img src="/img/ps/17002045896302.jpg" srcset="/img/loading.gif" lazyload></li>
+<h3 id="滚动条样式设置"><a href="#滚动条样式设置" class="headerlink" title="滚动条样式设置"></a>滚动条样式设置</h3><ol>
+<li>属性<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mel">::-webkit-scrollbar    <span class="hljs-comment">//滚动条整体部分</span><br>::-webkit-scrollbar-<span class="hljs-keyword">button</span>   <span class="hljs-comment">//滚动条两端的按钮</span><br>::-webkit-scrollbar-<span class="hljs-keyword">track</span>   <span class="hljs-comment">// 外层轨道</span><br>::-webkit-scrollbar-<span class="hljs-keyword">track</span>-piece    <span class="hljs-comment">//内层轨道，滚动条中间部分（除去）</span><br>::-webkit-scrollbar-thumb <span class="hljs-comment">//滚动条里面可以拖动的那个</span><br>::-webkit-scrollbar-corner   <span class="hljs-comment">//边角</span><br>::-webkit-resizer   <span class="hljs-comment">///定义右下角拖动块的样式</span><br></code></pre></td></tr></table></figure></li>
+<li>示例<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs css">//  定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸<br>&amp;::-webkit-scrollbar &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">0.16rem</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">0.16rem</span>;<br>    // <span class="hljs-attribute">background-color</span>: green;<br>&#125;<br><br>// 定义滚动条轨道 内阴影+圆角<br>&amp;::-webkit-scrollbar-track &#123;<br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#011822</span>;<br>&#125;<br><br>// 定义滑块  内阴影+圆角<br>&amp;::-webkit-scrollbar-thumb &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">0.16rem</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.08rem</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#023548</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
-</li>
-<li><p>也可右键点击展开选择预设置颜色</p>
-<ol>
-<li><img src="/img/ps/17002046915979.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><h4 id="复位基本功能（一键重置）"><a href="#复位基本功能（一键重置）" class="headerlink" title="复位基本功能（一键重置）"></a>复位基本功能（一键重置）</h4><ol>
-<li>各种操作区域操作乱序 在 <strong>窗口-&gt;工作区-&gt;复位基本功能</strong> 重置</li>
-</ol>
-</li>
-</ol>
-<h3 id="新建文档"><a href="#新建文档" class="headerlink" title="新建文档"></a>新建文档</h3><ol>
-<li>菜单栏-文件-新建 右边修改初始配置参数<ol>
-<li><img src="/img/ps/17002057788246.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-</ol>
-<h3 id="图像大小"><a href="#图像大小" class="headerlink" title="图像大小"></a>图像大小</h3><ol>
-<li>再次修改文档参数 图像-图像大小<ol>
-<li>快捷键：win：<code>ctrl+alt+i</code> mac:<code>cmd+option+i</code></li>
-<li><img src="/img/ps/17002071119831.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-</ol>
-<h3 id="存储文件"><a href="#存储文件" class="headerlink" title="存储文件"></a>存储文件</h3><ol>
-<li>直接保存（改变源文件）</li>
-<li>另存为</li>
-</ol>
-<h3 id="性能配置-开工前的准备工作"><a href="#性能配置-开工前的准备工作" class="headerlink" title="性能配置-开工前的准备工作"></a>性能配置-开工前的准备工作</h3><ol>
-<li>首选项 <ol>
-<li>快捷键win<code>ctrl+k</code> mac<code>cmd+k</code></li>
-<li>暂存盘<ol>
-<li><img src="/img/ps/17002077698935.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-<li>历史记录<ol>
-<li>可回到做错前的次数 菜单窗口-历史记录</li>
-<li><img src="/img/ps/17002116764872.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-<li>自动保存设置<ol>
-<li><img src="/img/ps/17002118672543.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-<li>快捷键设置<ol>
-<li>菜单编辑-键盘快捷键</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="图层知识"><a href="#图层知识" class="headerlink" title="图层知识"></a>图层知识</h3><ol>
-<li>位置<ol>
-<li>菜单图层</li>
-<li>面板栏的图层面板（窗口-图层）</li>
-</ol>
-</li>
-<li>创建普通图层<ol>
-<li>点击添加按钮（新建图层双击标题区域即可修改名称，增删改查也在此窗口操作）<ol>
-<li><img src="/img/ps/17002125816426.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-<li>option+上面按钮即可唤出<ol>
-<li><img src="/img/ps/17002126818904.jpg" srcset="/img/loading.gif" lazyload></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="视图操作"><a href="#视图操作" class="headerlink" title="视图操作"></a>视图操作</h3><ol>
-<li>查看画面的方式<ol>
-<li>左边抓手工具（按住空格键不松）</li>
-<li>缩放工具（放大镜图标）</li>
-<li>旋转工具（在抓手工具内）</li>
-</ol>
-</li>
-</ol>
-<!--### 移动工具-->
+
                 
               </div>
             
@@ -384,7 +302,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/ps/" class="category-chain-item">ps</a>
+  <a href="/categories/css/" class="category-chain-item">css</a>
   
   
 
@@ -399,7 +317,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/ps/" class="print-no-link">#ps</a>
+        <a href="/tags/css/" class="print-no-link">#css</a>
       
     </div>
   
@@ -411,8 +329,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>photoshopStart</div>
-      <div>https://easywz.github.io/2023/11/17/photoshopStart/</div>
+      <div>常用CSS</div>
+      <div>https://easywz.github.io/2023/11/20/CSSofCommonlyUsed/</div>
     </div>
     <div class="license-meta">
       
@@ -424,7 +342,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月17日</div>
+          <div>2023年11月20日</div>
         </div>
       
       
@@ -456,18 +374,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/20/errorRecord/" title="错题本">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">错题本</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/16/markdownGrammar/" title="markdown基础语法">
-                        <span class="hidden-mobile">markdown基础语法</span>
+                      <a href="/2023/11/20/errorRecord/" title="错题本">
+                        <span class="hidden-mobile">错题本</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
