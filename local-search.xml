@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>jsArray</title>
+    <link href="/2023/11/20/jsArray/"/>
+    <url>/2023/11/20/jsArray/</url>
+    
+    <content type="html"><![CDATA[<!--|  函数名称   | 语法  |函数解析  |返回值  |是否改变原数组  ||  ----  | ----  |----  |----  |----  ||   | var arr = new Array() |创建一个空数组 | | ||   | var arr = new Array(10) | | | ||   | var arr = Array(7) |创建一个长度为7的空数组（注意：这是指一个有7个空位(empty)的数组，而不是由7个undefined组成的数组） | | ||   | var arr = Array.of(7) |创建一个包含1个字符串7的数组 | | || constructor  |  |返回对创建此对象的数组函数的引用 | | || length  | array.length |设置或返回数组中元素的数目 | | || prototype  |  | 向对象添加属性和方法| | ||  valueOf() | array.valueOf() |返回 Array 对象的原始值。该原始值由 Array 对象派生的所有对象继承。valueOf() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。 | | N||  concat() |arrayObject.concat(arrayX,arrayX,......,arrayX)  | | | ||   |  | | | |--><ol><li><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><ol><li><h4 id="var-arr-new-Array"><a href="#var-arr-new-Array" class="headerlink" title="var arr &#x3D; new Array()"></a>var arr &#x3D; new Array()</h4><ol><li>创建一个空数组</li></ol></li><li><h4 id="var-arr-new-Array-10"><a href="#var-arr-new-Array-10" class="headerlink" title="var arr &#x3D; new Array(10)"></a>var arr &#x3D; new Array(10)</h4></li></ol></li><li><h3 id="length"><a href="#length" class="headerlink" title="length"></a>length</h3><ol><li>语法： <strong>array.length</strong></li><li>作用： 设置或返回数组中元素的数目</li></ol></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>常用CSS</title>
     <link href="/2023/11/20/CSSofCommonlyUsed/"/>
     <url>/2023/11/20/CSSofCommonlyUsed/</url>
@@ -20,7 +33,7 @@
     
     <tags>
       
-      <tag>css</tag>
+      <tag>css css3</tag>
       
     </tags>
     
