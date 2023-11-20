@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/css.jpeg">
 <meta property="article:published_time" content="2023-11-20T03:16:14.000Z">
-<meta property="article:modified_time" content="2023-11-20T06:27:21.310Z">
+<meta property="article:modified_time" content="2023-11-20T07:47:35.769Z">
 <meta property="article:author" content="wang zou">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.5k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          11 分钟
+          13 分钟
         
       </span>
     
@@ -284,22 +284,58 @@
 <li>属性<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css">::-webkit-scrollbar    //滚动条整体部分<br>::-webkit-scrollbar-button   //滚动条两端的按钮<br>::-webkit-scrollbar-track   // 外层轨道<br>::-webkit-scrollbar-track-piece    //内层轨道，滚动条中间部分（除去）<br>::-webkit-scrollbar-thumb //滚动条里面可以拖动的那个<br>::-webkit-scrollbar-corner   //边角<br>::-webkit-resizer   ///定义右下角拖动块的样式<br></code></pre></td></tr></table></figure></li>
 <li>示例<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs css">//  定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸<br>&amp;::-webkit-scrollbar &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">0.16rem</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">0.16rem</span>;<br>    // <span class="hljs-attribute">background-color</span>: green;<br>&#125;<br><br>// 定义滚动条轨道 内阴影+圆角<br>&amp;::-webkit-scrollbar-track &#123;<br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#011822</span>;<br>&#125;<br><br>// 定义滑块  内阴影+圆角<br>&amp;::-webkit-scrollbar-thumb &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">0.16rem</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.08rem</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#023548</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><table>
+<h3 id="文字向两侧对齐"><a href="#文字向两侧对齐" class="headerlink" title="文字向两侧对齐"></a>文字向两侧对齐</h3><p><code>text-align: justify;</code></p>
+<table>
 <thead>
 <tr>
-<th>表头</th>
-<th>表头</th>
+<th>text-align</th>
+<th>属性值</th>
+<th>作用</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
+<td></td>
+<td>start</td>
+<td>如果内容方向是左至右，则等于 left，反之则为 right。</td>
 </tr>
 <tr>
-<td>单元格</td>
-<td>单元格</td>
+<td></td>
+<td>end</td>
+<td>如果内容方向是左至右，则等于 right，反之则为 left。</td>
+</tr>
+<tr>
+<td></td>
+<td>left</td>
+<td>行内内容向左侧边对齐。</td>
+</tr>
+<tr>
+<td></td>
+<td>right</td>
+<td>行内内容向右侧边对齐。</td>
+</tr>
+<tr>
+<td></td>
+<td>center</td>
+<td>行内内容居中。</td>
+</tr>
+<tr>
+<td></td>
+<td>justify</td>
+<td>文字向两侧对齐，对最后一行无效。</td>
+</tr>
+<tr>
+<td></td>
+<td>justify-all</td>
+<td>和 justify 一致，但是强制使最后一行两端对齐。</td>
+</tr>
+<tr>
+<td></td>
+<td>match-parent</td>
+<td>和 inherit 类似，区别在于 start 和 end 的值根据父元素的 direction 确定，并被替换为恰当的 left 或 right 值。</td>
 </tr>
 </tbody></table>
+<!--|   | <string> | 应用在单元格时，指定单元格内容相对于哪个字符对齐。|-->
+
 
                 
               </div>
