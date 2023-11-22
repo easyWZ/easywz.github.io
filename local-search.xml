@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>mac常用命令</title>
+    <link href="/2023/11/22/macCommandUsed/"/>
+    <url>/2023/11/22/macCommandUsed/</url>
+    
+    <content type="html"><![CDATA[<h3 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h3><p><code>sudo chmod -R 777 文件名称</code></p><h3 id="修改hosts"><a href="#修改hosts" class="headerlink" title="修改hosts"></a>修改hosts</h3><p><code>sudo vim /private/etc/hosts</code><br><code>sudo vi /etc/hosts</code></p><ol><li>sudo vi &#x2F;etc&#x2F;hosts</li><li>提示输入个人电脑密码</li><li>此时输入E，点击enter</li><li>看到hosts，此时输入i，看到命令行下面显示insert，输入自己需要修改的host</li><li>点击esc退出编辑</li><li>按住shift 和 :，输入wq保存退出</li></ol><h3 id="显示“隐藏文件”"><a href="#显示“隐藏文件”" class="headerlink" title="显示“隐藏文件”"></a>显示“隐藏文件”</h3><ol><li>局部：<br>操作快捷键 <code>command+shift+.</code></li><li>全局：<br><code>defaults write com.apple.finder AppleShowAllFiles -bool true</code><br> Mac关闭“显示隐藏文件”命令：<br><code>defaults write com.apple.finder AppleShowAllFiles -bool false</code></li></ol><h3 id="查看8080端口占用情况"><a href="#查看8080端口占用情况" class="headerlink" title="查看8080端口占用情况"></a>查看8080端口占用情况</h3><p><code>sudo lsof -i tcp:8080 </code></p><h3 id="80端口转向8080"><a href="#80端口转向8080" class="headerlink" title="80端口转向8080"></a>80端口转向8080</h3><p><strong>（以下34配置在mac重启后需重新加载）</strong></p><ol><li><code>sudo vim /etc/pf.conf</code></li><li>在<code>rdr-anchor “com.apple/* </code>后面加上如下这一行（代表将发到80端口的数据转发到8080上,8080可以更改成自己的端口）<br><code>rdr on lo0 inet proto tcp from any to 127.0.0.1 port 80 -&gt; 127.0.0.1 port 8080</code></li><li>重新加载配置<br><code>sudo pfctl -f /etc/pf.conf</code></li><li>启动<br><code>sudo pfctl -e</code></li></ol><h3 id="查看nginx运行状态"><a href="#查看nginx运行状态" class="headerlink" title="查看nginx运行状态"></a>查看nginx运行状态</h3><p><code>ps -ef | grep nginx</code></p><h3 id="查看java占用-清理占用"><a href="#查看java占用-清理占用" class="headerlink" title="查看java占用-清理占用"></a>查看java占用-清理占用</h3><p><code>ps -ef|grep java</code><br><code>kill -9 1234</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>mac</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>jsArray</title>
     <link href="/2023/11/20/jsArray/"/>
     <url>/2023/11/20/jsArray/</url>
