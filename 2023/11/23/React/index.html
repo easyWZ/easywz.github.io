@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/react.png">
 <meta property="article:published_time" content="2023-11-23T02:05:42.000Z">
-<meta property="article:modified_time" content="2023-11-24T03:10:45.468Z">
+<meta property="article:modified_time" content="2023-11-24T08:56:19.401Z">
 <meta property="article:author" content="wang zou">
 <meta property="article:tag" content="react">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.4k 字
+          4.4k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          29 分钟
+          37 分钟
         
       </span>
     
@@ -336,7 +336,7 @@
 </ol>
 </li>
 </ol>
-<h3 id="初始组件体验"><a href="#初始组件体验" class="headerlink" title="初始组件体验"></a>初始组件体验</h3><ol>
+<h3 id="初始组件体验"><a href="#初始组件体验" class="headerlink" title="初始组件体验"></a><a id="useZJ">初始组件体验</a></h3><ol>
 <li>React 应用是由被称为 组件 的独立 UI 片段构建而成。React 组件本质上是可以任意添加标签的 JavaScript 函数。组件可以小到一个按钮，也可以大到是整个页面。这是一个 Gallery 组件，用于渲染三个 Profile 组件：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, &#123; <span class="hljs-title class_">StrictMode</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;<br><span class="hljs-keyword">import</span> &#123; createRoot &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-dom/client&#x27;</span>;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3As.jpg&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">    /&gt;</span></span><br>  );<br>&#125;<br><br><span class="hljs-keyword">let</span> <span class="hljs-title class_">App</span> = <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Amazing scientists<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span><br>  );<br>&#125;<br><br><span class="hljs-keyword">const</span> root = <span class="hljs-title function_">createRoot</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;root&#x27;</span>));<br>root.<span class="hljs-title function_">render</span>(<br>  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">StrictMode</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">StrictMode</span>&gt;</span></span><br>);<br></code></pre></td></tr></table></figure></li>
 <li><h4 id="定义组件"><a href="#定义组件" class="headerlink" title="定义组件"></a>定义组件</h4><ol>
 <li>React 组件是一段可以 使用标签进行扩展 的 JavaScript 函数 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3Am.jpg&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">    /&gt;</span></span><br>  )<br>&#125;<br></code></pre></td></tr></table></figure></li>
@@ -359,7 +359,28 @@
 </li>
 </ol>
 </li>
-<li><h4 id="使用组件"><a href="#使用组件" class="headerlink" title="使用组件"></a>使用组件</h4></li>
+<li><h4 id="使用组件"><a href="#使用组件" class="headerlink" title="使用组件"></a>使用组件</h4><ol>
+<li>定义了 Profile 组件，你可以在其他组件中使用它。例如，你可以导出一个内部使用了多个 Profile 组件的 Gallery 组件：<a href="#useZJ">LINK</a> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3As.jpg&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">    /&gt;</span></span><br>  );<br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>了不起的科学家<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span><br>  );<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>注意：<ol>
+<li><section> 是小写的，所以 React 知道我们指的是 HTML 标签。</li>
+<li><Profile /> 以大写 P 开头，所以 React 知道我们想要使用名为 Profile 的组件。</li>
+</ol>
+</li>
+<li>嵌套和组织组件 <ol>
+<li><p>组件是常规的 JavaScript 函数，所以你可以将多个组件保存在同一份文件中。当组件相对较小或彼此紧密相关时，这是一种省事的处理方式。如果这个文件变得臃肿，你也可以随时将 Profile 移动到单独的文件中</p>
+</li>
+<li><p>因为 Profile 组件在 Gallery 组件中渲染——甚至好几次！——我们可以认为 Gallery 是一个 父组件，将每个 Profile 渲染为一个“孩子”。这是 React 的神奇之处：你可以只定义组件一次，然后按需多处和多次使用。</p>
+</li>
+<li><p><strong>组件可以渲染其他组件，但是 请不要嵌套他们的定义</strong>：</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// 🔴 永远不要在组件中定义组件</span><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// ...</span><br>  &#125;<br>  <span class="hljs-comment">// ...</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p> 上面这段代码 非常慢，并且会导致 bug 产生。因此，你应该在顶层定义每个组件：</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Gallery</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// ...</span><br>&#125;<br><br><span class="hljs-comment">// ✅ 在顶层声明组件</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Profile</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// ...</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p> 当子组件需要使用父组件的数据时，你需要 通过 props 的形式进行传递，而不是嵌套定义。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
