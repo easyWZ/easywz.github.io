@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>电脑配置</title>
+    <link href="/2023/11/28/ComputerConfiguration/"/>
+    <url>/2023/11/28/ComputerConfiguration/</url>
+    
+    <content type="html"><![CDATA[<ol><li>主要部件：<ol><li>CPU</li><li>主板</li><li>内存</li><li>显卡</li><li>固态</li><li>机械</li><li>散热</li><li>电源</li><li>机箱</li></ol></li></ol><h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><ol><li>cpu是电脑的大脑，负责几乎所有的数据处理和运算</li><li>主要品牌商<ol><li>AMD</li><li>intel</li></ol></li></ol><h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h3><ol><li>主板是电脑的工作平台，连通并安装着各个硬件，集成了许多的设备，并为许多安装在主板上的设备提供最基础的供电</li><li>AMD的CPU需要搭配AMD的主板才能使用</li><li>intel的CPU需要搭配intel的主板才能使用</li></ol><h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><ol><li>电脑的草稿纸，负责临时存放当前运行和计算的数据</li></ol><h3 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h3><ol><li>电脑的图形处理中心，负责渲染并输出给显示器</li></ol><h3 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h3><ol><li>存放着各种文件 系统和游戏等数据</li><li>主流硬盘：<ol><li>机械硬盘 <ol><li>3.5寸和2.5寸两种规格</li><li>速度极慢但是较为廉价</li></ol></li><li>2.5寸固态硬盘<ol><li>速度较快</li></ol></li><li>PCIe固态硬盘<ol><li>速度最快</li></ol></li><li>M.2固态硬盘<ol><li>速度同PCIe</li></ol></li></ol></li></ol><h3 id="散热器"><a href="#散热器" class="headerlink" title="散热器"></a>散热器</h3><ol><li>负责处理芯片产生的热量</li><li>CPU与显卡在工作之余会发热，大部分显卡会自带风冷散热器，CPU需额外准备散热器</li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Git常用命令</title>
+    <link href="/2023/11/28/GitCommand/"/>
+    <url>/2023/11/28/GitCommand/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>React</title>
     <link href="/2023/11/23/React/"/>
     <url>/2023/11/23/React/</url>
