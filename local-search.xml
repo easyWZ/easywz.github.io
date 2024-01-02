@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>interviewQuestion</title>
+    <link href="/2024/01/02/interviewQuestion/"/>
+    <url>/2024/01/02/interviewQuestion/</url>
+    
+    <content type="html"><![CDATA[<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><ol><li>什么是跨域<ol><li>导致<strong>跨域</strong>问题产生的根本原因是来自浏览器的<strong>同源策略</strong></li><li>同源策略是浏览器的重要安全策略，用于限制一个origin的文档或者它加载的脚本如何能与另一个源的资源进行交互，其中origin指Web文档的来源，Web内容的来源取决于访问的URL的<strong>方案（协议），主机（域名）和端口定义</strong></li><li>在浏览器同源策略限制下，向不同源（不同协议、不同域名或者不同端口）发送XHR请求时，浏览器认为该请求不受信任，可能存在安全隐患，禁止该请求，并作出不正常的响应。</li></ol></li><li>跨域解决方案<ol><li><h4 id="关闭浏览器的同源策略"><a href="#关闭浏览器的同源策略" class="headerlink" title="关闭浏览器的同源策略"></a>关闭浏览器的同源策略</h4><ol><li>IE浏览器：进入ie的网际网路选项设置，然后选择安全性，再选择自订等级，然后下拉，找到「存取跨网络的资料来源」，选择启用即可</li><li>chrome浏览器：首先需要关闭所有打开的浏览器窗口，在命令行窗口输入chrome –disable-web-security</li><li>FireFox浏览器：在地址栏输入about:config，然后下拉找到security.fileuri.strict_origin_policy，然后设置为false即可</li><li>这样的做法确实从根本上解决了跨域问题，但禁用同源策略会导致安全风险，所有并不推荐这样做</li></ol></li><li></li></ol></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>每日一题</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>typeScript-基础类型</title>
     <link href="/2023/12/01/typeScriptBaseType/"/>
     <url>/2023/12/01/typeScriptBaseType/</url>
