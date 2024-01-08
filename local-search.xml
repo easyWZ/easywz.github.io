@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>二、操作系统</title>
+    <link href="/2024/01/08/operatingSystem/"/>
+    <url>/2024/01/08/operatingSystem/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>每日一题</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>操作系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>一、跨域</title>
     <link href="/2024/01/02/kuayu/"/>
     <url>/2024/01/02/kuayu/</url>
@@ -17,6 +42,14 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>跨域</tag>
+      
+      <tag>javaScript</tag>
+      
+    </tags>
     
   </entry>
   
@@ -39,7 +72,9 @@
     
     <tags>
       
-      <tag>typeScript ts</tag>
+      <tag>typeScript</tag>
+      
+      <tag>ts</tag>
       
     </tags>
     
@@ -127,7 +162,9 @@
     
     <tags>
       
-      <tag>js array</tag>
+      <tag>js</tag>
+      
+      <tag>array</tag>
       
     </tags>
     
@@ -152,7 +189,9 @@
     
     <tags>
       
-      <tag>css css3</tag>
+      <tag>css</tag>
+      
+      <tag>css3</tag>
       
     </tags>
     
@@ -177,7 +216,13 @@
     
     <tags>
       
-      <tag>错题 日常记录 bug 难题</tag>
+      <tag>错题</tag>
+      
+      <tag>日常记录</tag>
+      
+      <tag>bug</tag>
+      
+      <tag>难题</tag>
       
     </tags>
     
@@ -227,7 +272,9 @@
     
     <tags>
       
-      <tag>markdown md</tag>
+      <tag>markdown</tag>
+      
+      <tag>md</tag>
       
     </tags>
     
