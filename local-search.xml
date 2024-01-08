@@ -4,11 +4,24 @@
   
   
   <entry>
+    <title>手写编码题</title>
+    <link href="/2024/01/08/handwrittenCode/"/>
+    <url>/2024/01/08/handwrittenCode/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>二、操作系统</title>
     <link href="/2024/01/08/operatingSystem/"/>
     <url>/2024/01/08/operatingSystem/</url>
     
-    <content type="html"><![CDATA[<h3 id="1、什么是操作系统"><a href="#1、什么是操作系统" class="headerlink" title="1、什么是操作系统"></a>1、什么是操作系统</h3><p>操作系统（Operating System，简称 OS）是计算机硬件与用户之间的接口，负责管理和协调计算机硬件资源，为应用程序和用户提供一个友好的运行环境。操作系统具有多种功能，包括进程管理、内存管理、文件系统管理和设备管理等。</p><p>操作系统使得程序员和用户不必关心底层硬件的具体细节，可以更高效地开发和使用计算机。常见的操作系统有 Microsoft Windows、macOS、Linux 等。</p><h3 id="2、软链接和硬链接的区别"><a href="#2、软链接和硬链接的区别" class="headerlink" title="2、软链接和硬链接的区别"></a>2、软链接和硬链接的区别</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="1、什么是操作系统"><a href="#1、什么是操作系统" class="headerlink" title="1、什么是操作系统"></a>1、什么是操作系统</h3><p>操作系统（Operating System，简称 OS）是计算机硬件与用户之间的接口，负责管理和协调计算机硬件资源，为应用程序和用户提供一个友好的运行环境。操作系统具有多种功能，包括进程管理、内存管理、文件系统管理和设备管理等。</p><p>操作系统使得程序员和用户不必关心底层硬件的具体细节，可以更高效地开发和使用计算机。常见的操作系统有 Microsoft Windows、macOS、Linux 等。</p><!--### 2、软链接和硬链接的区别-->]]></content>
     
     
     <categories>
