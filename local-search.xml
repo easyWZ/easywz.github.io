@@ -4,38 +4,13 @@
   
   
   <entry>
-    <title>手写编码题</title>
-    <link href="/2024/01/08/handwrittenCode/"/>
-    <url>/2024/01/08/handwrittenCode/</url>
+    <title>reactStart</title>
+    <link href="/2024/01/23/reactStart/"/>
+    <url>/2024/01/23/reactStart/</url>
     
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>二、操作系统</title>
-    <link href="/2024/01/08/operatingSystem/"/>
-    <url>/2024/01/08/operatingSystem/</url>
-    
-    <content type="html"><![CDATA[<h3 id="1、什么是操作系统"><a href="#1、什么是操作系统" class="headerlink" title="1、什么是操作系统"></a>1、什么是操作系统</h3><p>操作系统（Operating System，简称 OS）是计算机硬件与用户之间的接口，负责管理和协调计算机硬件资源，为应用程序和用户提供一个友好的运行环境。操作系统具有多种功能，包括进程管理、内存管理、文件系统管理和设备管理等。</p><p>操作系统使得程序员和用户不必关心底层硬件的具体细节，可以更高效地开发和使用计算机。常见的操作系统有 Microsoft Windows、macOS、Linux 等。</p><!--### 2、软链接和硬链接的区别-->]]></content>
+    <content type="html"><![CDATA[<ol><li>项目创建及目录结构<ol><li>使用官方的脚手架<ol><li>通过npx create-react-app <projectname>能创建一个最基本的react项目)</li><li><strong>只做了react基本的搭建和构建，没有配上任何路由和状态管理。项目使用webpack构建</strong></li></ol></li><li>使用市场上集成脚手架<ol><li>官方脚手架提供的项目模板非常简单，因此也有很多集成的脚手架</li><li>典型的比如umi。这一类脚手架创建出来的项目会集成好很多功能，比如路由，mock</li></ol></li></ol></li><li>react组件和jsx<ol><li>组件<ol><li>组件化开发，定义一个基本组件的必要条件：<ol><li>组件html模板</li><li>数据和方法</li></ol></li><li>react实现：<br> 函数组件 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ada"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>()&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-type">&lt;div&gt;hello&lt;/div&gt;</span><br>&#125;<br></code></pre></td></tr></table></figure> class组件 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>&#123;<br>    render()&#123;<br>        <span class="hljs-keyword">return</span> &lt;div&gt;hello&lt;/div&gt;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li></ol></li><li>jsx的特点<ol><li>直接js中混用<ol><li>react项目利用babel做了对js的编译，所以是可以在js里写jsx的</li></ol></li><li>写法接近js<ol><li>jsx几乎和js一样，不同点在于，可以更方便的写html在js里，写在js里的html最后会被编译成一个js对象，也可以用react自带createElement创建这个对象（jsx和react是互相独立的） <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Fnreactdom</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-keyword">return</span> React.createElement(<span class="hljs-string">&#x27;div&#x27;</span>,[],<span class="hljs-string">&#x27;hello&#x27;</span>)<br>    <span class="hljs-comment">// 元素，属性，内容</span><br>&#125;<br></code></pre></td></tr></table></figure></li></ol></li></ol></li></ol></li></ol>]]></content>
     
     
-    <categories>
-      
-      <category>每日一题</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>操作系统</tag>
-      
-    </tags>
     
   </entry>
   
