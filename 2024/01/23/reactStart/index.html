@@ -16,23 +16,23 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="概述整合">
+    <meta name="description" content="自学整合">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react概述整合">
+<meta property="og:title" content="react自学整合">
 <meta property="og:url" content="https://easywz.github.io/2024/01/23/reactStart/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
-<meta property="og:description" content="概述整合">
+<meta property="og:description" content="自学整合">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/react-2.jpeg">
 <meta property="article:published_time" content="2024-01-23T08:40:34.000Z">
-<meta property="article:modified_time" content="2024-02-01T10:06:41.453Z">
+<meta property="article:modified_time" content="2024-02-02T08:13:22.515Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/react-2.jpeg">
   
   
   
-  <title>react概述整合 - WZ&#39;s blog</title>
+  <title>react自学整合 - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="react概述整合"></span>
+            <span id="subtitle" data-typed-text="react自学整合"></span>
           
         </div>
 
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k 字
+          7k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          28 分钟
+          59 分钟
         
       </span>
     
@@ -269,7 +269,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">react概述整合</h1>
+            <h1 id="seo-header">react自学整合</h1>
             
             
               <div class="markdown-body">
@@ -302,7 +302,7 @@
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-title class_">ReactDOM</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-dom/client&#x27;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;./index.css&#x27;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./App&#x27;</span>;<br><br><span class="hljs-comment">// React.StrictMode 开启严格模式</span><br><span class="hljs-keyword">const</span> root = <span class="hljs-title class_">ReactDOM</span>.<span class="hljs-title function_">createRoot</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;root&#x27;</span>));<br>root.<span class="hljs-title function_">render</span>(<br>  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">React.StrictMode</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">React.StrictMode</span>&gt;</span></span><br>);<br><br><span class="hljs-comment">// 卸载(2s后页面清除)</span><br><span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>  root.<span class="hljs-title function_">unmount</span>();<br>&#125;, <span class="hljs-number">2000</span>);<br></code></pre></td></tr></table></figure>
 <ol start="2">
-<li><h4 id="react组件和jsx"><a href="#react组件和jsx" class="headerlink" title="react组件和jsx"></a>react组件和jsx</h4><ol>
+<li><h4 id="组件中的jsx"><a href="#组件中的jsx" class="headerlink" title="组件中的jsx"></a>组件中的jsx</h4><ol>
 <li>组件<ol>
 <li>组件化开发，定义一个基本组件的必要条件：<ol>
 <li><strong>组件html模板</strong></li>
@@ -360,7 +360,7 @@
 </li>
 </ol>
 </li>
-<li>React的事件绑定<ol>
+<li><h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><ol>
 <li>规则模式<ol>
 <li>类似于原生 on+方法名（首字母大写）</li>
 <li>一定要赋值给事件一个方法 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">React.Component</span> &#123;<br>  <span class="hljs-title function_">fn1</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">2</span>);<br>  &#125;<br>  <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;App&#x27;</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">&#123;()</span> =&gt;</span> &#123;</span><br><span class="language-xml">        console.log(1);</span><br><span class="language-xml">      &#125;&#125;&gt;匿名函数<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">&#123;this.fn1&#125;</span>&gt;</span>dianji<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
@@ -377,6 +377,69 @@
 </ol>
 </li>
 <li>给到事件绑定的一定得是一个方法，不要直接调用方法，调用方法只会在页面初次渲染指向方法。</li>
+<li>事件绑定其他操作<ol>
+<li>传递参数</li>
+<li>获取事件对象<ol>
+<li>并不是原生事件对象，而是合成的事件对象</li>
+</ol>
+</li>
+<li>阻止默认行为，冒泡等</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">React.Component</span> &#123;<br>  fn3=<span class="hljs-function">(<span class="hljs-params">a,b</span>)=&gt;</span>&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a,b);<br>  &#125;<br>  fn4=<span class="hljs-function">(<span class="hljs-params">a</span>)=&gt;</span>&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a);<span class="hljs-comment">//事件对象</span><br>  &#125;<br>  fn5=<span class="hljs-function">(<span class="hljs-params">a,b,c</span>)=&gt;</span>&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(c);<span class="hljs-comment">//事件对象</span><br>    <span class="hljs-comment">// 阻止冒泡,和原生js是一致的</span><br>    c.<span class="hljs-title function_">stopPropagation</span>();<br>    c.<span class="hljs-title function_">preventDefault</span>();<br>  &#125;<br>  <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;App&#x27;</span>&gt;</span></span><br><span class="language-xml">      &#123;/* 传递参数 */&#125;</span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">&#123;this.fn3.bind(this,1,2)&#125;</span>&gt;</span>传递参数<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">      &#123;/* 获取事件对象;不传参数默认接收的第一个，传参数则为最后一个 */&#125;</span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">&#123;this.fn4&#125;</span>&gt;</span>不传参数<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">&#123;this.fn5.bind(this,1,2)&#125;</span>&gt;</span>传参数<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><h4 id="组件的响应式数据"><a href="#组件的响应式数据" class="headerlink" title="组件的响应式数据"></a>组件的响应式数据</h4><ol>
+<li>类组件响应式数据的定义<ol>
+<li>响应式数据定义在类的state属性中 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>&#123;<br>  <span class="hljs-comment">// constructor(props)&#123;</span><br>  <span class="hljs-comment">//   super(props)</span><br>  <span class="hljs-comment">//   this.state = &#123;</span><br>      <br>  <span class="hljs-comment">//   &#125;</span><br>  <span class="hljs-comment">// &#125;</span><br>  <span class="hljs-comment">//</span><br>  state = &#123;<br>    a:<span class="hljs-number">0</span><br>  &#125;<br>  render() &#123;<br>    <span class="hljs-keyword">return</span> &lt;div className=&#x27;<span class="hljs-type">App</span>&#x27;&gt;<br>      &#123;<span class="hljs-keyword">this</span>.state.a&#125;<br>    &lt;/div&gt;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>react响应式体系的原理<ol>
+<li>react不能像vue一样直接修改触发更新</li>
+<li>react修改能改值，但无法触发更新，因为react没有像vue一样监听get和set，而是在调用setState的时候调用react的更新操作 <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs pf">class App extends React.Component &#123;<br>  <span class="hljs-keyword">state</span> = &#123;<br>    a:<span class="hljs-number">0</span><br>  &#125;<br>  addA=()=&gt;&#123;<br>    this.<span class="hljs-built_in">set</span>State(&#123;<br>      a:++this.<span class="hljs-keyword">state</span>.a<br>    &#125;)<br>  &#125;<br>  addB=()=&gt;&#123;<br>    this.<span class="hljs-keyword">state</span>.a+=<span class="hljs-number">1</span>;<br>    this.<span class="hljs-built_in">set</span>State(&#123;&#125;)<br>  &#125;<br>  addC=()=&gt;&#123;<br>    this.<span class="hljs-built_in">set</span>State((<span class="hljs-keyword">state</span>)=&gt;&#123;<br>      return &#123;<br>        a: ++<span class="hljs-keyword">state</span>.a<br>      &#125;<br>    &#125;)<br>  &#125;<br>  render() &#123;<br>    return <span class="hljs-variable">&lt;div className=&#x27;App&#x27;&gt;</span><br>      &#123;this.<span class="hljs-keyword">state</span>.a&#125;<br>      <span class="hljs-variable">&lt;button onClick=&#123;this.addA&#125;&gt;</span>a加一第一种写法&lt;/button&gt;<br>      <span class="hljs-variable">&lt;button onClick=&#123;this.addB&#125;&gt;</span>a加一第二种写法&lt;/button&gt;<br>      <span class="hljs-variable">&lt;button onClick=&#123;this.addC&#125;&gt;</span>a加一第三种写法&lt;/button&gt;<br>    &lt;/div&gt;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>setState流程<ol>
+<li>调用setState</li>
+<li>给入一个对象</li>
+<li>给入的对象和state对象进行浅合并</li>
+<li>合并后调用更新方法进行更新</li>
+<li>关键点：<ol>
+<li><strong>通过浅合并来修改数据object.assign(),由此修改对象数据要注意展开原state,否则原对象属性会丢失</strong> <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs pf">class App extends React.Component &#123;<br>  <span class="hljs-keyword">state</span> = &#123;<br>    a:<span class="hljs-number">0</span>,<br>    c:&#123;<br>      c1:<span class="hljs-number">1</span>,<br>      c2:<span class="hljs-number">2</span>,<br>      c9:<span class="hljs-number">9</span><br>    &#125;<br>  &#125;<br>  <span class="hljs-built_in">set</span>C=()=&gt;&#123;<br>    this.<span class="hljs-built_in">set</span>State(&#123;<br>      a:<span class="hljs-number">1</span>,<br>      c:&#123;<br>        ...this.<span class="hljs-keyword">state</span>.c,<br>        c1:<span class="hljs-number">2</span><br>      &#125;<br>    &#125;)<br>  &#125;<br>  render() &#123;<br>    return <span class="hljs-variable">&lt;div className=&#x27;App&#x27;&gt;</span><br>      <span class="hljs-variable">&lt;div&gt;</span><br>        &#123;this.<span class="hljs-keyword">state</span>.a&#125; <br>        <span class="hljs-variable">&lt;br/&gt;</span><br>        &#123;this.<span class="hljs-keyword">state</span>.c.c1&#125; <br>        <span class="hljs-variable">&lt;button onClick=&#123;this.setC&#125;&gt;</span><span class="hljs-built_in">set</span>C&lt;/button&gt;<br>      &lt;/div&gt;<br>    &lt;/div&gt;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>调用setState方法会触发更新，修改state并不会触发更新</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>setState方法的修改是异步的<ol>
+<li>所以如果我们要获取修改后的值，需要在setState的第二个参数里获取 <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs pf"><span class="hljs-keyword">state</span> = &#123;<br>  a:<span class="hljs-number">0</span>,<br>  c:&#123;<br>    c1:<span class="hljs-number">1</span>,<br>    c2:<span class="hljs-number">2</span>,<br>    c9:<span class="hljs-number">9</span><br>  &#125;<br>&#125;<br><span class="hljs-built_in">set</span>C=()=&gt;&#123;<br>  this.<span class="hljs-built_in">set</span>State(&#123;<br>    a:<span class="hljs-number">1</span>,<br>    c:&#123;<br>      ...this.<span class="hljs-keyword">state</span>.c,<br>      c1:<span class="hljs-number">2</span><br>    &#125;<br>  &#125;,()=&gt;&#123;<br>    // 在这里才能获取到更新后的值<br>    console.<span class="hljs-keyword">log</span>(this.<span class="hljs-keyword">state</span>.a);//<span class="hljs-number">1</span><br>  &#125;)<br>  console.<span class="hljs-keyword">log</span>(this.<span class="hljs-keyword">state</span>.a);//<span class="hljs-number">0</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>setState的一些特性<ol>
+<li>setState方法多次修改，会合并为一次，统一更新</li>
+<li>setState返回会触发更新，不管你是否有修改，这造成一个问题：重复修改为相同的值也会让组件更新<ol>
+<li>解决方法：<ol>
+<li><code>class App extends React.PureComponent </code>,PureComponent是优化后的Component，解决了一些性能问题，其中包括上述问题的优化</li>
+<li>PureComponent会根据state是否改变来决定是否更新，而对于对象数组这样的引用类型判断他是否改变的原理是看他的内存地址，而不是内容，所以在PureComponent下修改对象和数组，需要赋予一个新对象，一般先拷贝一份在进行操作  <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pf">let _arr = [...this.<span class="hljs-keyword">state</span>.arr];<br>_arr.push(<span class="hljs-number">4</span>);<br>this.<span class="hljs-built_in">set</span>State(&#123;<br>    arr: _arr<br>&#125;)<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>一定不要在render里直接setState，会造成死循环。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h4 id="条件渲染和列表循环"><a href="#条件渲染和列表循环" class="headerlink" title="条件渲染和列表循环"></a>条件渲染和列表循环</h4><ol>
+<li>react没有vue一样的指令，一切操作本质都是通过运算生成不同的内容，渲染得到不同的页面</li>
+<li>条件渲染的本质：react渲染undefined，null，空字符串，false不会渲染成任何内容 <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs pf">    class App extends React.Component &#123;<br>  <span class="hljs-keyword">state</span> = &#123;<br>    show: true,<br>  &#125;;<br>  f1() &#123;<br>    if (this.<span class="hljs-keyword">state</span>.show) &#123;<br>      return <span class="hljs-variable">&lt;div&gt;</span><span class="hljs-number">1</span>&lt;/div&gt;;<br>    &#125; else &#123;<br>      return <span class="hljs-string">&quot;&quot;</span>;<br>    &#125;<br>  &#125;<br><br>  render() &#123;<br>    return (<br>      <span class="hljs-variable">&lt;div className=&quot;App&quot;&gt;</span><br>        <span class="hljs-variable">&lt;div&gt;</span>条件渲染&lt;/div&gt;<br>        &#123;this.<span class="hljs-keyword">state</span>.show ? <span class="hljs-variable">&lt;div&gt;</span><span class="hljs-number">123</span>&lt;/div&gt; : <span class="hljs-string">&quot;&quot;</span>&#125;<br>        &#123;this.f1()&#125;<br>        <span class="hljs-variable">&lt;button</span><br><span class="hljs-variable">          onClick=&#123;() =&gt;</span> &#123;<br>            this.<span class="hljs-built_in">set</span>State(&#123;<br>              show: !this.<span class="hljs-keyword">state</span>.show,<br>            &#125;);<br>          &#125;&#125;<br>        &gt;<br>          切换显隐<br>        &lt;/button&gt;<br>      &lt;/div&gt;<br>    );<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>列表循环的本质<ol>
+<li>渲染一个数组会把数组里的每一项单独取出渲染<br> 2.那么编写</li>
 </ol>
 </li>
 </ol>
@@ -399,7 +462,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>react概述整合</div>
+      <div>react自学整合</div>
       <div>https://easywz.github.io/2024/01/23/reactStart/</div>
     </div>
     <div class="license-meta">
