@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>前端八股文</title>
+    <link href="/2024/02/19/frontInterviewQuestion/"/>
+    <url>/2024/02/19/frontInterviewQuestion/</url>
+    
+    <content type="html"><![CDATA[<ol><li>js的数据类型及他们的区别</li><li>判断数据类型的几种方法</li><li>作用域和作用域链</li><li>原型和原型链</li><li>闭包</li><li>内存泄漏，垃圾回收机制</li><li>js获取dom</li><li>浅拷贝和深拷贝</li><li>如何改变this指向（call，apply，bind区别）</li><li>箭头函数与普通函数区别</li><li>浏览器存储的区别</li><li>继承方式</li><li>什么是promise</li><li>async，await</li><li>宏任务和微任务以及执行顺序</li><li>var let const的区别</li><li>ES6的新特性</li><li>从浏览器输入url后都经历了什么</li><li>TCP协议和HTTP协议</li><li>http和https区别</li><li>如何解决前端跨域问题</li><li>websocket和webwork</li><li>性能优化</li><li>标准盒模型和怪异盒模型（IE盒模型）</li><li>让一个元素水平&#x2F;垂直居中</li><li>flex：1代表什么</li><li>回溯算法</li><li>冒泡算法排序</li><li>快速排序</li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>React-个人学习归纳</title>
     <link href="/2024/01/23/reactStart/"/>
     <url>/2024/01/23/reactStart/</url>
