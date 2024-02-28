@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Vue3</title>
+    <link href="/2024/02/28/Vue3/"/>
+    <url>/2024/02/28/Vue3/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://juejin.cn/post/7139921537896808479">资料一</a></p><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol><li><a href="#question1">Options Api与Composition Api的区别</a></li><li><a href="#question2">Vue3.0性能提升主要是通过哪几方面体现的</a></li><li><a href="#question3">Vue3.0里为什么要用Proxy API 替代defineProperty API</a></li><li><a href="#question4">Vue3响应式原理</a></li><li><a href="#question5">Vue3中Treeshaking特性，举例说明</a></li><li><a href="#question6">Vue3新特性</a></li><li><a href="#question7">Vue3组合式API生命周期钩子函数有变化吗</a></li><li><a href="#question8">watch和watchEffect的区别</a></li><li><a href="#question9">v-if和v-for的优先级哪个高</a></li><li><a href="#question10">script setup是干啥的</a></li><li><a href="#question11">vue2&#x2F;vue3组件通信方式</a></li><li><a href="#question12">ref与reactive的区别</a></li><li><a href="#question13">EventBus与mitt的区别</a></li><li><a href="#question14">谈谈pinia</a></li></ol><h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><ol><li><p><a id="question1">Options Api与Composition Api的区别</a></p><ol><li><strong>Option api</strong>：选项API，即以vue为后缀的文件，通过定义methods，computed，watch，data等属性与方法，共同处理页面逻辑。用组件的选项（data,computed,methods,watch）组织逻辑在大多数情况下都有效。然而，当组件变得复杂，导致对应属性的列表也会增长，这可能导致组件难以阅读和理解。</li><li><strong>Composition api</strong>中，组件根据逻辑功能来组织，一个功能所定义的所有api会放在一起（高内聚，低耦合）</li><li>Composition api 相对 Option api的两大优点<ol><li>逻辑组织 <ol><li>option api在处理一个大型组件时，内部逻辑点容易碎片化，可能同时存在于method，computed，watch等api中，我们必须不断地跳转相关代码的选项块，这种碎片化使得理解和维护复杂组件变得困难。</li><li>Composition api将某个逻辑关注点相关的代码全都放在一个函数里，这样，当需要修改一个功能时，就不再需要在文件中跳来跳去。</li></ol></li><li>逻辑复用<ol><li>在vue2中，当混入多个mixin会存在两个非常明显的问题：命名冲突，数据来源不清晰</li><li>而composition api可以通过编写多个hooks函数就很好地解决了</li></ol></li></ol></li><li>总结：<ol><li>在逻辑组织和逻辑复用方面，Composition API是优于Option API</li><li>因为Composition API几乎是函数，会有更好的类型推断</li><li>Composition API对tree-shaking友好，代码也更容易压缩</li><li>Composition API中见不到this的使用，减少了this指向不明的情况</li><li>如果是小型组件，可以继续使用Option API</li></ol></li></ol></li><li><p><a id="question2">Vue3.0性能提升主要是通过哪几方面体现的</a></p><ol><li>编译阶段优化<ol><li>回顾vue2每个组件实例都对应一个watcher实例，它会在组件渲染的过程中把用到的数据property记录为依赖，当依赖发生改变，触发setter，则会通知watcher，从而使关联的组件重新渲染。因此，vue3在编译阶段，做了进一步优化<ol><li>diff算法优化</li></ol></li></ol></li></ol></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>前端八股文</title>
     <link href="/2024/02/19/frontInterviewQuestion/"/>
     <url>/2024/02/19/frontInterviewQuestion/</url>

@@ -16,23 +16,23 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前端八股文">
+    <meta name="description" content="---">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端八股文">
-<meta property="og:url" content="https://easywz.github.io/2024/02/19/frontInterviewQuestion/index.html">
+<meta property="og:title" content="Vue3">
+<meta property="og:url" content="https://easywz.github.io/2024/02/28/Vue3/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
-<meta property="og:description" content="前端八股文">
+<meta property="og:description" content="---">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/interview.jpeg">
-<meta property="article:published_time" content="2024-02-19T03:18:14.000Z">
-<meta property="article:modified_time" content="2024-02-19T09:46:49.556Z">
+<meta property="article:published_time" content="2024-02-28T01:54:31.000Z">
+<meta property="article:modified_time" content="2024-02-28T03:24:00.543Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/interview.jpeg">
   
   
   
-  <title>前端八股文 - WZ&#39;s blog</title>
+  <title>Vue3 - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="前端八股文"></span>
+            <span id="subtitle" data-typed-text="Vue3"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-19 11:18" pubdate>
-          2024年2月19日 上午
+        <time datetime="2024-02-28 09:54" pubdate>
+          2024年2月28日 上午
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          952 字
+          1.1k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          8 分钟
+          10 分钟
         
       </span>
     
@@ -269,68 +269,67 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">前端八股文</h1>
+            <h1 id="seo-header">Vue3</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45712370/article/details/134951791">资料一</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/677919386">资料二</a></p>
+                <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7139921537896808479">资料一</a></p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
+<li><a href="#question1">Options Api与Composition Api的区别</a></li>
+<li><a href="#question2">Vue3.0性能提升主要是通过哪几方面体现的</a></li>
+<li><a href="#question3">Vue3.0里为什么要用Proxy API 替代defineProperty API</a></li>
+<li><a href="#question4">Vue3响应式原理</a></li>
+<li><a href="#question5">Vue3中Treeshaking特性，举例说明</a></li>
+<li><a href="#question6">Vue3新特性</a></li>
+<li><a href="#question7">Vue3组合式API生命周期钩子函数有变化吗</a></li>
+<li><a href="#question8">watch和watchEffect的区别</a></li>
+<li><a href="#question9">v-if和v-for的优先级哪个高</a></li>
+<li><a href="#question10">script setup是干啥的</a></li>
+<li><a href="#question11">vue2&#x2F;vue3组件通信方式</a></li>
+<li><a href="#question12">ref与reactive的区别</a></li>
+<li><a href="#question13">EventBus与mitt的区别</a></li>
+<li><a href="#question14">谈谈pinia</a></li>
+</ol>
+<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><ol>
+<li><p><a id="question1">Options Api与Composition Api的区别</a></p>
 <ol>
-<li>js的数据类型及他们的区别</li>
-<li>判断数据类型的几种方法</li>
-<li>作用域和作用域链</li>
-<li>原型和原型链</li>
-<li>闭包</li>
-<li>内存泄漏，垃圾回收机制</li>
-<li>js获取dom</li>
-<li>浅拷贝和深拷贝</li>
-<li>如何改变this指向（call，apply，bind区别）</li>
-<li>箭头函数与普通函数区别</li>
-<li>浏览器存储的区别</li>
-<li>继承方式</li>
-<li>什么是promise</li>
-<li>async，await</li>
-<li>宏任务和微任务以及执行顺序</li>
-<li>var let const的区别</li>
-<li>ES6的新特性</li>
-<li>从浏览器输入url后都经历了什么</li>
-<li>TCP协议和HTTP协议</li>
-<li>http和https区别</li>
-<li>如何解决前端跨域问题</li>
-<li>websocket和webwork</li>
-<li>性能优化</li>
-<li>标准盒模型和怪异盒模型（IE盒模型）</li>
-<li>让一个元素水平&#x2F;垂直居中</li>
-<li>flex：1代表什么</li>
-<li>回溯算法</li>
-<li>冒泡算法排序</li>
-<li>快速排序</li>
-<li>什么是MVVM，MVC模型</li>
-<li>写react&#x2F;vue项目中为什么要在列表组件中写key，其作用是什么</li>
-<li><code>[&#39;1&#39;,&#39;2&#39;.&#39;3&#39;].map(parseInt) what&amp;why? </code></li>
-<li>防抖和节流的区别和实现</li>
-<li>Set,Map.WeakSet和WeakMap的区别</li>
-<li>深度优先遍历和广度优先遍历的实现</li>
-<li>分别用深度优先思想和广度优先思想实现一个拷贝函数</li>
-<li>ES5&#x2F;ES6的继承除了写法之外还有什么区别</li>
-<li>setTimeout,Promise,Async&#x2F;Await的区别</li>
-<li>Async&#x2F;Await如何通过同步的方式实现异步</li>
-<li>JS异步解决方案的发展历程以及优缺点</li>
-<li>Promise构造函数是同步执行还是异步执行，then呢</li>
-<li>如何实现一个new</li>
-<li>简单阐述http2的多路复用</li>
-<li>TCP的三次握手和四次挥手</li>
-<li>A，B机器正常连接后，B机器突然重启，A处于TCP什么状态</li>
-<li>react中setState什么时候是同步的，什么时候是异步的</li>
-<li>npm模块安装机制，为什么输入npm install就可以自动安装对应的</li>
-<li>重绘和回流及如何优化</li>
-<li>观察者模式和订阅-发布模式区别，各自适用什么场景</li>
-<li>Redux和Vuex的设计思想</li>
-<li>浏览器和Node事件循环的区别</li>
-<li>介绍模块化发展历程</li>
-<li>全局作用域中，用const和let声明的变量不在window上，那到底在哪</li>
-<li>cookie和token都存放在header中，为什么不会劫持token</li>
-<li>Vue的双向数据绑定，Model如何改变View，view又如何改变</li>
+<li><strong>Option api</strong>：选项API，即以vue为后缀的文件，通过定义methods，computed，watch，data等属性与方法，共同处理页面逻辑。用组件的选项（data,computed,methods,watch）组织逻辑在大多数情况下都有效。然而，当组件变得复杂，导致对应属性的列表也会增长，这可能导致组件难以阅读和理解。</li>
+<li><strong>Composition api</strong>中，组件根据逻辑功能来组织，一个功能所定义的所有api会放在一起（高内聚，低耦合）</li>
+<li>Composition api 相对 Option api的两大优点<ol>
+<li>逻辑组织 <ol>
+<li>option api在处理一个大型组件时，内部逻辑点容易碎片化，可能同时存在于method，computed，watch等api中，我们必须不断地跳转相关代码的选项块，这种碎片化使得理解和维护复杂组件变得困难。</li>
+<li>Composition api将某个逻辑关注点相关的代码全都放在一个函数里，这样，当需要修改一个功能时，就不再需要在文件中跳来跳去。</li>
+</ol>
+</li>
+<li>逻辑复用<ol>
+<li>在vue2中，当混入多个mixin会存在两个非常明显的问题：命名冲突，数据来源不清晰</li>
+<li>而composition api可以通过编写多个hooks函数就很好地解决了</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>总结：<ol>
+<li>在逻辑组织和逻辑复用方面，Composition API是优于Option API</li>
+<li>因为Composition API几乎是函数，会有更好的类型推断</li>
+<li>Composition API对tree-shaking友好，代码也更容易压缩</li>
+<li>Composition API中见不到this的使用，减少了this指向不明的情况</li>
+<li>如果是小型组件，可以继续使用Option API</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><a id="question2">Vue3.0性能提升主要是通过哪几方面体现的</a></p>
+<ol>
+<li>编译阶段优化<ol>
+<li>回顾vue2每个组件实例都对应一个watcher实例，它会在组件渲染的过程中把用到的数据property记录为依赖，当依赖发生改变，触发setter，则会通知watcher，从而使关联的组件重新渲染。因此，vue3在编译阶段，做了进一步优化<ol>
+<li>diff算法优化</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
 </ol>
 
                 
@@ -349,8 +348,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>前端八股文</div>
-      <div>https://easywz.github.io/2024/02/19/frontInterviewQuestion/</div>
+      <div>Vue3</div>
+      <div>https://easywz.github.io/2024/02/28/Vue3/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +361,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月19日</div>
+          <div>2024年2月28日</div>
         </div>
       
       
@@ -394,18 +393,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/28/Vue3/" title="Vue3">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Vue3</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/23/reactStart/" title="React-个人学习归纳">
-                        <span class="hidden-mobile">React-个人学习归纳</span>
+                      <a href="/2024/02/19/frontInterviewQuestion/" title="前端八股文">
+                        <span class="hidden-mobile">前端八股文</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
