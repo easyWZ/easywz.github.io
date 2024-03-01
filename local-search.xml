@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>git</title>
+    <link href="/2024/03/01/gitInterviewQuestion/"/>
+    <url>/2024/03/01/gitInterviewQuestion/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>webpack</title>
+    <link href="/2024/02/29/webpackInterviewQuestion/"/>
+    <url>/2024/02/29/webpackInterviewQuestion/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://juejin.cn/post/7066807280557096974">资料一</a></p><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol><li><a href="#question1">简单说一下webpack的构建流程</a></li><li>Loader和Plugin的区别</li><li>webpack的热更新原理</li><li>如何提高webpack的打包速度</li><li>如何减少webpack打包体积</li><li>有哪些常用的loader</li><li>常用的plugin</li><li>用过哪些可以提供效率的插件</li><li>source map是什么，生产环境怎么用</li><li>文件指纹是什么</li><li>tree shaking原理是什么</li><li>说一下Babel原理</li><li>有写过loader吗 简述一下思路</li><li>有写过plugin吗 简述一下思路</li></ol><h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><ol><li><a id="question1">简单说一下 webpack 的构建流程</a><ol><li></li></ol></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>react.js</title>
     <link href="/2024/02/28/reactInterviewQuestion/"/>
     <url>/2024/02/28/reactInterviewQuestion/</url>
@@ -78,9 +104,9 @@
     
     <tags>
       
-      <tag>跨域</tag>
-      
       <tag>javaScript</tag>
+      
+      <tag>跨域</tag>
       
     </tags>
     
