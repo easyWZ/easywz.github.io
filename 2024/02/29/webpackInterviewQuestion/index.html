@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/interview.jpeg">
 <meta property="article:published_time" content="2024-02-29T09:54:09.000Z">
-<meta property="article:modified_time" content="2024-03-01T03:16:35.982Z">
+<meta property="article:modified_time" content="2024-03-01T06:47:01.116Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/interview.jpeg">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          220 字
+          6.7k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          2 分钟
+          56 分钟
         
       </span>
     
@@ -274,26 +274,218 @@
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7066807280557096974">资料一</a></p>
+                <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7066807280557096974">资料一</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/44438844">资料二</a></p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
 <li><a href="#question1">简单说一下webpack的构建流程</a></li>
-<li>Loader和Plugin的区别</li>
-<li>webpack的热更新原理</li>
-<li>如何提高webpack的打包速度</li>
-<li>如何减少webpack打包体积</li>
-<li>有哪些常用的loader</li>
-<li>常用的plugin</li>
-<li>用过哪些可以提供效率的插件</li>
-<li>source map是什么，生产环境怎么用</li>
-<li>文件指纹是什么</li>
-<li>tree shaking原理是什么</li>
-<li>说一下Babel原理</li>
-<li>有写过loader吗 简述一下思路</li>
-<li>有写过plugin吗 简述一下思路</li>
+<li><a href="#question2">Loader和Plugin的区别</a></li>
+<li><a href="#question3">webpack的热更新原理</a></li>
+<li><a href="#question4">如何提高webpack的打包速度</a></li>
+<li><a href="#question5">如何减少webpack打包体积</a></li>
+<li><a href="#question6">有哪些常用的loader</a></li>
+<li><a href="#question7">常用的plugin</a></li>
+<li><a href="#question8">用过哪些可以提供效率的插件</a></li>
+<li><a href="#question9">source map是什么，生产环境怎么用</a></li>
+<li><a href="#question10">文件指纹是什么</a></li>
+<li><a href="#question11">tree shaking原理是什么</a></li>
+<li><a href="#question12">说一下Babel原理</a></li>
+<li><a href="#question13">有写过loader吗 简述一下思路</a></li>
+<li><a href="#question14">有写过plugin吗 简述一下思路</a></li>
+<li><a href="#question15">怎么配置单页应用？怎么配置多页应用？</a></li>
 </ol>
 <h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><ol>
 <li><a id="question1">简单说一下 webpack 的构建流程</a><ol>
-<li></li>
+<li><strong>初始化参数</strong>：从配置文件和shell语句中读取与合并参数，得到最终的参数。</li>
+<li><strong>开始编译</strong>：用上一步得到的参数初始化Compiler对象，加载所有配置的插件，执行compiler对象的run方法开始执行编译。</li>
+<li><strong>确定入口</strong>：根据配置中的entry找出所有的入口文件</li>
+<li><strong>编译模块</strong>：从入口文件出发，调用所有配置的Loader对模块进行编译，找出该模块依赖的模块，再递归本步骤直到所有依赖文件都经过本步骤的处理。</li>
+<li><strong>完成模块编译</strong>：在经过第四步使用Loader编译完所有模块之后，得到每个模块被编译后的最终内容以及它们之间的依赖关系。</li>
+<li><strong>输出资源</strong>：根据入口和模块之间的关系，组装成一个个包含多个模块的chunk，再把每个chunk转换成一个单独的文件加入到输出列表，这步是可以修改输出内容的最后机会。</li>
+<li><strong>输出完成</strong>：在确定输出内容之后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统。</li>
+</ol>
+</li>
+<li><a id="question2">Loader 和 Plugin 的区别</a><ol>
+<li><strong>Loader</strong>本质就是一个函数，在该函数对接收到的内容进行转换，返回转换后的结果。你可以理解为是一个“管道”，在外部接收到的内容通过这个“管道”进行转换，然后再将转换后的结果输出。因为 webpack 只认识 js，所以，你也可以将 Loader 称之为“翻译官”，对其他类型的资源进行转译的预处理工作。</li>
+<li><strong>Plugin</strong> 直译为插件，基于事件流框架 Tapable。Plugin 可以扩展 webpack 的功能，让 webpack 具有更多的灵活性。在 Webpack 运行的生命周期中会广播出许多事件，Plugin可以监听这些事件，在合适的时机通过 webpack 提供的 API 改变输出结果。<ol>
+<li>通过这个 Tapable 框架，你可以更深层的谈一下 webpack 底层 plugin 是如何实现的以及微内核，其实 webpack 就是微内核架构的一个例子，本质上就是一个是很小的功能，它并没有携带任何业务的功能，比如：打包多个页面，在打包页面上做相应的操作，其实它都没有，形象的来说它更像是一个底座，这底座可以插上各个地方增添的功能</li>
+<li>扩展：<ol>
+<li>微内核系统一般分为两部分 —核心系统和插件系统，这样就提供了很好的灵活性和可扩展性。核心系统是最小可运行的模块，它提供的是通用逻辑（比如 Tapable），而插件系统这些是具体的逻辑（比如HtmlWebpackPlugin插件），再比如系统怎么跑起来，插件之间怎么通信等模块都属于核心系统里面，让系统更加丰富多彩就是插件系统了。插件之间可以相互独立，也可以有依赖。</li>
+<li>核心系统怎么知道哪些插件可用呢？<ol>
+<li>这就需要注册表了，其实我们的 webpack.config.js 就起到了这样的作用，它告诉我们需要使用哪些插件。</li>
+</ol>
+</li>
+<li>插件系统和核心系统怎么通信呢？<ol>
+<li>这就需要用到 Tapable 了，里面有各种 hooks，并且在运行各个生命周期过程中会执行对应的回调。我们的核心系统有生命周期的概念，插件里面也有，因为它们的架构是类似的。我们的核心系统在运行后会先读取注册表信息，这个过程其实就是订阅事件，主车回调的过程。插件可以在运行回调的过程中再不断订阅自己需要的其他事件，注册其他回调。服务于具体逻辑的插件模块是独立于核心系统之外的，但是它可能会需要操作核心模块的系统服务来实现这些规定的功能，此时核心系统需要提供一个上下文对象（context），当然，插件模块与外部进行交互只允许通过此上下文对象完成。上下文对象提供了基础操作（调起其他插件模块、调起系统服务，获取系统信息）的 API 和事件。</li>
+<li>这样待核心系统的生命周期顺序执行的过程，也就伴随这对应的时期的插件的生命周期交替执行，生命周期走完了，整个程序流程也就结束了。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="question3">说一下 webpack 的热更新原理</a><ol>
+<li>webpack 的热更新又称为热替换（Hot Module Replacement），缩写为 HMR，这个机制可以做到不用刷新浏览器而将新变更的模块替换掉旧的模块。</li>
+<li>HMR 的核心就是客户端从服务端拉取更新后的文件，准确的说是 chunk diff（chunk需要更新的部分），实际上 webpack-dev-server 与浏览器之间维护了一个 WebSocket，当本地资源发生变化时，webpack-dev-server会向浏览器推送更新，并带上构建时的 hash，让客户端与上一次资源进行对比。客户端对比出差异后会向 webpack-dev-server 发起 ajax 请求来获取更改内容（文件列表、hash），这样客户端就可以再借助这些信息继续向 webpack-dev-server 发起 jsonp 请求获取该 chunk 的增量更新。后续的部分由 HotModulePlugin 来完成，提供了相关的 API 以供开发真针对自身场景进行处理，像 react-hot-loader 和 vue-loader 都是借助这些 API 实现 HMR。</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/30669007">Webpack HMR 原理解析</a></li>
+<li>基本实现原理大致这样的，构建 bundle 的时候，加入一段 HMR runtime 的 js 和一段和服务沟通的 js 。文件修改会触发 webpack 重新构建，服务器通过向浏览器发送更新消息，浏览器通过 jsonp 拉取更新的模块文件，jsonp 回调触发模块热替换逻辑。</li>
+</ol>
+</li>
+<li><a id="question4">如何提高 webpack 的打包速度？</a><ol>
+<li>多入口情况下，使用 optimization.splitChunks 来提取公共代码。</li>
+<li>通过 externals 配置来提取常用库。</li>
+<li>利用 DllPlugin 和 DllReferencePlugin 预编译资源模块，通过 DllPlugin 来对那些我们引用但是绝对不会修改的npm包来进行预编译，再通过DllReferencePlugin 将编译编译的模块加载进来。</li>
+<li>使用 thread-loader 实现多进程加速编译。</li>
+<li>使用 terser-webpack-plugin 对js进行代码压缩。</li>
+<li>优化 resolve 配置缩小范围。</li>
+<li>使用 tree-shaking 和 Scope hoisting 来剔除多余代码。</li>
+</ol>
+</li>
+<li><a id="question5">如何减少 webpack 打包体积？</a><ol>
+<li>使用 externals 配置来提取常用库。</li>
+<li>使用 tree-sjaking 和 scope hoisting 来剔除多余代码。</li>
+<li>使用 optimize-css-assets-webpack-plugin 压缩css。</li>
+<li>使用 terser-webpack-plugin 对 js 进行代码压缩。</li>
+</ol>
+</li>
+<li><a id="question6">webpack 有哪些常见的 loader？你用过哪些 loader？</a><ol>
+<li>cache-loader：可以在一些性能开销较大的 Loader 之前添加，目的是将结果缓存到磁盘里。</li>
+<li>file-loader：把文件输出到一个文件夹中，在代码中通过相对 URL 去引用输出的文件（处理图片、字体、图标）。</li>
+<li>url-loader：与file-loader 类似，区别是用户可以设置一个阈值，大于阈值会交给 file-loader，小于阈值时返回文件 base64 形式编码（处理图片）。</li>
+<li>image-loader：加载并且压缩图片文件。</li>
+<li>babel-loader：把 ES6 转换成 ES5。</li>
+<li>ts-loader：将 typescript 转换成 JavaScript。</li>
+<li>svg-inline-loader：将压缩后的SVG内容注入代码中。</li>
+<li>raw-loader：加载文件原始内容（utf-8）。</li>
+<li>sass-loader：将 scss&#x2F;sass 代码转换成 css。</li>
+<li>css-loader：加载 css，支持模块化、压缩、文件导入等特性。</li>
+<li>less-loader：将 less 代码转换成 css。</li>
+<li>style-loader：生成 style 标签，将 js 中的样式资源插入，并添加到 header 中生效。</li>
+<li>postcss-loader：扩展 css 语法，使用下一代 css，可以配合 autoprefixer 插件自动补齐 css3 前缀。</li>
+<li>eslint-loader：通过 eslint 检查 JavaScript 代码。</li>
+<li>tslint-loader：通过tslint 检查 typesc 代码。</li>
+<li>vue-loader：加载 vue.js 单文件组件。</li>
+<li>awesome-typescript-loader：将 typescript 转换成 JavaScript，性能优于 ts-loader。</li>
+</ol>
+</li>
+<li><a id="question7">webpack 有哪些常见的 plugin？你用过哪些 plugin？</a><ol>
+<li>ignore-plugin：忽略部分文件。</li>
+<li>html-webpack-plugin：简化 html 文件创建。</li>
+<li>web-webpack-plugin：可以方便地为单页应用输出 html，比 html-webpack-plugin 好用。</li>
+<li>terser-webpack-plugin：支持压缩ES6。</li>
+<li>optimize-css-assets-webpack-plugin：压缩css代码。</li>
+<li>mini-css-extract-plugin：分离样式文件，css 提取为单独文件，支持按需加载。</li>
+<li>werviceworker-webpack-plugin：为网页应用追加离线缓存功能。</li>
+<li>clean-webpack-plugin：目录清理。</li>
+<li>ModuleconcatenationPlugin：开启 Scope Hoisting。</li>
+<li>ebpack-bundle-analyzer：可视化 webpack 输出文件的体积（业务组件、依赖第三方模块）。</li>
+<li>speed-measure-webpack-plugin：可以看到每个 loader 和 plugin 执行耗时（这个打包耗时、plugin 和 loader 耗时）。</li>
+<li>HotModuleReplacementPlugin：模块热替换。</li>
+</ol>
+</li>
+<li><a id="question8">在使用 webpack 开发时，你用过哪些可以提供效率的插件？</a><ol>
+<li>webpack-dashboard：可以更有好的展示相关打包信息。</li>
+<li>webpack-merge：提取公共配置，减少重复配置代码。</li>
+<li>speed-measure-webpack-plugin：简称SMP，分析出 webpack 打包过程中 loader 和 plugin的耗时，有助于找到构建过程中的性能瓶颈。</li>
+<li>HotModuleReplacementPlugin：模块热替换。</li>
+<li>size-plugin：监控资源体积变化，尽早发现问题。</li>
+</ol>
+</li>
+<li><a id="question9">source map 是什么？生产环境怎么用？</a><ol>
+<li>source map 是将编译、打包、压缩后的代码映射会源代码的过程。打包压缩后的代码不具备良好的可读性，想要调试源码就需要 source map。</li>
+<li>map 文件只要不打开开发者工具，浏览器是不会加载的。</li>
+<li>生产环境一般有三种处理方案：<ol>
+<li>hidden-source-map：借助第三方错误监控平台 Sentry 使用。</li>
+<li>nosource-source-map：只会显示具体行数以及查看源代码的错误栈。安全性比 source-map 高</li>
+<li>source-map：通过 nginx 设置将.map文件指对白名单开发。 注意：在生产环境中避免使用 inline- 和 eval-，因为它们会增加 bundle 体积大小，并降低整体性能。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="question10">文件指纹是什么？</a><ol>
+<li>文件指纹是指打包后输出文件的名的后缀。<ol>
+<li>hash：和整个项目的构建相关，只要项目文件有修改，整个项目构建的 hash 就会变化。</li>
+<li>chunkhash：和webpack打包的 chunk 有关，不同的 chunk、不同的 entry 会生成不同的 chunkhash。</li>
+<li>contenthash：根据文件内容来定义 hash，文件内容不发生变化，则contenthash就不会变化。 直接在输出文件名添加对应的 hash值即可。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="question11">tree shaking 原理是什么？</a><ol>
+<li>webpack中，tree-shaking 的实现 一是先标记出模块导出值中哪些没有被动用过，二是 Terser 使用删除掉这些没被用到的导出语句。</li>
+<li>标记功能需要配置 optimization.usedExports &#x3D; true 开启   <ol>
+<li>标记过程大致可划分为三个步骤：<ol>
+<li>Make 阶段：收集模块导出变量并记录到模块依赖关系图 ModuleGraph 变量中。</li>
+<li>Seal 阶段：遍历 ModuleGraph 标记模块导出变量有没有被使用</li>
+<li>生成产物时：若变量没有被其他模块使用则删除对应的导出语句。 Webpack 中 Tree Shaking 的实现分为如下步骤：<ol>
+<li>在 FlagDependencyExportsPlugin 插件中根据模块的 dependencies 列表收集模块导出值，并记录到 ModuleGraph 体系的 exportsInfo 中</li>
+<li>在 FlagDependencyUsagePlugin 插件中收集模块的导出值的使用情况，并记录到 exportInfo._usedInRuntime 集合中</li>
+<li>在 HarmonyExportXXXDependency.Template.apply 方法中根据导出值的使用情况生成不同的导出语句</li>
+<li>使用 DCE 工具删除 Dead Code，实现完整的树摇效果 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7002410645316436004">详细tree-shaking原理</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="question12">说一下 Babel 原理</a><ol>
+<li>大多数JavaScript Parser遵循 estree 规范，Babel 最初基于 acorn 项目(轻量级现代 JavaScript 解析器) Babel大概分为三大部分：<ol>
+<li>解析：将代码转换成 AST (抽象语法树AST)<ol>
+<li>词法分析：将代码(字符串)分割为token流，即语法单元成的数组</li>
+<li>语法分析：分析token流(上面生成的数组)并生成 AST</li>
+</ol>
+</li>
+<li>转换：访问 AST 的节点进行变换操作生产新的 AST<ol>
+<li>Taro就是利用 babel 完成的小程序语法转换</li>
+</ol>
+</li>
+<li>生成：以新的 AST 为基础生成代码 <a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903746804137991">详细参考</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="question13">有写过 loader 吗？简单描述一下思路</a><ol>
+<li>开发的基本思路：因为 loader 支持链式调用，所以开发上需要严格遵循“单一职责”，每个 loader 只负责自己需要负责的事情</li>
+<li>loader 拿到的是源文件的内容（content）</li>
+<li>通过**this.getOptions() **拿到传入的参数，</li>
+<li>可以通过返回值的方式将处理后的内容输出或者通过 <strong>this.callback()</strong> 同步方式将内容返回出去，<ol>
+<li>也可以调用 this.async() 生成一个异步的函数， callback 来处理传入的内容，</li>
+</ol>
+</li>
+<li>再通过调用 <strong>cabllback（）</strong>将处理后的内容返回出去。</li>
+<li>开发的过程中尽量使用异步 loader。使用 schema-utils 来检验的我们的参数。然后再利用第三方提供的模块进行 loader 的开发。</li>
+</ol>
+</li>
+<li><a id="question14">有写过 plugin 吗？简答描述一下思路</a><ol>
+<li>开发的基本思路： webpack 在运行生命周期中会广播出许多事件，PLugin 可以监听这些事件，在特定的阶段写入想要添加的自定义功能。webpack 的 tapable 事件流机制保证了插件的有序性，使得整个系统扩展性良好。</li>
+<li>通过 consturctor 获取传入的配置参数</li>
+<li>apply() 方法得到 compiler，</li>
+<li>compiler 暴露了和 webpack 整个生命周期相关的钩子</li>
+<li>通过 conpiler.hooks.thiscompilation 初始 compilation。</li>
+<li>compilation 暴露了与模块和依赖有关的粒度更小的事件钩子，</li>
+<li>再使用相关的 hooks 对资源进行添加或者修改。</li>
+<li>emit 事件发生时，可以读取到最终输出的资源、代码块、模块及其依赖，并进行修改（emit 事件是修改 webpack 输出资源的最后时机）。</li>
+<li>异步的事件需要再插件处理完任务时调用回调函数通知 webpack 进入下一个流程，不然会卡住。</li>
+</ol>
+</li>
+<li><a id="question15">怎么配置单页应用？怎么配置多页应用？</a><ol>
+<li>单页应用可以理解为webpack的标准模式，直接在entry中指定单页应用的入口即可</li>
+<li>多页应用的话，可以使用webpack的 AutoWebPlugin来完成简单自动化的构建，但是前提是项目的目录结构必须遵守他预设的规范。 多页应用中要注意的是：<ol>
+<li>每个页面都有公共的代码，可以将这些代码抽离出来，避免重复的加载。比如，每个页面都引用了同一套css样式表</li>
+<li>随着业务的不断扩展，页面可能会不断的追加，所以一定要让入口的配置足够灵活，避免每次添加新页面还需要修改构建配置</li>
+</ol>
+</li>
+<li>如何进行多页面打包配置？<ol>
+<li>配置多个入口文件</li>
+<li>借助HtmlwebpackPlugin插件创建对应html<ol>
+<li>配置多个entry, 需要new多个htmlWebpackPlugin</li>
+<li>配置template, filename, 对应的chunks</li>
+</ol>
+</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
