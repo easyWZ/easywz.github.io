@@ -16,23 +16,23 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="git interview">
+    <meta name="description" content="http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git">
-<meta property="og:url" content="https://easywz.github.io/2024/03/01/gitInterviewQuestion/index.html">
+<meta property="og:title" content="http">
+<meta property="og:url" content="https://easywz.github.io/2024/03/04/httpInterviewQuestion/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
-<meta property="og:description" content="git interview">
+<meta property="og:description" content="http">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/interview.jpeg">
-<meta property="article:published_time" content="2024-03-01T03:13:42.000Z">
-<meta property="article:modified_time" content="2024-03-04T03:00:30.189Z">
+<meta property="article:published_time" content="2024-03-04T03:02:17.000Z">
+<meta property="article:modified_time" content="2024-03-04T05:49:44.665Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/interview.jpeg">
   
   
   
-  <title>git - WZ&#39;s blog</title>
+  <title>http - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="git"></span>
+            <span id="subtitle" data-typed-text="http"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-01 11:13" pubdate>
-          2024年3月1日 上午
+        <time datetime="2024-03-04 11:02" pubdate>
+          2024年3月4日 上午
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.5k 字
+          1.9k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          30 分钟
+          16 分钟
         
       </span>
     
@@ -269,159 +269,120 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">git</h1>
+            <h1 id="seo-header">http</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7122755913043148813">资料一</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/nobody_1/article/details/88956315">资料二</a></p>
+                <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45819386/article/details/123219420">资料一</a></p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
-<li><a href="#question1">常用git命令</a></li>
-<li><a href="#question2">提交时产生冲突，如何产生如何解决</a></li>
-<li><a href="#question3">提交误操作，怎么撤销</a></li>
-<li><a href="#question4">如何修改提交的历史信息</a></li>
-<li><a href="#question5">git stash</a></li>
-<li><a href="#question6">如何查看分支提交的历史记录，查看某个文件的历史记录</a></li>
-<li><a href="#question7">git fetch和git pull区别</a></li>
-<li><a href="#question8">git merge和git rebase区别</a></li>
-<li><a href="#question9">git系统中HEAD，工作树和索引区别</a></li>
-<li><a href="#question10">之前项目中使用GitFlow工作流程吗，有什么好处</a></li>
-<li><a href="#question11">git cherry-pick</a></li>
-<li><a href="#question12">git和其他版本控制器有啥区别</a></li>
-<li><a href="#question13">忽略提交</a></li>
-<li><a href="#question14">如何把本地仓库的内容推向一个空的远程仓库</a></li>
-<li><a href="#question15">git submodule</a></li>
+<li><a href="#question1">http简介</a></li>
+<li><a href="#question2">http工作原理</a></li>
+<li><a href="#question3">http优缺点</a></li>
+<li><a href="#question4">请求类型get和post区别</a></li>
+<li><a href="#question5">http和https区别</a></li>
+<li><a href="#question6">常见http状态码</a></li>
+<li><a href="#question7">HTTP常见的字段有哪些？</a></li>
+<li>三次握手四次挥手</li>
 </ol>
 <h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><ol>
-<li><p><a id="question1">列举工作中常用的几个git命令？</a></p>
-<ol>
-<li>git add file || git add</li>
-<li>git commit -m || git commit -a</li>
-<li>git status -s</li>
-<li>git fetch&#x2F;git merge || git pull</li>
-<li>git feflog</li>
+<li><a id="question1">HTTP 简介：</a><ol>
+<li>HTTP 协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议；</li>
+<li>HTTP 是一个基于TCP&#x2F;IP通信协议来传递数据（HTML文件、图片文件、查询结果等）；</li>
 </ol>
 </li>
-<li><p><a id="question2">提交时发生冲突，你能解释冲突是如何产生的吗？你是如何解决的？</a></p>
-</li>
-<li><p><a id="question3">如果本次提交误操作，如何撤销？</a></p>
-<ol>
-<li>撤销提交到索引区的文件，可以通过git reset HEAD file</li>
-<li>撤销提交到本地仓库的文件，可以通过git reset –soft HEAD^n恢复当前分支的版本库至上一次提交的状态，索引区和工作空间不变更</li>
-<li>通过git reset –mixed HEAD^n恢复当前分支的版本库和索引区至上一次提交的状态，工作区不变更</li>
-<li>通过git reset –hard HEAD^n恢复当前分支的版本库、索引区和工作空间至上一次提交的状态。</li>
+<li><a id="question2">HTTP工作原理：</a><ol>
+<li>HTTP协议工作于客户端-服务端架构上，浏览器作为HTTP客户端通过URL向HTTP服务端发送所有请求。</li>
+<li>web服务器有：Apache 服务器、lls服务器等；</li>
+<li>HTTP默认端口号为80，但是也可以改为8080或者其他端口；</li>
 </ol>
 </li>
-<li><p><a id="question4">如果我想修改提交的历史信息，应该用什么命令？</a></p>
-<ol>
-<li>修改最近一次提交的历史记录，就可以用git commit –amend命令；</li>
-<li>修改之前提交的历史记录，就需要按照下面的步骤<ol>
-<li>首先查看前三次的提交历史记录：<code>git log -3</code></li>
-<li>执行命令git rebase –i HEAD~3，会把前3次的提交记录按照倒叙列出来；</li>
-<li>根据提示，执行git commit –amend命令，进入vim编辑器并修改提交信息。</li>
-<li>然后执行git rebase –continue命令</li>
+<li><a id="question3">HTTP的优点和缺点？</a><ol>
+<li>优点<ol>
+<li>支持客户&#x2F;服务器模式</li>
+<li>应用广泛且跨平台</li>
+<li>简单快速、灵活</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>无连接：</li>
+<li>无状态：无状态可以减轻服务器负担，但进行关联操作时繁琐，Cookie正好可以解决这个问题</li>
+<li>明文传输:调试便利的同时带来了信息易被窃取</li>
+<li>不安全:（HTTPS通过引入SSL&#x2F;TLS层，解决了这个隐患）</li>
 </ol>
 </li>
 </ol>
 </li>
-<li><p><a id="question5">你使用过git stash命令吗？你一般什么情况下会使用它？</a></p>
-<ol>
-<li>命令git stash是把工作区修改的内容存储在栈区。<ol>
-<li>解决冲突文件时，会先执行git stash，然后解决冲突；</li>
-<li>遇到紧急开发任务但目前任务不能提交时，会先执行git stash，然后进行紧急任务的开发，然后通过git stash pop取出栈区的内容继续开发；</li>
-<li>切换分支时，当前工作空间内容不能提交时，会先执行git stash再进行分支切换；</li>
+<li><a id="question4">请求类型Get与Post之间的区别？</a><ol>
+<li>get重点在从服务器上获取资源，post重点在向服务器发送数据；</li>
+<li>get是不安全的，因为URL是可见的，可能会泄露私密信息，如密码等； post较get安全性较高；</li>
+<li>get传输数据是通过URL请求，以field（字段）&#x3D; value的形式，置于URL后，并用”?”连接，多个请求数据间用”&amp;”连接，如<a target="_blank" rel="noopener" href="http://127.0.0.1/Test/login.action?name=admin&password=admin%EF%BC%8C%E8%BF%99%E4%B8%AA%E8%BF%87%E7%A8%8B%E7%94%A8%E6%88%B7%E6%98%AF%E5%8F%AF%E8%A7%81%E7%9A%84%EF%BC%9Bpost%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E9%80%9A%E8%BF%87Http%E7%9A%84post%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%B0%86%E5%AD%97%E6%AE%B5%E4%B8%8E%E5%AF%B9%E5%BA%94%E5%80%BC%E5%B0%81%E5%AD%98%E5%9C%A8%E8%AF%B7%E6%B1%82%E5%AE%9E%E4%BD%93%E4%B8%AD%E5%8F%91%E9%80%81%E7%BB%99%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E8%BF%99%E4%B8%AA%E8%BF%87%E7%A8%8B%E5%AF%B9%E7%94%A8%E6%88%B7%E6%98%AF%E4%B8%8D%E5%8F%AF%E8%A7%81%E7%9A%84">http://127.0.0.1/Test/login.action?name=admin&amp;password=admin，这个过程用户是可见的；post传输数据通过Http的post机制，将字段与对应值封存在请求实体中发送给服务器，这个过程对用户是不可见的</a></li>
+<li>Get传输的数据量小，因为受URL长度限制，但效率较高；Post可以传输大量数据，所以上传文件时只能用Post方式；</li>
+<li>get方式只能支持ASCII字符，向服务器传的中文字符可能会乱码。post支持标准字符集，可以正确传递中文字符。</li>
+</ol>
+</li>
+<li><a id="question5">HTTP与HTTPS的区别？</a><ol>
+<li>HTTPS：是以安全为目标的 HTTP 通道，是 HTTP 的安全版。HTTPS 的安全基础是 SSL。SSL 协议位于 TCP&#x2F;IP协议与各种应用层协议之间，为数据通讯提供安全支持。</li>
+<li>HTTP 是超文本传输协议，信息是明文传输，HTTPS 则是具有安全性的 SSL 加密传输协议。</li>
+<li>HTTP和HTTPS 使用完全不同的连接方式，所用的端口不同，前者是80 端口，后者是 443端口</li>
+</ol>
+</li>
+<li><a id="question6">常见HTTP的状态码有哪些？</a><ol>
+<li>200 – 请求成功</li>
+<li>301 – 资源(网页等)被永久转移到其它URL</li>
+<li>404 – 请求的资源(网页等)不存在</li>
+<li>500 – 内部服务器错误</li>
+</ol>
+</li>
+<li><a id="question7">HTTP常见的字段有哪些？</a><ol>
+<li>URI&amp;URL：<ol>
+<li>URI:统一资源标识符，不仅可以标识http，ftp等其他的网络资源</li>
+<li>URL:统一资源定位符</li>
+</ol>
+</li>
+<li>请求头：<ol>
+<li>Accept可接受的响应内容类型（Content-Types）。</li>
+<li>Accept-Charset可接受的字符集</li>
+<li>Accept-Encoding可接受的响应内容的编码方式。</li>
+<li>Accept-Language可接受的响应内容语言列表。</li>
+<li>Accept-Datetime可接受的按照时间来表示的响应内容版本</li>
+<li>Authorization用于表示HTTP协议中需要认证资源的认证信息</li>
+</ol>
+</li>
+<li>请求方法：<ol>
+<li>GET ：获取一个资源，同时参数直接跟在URL后面,url长度受限制2048字节</li>
+<li>POST：不仅可以获取资源，还可以提交资源（譬如上传文件），参数放在请求体中，包大小4G</li>
+<li>HEAD：只要响应头，没有响应体，通常用于测试URL是否存在</li>
+<li>DELETE:删除一个资源</li>
+<li>PUT：通常修改一个资源</li>
+<li>OPTIONS：询问服务器支持的方法</li>
+<li>TRACE：追踪路径</li>
+<li>CONNECT：要求用隧道协议连接</li>
+</ol>
+</li>
+<li>响应头:<ol>
+<li>Content-Length:响应体的长度</li>
+<li>Server：服务器的信息</li>
+<li>Content-Type：内容的类型，text／html，xml等</li>
+<li>Last-Modified ：最有的修改日期，通常跟缓存相关 20151108</li>
+<li>Location: 新的地址</li>
+</ol>
+</li>
+<li>响应码:<ol>
+<li>200 OK 访问正常</li>
+<li>206 跟断点续传相关</li>
+<li>3XX 重定向：Location</li>
+<li>304 缓存有效</li>
+<li>307 临时重定向</li>
+<li>4XX 客户端问题</li>
+<li>401 代表没有权限访问</li>
+<li>404 代表访问的资源不存在</li>
+<li>5XX 通常服务器内部处理的问题</li>
 </ol>
 </li>
 </ol>
 </li>
-<li><p><a id="question6">如何查看分支提交的历史记录？查看某个文件的历史记录呢？</a></p>
-<ol>
-<li>命令git log –number：表示查看当前分支前number个详细的提交历史记录；</li>
-<li>命令git log –number –pretty&#x3D;oneline：在上个命令的基础上进行简化，只显示sha-1码和提交信息；</li>
-<li>命令git reflog –number: 表示查看所有分支前number个简化的提交历史记录；</li>
-<li>命令git reflog –number –pretty&#x3D;oneline：显示简化的信息历史信息；</li>
-<li>如果要查看某文件的提交历史记录，直接在上面命令后面加上文件名即可。</li>
-<li>注意：如果没有number则显示全部提交次数。</li>
-</ol>
-</li>
-<li><p><a id="question7">能不能说一下git fetch和git pull命令之间的区别？</a></p>
-<ol>
-<li>git fetch branch是把名为branch的远程分支拉取到本地；</li>
-<li>而git pull branch是在fetch的基础上，把branch分支与当前分支进行merge；因此pull &#x3D; fetch + merge。</li>
-</ol>
-</li>
-<li><p><a id="question8">使用过git merge和git rebase吗？它们之间有什么区别？</a></p>
-<ol>
-<li>git merge和git rebase都是合并分支的命令。</li>
-<li>git merge branch会把branch分支的差异内容pull到本地，然后与本地分支的内容一并形成一个committer对象提交到主分支上，合并后的分支与主分支一致；</li>
-<li>git rebase branch会把branch分支优先合并到主分支，然后把本地分支的commit放到主分支后面，合并后的分支就好像从合并后主分支又拉了一个分支一样，本地分支本身不会保留提交历史。</li>
-</ol>
-</li>
-<li><p><a id="question9">能说一下git系统中HEAD、工作树和索引之间的区别吗？</a></p>
-<ol>
-<li>HEAD文件包含当前分支的引用（指针）；</li>
-<li>工作树是把当前分支检出到工作空间后形成的目录树，一般的开发工作都会基于工作树进行；</li>
-<li>索引index文件是对工作树进行代码修改后，通过add命令更新索引文件；GIT系统通过索引index文件生成tree对象；</li>
-</ol>
-</li>
-<li><p><a id="question10">之前项目中是使用的GitFlow工作流程吗？它有什么好处？</a></p>
-<ol>
-<li>GitFlow可以用来管理分支。GitFlow工作流中常用的分支有下面几类：<ol>
-<li>master分支</li>
-<li>develop分支</li>
-<li>feature分支</li>
-<li>release分支</li>
-<li>hotfix分支</li>
-</ol>
-</li>
-<li>GitFlow主要工作流程<ol>
-<li>初始化项目为gitflow , 默认创建master分支 , 然后从master拉取第一个develop分支</li>
-<li>从develop拉取feature分支进行编码开发(多个开发人员拉取多个feature同时进行并行开发 , 互不影响)</li>
-<li>feature分支完成后 , 合并到develop(不推送 , feature功能完成还未提测 , 推送后会影响其他功能分支的开发)；合并feature到develop , 可以选择删除当前feature , 也可以不删除。但当前feature就不可更改了，必须从release分支继续编码修改</li>
-<li>从develop拉取release分支进行提测 , 提测过程中在release分支上修改BUG</li>
-<li>release分支上线后 , 合并release分支到develop&#x2F;master并推送；合并之后，可选删除当前release分支，若不删除，则当前release不可修改。线上有问题也必须从master拉取hotfix分支进行修改；</li>
-<li>上线之后若发现线上BUG , 从master拉取hotfix进行BUG修改；</li>
-<li>hotfix通过测试上线后，合并hotfix分支到develop&#x2F;master并推送；合并之后，可选删除当前hotfix ，若不删除，则当前hotfix不可修改，若补丁未修复，需要从master拉取新的hotfix继续修改；</li>
-<li>当进行一个feature时 , 若develop分支有变动 , 如其他开发人员完成功能并上线 , 则需要将完成的功能合并到自己分支上，即合并develop到当前feature分支；</li>
-<li>当进行一个release分支时 , 若develop分支有变动 , 如其他开发人员完成功能并上线 , 则需要将完成的功能合并到自己分支上，即合并develop到当前release分支 (!!! 因为当前release分支通过测试后会发布到线上 , 如果不合并最新的develop分支 , 就会发生丢代码的情况)；</li>
-<li>GitFlow的好处:为不同的分支分配一个明确的角色，并定义分支之间如何交互以及什么时间交互；可以帮助大型项目理清分支之间的关系，简化分支的复杂度。</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p><a id="question11">使用过git cherry-pick，有什么作用？</a></p>
-<ol>
-<li>命令git cherry-pick可以把branch A的commit复制到branch B上。</li>
-<li>在branch B上进行命令操作：<ol>
-<li>复制单个提交：git cherry-pick commitId</li>
-<li>复制多个提交：git cherry-pick commitId1…commitId3</li>
-<li>注意：复制多个提交的命令不包含commitId1.</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p><a id="question12">git跟其他版本控制器有啥区别？</a></p>
-<ol>
-<li>GIT是分布式版本控制系统，其他类似于SVN是集中式版本控制系统。</li>
-<li>分布式区别于集中式在于：每个节点的地位都是平等，拥有自己的版本库，在没有网络的情况下，对工作空间内代码的修改可以提交到本地仓库，此时的本地仓库相当于集中式的远程仓库，可以基于本地仓库进行提交、撤销等常规操作，从而方便日常开发。</li>
-<li></li>
-</ol>
-</li>
-<li><p><a id="question13">我们在本地工程常会修改一些配置文件，这些文件不需要被提交，而我们又不想每次执行git status时都让这些文件显示出来，我们该如何操作？</a></p>
-<ol>
-<li>touch .gitignore<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">$ vim <span class="hljs-string">.gitignore</span><br>$ cat <span class="hljs-string">.gitignore</span><br><span class="hljs-string">/target/class</span><br><span class="hljs-string">.settings</span><br><span class="hljs-string">.imp</span><br>*<span class="hljs-string">.ini</span><br></code></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p><a id="question14">如何把本地仓库的内容推向一个空的远程仓库？</a></p>
-</li>
-<li><p><a id="question15">git submodule</a></p>
-<ol>
-<li>Git 工具的 submodule 功能就是建立了当前项目与子模块之间的依赖关系：子模块路径、子模块的远程仓库、子模块的版本号。</li>
-<li>当项目比较复杂，部分代码希望独立为子模块进行版本控制时，可以使用 git submodule 功能。</li>
-<li>使用 git submodule 功能时，主项目仓库并不会包含子模块的文件，只会保留一份子模块的配置信息及版本信息，作为主项目版本管理的一部分。</li>
-<li>一个有用的场景是：当项目依赖并跟踪一个开源的第三方库时，将第三方库设置为submodule。</li>
-</ol>
-</li>
+<li><a id="question8">三次握手与四次挥手</a></li>
 </ol>
 
                 
@@ -440,8 +401,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>git</div>
-      <div>https://easywz.github.io/2024/03/01/gitInterviewQuestion/</div>
+      <div>http</div>
+      <div>https://easywz.github.io/2024/03/04/httpInterviewQuestion/</div>
     </div>
     <div class="license-meta">
       
@@ -453,7 +414,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月1日</div>
+          <div>2024年3月4日</div>
         </div>
       
       
@@ -485,18 +446,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/04/httpInterviewQuestion/" title="http">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">http</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/29/webpackInterviewQuestion/" title="webpack">
-                        <span class="hidden-mobile">webpack</span>
+                      <a href="/2024/03/01/gitInterviewQuestion/" title="git">
+                        <span class="hidden-mobile">git</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
