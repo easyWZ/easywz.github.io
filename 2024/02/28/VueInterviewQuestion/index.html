@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/interview.jpeg">
 <meta property="article:published_time" content="2024-02-28T01:54:31.000Z">
-<meta property="article:modified_time" content="2024-02-28T09:44:44.054Z">
+<meta property="article:modified_time" content="2024-03-05T05:22:50.350Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/interview.jpeg">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          9.8k 字
+          13k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          82 分钟
+          106 分钟
         
       </span>
     
@@ -326,29 +326,29 @@
 <li>SSR解决了什么问题?有做过SSR吗?你是怎么做的?</li>
 <li>说一下在 Vue2.x 中如何检测数组的变化？</li>
 <li>如何让 CSS 值在当前的组件中起作用(scoped及其原理</li>
-<li>scoped 是如何实现样式穿透的？</li>
+<li><a href="#scoped">scoped 是如何实现样式穿透的？</a></li>
 <li>Vue 中如何进行组件的使用？Vue 如何实现全局组件的注册？</li>
 <li>构建 vue-cli 工程都用到了哪些技术？他们的作用分别是什么？</li>
 <li>vue-cli 工程常用的 npm 命令有哪些？</li>
-<li>nextTick 的作用是什么？他的实现原理是什么？</li>
+<li><a href="#nextTick">nextTick 的作用是什么？他的实现原理是什么？</a></li>
 <li>说一下 Vue SSR 的实现原理</li>
 <li>说一下 Vue 的 computed 的实现原理</li>
 <li>说一下 Vue complier 的实现原理是什么样的？</li>
 <li>vue 如何快速定位那个组件出现性能问题的</li>
 <li>Vue 与 Angular 以及 React 的区别是什么？</li>
-<li>说一下 watch 与 computed 的区别是什么？以及他们的使用场景分别是什么？</li>
+<li><a href="#watchcomputed">说一下 watch 与 computed 的区别是什么？以及他们的使用场景分别是什么？</a></li>
 <li>说一下 ref 的作用是什么？</li>
 <li>说一下你知道的 vue 修饰符都有哪些？</li>
 <li>如何实现 vue 项目中的性能优化？</li>
-<li>Vue.extend 和 Vue.component 的区别是什么？</li>
+<li><a href="extend">Vue.extend 和 Vue.component 的区别是什么？</a></li>
 <li>vue 中的 spa 应用如何优化首屏加载速度?</li>
 <li>移动端如何实现一个比较友好的 header 组件</li>
 <li>既然 Vue 通过数据劫持可以精准探测数据变化，为什么还需要虚拟 DOM 进行 diff 监测差异 ？</li>
 <li>Vue 为什么没有类似于 React 中 shouldComponentUpdate 的生命周期？</li>
-<li>你的接口请求一般放在哪个生命周期中？为什么要这样做？</li>
-<li>说一下你对 vue 事件绑定原理的理解？</li>
+<li><a href="#question53">你的接口请求一般放在哪个生命周期中？为什么要这样做？</a></li>
+<li><a href="#question54">说一下你对 vue 事件绑定原理的理解？</a></li>
 <li>说一下 vue 模版编译的原理是什么</li>
-<li>delete 和 Vue.delete 删除数组的区别是什么？</li>
+<li><a href="#question56">delete 和 Vue.delete 删除数组的区别是什么？</a></li>
 <li>v-on 可以实现监听多个方法么？</li>
 <li>vue 的数据为什么频繁变化但只会更新一次？</li>
 <li>说一下 vue 中 computed 和 methods 的区别是什么？</li>
@@ -427,7 +427,7 @@
 </ol>
 </li>
 <li>源码体积<ol>
-<li>相比vue2，vue3整体体积变小了，除了移出一些不常用的API，最重要的是Tree shanking。</li>
+<li>相比vue2，vue3整体体积变小了，除了移出一些不常用的API，最重要的是Tree shaking。</li>
 <li>任何一个函数，如ref，reavtived，computed等，仅仅在用到的时候才打包，没用到的模块都被摇掉，打包的整体体积变小。</li>
 </ol>
 </li>
@@ -710,6 +710,122 @@
 </ol>
 </li>
 </ol>
+</li>
+<li><p><a id="scoped">scoped 是如何实现样式穿透的？</a></p>
+<ol>
+<li>在vue文件中的style标签上，有一个特殊的属性：scoped。</li>
+<li>当一个style标签拥有scoped属性时，它的CSS样式就只能作用于当前的组件，通过该属性，可以使得组件之间的样式不互相污染。</li>
+<li>原理：<ol>
+<li>为组件实例生成一个唯一标识，给组件中的每个标签对应的dom元素添加一个标签属性，data-v-xxxx</li>
+<li>给<style scoped>中的每个选择器的最后一个选择器添加一个属性选择器，原选择器[data-v-xxxx]，如：原选择器为.container #id div，则更改后选择器为.container #id div[data-v-xxxx]</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><a id="nextTick">nextTick 的作用是什么？他的实现原理是什么？</a></p>
+<ol>
+<li>Vue 在更新 DOM 时是异步执行的，当数据发生变化，Vue 将开启一个异步更新队列，视图需要等队列中所有数据变化完成之后，再统一进行更新</li>
+<li>this.$nextTick() 的作用就是可以将里面的回调函数延迟下次 DOM 更新循环结束之后执行。在修改数据之后立即使用这个方法，获取更新后的 DOM。</li>
+<li>更新原理<ol>
+<li>vue 里面用到了观察者模式，默认组件渲染的时候，会创建一个 watcher，并且渲染视图</li>
+<li>当渲染视图的时候，会取 data 中的数据，触发属性的 get 方法，就让这个属性的 dep 记录watcher（注意：每一个data属性都对应一个dep）</li>
+<li>同时让 watcher 也记住 dep ，dep 和 watcher 是多对多的关系，因为一个属性可能对应多个视图，一个视图对应多个数据</li>
+<li>如果数据发生变化，也就是在 set 的时候，会触发 dep.notify() ，通知 dep 中存放的 watcher 去更新</li>
+<li>每次更新数据都会同步调用 watcher 中 update 方法，此时就可以将更新的逻辑缓存起来，等会同步更新数据的逻辑执行完毕后，依次调用 (去重的逻辑)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><a id="watchcomputed">watch跟computed的区别</a></p>
+<ol>
+<li>功能上：computed是计算属性，watch是监听一个值的变化，然后执行对应的回调。</li>
+<li>是否调用缓存：computed中的函数所依赖的属性没有发生变化，那么调用当前的函数的时候会从缓存中读取，而watch在每次监听的值发生变化的时候都会执行回调。</li>
+<li>是否调用return：computed中的函数必须要用return返回，watch中的函数不是必须要用return。</li>
+<li>computed默认第一次加载的时候就开始监听；watch默认第一次加载不做监听，如果需要第一次加载做监听，添加immediate属性，设置为true（immediate:true）</li>
+<li>使用场景：computed—-当一个属性受多个属性影响的时候，使用computed—–购物车商品结算。watch–当一条数据影响多条数据的时候，使用watch—–搜索框.</li>
+</ol>
+</li>
+<li><p><a id="extend">Vue.extend 和 Vue.component 的区别是什么？</a></p>
+<ol>
+<li>extend和component作用基本相同，区别在于我们需不需要使用组件名称，不需要使用组件名称时，用extend会简便些；需要使用新的标签来定义组件时，那么就用component去创建组件;</li>
+</ol>
+</li>
+<li><p><a id="ssr">SSR</a></p>
+<ol>
+<li>服务端渲染 SSR (Server-Side Rendering)，是指在服务端完成页面的html 拼接处理， 然后再发送给浏览器，将不具有交互能力的html结构绑定事件和状态，在客户端展示为具有完整交互能力的应用程序。</li>
+<li>适用场景<ol>
+<li>需更好的支持 SEO 优势在于同步。</li>
+<li>需更快的到达时间 优势在于慢网络和运行缓慢的设备场景。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><a id="question51">既然Vue通过数据劫持可以精准探测数据变化,为什么还需要虚拟 DOM进⾏diff检测差异?</a></p>
+<ol>
+<li>现在前端框架有两种数据变动侦测方式，一种是pull，一种是push.</li>
+<li>pull 的代表是React ，在进行 setState 操作后显示更新数据，React 会使用 diff 算法一层层找出差异，然后 patch 到 DOM 树上，React 一开始不知道那里变化了，只是知道变化了，然后暴力进行查找那变化了，另一个代表是 Angular 的脏检查。</li>
+<li>Vue 的响应式系统就是 Push 的代表，Vue 初始化的时候就会对 data 的数据进行依赖收集，因此Vue能实时知道那里发生了变化，一般绑定的细粒度过高，会生成大量的Watcher 实例，则会造成过大的内存和依赖追踪的开销，而细粒度过低无法侦测到变化。因此，Vue采用的是中等细粒度的方案，只针对组件级别的进行响应式监听也就是push，这样可以知道那个组件发生了变化，再对组件进行diff算法找到具体变化的位置，这是pull操作，vue是pull + push 结合进行变化侦测的。</li>
+</ol>
+</li>
+<li><p><a id="question53">Vue请求是在Created还是Mounted？</a></p>
+<ol>
+<li>常规生命周期：<ol>
+<li>beforeCreate  &#x2F;&#x2F; 这时候data，methods函数未挂载</li>
+<li>created       &#x2F;&#x2F; data已挂载、methods函数已挂载</li>
+<li>beforeMount   &#x2F;&#x2F; 相关的render函数首次被调用,dom未挂载</li>
+<li>mounted       &#x2F;&#x2F; dom已渲染挂载完成</li>
+<li>beforeUpdate</li>
+<li>updated</li>
+<li>beforeDestroy</li>
+<li>destroyed</li>
+</ol>
+</li>
+<li>如果我们的请求不需要获取&#x2F;借助&#x2F;依赖&#x2F;改变DOM，这时请求可以放在Created</li>
+<li>反之则可以放在Mounted里</li>
+</ol>
+</li>
+<li><p><a id="question54">vue中的事件绑定原理</a></p>
+<ol>
+<li>原生的事件绑定，原生 dom 事件的绑定,采用的是 addEventListener 实现。</li>
+<li>组件的事件绑定，组件绑定事件采用的是 $on 方法 。<ol>
+<li>给组件绑定一个事件，有两种绑定方法<ol>
+<li>一种@click.native，这个绑定的就是原生事件</li>
+<li>另一种@click，这个绑定的就是组件自定义事件</li>
+<li>为什么组件要加native？因为组件最终会把nativeOn属性放到on的属性中去，这个on会单独处理</li>
+<li>组件中的nativeOn 等价于 普通元素on，组件on会单独处理</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><a id="question56">delete和Vue.delete的区别</a></p>
+<ol>
+<li>delete只是被删除的元素变成了 empty&#x2F;undefined 其他的元素的键值还是不变。数组长度也不变。（逻辑删）</li>
+<li>Vue.delete是直接删除该元素，长度发生变化。（物理删）</li>
+</ol>
+</li>
+<li><p><a id="question65">自定义指令有哪些生命周期？</a></p>
+<ol>
+<li>bind:只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个绑定时执行一次的初始化动作。</li>
+<li>inserted:被绑定元素插入父节点时调用（父节点存在即可调用，不必存在于document中）。</li>
+<li>update:被绑定于元素所在的模板更新时调用，而无论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新。</li>
+<li>componentUpdated:被绑定元素所在模板完成一次更新周期时调用。</li>
+<li>unbind:只调用一次，指令与元素解绑时调用。</li>
+</ol>
+</li>
+<li><p><a id="question67">组件中写 name 选项有哪些好处</a></p>
+<ol>
+<li>增加 name 属性，可以实现组件递归调⽤自身，调用的时候用的就是 name 名字</li>
+<li>可以表示组件的具体名称，⽅便调试和查找对应的组件 比如说 keep-alive 的 include 和 exclude 就是通过组件的 name 属性区分谁缓存谁不缓存的</li>
+</ol>
+</li>
+<li><p><a id="question66">为什么vue采用异步渲染</a></p>
+<ol>
+<li>因为不采用异步更新，在每次更新数据都会对当前组件进行重新渲染。所以为了性能考虑，vue 会在本轮数据更新后，再去异步更新视图。</li>
+</ol>
+</li>
+<li><p><a id="question2">&#x3D;</a></p>
 </li>
 </ol>
 
