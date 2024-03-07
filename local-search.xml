@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Vue nextTick 原理</title>
+    <link href="/2024/03/06/VueNextTick/"/>
+    <url>/2024/03/06/VueNextTick/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://juejin.cn/post/7226210789376065594">资料一</a></p><ol><li>作用<ol><li>无论是在 Vue2 还是 Vue3 中，nextTick 都是用来处理 DOM 更新完毕后执行回调函数的方法。</li></ol></li><li>原理<ol><li><strong>Vue2 中的 nextTick</strong><ol><li>在 Vue2 中，nextTick 的实现基于浏览器的异步任务队列和微任务队列。</li><li><strong>异步任务队列</strong><ol><li>在浏览器中，每个宏任务结束后会检查微任务队列，如果有任务则依次执行。当所有微任务执行完成后，才会执行下一个宏任务。因此可以通过将任务作为微任务添加到微任务队列中，来确保任务在所有宏任务执行完毕后立即执行。</li><li>而使用 setTimeout 可以将任务添加到异步任务队列中，在下一轮事件循环中执行。</li><li>在 Vue2 中，如果没有指定执行环境，则会优先使用 Promise.then &#x2F; MutationObserver，否则使用 setTimeout。</li></ol></li><li><strong>宏任务和微任务</strong><ol><li>在 Vue2 中，可以通过设置 useMacroTask 来使 nextTick 方法使用宏任务或者微任务。</li><li>Vue2 中默认使用微任务，在没有原生 Promise 和 MutationObserver 的情况下，才会改用 setTimeout。</li></ol></li><li>总结<ol><li>在 Vue2 中，nextTick 的实现原理基于浏览器的异步任务队列和微任务队列。Vue2 默认使用微任务，在没有原生 Promise 和 MutationObserver 的情况下才会改用 setTimeout。</li></ol></li></ol></li><li><strong>Vue3 中的 nextTick</strong><ol><li>在 Vue3 中，nextTick 的实现有了较大变化，主要是为了解决浏览器对 Promise 的缺陷和问题。</li><li><strong>Promise 在浏览器中的问题</strong><ol><li>在浏览器中，Promise 有一个缺陷：如果 Promise 在当前事件循环中被解决，那么在 then 回调函数之前添加的任务将不能在同一个任务中执行。</li><li>这是因为 Promise 虽然是微任务，但是需要等到当前宏任务结束才能执行。</li></ol></li><li><strong>Vue3 中解决 Promise 缺陷的方法</strong><ol><li>在 Vue3 中，通过使用 MutationObserver 和 Promise.resolve().then() 来解决 Promise 在浏览器中的缺陷。</li><li>在 Vue3 中，nextTick 的实现原理基于MutationObserver 和 Promise.resolve().then()，通过 MutationObserver 监测 DOM 变化，在下一个微任务中执行回调函数。</li><li>如果当前浏览器不支持原生 Promise，则使用 setTimeout 来模拟 Promise 的行为，并在回调函数执行前添加一个空的定时器来强制推迟执行（解决 iOS 中 setTimeout 在非激活标签页中的问题）。</li><li>如果需要等待所有回调函数执行完成，则可以通过返回一个 Promise 对象来实现。</li></ol></li><li>总结<ol><li>在 Vue3 中，nextTick 的实现原理基于 MutationObserver 和 Promise.resolve().then()。如果浏览器不支持原生 Promise，则使用 setTimeout 来模拟 Promise 的行为，并在回调函数执行前添加一个空的定时器来强制推迟执行。</li></ol></li></ol></li></ol></li><li>结论<ol><li>无论是在 Vue2 还是 Vue3 中，nextTick 都是用来处理 DOM 更新完毕后执行回调函数的方法。</li><li><strong>在 Vue2 中，nextTick 的实现基于浏览器的异步任务队列和微任务队列</strong></li><li><strong>Vue3 中，为了解决浏览器对 Promise 的缺陷和问题，使用 MutationObserver 和 Promise.resolve().then() 来实现</strong></li><li><strong>Vue3 中的 nextTick 方法也支持返回 Promise 对象，方便等待所有回调函数执行完成后再进行下一步操作。</strong></li><li>注意<ol><li>尽管 Vue3 中使用了 MutationObserver 和 Promise.resolve().then() 来解决 Promise 在浏览器中的缺陷，但在某些情况下（例如非激活标签页中），仍然可能会出现问题。因此，在实际使用中，还需要根据具体情况选择合适的方案。</li></ol></li></ol></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vue组件通讯</title>
     <link href="/2024/03/06/VueComponmentCommmunication/"/>
     <url>/2024/03/06/VueComponmentCommmunication/</url>
