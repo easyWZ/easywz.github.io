@@ -16,23 +16,23 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="js事件循环机制">
+    <meta name="description" content="---">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JsEventLoop">
-<meta property="og:url" content="https://easywz.github.io/2024/03/07/JsEventLoop/index.html">
+<meta property="og:title" content="ReactQuestion">
+<meta property="og:url" content="https://easywz.github.io/2024/03/13/ReactQuestion/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
-<meta property="og:description" content="js事件循环机制">
+<meta property="og:description" content="---">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/interview.jpeg">
-<meta property="article:published_time" content="2024-03-07T05:43:38.000Z">
-<meta property="article:modified_time" content="2024-03-07T07:08:40.869Z">
+<meta property="article:published_time" content="2024-03-13T14:40:26.000Z">
+<meta property="article:modified_time" content="2024-03-15T05:30:26.307Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/interview.jpeg">
   
   
   
-  <title>JsEventLoop - WZ&#39;s blog</title>
+  <title>ReactQuestion - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="JsEventLoop"></span>
+            <span id="subtitle" data-typed-text="ReactQuestion"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-07 13:43" pubdate>
-          2024年3月7日 下午
+        <time datetime="2024-03-13 22:40" pubdate>
+          2024年3月13日 晚上
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          4.8k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          16 分钟
+          40 分钟
         
       </span>
     
@@ -269,74 +269,179 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JsEventLoop</h1>
+            <h1 id="seo-header">ReactQuestion</h1>
             
             
               <div class="markdown-body">
                 
-                <ol>
-<li>经典面试题<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;1&#x27;</span>)<br><br>setTimeout(<span class="hljs-keyword">function</span> <span class="hljs-title function_">callback</span>(<span class="hljs-params"></span>)&#123;<br>	<span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;2&#x27;</span>)<br>&#125;, <span class="hljs-number">1000</span>)<br><br><span class="hljs-keyword">new</span> Promise(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;3&#x27;</span>)<br>    resolve()<br>&#125;)<br>.then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;4&#x27;</span>);<br>&#125;)<br><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;5&#x27;</span>)<br></code></pre></td></tr></table></figure></li>
-<li>上述最终执行结果为<code>1 3 5 4 2</code> Promise函数是同步执行，.then方法为异步执行</li>
-<li>JavaScript是单线程<ol>
-<li>JavaScript是一种单线程的编程语言，意思就是同一时间段只能做一件事，所有任务都需要排队依次完成；</li>
-<li>为什么JavaScript不能有多个线程呢？<ol>
-<li>作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准；</li>
+                <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/beifeng1996/p/16698601.html">资料一</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jiang7701037/article/details/112553013">资料二</a></p>
+<ol>
+<li>在构造函数调用super并将props作为参数传入的作用<ol>
+<li>在构造函数里调用super的目的是：保证子类（组件里）有this；<ol>
+<li>在ES6中，super()函数就是父类的构造函数。所以，在react里定义类组件时，调用super就是在调用React.Component的构造函数。</li>
+</ol>
+</li>
+<li>调用super函数时，把props传入的目的是，保证this有属性props；即：在子类（组件）里能够使用this.props。<ol>
+<li>即： 执行 super(props) 是为了让 React.Component 初始化 this.props。</li>
+</ol>
+</li>
+<li>组件的super里如果不传递props<ol>
+<li>可以在其它函数里使用this.props，因为，组件的构造函数会再次设置props的</li>
+<li>在构造函数里，this.props是undefined。即：this.props.属性名会报错。因为，React.Component的构造函数没有增加props属性。</li>
 </ol>
 </li>
 </ol>
 </li>
-<li>同步任务和异步任务<ol>
-<li>单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。</li>
-<li>JavaScript开发人员意识到，为了不影响主线程正常运行，就把那些耗时的时间（比如定时器，Ajax操作从网络读取数据等）任务挂起来，依次的放进一个任务队列中，等主线程的任务执行完毕后，再回过来去继续执行队列中的任务；</li>
-<li>于是，任务就可以分成两种：<ol>
-<li>同步任务：在主线程上排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务；</li>
-<li>异步任务：不进入主线程、而进入”任务队列”（task queue）的任务，只有”任务队列”通知主线程，某个异步任务可以执行了，该任务才会进入主线程执行。</li>
+<li>虚拟 DOM 的引入与直接操作原生 DOM 相比，哪一个效率更高，为什么<ol>
+<li>虚拟DOM相对原生的DOM不一定是效率更高，如果只修改一个按钮的文案，那么虚拟 DOM 的操作无论如何都不可能比真实的 DOM 操作更快。在首次渲染大量DOM时，由于多了一层虚拟DOM的计算，虚拟DOM也会比innerHTML插入慢。它能保证性能下限，在真实DOM操作的时候进行针对性的优化时，还是更快的。所以要根据具体的场景进行探讨。</li>
+<li>在整个 DOM 操作的演化过程中，其实主要矛盾并不在于性能，而在于开发者写得爽不爽，在于研发体验&#x2F;研发效率。虚拟 DOM 不是别的，正是前端开发们为了追求更好的研发体验和研发效率而创造出来的高阶产物。虚拟 DOM 并不一定会带来更好的性能，React 官方也从来没有把虚拟 DOM 作为性能层面的卖点对外输出过。<strong>虚拟 DOM 的优越之处在于，它能够在提供更爽、更高效的研发模式（也就是函数式的 UI 编程方式）的同时，仍然保持一个还不错的性能。</strong></li>
+</ol>
+</li>
+<li>Redux内部原理 内部怎么实现dispstch一个函数的<br> 1. </li>
+<li>如何有条件地向 React 组件添加属性？<ol>
+<li><code>&lt;input type=&quot;text&quot; disabled=&#123;disabled&#125; required=&#123;required&#125; /&gt;;</code></li>
+<li><code>&lt;div value=&quot;foo&quot; &#123;...(condition &amp;&amp; &#123; disabled: true &#125;)&#125; /&gt;;</code></li>
+</ol>
+</li>
+<li>useEffect(fn, []) 和 componentDidMount 有什么差异<ol>
+<li>useEffect第二个参数[]如何影响fn的执行？换句话说，它的第二个参数是如何影响fiber创建Passive Effect（useEffect的回调）的？<ol>
+<li>不包含第二个参数，Mount时，Update时，每次render时都会创建一个Passive Effect</li>
+<li>包含一个空数组[]作为依赖项，它会在mount时，创建Passive Effect</li>
+<li>包含一个依赖项[dep]，它会在mount时，dep依赖项变化时，创建Passive Effect</li>
+<li>对于classComponent，会在mount时创建Placement的Effect</li>
+<li>render阶段到commit阶段，传递的时包含不同fiber节点的effect的链表</li>
+<li>commit阶段时将状态变化（Effect）渲染在视图中</li>
+<li>渲染视图前，beforeMutation阶段</li>
+<li>渲染视图中，mutation阶段，Placement会执行appendChild，DOM节点插入到视图中</li>
+<li>渲染视图后，layout阶段，调用componentDidMount</li>
+</ol>
+</li>
+<li>fn和componentDidMount的执行时机分别是什么？<ol>
+<li>useEffect是commit完成后异步调用</li>
+<li>componentDidMount是commit阶段完成视图更新（mutation阶段）后，在layout阶段同步调用</li>
+<li>useLayoutEffect和componentDidMount调用时机一致，也是在layout阶段同步调用</li>
+</ol>
+</li>
+<li>所有与视图相关的操作都有对应的Effect：<ol>
+<li>插入Dom元素，Placemenet Effect</li>
+<li>更新Dom元素，Update Effect</li>
+<li>删除Dom元素，Deletion Effect</li>
+<li>更新Ref属性，Ref Effect</li>
+<li>包含useEffect回调执行，Passive Effect</li>
 </ol>
 </li>
 </ol>
 </li>
-<li>event loop（事件循环）<ol>
-<li>event loop（事件循环）机制 过程<ol>
-<li>所有同步任务都在主线程上执行，形成一个执行栈（调用栈）；</li>
-<li>主线程之外，还存在一个‘任务队列’（task queue），浏览器中的各种 Web API 为异步的代码提供了一个单独的运行空间，当异步的代码运行完毕以后，会将代码中的回调送入到 任务队列中（队列遵循先进先出得原则）</li>
-<li>一旦主线程的栈中的所有同步任务执行完毕后，调用栈为空时系统就会将队列中的回调函数依次压入调用栈中执行，当调用栈为空时，仍然会不断循环检测任务队列中是否有代码需要执行；</li>
+<li>redux中的connect用法介绍及原理解析</li>
+<li>React 中 key 的作用是什么？<ol>
+<li>Keys 是 React 用于追踪哪些列表中元素被修改、被添加或者被移除的辅助标识</li>
+<li>在 React 中渲染集合时，向每个重复的元素添加关键字对于帮助React跟踪元素与数据之间的关联非常重要。key 应该是唯一ID，最好是 UUID 或收集项中的其他唯一字符串</li>
+<li>在集合中添加和删除项目时，不使用键或将索引用作键会导致奇怪的行为。</li>
 </ol>
 </li>
-</ol>
-</li>
-<li>宏任务和微任务<ol>
-<li>macrotask（宏任务） 和 microtask（微任务）</li>
-<li>浏览器中常用的宏任务和微任务：<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>事件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>宏任务</td>
-<td>setTimeout 、setInterval 、UI rendering</td>
-</tr>
-<tr>
-<td>微任务</td>
-<td>promise 、requestAnimationFrame</td>
-</tr>
-</tbody></table>
-</li>
-<li>异步任务既然分为宏任务和微任务，则队列肯定也分为宏任务队列和微任务队列；</li>
-<li>当宏任务和微任务都处于 任务队列（Task Queue） 中时，微任务的优先级大于宏任务，即先将微任务执行完，再执行宏任务；</li>
-<li>执行机制过程如下：<ol>
-<li>第一步： 主线程执行同步任务的同时，把一些异步任务放入‘任务队列’（task queue）中，等待主线程的调用栈为空时，再依次从队列出去任务去执行；</li>
-<li>第二步：检测任务队列中的微队列是否为空，若不为空，则取出一个微任务入栈执行；然后继续执行第2步；如果微队列为空，则开始取出宏队列中的一个宏任务执行；</li>
-<li>第三步：执行完宏队列中的一个宏任务后，会继续检测微队列是否为空，如果有新插入的任务，这继续执行第二步；如果微队列为空，则继续执行宏队列中的下一个任务，然后再继续循环执行第三步；</li>
+<li>React 性能优化在哪个生命周期？它优化的原理是什么？<ol>
+<li>react的父级组件的render函数重新渲染会引起子组件的render方法的重新渲染。但是，有的时候子组件的接受父组件的数据没有变动。子组件render的执行会影响性能，这时就可以使用shouldComponentUpdate来解决这个问题。 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">shouldComponentUpdate(nexrProps) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.props.num === nexrProps.num) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>shouldComponentUpdate提供了两个参数nextProps和nextState，表示下一次props和一次state的值，当函数返回false时候，render()方法不执行，组件也就不会渲染，返回true时，组件照常重渲染。此方法就是拿当前props中值和下一次props中的值进行对比，数据相等时，返回false，反之返回true。</li>
+<li>需要注意，在进行新旧对比的时候，是浅对比，也就是说如果比较的数据时引用数据类型，只要数据的引用的地址没变，即使内容变了，也会被判定为true。<ol>
+<li>面对这个问题，可以使用如下方法进行解决：<ol>
+<li>使用setState改变数据之前，先采用ES6中assgin进行拷贝，但是assgin只深拷贝的数据的第一层，所以说不是最完美的解决办法</li>
+<li>使用JSON.parse(JSON.stringfy())进行深拷贝，但是遇到数据为undefined和函数时就会错。</li>
 </ol>
 </li>
 </ol>
 </li>
 </ol>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs arcade">setTimeout( <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;<br>  <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;1&#x27;</span>)<br>  Promise.resole().then( <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;2&#x27;</span>)<br>  &#125;)<br>&#125;,<span class="hljs-number">0</span>)<br><br><span class="hljs-keyword">new</span> Promise(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;3&#x27;</span>)<br>    resolve()<br>&#125;)<br>.then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;4&#x27;</span>);<br>&#125;)<br><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;5&#x27;</span>)<br></code></pre></td></tr></table></figure>
-<p>结果为 35412
-    </p>
+</li>
+<li>react性能优化是在哪个生命周期函数中<ol>
+<li>在shouldComponentUpdate 这个方法中，这个方法主要用来判断是否需要调用render方法重绘DOM</li>
+<li>因为DOM的描绘非常消耗性能，如果能够在shouldComponentUpdate方法中能写出更优化的 diff算法，极大的提高性能</li>
+</ol>
+</li>
+<li>react 父子传值<ol>
+<li>父传子——在调用子组件上绑定，子组件中获取this.props</li>
+<li>子传父——引用子组件的时候传过去一个方法，子组件通过this.props.methed()传过去参数</li>
+</ol>
+</li>
+<li>React的事件和普通的HTML事件有什么不同？<ol>
+<li>区别：<ol>
+<li>对于事件名称命名方式，原生事件为全小写，react 事件采用小驼峰；</li>
+<li>对于事件函数处理语法，原生事件为字符串，react 事件为函数；</li>
+<li>react 事件不能采用 return false 的方式来阻止浏览器的默认行为，而必须要地明确地调用preventDefault()来阻止默认行为。</li>
+</ol>
+</li>
+<li>合成事件是 react 模拟原生 DOM 事件所有能力的一个事件对象，其优点如下：<ol>
+<li>兼容所有浏览器，更好的跨平台；</li>
+<li>将事件统一存放在一个数组，避免频繁的新增与删除（垃圾回收）。</li>
+<li>方便 react 统一管理和事务机制。</li>
+</ol>
+</li>
+<li>事件的执行顺序为原生事件先执行，合成事件后执行，合成事件会冒泡绑定到 document 上，所以尽量避免原生事件与合成事件混用，如果原生事件阻止冒泡，可能会导致合成事件不执行，因为需要冒泡到document 上合成事件才会执行。</li>
+</ol>
+</li>
+<li>对 React Hook 的理解，它的实现原理是什么<ol>
+<li>React-Hooks 是 React 团队在 React 组件开发实践中，逐渐认知到的一个改进点，这背后其实涉及对类组件和函数组件两种组件形式的思考和侧重。<ol>
+<li>类组件： 所谓类组件，就是基于 ES6 Class 这种写法，通过继承 React.Component 得来的 React 组件。<ol>
+<li>React 类组件内部预置了相当多的“现成的东西”等着我们去调度&#x2F;定制，state 和生命周期就是这些“现成东西”中的典型。要想得到这些东西，难度也不大，只需要继承一个 React.Component 即可。</li>
+<li>这也是类组件的一个不便，它太繁杂了，对于解决许多问题来说，编写一个类组件实在是一个过于复杂的姿势。复杂的姿势必然带来高昂的理解成本，这也是我们所不想看到的。除此之外，由于开发者编写的逻辑在封装后是和组件粘在一起的，这就使得类组件内部的逻辑难以实现拆分和复用。</li>
+</ol>
+</li>
+<li>函数组件：函数组件就是以函数的形态存在的 React 组件。早期并没有 React-Hooks，函数组件内部无法定义和维护 state，因此它还有一个别名叫“无状态组件”<ol>
+<li>相比于类组件，函数组件肉眼可见的特质自然包括轻量、灵活、易于组织和维护、较低的学习成本等。</li>
+</ol>
+</li>
+<li>区别<ol>
+<li>类组件需要继承 class，函数组件不需要；</li>
+<li>类组件可以访问生命周期方法，函数组件不能；</li>
+<li>类组件中可以获取到实例化后的 this，并基于这个 this 做各种各样的事情，而函数组件不可以；</li>
+<li>类组件中可以定义并维护 state（状态），而函数组件不可以；</li>
+</ol>
+</li>
+<li>类组件和函数组件之间，是面向对象和函数式编程这两套不同的设计思想之间的差异<ol>
+<li>而函数组件更加契合 React 框架的设计理念： React 组件本身的定位就是函数，一个输入数据、输出 UI 的函数。</li>
+<li>函数组件就真正地将数据和渲染绑定到了一起。函数组件是一个更加匹配其设计理念、也更有利于逻辑拆分与重用的组件表达形式。</li>
+<li>React-Hooks 是一套能够使函数组件更强大、更灵活的“钩子”。</li>
+<li>函数组件比起类组件少了很多东西，比如生命周期、对 state 的管理等。这就给函数组件的使用带来了非常多的局限性，导致我们并不能使用函数这种形式，写出一个真正的全功能的组件。而React-Hooks 的出现，就是为了帮助函数组件补齐这些（相对于类组件来说）缺失的能力。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Redux 中间件是怎么拿到store 和 action? 然后怎么处理?</li>
+<li>为何React事件要自己绑定this<ol>
+<li>在 React源码中，当具体到某一事件处理函数将要调用时，将调用 invokeGuardedCallback方法。 <figure class="highlight wren"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs wren"><span class="hljs-variable">function</span> <span class="hljs-title function_">invokeGuardedCallback</span>(<span class="hljs-params">name</span>, <span class="hljs-params">func</span>, <span class="hljs-params">a</span>) &#123;<br>      <span class="hljs-title function_">try</span> &#123;<br>        <span class="hljs-title function_">func</span>(<span class="hljs-variable">a</span>);<br>      &#125; <span class="hljs-title function_">catch</span> (<span class="hljs-variable">x</span>) &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-variable">caughtError</span> <span class="hljs-operator">==</span><span class="hljs-operator">=</span> <span class="hljs-literal">null</span>) &#123;<br>          <span class="hljs-variable">caughtError</span> <span class="hljs-operator">=</span> <span class="hljs-variable">x</span>;<br>        &#125;<br>      &#125;<br>    &#125;<br></code></pre></td></tr></table></figure></li>
+<li>事件处理函数是直接调用的，并没有指定调用的组件，所以不进行手动绑定的情况下直接获取到的 this是不准确的，所以我们需要手动将当前组件绑定到 this上</li>
+</ol>
+</li>
+<li>在构造函数调用 super 并将 props 作为参数传入的作用是啥？<ol>
+<li>在调用 super() 方法之前，子类构造函数无法使用this引用，ES6 子类也是如此。将 props 参数传递给 super() 调用的主要原因是在子构造函数中能够通过this.props来获取传入的 props。</li>
+<li>props 的行为只有在构造函数中是不同的，在构造函数之外也是一样的。</li>
+</ol>
+</li>
+<li>React组件的构造函数有什么作用？它是必须的吗？<ol>
+<li>构造函数主要用于两个目的：<ol>
+<li>通过将对象分配给this.state来初始化本地状态</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+</ol>
 
                 
               </div>
@@ -354,8 +459,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JsEventLoop</div>
-      <div>https://easywz.github.io/2024/03/07/JsEventLoop/</div>
+      <div>ReactQuestion</div>
+      <div>https://easywz.github.io/2024/03/13/ReactQuestion/</div>
     </div>
     <div class="license-meta">
       
@@ -367,7 +472,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月7日</div>
+          <div>2024年3月13日</div>
         </div>
       
       
@@ -394,29 +499,6 @@
 
 
 
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2024/03/15/FrontEndBaGuWen/" title="前端八股文">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">前端八股文</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2024/03/06/VueNextTick/" title="Vue nextTick 原理">
-                        <span class="hidden-mobile">Vue nextTick 原理</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
               
             </div>
 
