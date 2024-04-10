@@ -18,21 +18,21 @@
   
     <meta name="description" content="---">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VueAgain">
-<meta property="og:url" content="https://easywz.github.io/2024/03/22/VueAgain/index.html">
+<meta property="og:title" content="DayStudy-2">
+<meta property="og:url" content="https://easywz.github.io/2024/04/10/DayStudy-2/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
 <meta property="og:description" content="---">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
-<meta property="article:published_time" content="2024-03-22T06:23:01.000Z">
-<meta property="article:modified_time" content="2024-04-08T06:42:02.010Z">
+<meta property="article:published_time" content="2024-04-10T08:41:10.000Z">
+<meta property="article:modified_time" content="2024-04-10T14:35:57.274Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
   
   
   
-  <title>VueAgain - WZ&#39;s blog</title>
+  <title>DayStudy-2 - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="VueAgain"></span>
+            <span id="subtitle" data-typed-text="DayStudy-2"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-22 14:23" pubdate>
-          2024年3月22日 下午
+        <time datetime="2024-04-10 16:41" pubdate>
+          2024年4月10日 下午
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          2.9k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          11 分钟
+          24 分钟
         
       </span>
     
@@ -269,46 +269,242 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">VueAgain</h1>
+            <h1 id="seo-header">DayStudy-2</h1>
             
             
               <div class="markdown-body">
                 
-                <ol>
-<li>vue2和vue3区别<ol>
-<li>用组合式api替换选项式api，方便逻辑更加的聚合</li>
-<li>因为改成组合式所以没有this</li>
-<li>生命周期没有create，setup等同create，卸载改成unmount</li>
-<li>vue3中v-if高于v-for优先级</li>
-<li>根实例的创建从new app变成createApp方法</li>
-<li>一些全局注册，比如mixin，注册全局组件，use改成了用app实例调用，而不是vue类调用</li>
-<li>新增了传送门teleport组件</li>
-<li>template模版可以不包在一个根div里</li>
-<li>响应式原理改成了用proxy,解决了数组无法通过下标修改，无法监听到对象属性的新增和删除的问题。也提升了响应式的效率</li>
-<li>vue3并不是完全抛弃了defineProperty，通过reactive定义的响应式数据使用proxy包装出来，而ref还是用的defineProperty去给一个空对象，定义了一个value属性来做的响应式</li>
-<li>组合式api的写法下，源码改成了函数式编程，方便按需引入，因为tree-shaking功能必须配合按需引入写法。所以vue3更好地配合tree-shaking能让打包体积更小</li>
-<li>性能优化，增加了静态节点标记。会标记静态节点，不对静态节点进行比对。从而增加效率。<ol>
-<li>文本内容为变量会标记为1，属性为动态会标记为2，如果静态则不标记跳过比对</li>
+                <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rc411e7D2/">视频资料</a></p>
+<h4 id="react问题"><a href="#react问题" class="headerlink" title="react问题"></a>react问题</h4><ol>
+<li>用户根据不同的权限，查看不同的页面</li>
+<li>react.createclass和extends Component的区别</li>
+<li>react事件与普通事件区别</li>
+<li>受控组件和非受控组件</li>
+<li>为什么useState要使用数组而非对象</li>
+<li>refs</li>
+<li>为什么使用hooks</li>
+<li>降级处理错误边界Error Boundary</li>
+<li>代码分割</li>
+<li>Frapnents</li>
+<li>React高级组件简介</li>
+<li>属性代理props</li>
+<li>属性代理抽象state</li>
+<li>控制逻辑渲染</li>
+<li>实现hoc方式之反向继承</li>
+<li>使用反向继承实现修改返回的react内容</li>
+<li>利用反向继承实现复用性的抽象</li>
+<li>利用反向继承实现传入一个组件，计算得到组件render期间的耗时</li>
+<li>hooks</li>
+<li>hooks之useref</li>
+<li>useEffect</li>
+<li>useLayoutEffect</li>
+<li>useReducer</li>
+<li>usecallback</li>
+<li>自定义hooks</li>
+<li>异步组件</li>
+<li>异步组件用法示例</li>
+<li>什么是react fiber</li>
+<li>手写fiber以及实现fiber</li>
+</ol>
+<h4 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h4><ol>
+<li><p>用户根据不同的权限，查看不同的页面</p>
+<ol>
+<li>js<ol>
+<li>ajax role -&gt; menuList json 展示有权限菜单</li>
 </ol>
 </li>
-<li>vue3不推荐使用mixin进行复用逻辑提取，而是推荐写成hook</li>
-<li>v-model应用于组件时，监听的事件和传递的值改变</li>
-<li>ts更好地配合</li>
+<li>react-router<ol>
+<li>onEnter</li>
+<li><img src="/img/js/10031712740506_.pic.jpg" srcset="/img/loading.gif" lazyload alt="10031712740506_.pic"></li>
 </ol>
 </li>
-<li>事件循环<ol>
-<li>JS引擎线程从任务队列中读取任务事件，这个过程是不断循环的。所以整个的这种运行机制又称为Event Loop（事件循环）。</li>
-<li>所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。</li>
-<li>主线程之外，还存在一个”任务队列”（task queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。 </li>
-<li>一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。 </li>
-<li>主线程不断重复上面的第三步。</li>
-<li>在ES6之前根本没有宏任务，微任务的划分，它们统称为任务(task)，都属于异步任务。ES6引入Promise之后，JavaScript引擎自身也能发起异步任务，为了和浏览器其他线程程的异步任务分开，也就有了宏任务和微任务的划分。</li>
-<li>宏任务是由宿主（浏览器，node.js）发起的，微任务是由JavaScript自身发起的。</li>
-<li>宏任务和微任务都是属于异步任务，在ES6引入Promise之后，任务队列就分成了两个子队列：宏任务队列和微任务队列。<ol>
-<li>先执行同步代码，遇到异步宏任务则将异步宏任务放入宏任务队列中，遇到异步微任务则将异步微任务放入微任务队列中，</li>
-<li>当所有同步代码执行完毕后，再将异步微任务从队列中调入主线程执行，微任务队列中所有微任务执行完毕后，再将异步宏任务从队列中调入一个宏任务到主线程执行，执行完毕后再循环执行。</li>
 </ol>
 </li>
+<li><p>react.createclass和extends Component的区别</p>
+<ol>
+<li>语法使用区别 react.createClass 工厂函数 </li>
+<li>proType getDefaultProps<ol>
+<li>createClass:proTypes getDefaultProps()</li>
+<li>react Compontent:proTypes getDefaultProps</li>
+</ol>
+</li>
+<li>状态初始化<ol>
+<li>createClass：getInitialState()</li>
+<li>Compontent: constructor</li>
+</ol>
+</li>
+<li>mixin<ol>
+<li>createClass: mixins 添加属性</li>
+<li>Compontent 不可使用</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>react事件与普通事件区别</p>
+<ol>
+<li>事件名称<ol>
+<li>原生：全小写</li>
+<li>react：小驼峰</li>
+</ol>
+</li>
+<li>事件函数处理<ol>
+<li>原生：字符串</li>
+<li>react onclick&#x3D;{}</li>
+</ol>
+</li>
+<li>阻止事件本身的默认行为<ol>
+<li>原生 return false</li>
+<li>react preventDefault（）</li>
+</ol>
+</li>
+<li>VDOM 合成事件 模拟原生dom行为 便于多平台，所有事件全部存放在数组</li>
+</ol>
+</li>
+<li><p>受控组件和非受控组件</p>
+<ol>
+<li>input select react能否知道当前的状态释放</li>
+<li><img src="/img/js/17127415034107.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>为什么useState要使用数组而非对象</p>
+<ol>
+<li>本质上数组结构和对象结构 数组结构可以自定义名称 对象则更麻烦</li>
+<li><img src="/img/js/17127417558072.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>refs</p>
+<ol>
+<li>refs可以允许用户直接访问dom</li>
+<li><code>this.refs.userName.value</code></li>
+</ol>
+</li>
+<li><p>为什么使用hooks</p>
+</li>
+<li><p>降级处理错误边界Error Boundary</p>
+<ol>
+<li><img src="/img/js/17127424289230.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>代码分割</p>
+<ol>
+<li>webpack</li>
+<li>rollup</li>
+<li>import使用</li>
+<li>react.lazy<ol>
+<li>suspense </li>
+<li><img src="/img/js/17127427537882.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Fragmnents</p>
+<ol>
+<li><code>render()&#123; return &lt;React.Fragment&gt;q&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/React.Fragment&gt;&#125;</code></li>
+<li><img src="/img/js/17127429359437.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>React高级组件简介</p>
+<ol>
+<li>HOC<ol>
+<li>入参是组件 出参也是组件的函数</li>
+<li>纯函数 不改变原有参的组件</li>
+<li>功能模块抽象，提升复用性</li>
+<li>控制渲染流程，权限控制</li>
+<li>处理生命周期，检测组件渲染性能的好坏</li>
+</ol>
+</li>
+<li>Hooks</li>
+<li>异步组件</li>
+</ol>
+</li>
+<li><p>HOC属性代理props</p>
+<ol>
+<li><img src="/img/js/17127434598612.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>HOC属性代理抽象state</p>
+<ol>
+<li><img src="/img/js/17127437780839.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>HOC控制逻辑渲染</p>
+<ol>
+<li><img src="/img/js/17127439867063.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>实现hoc方式之反向继承</p>
+<ol>
+<li><img src="/img/js/17127443574582.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17127443911449.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>HOC使用反向继承实现修改返回的react内容</p>
+<ol>
+<li><img src="/img/js/17127447437360.jpg" srcset="/img/loading.gif" lazyload></li>
+</ol>
+</li>
+<li><p>HOC利用反向继承实现复用性的抽象<br>1. </p>
+</li>
+<li><p>HOC利用反向继承实现传入一个组件，计算得到组件render期间的耗时</p>
+<ol>
+<li>生命周期 willMount didMount</li>
+<li>属性代理：外-内 传递props</li>
+<li>反向继承：内-外 render props state</li>
+</ol>
+</li>
+<li><p>Hooks</p>
+<ol>
+<li>ahooks<ol>
+<li>站点 dumi</li>
+<li>功能Hooks</li>
+<li>Typescript</li>
+<li>jest</li>
+<li>bundle</li>
+<li>npm import {} from ‘xxxx’</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>useState 触发组件的更新 useRef不触发组件的更新</p>
+</li>
+<li><p>useEffect 在某些时间点触发一些方法</p>
+</li>
+<li><p>useLayoutEffect</p>
+<ol>
+<li>useEffect ：组件更新挂在完成后 VDOM-DOM更新-useEffect 闪动</li>
+<li>useLayoutEffect ：组件更新挂在完成后 VDOM-useEffect-DOM更新 卡顿</li>
+</ol>
+</li>
+<li><p>useContext 传递上下文 </p>
+</li>
+<li><p>useReducer state action dispatch</p>
+</li>
+<li><p>useMemo useCallback</p>
+<ol>
+<li>useMemo 返回的运行结果</li>
+<li>useCallback返回的函数</li>
+</ol>
+</li>
+<li><p>自定义hooks</p>
+</li>
+<li><p>异步组件</p>
+<ol>
+<li>react.lazy</li>
+<li>react.Suspense</li>
+<li>dynamic import</li>
+<li>errorBoundary 错误边界</li>
+<li>本质：<ol>
+<li>lazy load component promise</li>
+<li>Suspense</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>react fiber</p>
+<ol>
+<li>16.8 fiber架构 <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/49496872">ziliao</a></li>
+<li>Fiber 树通过 beginWork 同时进行创建和“向下”遍历创建过程也是 current（旧）、workInProgress（新）两棵树 Diffing 的过程，决定哪些旧节点需要复用、删除、移动，哪些新节点需要创建只有父节点相互复用，才会触发子节点 Diffing，所以跨父节点的移动是铁定 Diffing 不到的复用的条件是 key 和 type 都相同，所以 key 能提升复用率子节点间的 Diffing 是一个“先做简单题”的过程，假设的优先级为：新子节点只有一个 —&gt; 子节点只发生末尾的增删 —&gt; 其他情况对应的，Diffing 策略也分为：单节点 Diffing —&gt; 一轮循环 —&gt; 二轮循环Diffing 过程中会把结果（操作）以 Effect 的形式挂到节点上</li>
+<li>Fiber 树由链表构成，节点间通过 return（父节点）、child（第一个子节点）、sibling（下一个兄弟节点）相连。当前视图对应的 Fiber 树称为 current 树，每次协调发起，都会构建新的 workInProgress 树，并在结束时替换 current 树。Fiber 树的遍历方式是深度优先遍历，向下的过程由 beginWork 发起，向上的过程由 completeUnitOfWork 发起。beginWork 每次只向下一步，completeUnitOfWork 则每次向上若干步（由其内部若干个一步循环达成）。Fiber 树是边构建边遍历的，构建在 beginWork 向下过程中发起。Fiber 树的 Diffing 策略体现在构建过程中：父节点已复用、key 和 type 相同是节点复用的基本条件；子节点 Diffing 从易向难，单节点 Diffing —&gt; 多节点末尾增删（一轮循环） —&gt; 多节点其他情况（二轮循环）。Diffing 的结果，诸如节点的删除、新增、移动，称为 effect，以 effectTag 的形式挂在节点上。completeUnitOfWork 的内部循环会自底向上收集 effect，不断把有 effectTag 的子节点和自身向上合并到父节点的 effectList 中，直至根节点。effectList 是个链表。宿主相关组件节点会把宿主实例挂到 stateNode 上，间接调用宿主方法对其完成创建、更新，由此也会产生 effectTag。</li>
 </ol>
 </li>
 </ol>
@@ -329,8 +525,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>VueAgain</div>
-      <div>https://easywz.github.io/2024/03/22/VueAgain/</div>
+      <div>DayStudy-2</div>
+      <div>https://easywz.github.io/2024/04/10/DayStudy-2/</div>
     </div>
     <div class="license-meta">
       
@@ -342,7 +538,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月22日</div>
+          <div>2024年4月10日</div>
         </div>
       
       

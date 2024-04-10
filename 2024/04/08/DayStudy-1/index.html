@@ -18,21 +18,21 @@
   
     <meta name="description" content="---">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VueAgain">
-<meta property="og:url" content="https://easywz.github.io/2024/03/22/VueAgain/index.html">
+<meta property="og:title" content="DayStudy-1">
+<meta property="og:url" content="https://easywz.github.io/2024/04/08/DayStudy-1/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
 <meta property="og:description" content="---">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
-<meta property="article:published_time" content="2024-03-22T06:23:01.000Z">
-<meta property="article:modified_time" content="2024-04-08T06:42:02.010Z">
+<meta property="article:published_time" content="2024-04-08T06:47:50.000Z">
+<meta property="article:modified_time" content="2024-04-10T14:35:53.857Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
   
   
   
-  <title>VueAgain - WZ&#39;s blog</title>
+  <title>DayStudy-1 - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="VueAgain"></span>
+            <span id="subtitle" data-typed-text="DayStudy-1"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-22 14:23" pubdate>
-          2024年3月22日 下午
+        <time datetime="2024-04-08 14:47" pubdate>
+          2024年4月8日 下午
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          1.8k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          11 分钟
+          15 分钟
         
       </span>
     
@@ -269,47 +269,119 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">VueAgain</h1>
+            <h1 id="seo-header">DayStudy-1</h1>
             
             
               <div class="markdown-body">
                 
                 <ol>
-<li>vue2和vue3区别<ol>
-<li>用组合式api替换选项式api，方便逻辑更加的聚合</li>
-<li>因为改成组合式所以没有this</li>
-<li>生命周期没有create，setup等同create，卸载改成unmount</li>
-<li>vue3中v-if高于v-for优先级</li>
-<li>根实例的创建从new app变成createApp方法</li>
-<li>一些全局注册，比如mixin，注册全局组件，use改成了用app实例调用，而不是vue类调用</li>
-<li>新增了传送门teleport组件</li>
-<li>template模版可以不包在一个根div里</li>
-<li>响应式原理改成了用proxy,解决了数组无法通过下标修改，无法监听到对象属性的新增和删除的问题。也提升了响应式的效率</li>
-<li>vue3并不是完全抛弃了defineProperty，通过reactive定义的响应式数据使用proxy包装出来，而ref还是用的defineProperty去给一个空对象，定义了一个value属性来做的响应式</li>
-<li>组合式api的写法下，源码改成了函数式编程，方便按需引入，因为tree-shaking功能必须配合按需引入写法。所以vue3更好地配合tree-shaking能让打包体积更小</li>
-<li>性能优化，增加了静态节点标记。会标记静态节点，不对静态节点进行比对。从而增加效率。<ol>
-<li>文本内容为变量会标记为1，属性为动态会标记为2，如果静态则不标记跳过比对</li>
+<li>对Promise的理解<ol>
+<li>promise不仅是一个技术工具，更代表了一种编程理念的体现，promise作为一个构造函数，它可以生成具有特定状态的实例，这些状态包括pending（待定）、resolved（成功）和rejected（拒绝），这种状态管理机制，使得异步操作的结果变得可预测和可控。</li>
+<li>promise即承诺，后续必要兑现，一旦兑现则不可更改，所以Promise的状态只可更改一次</li>
+<li>promise是对回调函数的一种封装，它改进了异步编程的方式。传统的异步编程往往依赖于回调函数，然而回调函数的嵌套过深，很容易导致代码结构混乱，形成所谓的回调地狱问题。而promise则允许我们以同步的方式，表达异步操作，从而可以简化代码臃肿以及可读性差的问题</li>
+<li>promise实例可以视为一个状态的展示器，我们可以利用promise来管理具有状态改变的业务逻辑，结合async function进一步提升程序的清晰度和便捷性</li>
+<li>promise在前端技术体系中，有着广泛的应用，比如Axios、Fetch API等等，都采用了promise对象来处理异步操作。</li>
+<li>当项目中存在着多个异步操作，并且这些操作之间存在着依赖关系时，promise可以通过链式调用来处理这些操作，使得代码更加简洁和易读，比如用户信息调用数据</li>
+<li>不能滥用，promise.all，如图片的预加载，别嵌套太多。</li>
 </ol>
 </li>
-<li>vue3不推荐使用mixin进行复用逻辑提取，而是推荐写成hook</li>
-<li>v-model应用于组件时，监听的事件和传递的值改变</li>
-<li>ts更好地配合</li>
+<li>延迟加载JS有哪些方式<ol>
+<li>动态创建</li>
+<li>setTimeout</li>
+<li>async<ol>
+<li>在外部js加载完成后，浏览器空闲时，Load事件触发前执行</li>
 </ol>
 </li>
-<li>事件循环<ol>
-<li>JS引擎线程从任务队列中读取任务事件，这个过程是不断循环的。所以整个的这种运行机制又称为Event Loop（事件循环）。</li>
-<li>所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。</li>
-<li>主线程之外，还存在一个”任务队列”（task queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。 </li>
-<li>一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。 </li>
-<li>主线程不断重复上面的第三步。</li>
-<li>在ES6之前根本没有宏任务，微任务的划分，它们统称为任务(task)，都属于异步任务。ES6引入Promise之后，JavaScript引擎自身也能发起异步任务，为了和浏览器其他线程程的异步任务分开，也就有了宏任务和微任务的划分。</li>
-<li>宏任务是由宿主（浏览器，node.js）发起的，微任务是由JavaScript自身发起的。</li>
-<li>宏任务和微任务都是属于异步任务，在ES6引入Promise之后，任务队列就分成了两个子队列：宏任务队列和微任务队列。<ol>
-<li>先执行同步代码，遇到异步宏任务则将异步宏任务放入宏任务队列中，遇到异步微任务则将异步微任务放入微任务队列中，</li>
-<li>当所有同步代码执行完毕后，再将异步微任务从队列中调入主线程执行，微任务队列中所有微任务执行完毕后，再将异步宏任务从队列中调入一个宏任务到主线程执行，执行完毕后再循环执行。</li>
+<li>defer<ol>
+<li>在js加载完成后，整个文档解析完成后执行</li>
+</ol>
+</li>
+<li>async和defer区别<ol>
+<li>下载都是异步的（相较于html解析）</li>
+<li>async不考虑依赖，不是顺次序加载； defer在html解析后才执行</li>
 </ol>
 </li>
 </ol>
+</li>
+<li>JS数据类型有哪些<ol>
+<li>基本类型<ol>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>undefined</li>
+<li>null</li>
+<li>symbol</li>
+<li>bigint</li>
+</ol>
+</li>
+<li>引用类型<ol>
+<li>object<ol>
+<li>array</li>
+<li>function</li>
+<li>date</li>
+<li>regExp</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>题<ol>
+<li>true+1 &#x2F;&#x2F; 2</li>
+<li>‘name’+true &#x2F;&#x2F; ‘nametrue’</li>
+<li>undefined+1 &#x2F;&#x2F; NaN</li>
+<li>typeof null &#x2F;&#x2F; object</li>
+<li>NaN是一个数值类型</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>null和undefined的区别<ol>
+<li>作者先设计的null，借鉴java，根据c语言传统默认转化为0，很容易发生错误</li>
+<li>所以产生了undefined</li>
+<li>null是一个表示无的对象（空对象指针），转化为数值时为0；</li>
+<li>undefined是一个表示无的原始值，转化为数值时为NaN</li>
+</ol>
+</li>
+<li>&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同<ol>
+<li>&#x3D;&#x3D; 比较值 &#x3D;&#x3D;&#x3D; 比较值和类型</li>
+<li>&#x3D;&#x3D; 比较顺序<ol>
+<li>强制null&#x3D;&#x3D;undefined为true</li>
+<li>string&#x3D;&#x3D;number string转化为number</li>
+<li>boolean&#x3D;&#x3D;number boolean转化为number</li>
+<li>object&#x3D;&#x3D;string||number.. object转化为基本类型</li>
+<li>原理：valueOf返回Math对象的原始值，在后台自动调用，不显示的出现在代码中</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>微任务和宏任务<ol>
+<li>js是单线程语言</li>
+<li>js代码执行流程：同步执行完-》事件循环<ol>
+<li>事件循环中包含：微任务 宏任务</li>
+<li>同步的任务都执行完了，才会进入事件循环：请求，定时器，事件</li>
+</ol>
+</li>
+<li><code>for(var i=0;i&lt;3;i++)&#123; setTimeout(function()&#123;console.log(i)&#125;,1000*i) &#125;</code> &#x2F;&#x2F; 333</li>
+<li>微任务：promise.then 宏任务：settimeout</li>
+<li>要执行宏任务的前提是清空了所有微任务</li>
+</ol>
+</li>
+<li>js作用域<ol>
+<li>除了函数外，没有块级作用域</li>
+<li>作用域链：内部可以访问外部的变量 外部不能访问内部的变量<ol>
+<li>注意：优先查找内部，内部没有才查找外部的</li>
+</ol>
+</li>
+<li>注意声明变量是用var还是没有写（没写即是window.）</li>
+<li>js有变量提升的机制 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-keyword">function</span> <span class="hljs-title function_">a</span>(<span class="hljs-params"></span>)&#123;</span><br><span class="language-javascript">        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(b);<span class="hljs-comment">//undefined</span></span><br><span class="language-javascript">        <span class="hljs-keyword">var</span> b = <span class="hljs-number">1</span>;</span><br><span class="language-javascript">    &#125;</span><br><span class="language-javascript">    <span class="hljs-title function_">a</span>();</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+<li><ul>
+<li></li>
+</ul>
 </li>
 </ol>
 
@@ -329,8 +401,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>VueAgain</div>
-      <div>https://easywz.github.io/2024/03/22/VueAgain/</div>
+      <div>DayStudy-1</div>
+      <div>https://easywz.github.io/2024/04/08/DayStudy-1/</div>
     </div>
     <div class="license-meta">
       
@@ -342,7 +414,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月22日</div>
+          <div>2024年4月8日</div>
         </div>
       
       
