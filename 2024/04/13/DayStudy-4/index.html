@@ -18,21 +18,21 @@
   
     <meta name="description" content="---">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DayStudy-2">
-<meta property="og:url" content="https://easywz.github.io/2024/04/10/DayStudy-2/index.html">
+<meta property="og:title" content="DayStudy-4">
+<meta property="og:url" content="https://easywz.github.io/2024/04/13/DayStudy-4/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
 <meta property="og:description" content="---">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
-<meta property="article:published_time" content="2024-04-10T08:41:10.000Z">
-<meta property="article:modified_time" content="2024-04-14T15:05:26.983Z">
+<meta property="article:published_time" content="2024-04-13T05:28:09.000Z">
+<meta property="article:modified_time" content="2024-04-14T15:05:34.994Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
   
   
   
-  <title>DayStudy-2 - WZ&#39;s blog</title>
+  <title>DayStudy-4 - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="DayStudy-2"></span>
+            <span id="subtitle" data-typed-text="DayStudy-4"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-10 16:41" pubdate>
-          2024年4月10日 下午
+        <time datetime="2024-04-13 13:28" pubdate>
+          2024年4月13日 下午
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.9k 字
+          1.8k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          24 分钟
+          16 分钟
         
       </span>
     
@@ -269,242 +269,202 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">DayStudy-2</h1>
+            <h1 id="seo-header">DayStudy-4</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rc411e7D2/">视频资料</a></p>
-<h4 id="react问题"><a href="#react问题" class="headerlink" title="react问题"></a>react问题</h4><ol>
-<li>用户根据不同的权限，查看不同的页面</li>
-<li>react.createclass和extends Component的区别</li>
-<li>react事件与普通事件区别</li>
-<li>受控组件和非受控组件</li>
-<li>为什么useState要使用数组而非对象</li>
-<li>refs</li>
-<li>为什么使用hooks</li>
-<li>降级处理错误边界Error Boundary</li>
-<li>代码分割</li>
-<li>Frapnents</li>
-<li>React高级组件简介</li>
-<li>属性代理props</li>
-<li>属性代理抽象state</li>
-<li>控制逻辑渲染</li>
-<li>实现hoc方式之反向继承</li>
-<li>使用反向继承实现修改返回的react内容</li>
-<li>利用反向继承实现复用性的抽象</li>
-<li>利用反向继承实现传入一个组件，计算得到组件render期间的耗时</li>
-<li>hooks</li>
-<li>hooks之useref</li>
-<li>useEffect</li>
-<li>useLayoutEffect</li>
-<li>useReducer</li>
-<li>usecallback</li>
-<li>自定义hooks</li>
-<li>异步组件</li>
-<li>异步组件用法示例</li>
-<li>什么是react fiber</li>
-<li>手写fiber以及实现fiber</li>
-</ol>
-<h4 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h4><ol>
-<li><p>用户根据不同的权限，查看不同的页面</p>
+                <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><ol>
+<li><p>react是什么</p>
 <ol>
-<li>js<ol>
-<li>ajax role -&gt; menuList json 展示有权限菜单</li>
+<li>React 是一个网页 UI框架，通过组件化的方式解决视图层开发复用的问题，本质是一个组件化框架。</li>
+<li>它的核心设计思路有三点，分别是声明式、组件化与通用性。<ol>
+<li>声明式的优势在于直观与组合。</li>
+<li>组件化的优势在于视图的拆分与模块复用，可以更容易做到高内聚低耦合</li>
+<li>通用性在于一次学习，随处编写。比如 React Native，React360 等，这里主要靠虚拟 DOM 来保证实现。</li>
 </ol>
 </li>
-<li>react-router<ol>
-<li>onEnter</li>
-<li><img src="/img/js/10031712740506_.pic.jpg" srcset="/img/loading.gif" lazyload alt="10031712740506_.pic"></li>
+<li>这使得 React 的适用范围变得足够广，无论是 Web、Native、VR，甚至 Shell 应用都可以进行开发。这也是 React 的优势。</li>
+<li>但作为一个视图层的框架，React的劣势也十分明显。它并没有提供完整的一揽子解决方案，在开发大型前端应用时，需要向社区寻找并整合解决方案。虽然一定程度上促进了社区的繁荣，但也为开发者在技术选型和学习适用上造成了一定的成本。</li>
 </ol>
 </li>
-</ol>
-</li>
-<li><p>react.createclass和extends Component的区别</p>
+<li><p>为什么react要用jsx</p>
 <ol>
-<li>语法使用区别 react.createClass 工厂函数 </li>
-<li>proType getDefaultProps<ol>
-<li>createClass:proTypes getDefaultProps()</li>
-<li>react Compontent:proTypes getDefaultProps</li>
+<li>react本身并不强制使用JSX 本身可以利用creatElement（’div’,null,<code>hello$&#123;this.props.toWhat&#125;</code>）</li>
+<li>react需要将组件转化为dom树</li>
+<li>关注点分离 是面向对象的程序设计的核心概念</li>
+<li><img src="/img/js/17129876270527.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>babel插件如何实现jsx到js的编译</li>
 </ol>
 </li>
-<li>状态初始化<ol>
-<li>createClass：getInitialState()</li>
-<li>Compontent: constructor</li>
-</ol>
-</li>
-<li>mixin<ol>
-<li>createClass: mixins 添加属性</li>
-<li>Compontent 不可使用</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>react事件与普通事件区别</p>
+<li><p>如何避免生命周期的坑</p>
 <ol>
-<li>事件名称<ol>
-<li>原生：全小写</li>
-<li>react：小驼峰</li>
+<li><img src="/img/js/17130868844247.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>什么情况下会触发重新渲染<ol>
+<li>函数组件 react.memo处理</li>
+<li>react.Component<ol>
+<li>不实现shouldComponentUpdate函数，有两种情况触发<ol>
+<li>state变化时</li>
+<li>父级props</li>
 </ol>
 </li>
-<li>事件函数处理<ol>
-<li>原生：字符串</li>
-<li>react onclick&#x3D;{}</li>
 </ol>
 </li>
-<li>阻止事件本身的默认行为<ol>
-<li>原生 return false</li>
-<li>react preventDefault（）</li>
+<li>PureComponent 默认实现shouldComponentUpdate 仅在props与state进行浅比较后，确认有变更时才会触发重新渲染</li>
 </ol>
 </li>
-<li>VDOM 合成事件 模拟原生dom行为 便于多平台，所有事件全部存放在数组</li>
+<li>渲染报错后怎么处理<ol>
+<li>错误边界<ol>
+<li>getDerivedStateFromError（error）<ol>
+<li>更新state 使下一次渲染能够显示降级后的ui</li>
 </ol>
 </li>
-<li><p>受控组件和非受控组件</p>
+<li>componentDidCatch（error,errorInfo）<ol>
+<li>上传错误日志</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>问题解答：<ol>
+<li>问题本质<ol>
+<li>在不恰当时机调用了不合适的代码</li>
+<li>在需要调用时，忘记了调用</li>
+</ol>
+</li>
+<li>解答<ol>
+<li>getDerivedstateFromProps容易编写反模式代码 使得受控组件和非受控组件区分模糊</li>
+<li>componmengWillmount已被弃用，新的异步渲染可能导致多次调用</li>
+<li>componentWillReceiveProps因性能问题被getDerivedStateFromProps取代</li>
+<li>shouldComponentUpdate通过返回值true&#x2F;false 性能优化</li>
+<li>componentWillUpdate弃用 新的异步渲染可能导致多次调用</li>
+<li>卸载阶段取消定时器</li>
+<li>如果没有错误边界处理 用户会看到白屏</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>react请求放在哪个<ol>
+<li>componentDidMount<ol>
+<li>constructor</li>
+<li>componmengWillmount</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>类组件和函数组件有什么区别</p>
 <ol>
-<li>input select react能否知道当前的状态释放</li>
-<li><img src="/img/js/17127415034107.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130888699771.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>区别<ol>
+<li>语法和写法：类组件是使用类的语法进行定义的，函数组件是使用函数的语法进行定义的。</li>
+<li>状态：类组件具有内部状态，可以通过 setState 来更新；函数组件是无状态的，它们的输出完全由其输入 props 决定。</li>
+<li>复杂度：函数组件更简洁，因为它们只是纯函数；类组件则更复杂，因为它们具有更多的属性和方法。</li>
+<li>生命周期：类组件有生命周期，函数组件没有生命周期，而是使用 Hooks。</li>
+<li>组件调用：类组件实例化后调用 render 方法调用；函数组件只需调用函数即可创建组件。</li>
 </ol>
 </li>
-<li><p>为什么useState要使用数组而非对象</p>
+</ol>
+</li>
+<li><p>如何设计react组件</p>
 <ol>
-<li>本质上数组结构和对象结构 数组结构可以自定义名称 对象则更麻烦</li>
-<li><img src="/img/js/17127417558072.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>一个主题，多个场景</li>
+<li>把只做展示，独立运行，不额外增加功能的组件 无状态组件&#x2F;展示组件 代理组件</li>
+<li>处理业务逻辑与数据状态的组件 有状态组件</li>
+<li><img src="/img/js/17130898782037.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>缺陷处理<ol>
+<li>通过向上层复制 社区解决方案：host nullreact status</li>
+<li>react.forwordrefluse</li>
 </ol>
 </li>
-<li><p>refs</p>
+<li>如何在渲染劫持中为原本的渲染结果添加新的样式<ol>
+<li>通过 操作 state、props 都可以实现渲染劫持</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>setState是同步&#x2F;异步更新</p>
 <ol>
-<li>refs可以允许用户直接访问dom</li>
-<li><code>this.refs.userName.value</code></li>
+<li>合成事件<ol>
+<li>事件委托</li>
 </ol>
 </li>
-<li><p>为什么使用hooks</p>
+<li><img src="/img/js/17130906263305.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>更新队列</li>
+</ol>
 </li>
-<li><p>降级处理错误边界Error Boundary</p>
+<li><p>如何面向组件跨层级通信</p>
 <ol>
-<li><img src="/img/js/17127424289230.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>一个基本 多个场景</li>
+<li><img src="/img/js/17130912918871.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>代码分割</p>
+<li><p>列举一种react状态管理框架</p>
 <ol>
-<li>webpack</li>
-<li>rollup</li>
-<li>import使用</li>
-<li>react.lazy<ol>
-<li>suspense </li>
-<li><img src="/img/js/17127427537882.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>flux</li>
+<li>redux</li>
+<li>mobx</li>
+<li><img src="/img/js/17130918644415.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-</ol>
-</li>
-<li><p>Fragmnents</p>
+<li><p>Vritual DOM工作原理</p>
 <ol>
-<li><code>render()&#123; return &lt;React.Fragment&gt;q&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/React.Fragment&gt;&#125;</code></li>
-<li><img src="/img/js/17127429359437.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130923081810.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>React高级组件简介</p>
+<li><p>与其他框架相比 react diff算法有何不同</p>
 <ol>
-<li>HOC<ol>
-<li>入参是组件 出参也是组件的函数</li>
-<li>纯函数 不改变原有参的组件</li>
-<li>功能模块抽象，提升复用性</li>
-<li>控制渲染流程，权限控制</li>
-<li>处理生命周期，检测组件渲染性能的好坏</li>
+<li><img src="/img/js/17130927335611.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li>Hooks</li>
-<li>异步组件</li>
-</ol>
-</li>
-<li><p>HOC属性代理props</p>
+<li><p>react的渲染流程</p>
 <ol>
-<li><img src="/img/js/17127434598612.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131015620178.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>HOC属性代理抽象state</p>
+<li><p>react的渲染异常后果</p>
 <ol>
-<li><img src="/img/js/17127437780839.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131021090506.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>HOC控制逻辑渲染</p>
+<li><p>分析和调优性能瓶颈</p>
 <ol>
-<li><img src="/img/js/17127439867063.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131028206062.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>实现hoc方式之反向继承</p>
+<li><p>避免重复渲染</p>
 <ol>
-<li><img src="/img/js/17127443574582.jpg" srcset="/img/loading.gif" lazyload></li>
-<li><img src="/img/js/17127443911449.jpg" srcset="/img/loading.gif" lazyload></li>
+<li>长列表 - 虚拟滚动 react-virtualized react-window</li>
+<li><img src="/img/js/17131034976033.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>HOC使用反向继承实现修改返回的react内容</p>
+<li><p>提升代码可维护性</p>
 <ol>
-<li><img src="/img/js/17127447437360.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131038610300.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>HOC利用反向继承实现复用性的抽象<br>1. </p>
-</li>
-<li><p>HOC利用反向继承实现传入一个组件，计算得到组件render期间的耗时</p>
+<li><p>Hook使用限制</p>
 <ol>
-<li>生命周期 willMount didMount</li>
-<li>属性代理：外-内 传递props</li>
-<li>反向继承：内-外 render props state</li>
+<li><img src="/img/js/17131046226224.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>Hooks</p>
+<li><p>useEffect useLayoutEffect区别</p>
 <ol>
-<li>ahooks<ol>
-<li>站点 dumi</li>
-<li>功能Hooks</li>
-<li>Typescript</li>
-<li>jest</li>
-<li>bundle</li>
-<li>npm import {} from ‘xxxx’</li>
+<li><img src="/img/js/17131052188753.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-</ol>
+<li><p>Hook设计模式<br>1. </p>
 </li>
-<li><p>useState 触发组件的更新 useRef不触发组件的更新</p>
-</li>
-<li><p>useEffect 在某些时间点触发一些方法</p>
-</li>
-<li><p>useLayoutEffect</p>
+<li><p>react-router实现原理</p>
 <ol>
-<li>useEffect ：组件更新挂在完成后 VDOM-DOM更新-useEffect 闪动</li>
-<li>useLayoutEffect ：组件更新挂在完成后 VDOM-useEffect-DOM更新 卡顿</li>
+<li><img src="/img/js/17131065199237.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
-<li><p>useContext 传递上下文 </p>
-</li>
-<li><p>useReducer state action dispatch</p>
-</li>
-<li><p>useMemo useCallback</p>
+<li><p>常用工具库</p>
 <ol>
-<li>useMemo 返回的运行结果</li>
-<li>useCallback返回的函数</li>
-</ol>
-</li>
-<li><p>自定义hooks</p>
-</li>
-<li><p>异步组件</p>
-<ol>
-<li>react.lazy</li>
-<li>react.Suspense</li>
-<li>dynamic import</li>
-<li>errorBoundary 错误边界</li>
-<li>本质：<ol>
-<li>lazy load component promise</li>
-<li>Suspense</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>react fiber</p>
-<ol>
-<li>16.8 fiber架构 <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/49496872">ziliao</a></li>
-<li>Fiber 树通过 beginWork 同时进行创建和“向下”遍历创建过程也是 current（旧）、workInProgress（新）两棵树 Diffing 的过程，决定哪些旧节点需要复用、删除、移动，哪些新节点需要创建只有父节点相互复用，才会触发子节点 Diffing，所以跨父节点的移动是铁定 Diffing 不到的复用的条件是 key 和 type 都相同，所以 key 能提升复用率子节点间的 Diffing 是一个“先做简单题”的过程，假设的优先级为：新子节点只有一个 —&gt; 子节点只发生末尾的增删 —&gt; 其他情况对应的，Diffing 策略也分为：单节点 Diffing —&gt; 一轮循环 —&gt; 二轮循环Diffing 过程中会把结果（操作）以 Effect 的形式挂到节点上</li>
-<li>Fiber 树由链表构成，节点间通过 return（父节点）、child（第一个子节点）、sibling（下一个兄弟节点）相连。当前视图对应的 Fiber 树称为 current 树，每次协调发起，都会构建新的 workInProgress 树，并在结束时替换 current 树。Fiber 树的遍历方式是深度优先遍历，向下的过程由 beginWork 发起，向上的过程由 completeUnitOfWork 发起。beginWork 每次只向下一步，completeUnitOfWork 则每次向上若干步（由其内部若干个一步循环达成）。Fiber 树是边构建边遍历的，构建在 beginWork 向下过程中发起。Fiber 树的 Diffing 策略体现在构建过程中：父节点已复用、key 和 type 相同是节点复用的基本条件；子节点 Diffing 从易向难，单节点 Diffing —&gt; 多节点末尾增删（一轮循环） —&gt; 多节点其他情况（二轮循环）。Diffing 的结果，诸如节点的删除、新增、移动，称为 effect，以 effectTag 的形式挂在节点上。completeUnitOfWork 的内部循环会自底向上收集 effect，不断把有 effectTag 的子节点和自身向上合并到父节点的 effectList 中，直至根节点。effectList 是个链表。宿主相关组件节点会把宿主实例挂到 stateNode 上，间接调用宿主方法对其完成创建、更新，由此也会产生 effectTag。</li>
+<li><img src="/img/js/17131070259194.jpg" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
 </ol>
@@ -525,8 +485,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>DayStudy-2</div>
-      <div>https://easywz.github.io/2024/04/10/DayStudy-2/</div>
+      <div>DayStudy-4</div>
+      <div>https://easywz.github.io/2024/04/13/DayStudy-4/</div>
     </div>
     <div class="license-meta">
       
@@ -538,7 +498,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月10日</div>
+          <div>2024年4月13日</div>
         </div>
       
       
