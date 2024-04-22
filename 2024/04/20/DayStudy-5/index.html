@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
 <meta property="article:published_time" content="2024-04-20T11:28:29.000Z">
-<meta property="article:modified_time" content="2024-04-22T02:35:51.058Z">
+<meta property="article:modified_time" content="2024-04-22T03:15:24.569Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7 字
+          2.8k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          1 分钟
+          24 分钟
         
       </span>
     
@@ -275,8 +275,95 @@
               <div class="markdown-body">
                 
                 <ol>
-<li>vue运行原理<ol>
-<li></li>
+<li>vue2运行原理 <ol>
+<li>MVVM</li>
+<li>数据劫持 Object.defineProperty 给定一个Observer类 遍历当前层的属性</li>
+<li>Observer通过walk（）绑定defineReactive 如果Obj[key]是对象则重复该过程</li>
+<li>上述为对象的绑定 数组绑定则 在Observer类的构造函数中，对所有的数组进行object.setPrototypeOf()强写，将当前数组对象的原型链强行指向arrayMethods</li>
+<li>在getter中收集依赖，在setter中触发更新</li>
+<li>依赖收集和触发更新主要有两个类完成 Dep和Watcher</li>
+<li>Dep和watcher发布-订阅者模式</li>
+<li>Dep通过建立subs数组 depend()方法添加依赖，存储依赖列表； notify通知更新 notify()</li>
+<li>Watcher触发依赖更新 属性：target expression callback value</li>
+<li>complier将组件模版转换成render函数，render函数在运行时可以生成虚拟节点vnode</li>
+<li>完整版vue包含runtime和complier也就是说模版的编译过程可以在运行时进行 官方提供独立的runtime版本只包含运行环境 vue-templete-comlier</li>
+<li>实例运行：<ol>
+<li>首先，observe（a） 会将a对象变为响应式对象</li>
+<li>执行new watcher之后就会调用watcher类的constructor。此时target是a，expression是‘b.c.d’，callback是（val,oldvalue）&#x3D;&gt;{console.log(‘ok’,val,oldvalue)}</li>
+<li>this.value&#x3D;this.get()又会执行get()方法 此时Dep.target被赋值了，就是当前Watcher实例</li>
+<li>value&#x3D;this.getter(obj)会触发defineReactive中的get(),因为Dep.target之前已经被赋值了，所以现在有值，触发dep.depend</li>
+<li>将当前Watcher实例推进subs数组中</li>
+<li>执行代码，触发defineReactive中的set方法，然后执行dep.notity()</li>
+<li>通过遍历subs列表，通知所有订阅者</li>
+<li>相应的订阅者执行update（），将新值和旧值获取，然后通过callback回调函数返回</li>
+<li>最终new watcher实例中的回调函数成功执行，并且成功拿到val和oldvalue</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>vue3运行原理<ol>
+<li>vue3响应式是使用ES6的proxy和Reflect相互配合实现数据响应式，解决了vue2中视图不能自动更新的问题。</li>
+<li>proxy是深度监听，所以可以监听对象和数组内的任意元素，从而实现试图实时更新</li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6858899262596448270">详细的原理</a></li>
+<li>总结响应式大致分为三个阶段：<ol>
+<li>初始化阶段<ol>
+<li>初始化阶段通过组件初始化方法形成对应的proxy对象，然后形成一个负责渲染的effect。</li>
+</ol>
+</li>
+<li>get依赖收集阶段<ol>
+<li>通过解析template，替换真实data属性，来触发get，然后通过stack方法，通过proxy对象和key形成对应的deps，将负责渲染的effect存入deps。（这个过程还有其他的effect，比如watchEffect存入deps中）</li>
+</ol>
+</li>
+<li>set派发更新阶段<ol>
+<li>当我通过this[key] &#x3D; value改变属性的时候，首先通过trigger方法，通过proxy对象和key找到对应的deps，然后给deps分类分成computedRunners和effect，然后依次执行，如果需要调度的，直接放入调度。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>proxy只会代理对象的第一层，vue3怎么处理<ol>
+<li>判断当前Reflect.get的返回值是否为Object，如果是则再通过reactive方法做代理，这样就实现了深度观测</li>
+</ol>
+</li>
+<li>监测数组时候可能会触发多次get&#x2F;set，如何防治<ol>
+<li>可以判断key是否为当前代理对象target自身属性，也可以判断旧值与新值是否相等，只有满足以上两个条件之一，才有可能执行trigger。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>vue2和vue3区别<ol>
+<li>用组合式api替换选项式api，方便逻辑更加的聚合</li>
+<li>因为改成组合式所以没有this</li>
+<li>生命周期没有create，setup等同create，卸载改成unmount</li>
+<li>vue3中v-if高于v-for优先级</li>
+<li>根实例的创建从new app变成createApp方法</li>
+<li>一些全局注册，比如mixin，注册全局组件，use改成了用app实例调用，而不是vue类调用</li>
+<li>新增了传送门teleport组件</li>
+<li>template模版可以不包在一个根div里</li>
+<li>响应式原理改成了用proxy,解决了数组无法通过下标修改，无法监听到对象属性的新增和删除的问题。也提升了响应式的效率</li>
+<li>vue3并不是完全抛弃了defineProperty，通过reactive定义的响应式数据使用proxy包装出来，而ref还是用的defineProperty去给一个空对象，定义了一个value属性来做的响应式</li>
+<li>组合式api的写法下，源码改成了函数式编程，方便按需引入，因为tree-shaking功能必须配合按需引入写法。所以vue3更好地配合tree-shaking能让打包体积更小</li>
+<li>性能优化，增加了静态节点标记。会标记静态节点，不对静态节点进行比对。从而增加效率。<ol>
+<li>文本内容为变量会标记为1，属性为动态会标记为2，如果静态则不标记跳过比对</li>
+</ol>
+</li>
+<li>vue3不推荐使用mixin进行复用逻辑提取，而是推荐写成hook</li>
+<li>v-model应用于组件时，监听的事件和传递的值改变</li>
+<li>ts更好地配合</li>
+</ol>
+</li>
+<li>事件循环<ol>
+<li>JS引擎线程从任务队列中读取任务事件，这个过程是不断循环的。所以整个的这种运行机制又称为Event Loop（事件循环）。</li>
+<li>所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。</li>
+<li>主线程之外，还存在一个”任务队列”（task queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。 </li>
+<li>一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。 </li>
+<li>主线程不断重复上面的第三步。</li>
+<li>在ES6之前根本没有宏任务，微任务的划分，它们统称为任务(task)，都属于异步任务。ES6引入Promise之后，JavaScript引擎自身也能发起异步任务，为了和浏览器其他线程程的异步任务分开，也就有了宏任务和微任务的划分。</li>
+<li>宏任务是由宿主（浏览器，node.js）发起的，微任务是由JavaScript自身发起的。</li>
+<li>宏任务和微任务都是属于异步任务，在ES6引入Promise之后，任务队列就分成了两个子队列：宏任务队列和微任务队列。<ol>
+<li>先执行同步代码，遇到异步宏任务则将异步宏任务放入宏任务队列中，遇到异步微任务则将异步微任务放入微任务队列中，</li>
+<li>当所有同步代码执行完毕后，再将异步微任务从队列中调入主线程执行，微任务队列中所有微任务执行完毕后，再将异步宏任务从队列中调入一个宏任务到主线程执行，执行完毕后再循环执行。</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
