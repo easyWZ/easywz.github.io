@@ -16,24 +16,23 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2024前端技术题汇总，每日一题">
+    <meta name="description" content="图层过滤器；不透明度和填充；图层混合模式；观察图层面板；图层指令按钮">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二、操作系统">
-<meta property="og:url" content="https://easywz.github.io/2024/01/08/operatingSystem/index.html">
+<meta property="og:title" content="PS（二）图层">
+<meta property="og:url" content="https://easywz.github.io/2024/08/20/PSBasicUnderstanding2/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
-<meta property="og:description" content="2024前端技术题汇总，每日一题">
+<meta property="og:description" content="图层过滤器；不透明度和填充；图层混合模式；观察图层面板；图层指令按钮">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://easywz.github.io/img/index/OS.jpeg">
-<meta property="article:published_time" content="2024-01-08T07:25:36.000Z">
-<meta property="article:modified_time" content="2024-08-20T08:10:15.330Z">
+<meta property="og:image" content="https://easywz.github.io/img/index/ps.jpeg">
+<meta property="article:published_time" content="2024-08-20T08:07:14.000Z">
+<meta property="article:modified_time" content="2024-08-20T09:09:43.368Z">
 <meta property="article:author" content="wang zou">
-<meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://easywz.github.io/img/index/OS.jpeg">
+<meta name="twitter:image" content="https://easywz.github.io/img/index/ps.jpeg">
   
   
   
-  <title>二、操作系统 - WZ&#39;s blog</title>
+  <title>PS（二）图层 - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,13 +192,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/index/home-1.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/index/view-2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="二、操作系统"></span>
+            <span id="subtitle" data-typed-text="PS（二）图层"></span>
           
         </div>
 
@@ -210,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-08 15:25" pubdate>
-          2024年1月8日 下午
+        <time datetime="2024-08-20 16:07" pubdate>
+          2024年8月20日 下午
         </time>
       </span>
     
@@ -222,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          200 字
+          419 字
         
       </span>
     
@@ -233,7 +232,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -270,14 +269,78 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">二、操作系统</h1>
+            <h1 id="seo-header">PS（二）图层</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="1、什么是操作系统"><a href="#1、什么是操作系统" class="headerlink" title="1、什么是操作系统"></a>1、什么是操作系统</h3><p>操作系统（Operating System，简称 OS）是计算机硬件与用户之间的接口，负责管理和协调计算机硬件资源，为应用程序和用户提供一个友好的运行环境。操作系统具有多种功能，包括进程管理、内存管理、文件系统管理和设备管理等。</p>
-<p>操作系统使得程序员和用户不必关心底层硬件的具体细节，可以更高效地开发和使用计算机。常见的操作系统有 Microsoft Windows、macOS、Linux 等。</p>
-<!--### 2、软链接和硬链接的区别-->
+                <h3 id="图层"><a href="#图层" class="headerlink" title="图层"></a>图层</h3><ol>
+<li><h4 id="图层过滤器"><a href="#图层过滤器" class="headerlink" title="图层过滤器"></a>图层过滤器</h4><ol>
+<li>图层下第一列 搜索 默认为类型<ol>
+<li>类型 右边展开5个选项<ol>
+<li>分别为 像素 调整 文字 形状 智能对象</li>
+<li>视为筛选条件 反选即取消 可多选</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h4 id="不透明度和填充"><a href="#不透明度和填充" class="headerlink" title="不透明度和填充"></a>不透明度和填充</h4><ol>
+<li>图层下第二列 默认为正常 不透明度100%<ol>
+<li>设置对应图层的不透明度</li>
+</ol>
+</li>
+<li>填充 不改变边框，只生效内容</li>
+</ol>
+</li>
+<li><h4 id="图层混合模式"><a href="#图层混合模式" class="headerlink" title="图层混合模式"></a>图层混合模式</h4><ol>
+<li>位置：位于 不透明度 左侧选择框</li>
+<li>例如正片叠底 变亮 滤色可将带有背景色图片融入至区域图片中</li>
+<li>作用：提取单个图层一个像素融入其他像素中</li>
+<li>锁定按钮：位于填充左侧<ol>
+<li>锁定透明像素</li>
+<li>禁用画笔</li>
+<li>锁定位置</li>
+<li>锁定画板，不能拖拽至其余画板</li>
+<li>锁定全部（以上四种都生效）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h4 id="观察图层面板"><a href="#观察图层面板" class="headerlink" title="观察图层面板"></a>观察图层面板</h4><ol>
+<li>实用： 左侧切换移动工具选项，双击文字，右上方可改变颜色</li>
+<li>命名：双击图层</li>
+<li>合并图层<ol>
+<li>合并<ol>
+<li>shift选中合并多个图层 + ctl + e </li>
+<li>注意：会丢失原图层</li>
+</ol>
+</li>
+<li>盖印<ol>
+<li>shift选中多个 command+option+e</li>
+<li>不会丢失原图层，出现一个合并图层，内容相当于复制一份在原位置</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h4 id="图层指令按钮"><a href="#图层指令按钮" class="headerlink" title="图层指令按钮"></a>图层指令按钮</h4><ol>
+<li>链接图层</li>
+<li>添加图层样式</li>
+<li>添加图层蒙层</li>
+<li>创建新的填充或者调整图层</li>
+<li>创建新组<ol>
+<li>相当于创建分类 将多个图层放入</li>
+</ol>
+</li>
+<li>创建图层</li>
+<li>删除图层</li>
+</ol>
+</li>
+</ol>
+
                 
               </div>
             
@@ -285,13 +348,27 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="print-no-link">#操作系统</a>
-      
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/photoShop/" class="category-chain-item">photoShop</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
     </div>
+  
   
 </div>
 
@@ -301,8 +378,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>二、操作系统</div>
-      <div>https://easywz.github.io/2024/01/08/operatingSystem/</div>
+      <div>PS（二）图层</div>
+      <div>https://easywz.github.io/2024/08/20/PSBasicUnderstanding2/</div>
     </div>
     <div class="license-meta">
       
@@ -314,7 +391,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月8日</div>
+          <div>2024年8月20日</div>
         </div>
       
       
@@ -341,6 +418,23 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/19/PSBasicUnderstanding/" title="PS（一）基本操作">
+                        <span class="hidden-mobile">PS（一）基本操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
