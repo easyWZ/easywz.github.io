@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>PS（一）</title>
+    <link href="/2024/08/19/PSBasicUnderstanding/"/>
+    <url>/2024/08/19/PSBasicUnderstanding/</url>
+    
+    <content type="html"><![CDATA[<h3 id="基本认识"><a href="#基本认识" class="headerlink" title="基本认识"></a>基本认识</h3><ol><li>打开ps - 主页 - 新建</li><li>整个ps分区域显示<ol><li>最顶层-菜单栏</li><li>左侧-工具栏</li><li>顶部第二层-属性栏（父级工具栏）</li><li>右侧-浮动面板（可以长按拖动 随意改变位置）<ol><li>打开：菜单 - 窗口 - xx</li><li>重置：菜单 - 窗口 - 工作区 - 复位基本功能</li></ol></li></ol></li><li>画布分层<ol><li>顶部 - 标题栏</li><li>中间 - 画布</li><li>左下 - 状态栏 更改% 像素</li></ol></li><li>预设（快捷键）<ol><li>ctl+ K （mac为 command + k）打开首选项</li><li>首选项 - 文件处理 - 自动存储恢复信息的间隔 - 5分钟</li><li>界面 - 颜色方案 - 黑色</li></ol></li></ol><h3 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h3><ol><li>置入图片<ol><li>单独处理： 文件 - 打开 - 选择本地图片</li><li>添加至已创建文件：<ol><li>拖动图片至操作区域</li><li>文件 - 置入嵌入对象 （嵌入源文件）</li><li>文件 - 置入链接的智能对象 （只插入源文件的链接地址，省内存，但发送别人依据地址就会丢失）</li><li>图片进入后会显示一个叉号 说明是一个智能对象文件，可放大缩小，按回车即可确认最终尺寸，叉号消失</li></ol></li><li>删除 - 选中点击 delete键</li><li>撤回 <ol><li>右上方 有个回滚箭头标识 点击 展开历史记录 点击对应步骤删除即可</li><li>菜单栏 - 编辑 - 还原删除状态 （快捷键ctl+z）</li></ol></li><li>放大和缩小<ol><li>放大&#x2F;缩小 option + 上&#x2F;下滑</li><li>ctl + 加号&#x2F;减号</li></ol></li><li>图层<ol><li>添加图层<ol><li>点击右下角 + 号标识</li></ol></li><li>改变位置<ol><li>单个：选中任意单个图层 工具栏选中 移动工具 鼠标拖动即可</li><li>整体：shift选中所有图层拖动 ctl + t 显示整体区域</li></ol></li><li>删除图层<ol><li>拖动至右下角垃圾桶标识</li><li>选中 - delete键</li></ol></li></ol></li><li>存储&#x2F;导出<ol><li>文件 - 存储</li><li>文件 - 存储为</li><li>文件 - 导出</li><li>可点击图层处背景前眼睛 关闭背景 导出为透明图</li></ol></li></ol></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>前端面试题汇总</title>
     <link href="/2024/04/20/EveryDayStudy/"/>
     <url>/2024/04/20/EveryDayStudy/</url>
