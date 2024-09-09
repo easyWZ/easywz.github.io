@@ -1,0 +1,814 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/index/bk.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wang zou">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="---">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHPquestions">
+<meta property="og:url" content="https://easywz.github.io/2024/03/18/Interview/PHPquestions/index.html">
+<meta property="og:site_name" content="WZ&#39;s blog">
+<meta property="og:description" content="---">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
+<meta property="article:published_time" content="2024-03-18T12:25:10.000Z">
+<meta property="article:modified_time" content="2024-09-09T08:21:38.521Z">
+<meta property="article:author" content="wang zou">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
+  
+  
+  
+  <title>PHPquestions - WZ&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"easywz.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>人生在勤，不索何获</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/index/home-1.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="PHPquestions"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-18 20:25" pubdate>
+          2024年3月18日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          48 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">PHPquestions</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
+<li>session和cookie区别及联系;</li>
+<li>session里的字段;</li>
+<li>php里2个等号和3个等号的区别</li>
+<li>Php里的全局变量如何引用;</li>
+<li>PHP闭包的概念;</li>
+<li>nginx?</li>
+<li>php fpm</li>
+<li>面向接口的编程?为什么会有面向接口的编程;具体怎么实现的?</li>
+<li>数据库索引:如果有一个三个列A.B.C联合作为索引，现在査询只用到B列，索引是否起作用?怎么样可以让B列起作用?</li>
+<li>redis常用的数据结构;</li>
+<li>linux里常用的命令log查询命令;</li>
+</ol>
+<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><ol>
+<li><p>session和cookie区别及联系;</p>
+<ol>
+<li>数据存储位置：Cookie存储在客户端的浏览器上，Session存储在服务器上。</li>
+<li>安全性：Cookie不是很安全，容易被篡改或窃取，Session相对较安全，对客户端不可见。</li>
+<li>数据容量：Cookie的容量较小，一般不超过4KB，Session可以存储更多的数据。</li>
+<li>传输方式：Cookie通过HTTP协议自动发送给服务器，Session可以通过Cookie或URL重写的方式传递Session ID。</li>
+<li>生命周期：Cookie可以设置过期时间，可以是短期的或长期的，Session默认情况下会持续到用户关闭浏览器或会话超时。</li>
+<li>Cookie是客户端保存用户信息的一种机制，用来记录用户的一些信息，实际上Cookie是服务器在本地机器上存储的一小段文本，并随着每次请求发送到服务器。<ol>
+<li>Cookie会根据响应报文里的一个叫做Set-Cookie的首部字段信息，通知客户端保存Cookie。当下客户端再向服务端发起请求时，客户端会自动在请求报文中加入Cookie值之后发送出去.</li>
+<li>set-Cookie的字段的属性<ol>
+<li>logcookie&#x3D;3qjj 赋予Cookie的名称和值，logcookie是名字 ，3qjj是值</li>
+<li>expires 是设置cookie有效期。当省略expires属性时，Cookie仅在关闭浏览器之前有效。可以通过覆盖已过期的Cookie，设置这个Cookie的过期时间是过去的时间，实现对客户端Cookie 的实质性删除操作。</li>
+<li>path 是限制指定Cookie 的发送范围的文件目录。不过另有办法可避开这项限制，看来对其作为安全机制的效果不能抱有期待。</li>
+<li>domain 通过domain属性指定的域名可以做到与结尾匹配一致。比如，指定domain是fafa.com，除了fafa.com那么<a target="_blank" rel="noopener" href="http://www.fafa.com等都可以发送cookie./">www.fafa.com等都可以发送Cookie。</a></li>
+<li>secure 设置web页面只有在HTTPS安全连接时，才可以发送Cookie。HHTP则不可以进行回收。</li>
+<li>HttpOnly 它使JavaScript 脚本无法获得Cookie，通过上述设置，通常从Web 页面内还可以对Cookie 进行读取操作。但使用JavaScript 的document.cookie 就无法读取附加HttpOnly 属性后的Cookie 的内容了</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>服务端执行session机制时候会生成session的id值，这个id值会发送给客户端。<ol>
+<li>客户端每次请求都会把这个id值放到http请求的头部发送给服务端，而这个id值在客户端会保存下来，保存的容器就是cookie。</li>
+<li>因此当我们完全禁掉浏览器的cookie的时候，服务端的session也会不能正常使用。</li>
+<li>PHP中的Session在默认情况下是使用客户端的Cookie来保存Session ID的，所以当客户端的cookie出现问题的时候就会影响Session了。</li>
+<li>Session不一定必须依赖Cookie，这也是Session相比Cookie的高明之处。当客户端的Cookie被禁用或出现问题时，PHP会自动把Session ID附着在URL中，这样再通过Session ID就能跨页使用Session变量了。<ol>
+<li>客户端把信息放入报文的实体部分，通常是以POST 方法把请求发送给服务器。</li>
+<li>服务器会发放用以识别用户的Session ID。通过验证从客户端发送过来的信息进行验证，然后把用户的认证状态与Session ID 绑定后记录在服务器端。向客户端返回响应时，会在首部字段Set-Cookie 内写入Session ID（如PHPSESSID&#x3D;l128ogl…）。你可以把Session ID 想象成一种用以区分不同用户的唯一Id。</li>
+<li>客户端接收到从服务器端发来的Session ID 后，会将其作为Cookie 保存在本地。下次向服务器发送请求时，浏览器会自动发送Cookie，所以Session ID 也随之发送到服务器。服务器端可通过验证接收到的Session ID 验证状态。</li>
+</ol>
+</li>
+<li>Cookie与Session的区别<ol>
+<li>cookie数据存放在客户的浏览器（客户端）上，session数据放在服务器上，但是服务端的session的实现对客户端的cookie有依赖关系的；</li>
+<li>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗，考虑到安全应当使用session；</li>
+<li>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能。考虑到减轻服务器性能方面，应当使用COOKIE；</li>
+<li>单个cookie在客户端的限制是3K，就是说一个站点在客户端存放的COOKIE不能超过3K；</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>session里的字段;</p>
+</li>
+<li><p>php里2个等号和3个等号的区别</p>
+<ol>
+<li>用两个等号时，只要比较的两个变量的值相同，输出true，否则输出false。</li>
+<li>用三个等号时，除了两个变量的值相同外，还必须这两个变量的类型相同，才能输出true，否则输出false。</li>
+<li>&#x3D;&#x3D;只是对值得比较（将两边值转化为同类型再比较），而&#x3D;&#x3D;&#x3D;则是对值和类型的比较。</li>
+<li>对于&#x3D;&#x3D;的比较，若有一方为数字，另一方为字符串或空或null，均会先将非数字一方转化为0，再做比较。</li>
+<li>在javascript中数字和非数字的比较，非数字不会被转化为0</li>
+</ol>
+</li>
+<li><p>Php里的全局变量如何引用;</p>
+<ol>
+<li>在 PHP 中使用 global 关键字在局部范围内声明全局变量</li>
+<li>PHP 中使用 $GLOBALS 超级全局变量在局部范围内使用全局变量</li>
+<li>在 PHP 中使用 define() 函数定义一个常量全局变量</li>
+</ol>
+</li>
+<li><p>PHP闭包的概念;</p>
+<ol>
+<li>PHP具有面向函数的编程特性，但是也是面向对象编程语言，PHP 会自动把闭包函数转换成内置类 Closure 的对象实例，依赖Closure 的对象实例又给闭包函数添加了更多的能力。 </li>
+<li>闭包不能被实例(私有构造函数)，也不能被继承(finally 类)。可以通过反射来判断闭包实例是否能被实例，继承。</li>
+<li>提到闭包就不得不想起匿名函数，也叫闭包函数（closures），貌似PHP闭包实现主要就是靠它。</li>
+<li>将匿名函数在普通函数中当做参数传入，也可以在函数中被返回。这就实现了一个简单的闭包。</li>
+<li>连接闭包和外界变量的关键字：USE</li>
+<li>如果将匿名函数返回给外界，匿名函数会保存use所引用的变量，而外界则不能得到这些变量</li>
+<li>闭包函数不能直接访问闭包外的变量，而是通过use 关键字来调用上下文变量(闭包外的变量)，也就是说通过use来引用上下文的变量；</li>
+<li>闭包内所引用的变量不能被外部所访问(即，内部对变量的修改，外部不受影响)，若想要在闭包内对变量的改变从而影响到上下文变量的值，需要使用&amp;的引用传参。</li>
+<li>use所引用的是变量的复制(副本而），并不是完全引用变量。如果要达到引用的效果，就需要使用 &amp; 符号，进行引用传递参数；</li>
+</ol>
+</li>
+<li><p>nginx?</p>
+<ol>
+<li>Nginx是一款轻量级的Web服务器、反向代理服务器，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用。<ol>
+<li>正向代理:由于防火墙的原因，我们并不能直接访问谷歌，那么我们可以借助VPN来实现，这就是一个简单的正向代理的例子。这里你能够发现，正向代理“代理”的是客户端，而且客户端是知道目标的，而目标是不知道客户端是通过VPN访问的。</li>
+<li>反向代理：当我们在外网访问百度的时候，其实会进行一个转发，代理到内网去，这就是所谓的反向代理，即反向代理“代理”的是服务器端，而且这一个过程对于客户端而言是透明的。</li>
+<li>启动Nginx后，其实就是在80端口启动了Socket服务进行监听</li>
+<li>Nginx涉及Master进程和Worker进程。<ol>
+<li>Master进程的作用是？<ol>
+<li>读取并验证配置文件nginx.conf；管理worker进程；</li>
+</ol>
+</li>
+<li>Worker进程的作用是？<ol>
+<li>每一个Worker进程都维护一个线程（避免线程切换），处理连接和请求；注意Worker进程的个数由配置文件决定，一般和CPU个数相关（有利于进程切换），配置几个就有几个Worker进程。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Nginx如何做到热部署？<ol>
+<li>修改配置文件nginx.conf后，重新生成新的worker进程，当然会以新的配置进行处理请求，而且新的请求必须都交给新的worker进程，至于老的worker进程，等把那些以前的请求处理完毕后，kill掉即可。</li>
+</ol>
+</li>
+<li>Nginx如何做到高并发下的高效处理？<ol>
+<li>Nginx采用了Linux的epoll模型，epoll模型基于事件驱动机制，它可以监控多个事件是否准备完毕，如果OK，那么放入epoll队列中，这个过程是异步的。worker只需要从epoll队列循环处理即可。</li>
+</ol>
+</li>
+<li>Nginx挂了怎么办？<ol>
+<li>Keepalived+Nginx实现高可用。</li>
+<li>Keepalived+Nginx实现高可用的思路：<ol>
+<li>请求不要直接打到Nginx上，应该先通过Keepalived（这就是所谓虚拟IP，VIP）</li>
+<li>Keepalived应该能监控Nginx的生命状态（提供一个用户自定义的脚本，定期检查Nginx进程状态，进行权重变化,，从而实现Nginx故障切换）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>nginx.conf</li>
+<li>Nginx有哪些应用？<ol>
+<li>动静分离其实就是 Nginx 服务器将接收到的请求分为动态请求和静态请求。<ol>
+<li>静态请求直接从 nginx 服务器所设定的根目录路径去取对应的资源，动态请求转发给真实的后台（前面所说的应用服务器，如图中的Tomcat）去处理。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+ <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;  <br>            <span class="hljs-attribute">listen</span>       <span class="hljs-number">8080</span>;        <br>            <span class="hljs-attribute">server_name</span>  localhost;<br>    <br>            <span class="hljs-section">location</span> / &#123;<br>                <span class="hljs-attribute">root</span>   html; <span class="hljs-comment"># Nginx默认值</span><br>                <span class="hljs-attribute">index</span>  index.html index.htm;<br>            &#125;<br>            <br>            <span class="hljs-attribute">proxy_pass</span> http://localhost:8000; <span class="hljs-comment"># 反向代理配置，请求会被转发到8000端口</span><br>    &#125;<br></code></pre></td></tr></table></figure>
+<ol>
+<li>负载均衡<ol>
+<li>在服务器集群中，Nginx 可以将接收到的客户端请求“均匀地”（严格讲并不一定均匀，可以通过设置权重）分配到这个集群中所有的服务器上。这个就叫做负载均衡。  <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-comment"># 负载均衡：设置domain</span><br><span class="hljs-section">upstream</span> domain &#123;<br>    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8000</span>;<br>    <span class="hljs-attribute">server</span> localhost:<span class="hljs-number">8001</span>;<br>&#125;<br><span class="hljs-section">server</span> &#123;  <br>        <span class="hljs-attribute">listen</span>       <span class="hljs-number">8080</span>;        <br>        <span class="hljs-attribute">server_name</span>  localhost;<br><br>        <span class="hljs-section">location</span> / &#123;<br>            <span class="hljs-comment"># root   html; # Nginx默认值</span><br>            <span class="hljs-comment"># index  index.html index.htm;</span><br>            <br>            <span class="hljs-attribute">proxy_pass</span> http://domain; <span class="hljs-comment"># 负载均衡配置，请求会被平均分配到8000和8001端口</span><br>            <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$host</span>:<span class="hljs-variable">$server_port</span>;<br>        &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>php fpm</p>
+<ol>
+<li>PHP-FPM(PHP FastCGI Process Manager)意：PHP FastCGI 进程管理器，用于管理PHP 进程池的软件，用于接受web服务器的请求。</li>
+<li>就是来管理启动一个master进程和多个worker进程的程序.</li>
+<li>PHP-FPM 会创建一个主进程，控制何时以及如何将HTTP请求转发给一个或多个子进程处理。PHP-FPM主进程还控制着什么时候创建(处理Web应用更多的流量)和销毁(子进程运行时间太久或不再需要了)</li>
+</ol>
+</li>
+<li><p>面向接口的编程?为什么会有面向接口的编程;具体怎么实现的?</p>
+<ol>
+<li>面向接口编程是一种编程范式，它强调的是在设计软件应用时，应该先定义接口，然后再实现接口。</li>
+<li>接口是一种契约，它定义了一组方法，这些方法应该在实现接口的类中实现。接口本身并不包含任何实现细节，它只是定义了一种规范，规定了实现接口的类应该做什么，而不是怎么做。</li>
+</ol>
+</li>
+<li><p>数据库索引:如果有一个三个列A.B.C联合作为索引，现在査询只用到B列，索引是否起作用?怎么样可以让B列起作用?</p>
+</li>
+<li><p>redis常用的数据结构;</p>
+<ol>
+<li>redis中存储数据是以key-value的形式去存储的，</li>
+<li>其中key为String字符串类型，value的数据类型有string、hash、list、set、zset等这五种常用的<ol>
+<li>string的使用场景<ol>
+<li>单值缓存</li>
+<li>对象缓存</li>
+<li>分布式锁</li>
+<li>计数器</li>
+<li>分布式系统全局序列号</li>
+</ol>
+</li>
+<li>hash &amp;&amp; 使用场景<ol>
+<li>电商购物车<ol>
+<li>以用户id为key &#x3D;&#x3D;&#x3D; cart:1001</li>
+<li>商品id为field &#x3D;&#x3D;&#x3D; 10088</li>
+<li>商品数量为value &#x3D;&#x3D;&#x3D; 1</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>list &amp;&amp; 使用场景<ol>
+<li>模拟分布式系统数据结构</li>
+<li>微博、朋友圈、公众号等，关注的文章列表展示</li>
+</ol>
+</li>
+<li>set &amp;&amp; 使用场景<ol>
+<li>set是一个集合，key不允许重复，如果重复设置key，则设置无效</li>
+<li>抽奖活动<ol>
+<li>点击参与抽奖加入集合</li>
+<li>查看参与抽奖所有用户</li>
+<li>随机抽取count名中奖者</li>
+</ol>
+</li>
+<li>朋友圈点赞</li>
+<li>利用set的交、并、差集实现微博、微信关注模型</li>
+</ol>
+</li>
+<li>zset &amp;&amp; 使用场景<ol>
+<li>实现热搜排行榜</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Redis是现在最受欢迎的NoSQL数据库之一</li>
+<li>缓存系统（“热点”数据：高频读、低频写）、计数器、消息队列系统、排行榜、社交网络和实时系统。</li>
+</ol>
+</li>
+<li><p>linux里常用的命令log查询命令;</p>
+<ol>
+<li>tail<ol>
+<li><code>tail  -n  10   test.log   查询日志尾部最后10行的日志;tail  -n +10   test.log   查询10行之后的所有日志;tail  -fn 10   test.log   循环实时查看最后1000行记录(最常用的)</code></li>
+</ol>
+</li>
+<li>cat<ol>
+<li>cat 是由第一行到最后一行连续显示在屏幕上</li>
+</ol>
+</li>
+<li>head</li>
+<li>more</li>
+<li>sed</li>
+<li>less</li>
+</ol>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>PHPquestions</div>
+      <div>https://easywz.github.io/2024/03/18/Interview/PHPquestions/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wang zou</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
