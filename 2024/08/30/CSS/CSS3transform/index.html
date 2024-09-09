@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/css/cssDH.jpeg">
 <meta property="article:published_time" content="2024-08-30T07:51:55.000Z">
-<meta property="article:modified_time" content="2024-09-09T03:14:45.234Z">
+<meta property="article:modified_time" content="2024-09-09T10:00:52.077Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/css/cssDH.jpeg">
@@ -274,7 +274,19 @@
             
               <div class="markdown-body">
                 
-                <h1 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h1><h3 id="（平移）translate"><a href="#（平移）translate" class="headerlink" title="（平移）translate"></a>（平移）translate</h3><p>平移<br>参考自己的位置来平移</p>
+                <h1 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h1><!--|  关键字   | 函数值  |
+|  ----  | ----  |
+|   | transform: none; |
+|   | transform: matrix(1, 2, 3, 4, 5, 6); |
+|   | transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); |
+|   | perspective(17px); |
+|   | rotate(0.5turn); |
+|   | rotate3d(1, 2, 3, 10deg); |
+|   | rotateX(10deg); |
+|   | rotateY(10deg); |
+|   | rotateZ(10deg); |
+|   |  |-->
+<h3 id="（平移）translate"><a href="#（平移）translate" class="headerlink" title="（平移）translate"></a>（平移）translate</h3><p>平移<br>参考自己的位置来平移</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml">div &#123;<br>    <span class="hljs-comment">&lt;!--args(水平方向位移量，垂直方向位移量)--&gt;</span><br>    transform: translate(10px,10px);<br>    <span class="hljs-comment">&lt;!--也可使用百分比 --&gt;</span><br>    transform: translate(50%, 50%);<br>&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="（旋转）rotate"><a href="#（旋转）rotate" class="headerlink" title="（旋转）rotate"></a>（旋转）rotate</h3><p>旋转</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml">div &#123;<br>    <span class="hljs-comment">&lt;!--参数传入角度 正数顺时针旋转 负数逆时针旋转--&gt;</span><br>    transform: rotate(30deg);<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -772,5 +784,5 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-</body>
+<!-- hexo injector body_end start --><script src="/js/outdate.js"></script><!-- hexo injector body_end end --></body>
 </html>
