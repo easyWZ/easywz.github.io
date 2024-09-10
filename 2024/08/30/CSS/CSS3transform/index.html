@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/css/cssDH.jpeg">
 <meta property="article:published_time" content="2024-08-30T07:51:55.000Z">
-<meta property="article:modified_time" content="2024-09-09T10:00:52.077Z">
+<meta property="article:modified_time" content="2024-09-10T01:47:13.146Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/css/cssDH.jpeg">
@@ -274,7 +274,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h1><!--|  关键字   | 函数值  |
+                <h1 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h1><!-- |  关键字   | 函数值  |
 |  ----  | ----  |
 |   | transform: none; |
 |   | transform: matrix(1, 2, 3, 4, 5, 6); |
@@ -285,7 +285,28 @@
 |   | rotateX(10deg); |
 |   | rotateY(10deg); |
 |   | rotateZ(10deg); |
-|   |  |-->
+|   | transform: translate(12px, 50%); |
+|   | transform: translate3d(12px, 50%, 3em); |
+|   | transform: translateX(2em); |
+|   | transform: translateY(3in); |
+|   | transform: translateZ(2px); |
+|   | transform: scale(2, 0.5); |
+|   | transform: scale3d(2.5, 1.2, 0.3); |
+|   | transform: scaleX(2); |
+|   | transform: scaleY(0.5); |
+|   | transform: scaleZ(0.3); |
+|   | transform: skew(30deg, 20deg); |
+|   | transform: skewX(30deg); |
+|   | transform: skewY(1.07rad); |
+|   | 多个函数值 |
+|   | transform: translateX(10px) rotate(10deg) translateY(5px); |
+|   | transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg); |
+|   | 全局值 |
+|   | transform: inherit; |
+|   | transform: initial; |
+|   | transform: revert; |
+|   | transform: revert-layer; |
+|   | transform: unset; | -->
 <h3 id="（平移）translate"><a href="#（平移）translate" class="headerlink" title="（平移）translate"></a>（平移）translate</h3><p>平移<br>参考自己的位置来平移</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml">div &#123;<br>    <span class="hljs-comment">&lt;!--args(水平方向位移量，垂直方向位移量)--&gt;</span><br>    transform: translate(10px,10px);<br>    <span class="hljs-comment">&lt;!--也可使用百分比 --&gt;</span><br>    transform: translate(50%, 50%);<br>&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="（旋转）rotate"><a href="#（旋转）rotate" class="headerlink" title="（旋转）rotate"></a>（旋转）rotate</h3><p>旋转</p>
