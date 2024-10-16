@@ -21,14 +21,14 @@
   
     <meta name="description" content="TypeScript是JavaScript类型的超集，它可以编译成纯JavaScript。TypeScript可以在任何浏览器、任何计算机和任何操作系统上运行，并且是开源的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TypeScript-基础类型">
+<meta property="og:title" content="TypeScript">
 <meta property="og:url" content="https://easywz.github.io/2023/12/01/JavaScript/TypeScriptBaseType/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
 <meta property="og:description" content="TypeScript是JavaScript类型的超集，它可以编译成纯JavaScript。TypeScript可以在任何浏览器、任何计算机和任何操作系统上运行，并且是开源的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/typescript.jpg">
 <meta property="article:published_time" content="2023-12-01T05:34:14.000Z">
-<meta property="article:modified_time" content="2024-10-15T03:32:14.662Z">
+<meta property="article:modified_time" content="2024-10-16T02:06:07.052Z">
 <meta property="article:author" content="wang zou">
 <meta property="article:tag" content="typeScript">
 <meta property="article:tag" content="ts">
@@ -37,7 +37,7 @@
   
   
   
-  <title>TypeScript-基础类型 - WZ&#39;s blog</title>
+  <title>TypeScript - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="TypeScript-基础类型"></span>
+            <span id="subtitle" data-typed-text="TypeScript"></span>
           
         </div>
 
@@ -274,7 +274,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">TypeScript-基础类型</h1>
+            <h1 id="seo-header">TypeScript</h1>
             
             
               <div class="markdown-body">
@@ -360,6 +360,7 @@
 <h2 id="初步使用"><a href="#初步使用" class="headerlink" title="初步使用"></a>初步使用</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">identity</span><span class="hljs-params">(arg: number)</span></span>: number &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">arg</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">identity</span>&lt;<span class="hljs-title">T</span>&gt;<span class="hljs-params">(arg: T)</span></span>: T &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">arg</span>;<br>&#125;<br><br>// 使用<br>// 第一种是，传入所有的参数，包含类型参数<br>let <span class="hljs-built_in">output</span> = identity&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&quot;myString&quot;</span>);  // <span class="hljs-built_in">type</span> of <span class="hljs-built_in">output</span> will be <span class="hljs-string">&#x27;string&#x27;</span><br>// 第二种方法更普遍。利用了类型推论 <br>let <span class="hljs-built_in">output</span> = identity(<span class="hljs-string">&quot;myString&quot;</span>);  // <span class="hljs-built_in">type</span> of <span class="hljs-built_in">output</span> will be <span class="hljs-string">&#x27;string&#x27;</span><br></code></pre></td></tr></table></figure>
 <h2 id="使用泛型变量"><a href="#使用泛型变量" class="headerlink" title="使用泛型变量"></a>使用泛型变量</h2><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">function</span> <span class="hljs-title function_">loggingIdentity</span>&lt;<span class="hljs-title function_">T</span>&gt;(<span class="hljs-params">arg: Array&lt;T&gt;</span>): <span class="hljs-title function_">Array</span>&lt;<span class="hljs-title function_">T</span>&gt; &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(arg.<span class="hljs-built_in">length</span>);  <span class="hljs-comment">// Array has a .length, so no more error</span><br>    <span class="hljs-keyword">return</span> arg;<br>&#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">loggingIdentity</span>&lt;<span class="hljs-title function_">T</span>&gt;(<span class="hljs-params">arg: Array&lt;T&gt;</span>): <span class="hljs-title function_">Array</span>&lt;<span class="hljs-title function_">T</span>&gt; &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(arg.<span class="hljs-built_in">length</span>);  <span class="hljs-comment">// Array has a .length, so no more error</span><br>    <span class="hljs-keyword">return</span> arg;<br>&#125;<br></code></pre></td></tr></table></figure>
 <!--## 泛型类型-->
+<p class="note note-info">欲知后事如何，且听下回分解</p>
                 
               </div>
             
@@ -406,7 +407,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>TypeScript-基础类型</div>
+      <div>TypeScript</div>
       <div>https://easywz.github.io/2023/12/01/JavaScript/TypeScriptBaseType/</div>
     </div>
     <div class="license-meta">
