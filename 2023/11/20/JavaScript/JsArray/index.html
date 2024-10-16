@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k 字
+          3.5k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          28 分钟
+          30 分钟
         
       </span>
     
@@ -499,7 +499,7 @@
 <tr>
 <td><code>for...of</code></td>
 <td>ES6 引入的循环方式，它可以直接遍历数组的元素</td>
-<td><a href="#forof">LINK</a></td>
+<td><a href="#forOf">LINK</a></td>
 </tr>
 <tr>
 <td><code>while</code></td>
@@ -509,7 +509,7 @@
 <tr>
 <td><code>do...while</code></td>
 <td></td>
-<td><a href="#dowhile">LINK</a></td>
+<td><a href="#doWhile">LINK</a></td>
 </tr>
 <tr>
 <td><code>forEach()</code></td>
@@ -765,6 +765,26 @@
 <li>语法：<code>array.some(function(currentValue,index,arr),thisValue)</code> <figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs arcade">let arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br>let hasLargeNumber = arr.some(<span class="hljs-function"><span class="hljs-params">element</span> =&gt;</span> element &gt; <span class="hljs-number">4</span>); <span class="hljs-comment">// 检查是否有大于4的元素</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(hasLargeNumber); <span class="hljs-comment">// 输出: true</span><br></code></pre></td></tr></table></figure></li>
 <li>解析：用于检测数组中的元素是否满足指定条件；会依次执行数组的每个元素；如果有一个元素满足条件，则表达式返回true , 剩余的元素不会再执行检测；如果没有满足条件的元素，则返回false；不会对空数组进行检测</li>
 <li>是否改变原数组: N</li>
+</ol>
+</li>
+<li><h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><ol>
+<li>语法 <figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arcade">let arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br><span class="hljs-keyword">for</span> (let i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-built_in">length</span>; i++) &#123;<br>  <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(arr[i]); <span class="hljs-comment">// 输出每个元素</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>解析: for 循环是最基础的循环方式，可以手动控制索引，适用于任何循环场景。</li>
+</ol>
+</li>
+<li><h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><ol>
+<li>语法 <figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs arcade">let arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br>let i = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">while</span> (i &lt; arr.<span class="hljs-built_in">length</span>) &#123;<br>  <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(arr[i]); <span class="hljs-comment">// 输出每个元素</span><br>  i++;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>解析: while 循环是一个常规的循环结构，当需要手动控制循环终止条件时可以使用。</li>
+</ol>
+</li>
+<li><h3 id="doWhile"><a href="#doWhile" class="headerlink" title="doWhile"></a>doWhile</h3><ol>
+<li>语法 <figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs arcade">let arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br>let i = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">do</span> &#123;<br>  <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(arr[i]); <span class="hljs-comment">// 输出每个元素</span><br>  i++;<br>&#125; <span class="hljs-keyword">while</span> (i &lt; arr.<span class="hljs-built_in">length</span>);<br></code></pre></td></tr></table></figure></li>
+<li>解析: do…while 与 while 类似，但它会先执行循环体再检查条件。</li>
+</ol>
+</li>
+<li><h3 id="forOf"><a href="#forOf" class="headerlink" title="forOf"></a>forOf</h3><ol>
+<li>语法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> element <span class="hljs-keyword">of</span> arr) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(element); <span class="hljs-comment">// 输出每个元素</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>解析: for…of 是 ES6 引入的循环方式，它可以直接遍历数组的元素，语法简洁且适合大多数遍历场景。</li>
 </ol>
 </li>
 <li><h3 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h3><ol>
