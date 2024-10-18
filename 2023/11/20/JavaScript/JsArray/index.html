@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.7k 字
+          4.1k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          31 分钟
+          34 分钟
         
       </span>
     
@@ -561,7 +561,39 @@
 <td><a href="#sort">LINK</a></td>
 </tr>
 </tbody></table>
-<ol>
+<h2 id="9、去重"><a href="#9、去重" class="headerlink" title="9、去重"></a>9、去重</h2><ol>
+<li><h3 id="使用-Set"><a href="#使用-Set" class="headerlink" title="使用 Set"></a>使用 Set</h3><ol>
+<li>Set 是 JavaScript 中的一个数据结构，它只允许存储唯一的值。因此，使用 Set 可以轻松去除数组中的重复项。</li>
+<li>示例 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs smali">const<span class="hljs-built_in"> array </span>= [1, 2, 3, 4, 4, 3, 5];<span class="hljs-built_in"></span><br><span class="hljs-built_in">const </span>uniqueArray = [...new Set(array)];<br><br>console.log(uniqueArray); // [1, 2, 3, 4, 5]<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><h3 id="filter-indexOf"><a href="#filter-indexOf" class="headerlink" title="filter() + indexOf()"></a>filter() + indexOf()</h3><ol>
+<li>通过 filter() 方法配合 indexOf() 来判断元素的首次出现位置，去除后续重复的元素。</li>
+<li>示例 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs smali">const<span class="hljs-built_in"> array </span>= [1, 2, 3, 4, 4, 3, 5];<span class="hljs-built_in"></span><br><span class="hljs-built_in">const </span>uniqueArray = array.filter((item, index) =&gt; array.indexOf(item) === index);<br><br>console.log(uniqueArray); // [1, 2, 3, 4, 5]<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><h3 id="使用-reduce"><a href="#使用-reduce" class="headerlink" title="使用 reduce()"></a>使用 reduce()</h3><ol>
+<li>reduce() 方法可以通过累加器来逐步构建一个新的数组，并通过判断是否已经存在元素来实现去重。</li>
+<li>示例 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs smali">const<span class="hljs-built_in"> array </span>= [1, 2, 3, 4, 4, 3, 5];<span class="hljs-built_in"></span><br><span class="hljs-built_in">const </span>uniqueArray = array.reduce((acc, item) =&gt; &#123;<br> <span class="hljs-built_in"> if </span>(!acc.includes(item)) &#123;<br>    acc.push(item);<br>  &#125;<br> <span class="hljs-built_in"> return </span>acc;<br>&#125;, []);<br><br>console.log(uniqueArray); // [1, 2, 3, 4, 5]<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><h3 id="forEach-和-includes"><a href="#forEach-和-includes" class="headerlink" title="forEach() 和 includes()"></a>forEach() 和 includes()</h3><ol>
+<li>可以手动遍历数组，并将不重复的元素添加到新的数组中。</li>
+<li>示例 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs smali">const<span class="hljs-built_in"> array </span>= [1, 2, 3, 4, 4, 3, 5];<span class="hljs-built_in"></span><br><span class="hljs-built_in">const </span>uniqueArray = [];<br>array.forEach(item =&gt; &#123;<br> <span class="hljs-built_in"> if </span>(!uniqueArray.includes(item)) &#123;<br>    uniqueArray.push(item);<br>  &#125;<br>&#125;);<br><br>console.log(uniqueArray); // [1, 2, 3, 4, 5]<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><h3 id="使用-Map"><a href="#使用-Map" class="headerlink" title="使用 Map"></a>使用 Map</h3><ol>
+<li>可以使用 Map 数据结构来检测每个元素是否已存在，从而实现数组去重。</li>
+<li>示例 <figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs arcade">const <span class="hljs-built_in">array</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>];<br>const <span class="hljs-built_in">map</span> = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();<br>const uniqueArray = <span class="hljs-built_in">array</span>.<span class="hljs-built_in">filter</span>(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> !<span class="hljs-built_in">map</span>.has(item) &amp;&amp; <span class="hljs-built_in">map</span>.set(item, <span class="hljs-number">1</span>));<br><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(uniqueArray); <span class="hljs-comment">// [1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><h3 id="支持深度去重的方案（针对对象数组）"><a href="#支持深度去重的方案（针对对象数组）" class="headerlink" title="支持深度去重的方案（针对对象数组）"></a>支持深度去重的方案（针对对象数组）</h3><ol>
+<li>如果数组元素是对象类型，通过比较对象的特性进行深度去重。</li>
+<li>示例 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xquery">const <span class="hljs-keyword">array</span> = [&#123;<span class="hljs-built_in"> id</span>: <span class="hljs-number">1</span> &#125;, &#123;<span class="hljs-built_in"> id</span>: <span class="hljs-number">2</span> &#125;, &#123;<span class="hljs-built_in"> id</span>: <span class="hljs-number">1</span> &#125;];<br>const uniqueArray = <span class="hljs-keyword">array</span><span class="hljs-built_in">.filter</span>((<span class="hljs-type">item</span>, index, self) =&gt;<br>  index === self.findIndex((t) =&gt; t<span class="hljs-built_in">.id</span> === <span class="hljs-type">item</span><span class="hljs-built_in">.id</span>)<br>);<br><br>console.log(uniqueArray); // [&#123;<span class="hljs-built_in"> id</span>: <span class="hljs-number">1</span> &#125;, &#123;<span class="hljs-built_in"> id</span>: <span class="hljs-number">2</span> &#125;]<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+<h2 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a>具体内容</h2><ol>
 <li><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a><a id="create">创建数组</a></h3><ol>
 <li><h4 id="var-arr-new-Array"><a href="#var-arr-new-Array" class="headerlink" title="var arr &#x3D; new Array()"></a>var arr &#x3D; new Array()</h4><ol>
 <li>创建一个空数组</li>
