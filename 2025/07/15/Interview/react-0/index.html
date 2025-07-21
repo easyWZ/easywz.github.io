@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
 <meta property="article:published_time" content="2025-07-15T10:47:34.000Z">
-<meta property="article:modified_time" content="2025-07-15T10:52:49.036Z">
+<meta property="article:modified_time" content="2025-07-21T08:39:31.029Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1 字
+          790 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -277,7 +277,59 @@
             
               <div class="markdown-body">
                 
-                <h2 id="react"><a href="#react" class="headerlink" title="react"></a>react</h2>
+                <h2 id="1-React-的核心理念是什么？"><a href="#1-React-的核心理念是什么？" class="headerlink" title="1.  React 的核心理念是什么？"></a>1.  React 的核心理念是什么？</h2><pre><code class="hljs">•	声明式 UI：只需描述“界面长什么样”，React 会帮你渲染；
+•	组件化：将 UI 拆分成独立的可复用组件；
+•	单向数据流：通过 props 向下传递数据，便于管理；
+•	虚拟 DOM：使用 JS 对象模拟 DOM 节点，提升性能。
+</code></pre>
+<h2 id="2-什么是-JSX？"><a href="#2-什么是-JSX？" class="headerlink" title="2. 什么是 JSX？"></a>2. 什么是 JSX？</h2><p>JSX 是 JavaScript 的语法扩展，允许在 JS 中编写 HTML 结构。浏览器不能直接识别 JSX，需通过 Babel 转换为 React.createElement()。</p>
+<h2 id="3-React-的生命周期函数有哪些？"><a href="#3-React-的生命周期函数有哪些？" class="headerlink" title="3. React 的生命周期函数有哪些？"></a>3. React 的生命周期函数有哪些？</h2><p>（Class 组件）：<br>挂载阶段<br>constructor → render → componentDidMount<br>更新阶段<br>shouldComponentUpdate → render → componentDidUpdate<br>卸载阶段<br>componentWillUnmount</p>
+<p>Hook 中的生命周期替代方案：<br>    •	useEffect 替代 componentDidMount、componentDidUpdate、componentWillUnmount。<br>    •	useLayoutEffect 类似同步生命周期。</p>
+<h2 id="4-组件通信方式有哪些？"><a href="#4-组件通信方式有哪些？" class="headerlink" title="4. 组件通信方式有哪些？"></a>4. 组件通信方式有哪些？</h2><pre><code class="hljs">•	props：父 → 子传参
+•	回调函数：子 → 父通信（通过 props 传递函数）
+•	Context：跨层通信
+•	Redux / Zustand：状态管理
+•	URL 参数、localStorage、EventBus、Pub/Sub 事件订阅等也可辅助通信
+</code></pre>
+<h2 id="5-useState-和-useEffect-有哪些注意点？"><a href="#5-useState-和-useEffect-有哪些注意点？" class="headerlink" title="5. useState 和 useEffect 有哪些注意点？"></a>5. useState 和 useEffect 有哪些注意点？</h2><pre><code class="hljs">•	useState 是异步更新；连续调用多次不会立即更新值。
+•	useEffect 默认在 组件挂载 &amp; 依赖更新后执行；
+•	第二个参数为依赖数组；
+•	若依赖为空数组 []，则只执行一次（类似 componentDidMount）。
+</code></pre>
+<h2 id="6-useRef-有哪些应用场景？"><a href="#6-useRef-有哪些应用场景？" class="headerlink" title="6. useRef 有哪些应用场景？"></a>6. useRef 有哪些应用场景？</h2><pre><code class="hljs">•	访问 DOM 节点（如 ref.current.focus()）
+•	存储可变值，避免重新渲染（如保存定时器 ID）
+•	跨 render 保留数据（如缓存上次的值）
+</code></pre>
+<h2 id="7-useMemo-和-useCallback-区别？"><a href="#7-useMemo-和-useCallback-区别？" class="headerlink" title="7. useMemo 和 useCallback 区别？"></a>7. useMemo 和 useCallback 区别？</h2><p>useMemo<br>返回值类型：缓存计算结果<br>使用场景：计算型操作（如排序、过滤）<br>useCallback<br>返回值类型：缓存函数<br>使用场景：避免函数重新定义（用于优化 props 传参）</p>
+<h2 id="8-React-如何实现性能优化？"><a href="#8-React-如何实现性能优化？" class="headerlink" title="8. React 如何实现性能优化？"></a>8. React 如何实现性能优化？</h2><pre><code class="hljs">•	使用 React.memo 避免子组件不必要渲染；
+•	使用 useMemo、useCallback 缓存结果和函数；
+•	拆分大组件，使用懒加载（React.lazy + Suspense）；
+•	列表渲染使用唯一 key；
+•	虚拟列表（如 react-window）减少 DOM 节点；
+•	代码分割（Webpack 动态 import）
+</code></pre>
+<h2 id="9-什么是-Fiber-架构？"><a href="#9-什么是-Fiber-架构？" class="headerlink" title="9. 什么是 Fiber 架构？"></a>9. 什么是 Fiber 架构？</h2><p>Fiber 是 React 16+ 重构的底层架构，实现了：<br>    •	任务拆分：长任务可被中断，避免主线程卡顿；<br>    •	异步渲染：控制组件的渲染优先级（并发模式）；<br>    •	可控调度：配合 scheduler 实现 requestIdleCallback 类似的效果；</p>
+<p>核心数据结构：Fiber 节点（链表形式），每个组件都会生成对应 Fiber 节点。</p>
+<h2 id="10-React-中-setState-是同步还是异步？"><a href="#10-React-中-setState-是同步还是异步？" class="headerlink" title="10. React 中 setState 是同步还是异步？"></a>10. React 中 setState 是同步还是异步？</h2><pre><code class="hljs">•	在合成事件、生命周期中是异步的（批处理机制）；
+•	在 setTimeout、原生事件中是同步的；
+•	React 18 开启自动批处理机制，在大多数场景下都异步执行更新。
+</code></pre>
+<h2 id="11-Redux-核心原理？"><a href="#11-Redux-核心原理？" class="headerlink" title="11. Redux 核心原理？"></a>11. Redux 核心原理？</h2><pre><code class="hljs">•	单一状态树（store）
+•	纯函数 reducer 更新状态
+•	派发 action → reducer → 更新 state → 组件更新
+•	可配中间件（如 redux-thunk、redux-saga）
+</code></pre>
+<h2 id="12-React-Router-v6-有哪些变化？"><a href="#12-React-Router-v6-有哪些变化？" class="headerlink" title="12. React Router v6 有哪些变化？"></a>12. React Router v6 有哪些变化？</h2><pre><code class="hljs">•	嵌套路由改为“元素嵌套”
+•	使用 &lt;Routes&gt; 替代 &lt;Switch&gt;
+•	useNavigate 替代 history.push
+•	动态参数获取用 useParams
+•	增加路由懒加载、错误边界、数据加载等功能
+</code></pre>
+<h2 id="13-React-中常用的性能调试工具？"><a href="#13-React-中常用的性能调试工具？" class="headerlink" title="13.  React 中常用的性能调试工具？"></a>13.  React 中常用的性能调试工具？</h2><pre><code class="hljs">•	React DevTools：查看组件状态、渲染次数
+•	why-did-you-render：检测不必要的重渲染
+•	Profiler（React 开发者工具中的 tab）
+</code></pre>
+
                 
               </div>
             

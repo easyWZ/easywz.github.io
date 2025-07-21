@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
 <meta property="article:published_time" content="2025-07-14T10:05:26.000Z">
-<meta property="article:modified_time" content="2025-07-15T10:47:51.517Z">
+<meta property="article:modified_time" content="2025-07-21T08:49:45.896Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
@@ -235,7 +235,7 @@
         
         
         
-          105 分钟
+          107 分钟
         
       </span>
     
@@ -678,6 +678,13 @@
 <p>待</p>
 </blockquote>
 <h2 id="49-Hook"><a href="#49-Hook" class="headerlink" title="49. Hook"></a>49. Hook</h2><p>Vue Hook 是一个组合式函数（composable），用于封装可复用的逻辑代码块，让多个组件之间共享功能（而不是共享数据）。</p>
+<h2 id="50-简述"><a href="#50-简述" class="headerlink" title="50 简述"></a>50 简述</h2><p>Vue2 入口初始化 init 初始化生命周期 事件系统 响应式系统 initState 挂载流程<br>响应式核心 defineProperty<br>收集依赖 dep 派发更新 dep。notify<br>Dep 收集收集Watcher 依赖列表<br>Watcher 执行render函数 computed watch<br>渲染流程 _render() 执行render函数 生成Vnode<br>——update 执行patch 更新真实DOM<br>Vue2更新是同步触发 异步批量处理 queueWatcher（）去重+nextTick 执行flush</p>
+<p>Vue3 彻底模块化重构<br>reactivity 响应式系统<br>runtime-core 组件逻辑 渲染引擎<br>complier<br>runtime——dom DOM平台</p>
+<p>核心 Proxy<br>内部通过Proxy拦截 Track reflect。get<br>依赖收集 是由effect驱动 维护当前正在执行的响应式函数<br>Efftec 注册响应函数 每次读取响应值 记录依赖 写入响应值 重新执行 重新渲染</p>
+<p>模版编译 template -render function<br>静态节点被hoist（静态提升）<br>动态节点被标记patchFlag 减少diff范围</p>
+<p>setupComponent（instance）<br>setup<br>renderComponentRoot<br>render vnode<br>patch（）<br>update DOM</p>
+<p>响应式数据变化 触发了scheduler<br>通过队列queueJob 合并多次更新 微任务执行flush<br>promise。resolve（）。then</p>
+<p>Vue2<br>data-defineproperty-getter&#x2F;setter-Dep<br> Watcher（run）-render vDom<br>    patch-Dom<br>Vue3<br>reactive proxy（get&#x2F;set）-track&#x2F;trigger<br>   effect -render-vDom<br>   patch-Dom</p>
 
                 
               </div>

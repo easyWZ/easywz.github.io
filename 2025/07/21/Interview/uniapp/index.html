@@ -19,23 +19,23 @@
   <meta name="author" content="wang zou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="html css js; react vue Angular; webpack Gulp npm yarn; git Jenkins; Axios;移动端开发;性能优化;安全;浏览器兼容性与调试工具;前端架构">
+    <meta name="description" content="---">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端 知识 整理">
-<meta property="og:url" content="https://easywz.github.io/2024/04/20/Interview/EveryDayStudy/index.html">
+<meta property="og:title" content="uniapp">
+<meta property="og:url" content="https://easywz.github.io/2025/07/21/Interview/uniapp/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
-<meta property="og:description" content="html css js; react vue Angular; webpack Gulp npm yarn; git Jenkins; Axios;移动端开发;性能优化;安全;浏览器兼容性与调试工具;前端架构">
+<meta property="og:description" content="---">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://easywz.github.io/img/interview/qdms.jpg">
-<meta property="article:published_time" content="2024-04-20T11:10:39.000Z">
-<meta property="article:modified_time" content="2025-07-21T07:50:37.319Z">
+<meta property="og:image" content="https://easywz.github.io/img/index/home-1.jpg">
+<meta property="article:published_time" content="2025-07-21T07:15:30.000Z">
+<meta property="article:modified_time" content="2025-07-21T07:41:12.044Z">
 <meta property="article:author" content="wang zou">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://easywz.github.io/img/interview/qdms.jpg">
+<meta name="twitter:image" content="https://easywz.github.io/img/index/home-1.jpg">
   
   
   
-  <title>前端 知识 整理 - WZ&#39;s blog</title>
+  <title>uniapp - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="前端 知识 整理"></span>
+            <span id="subtitle" data-typed-text="uniapp"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-20 19:10" pubdate>
-          2024年4月20日 晚上
+        <time datetime="2025-07-21 15:15" pubdate>
+          2025年7月21日 下午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          75 字
+          1.3k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          11 分钟
         
       </span>
     
@@ -272,30 +272,69 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">前端 知识 整理</h1>
+            <h1 id="seo-header">uniapp</h1>
             
             
               <div class="markdown-body">
                 
-                <ol>
-<li><a href="/2024/03/15/Interview/FrontEndBaGuWen/">前端八股文</a> </li>
-<li><a href="/2024/04/08/Interview/JS-1/">JS-数据类型;Promise;延迟加载;null和undefined;&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;;微任务和宏任务;作用域</a></li>
-<li><a href="/2025/07/14/Interview/vue-0/">vue2&#x2F;3-vue-interview 50题</a></li>
-<li><a href="/2024/04/20/Interview/Vue-1/">vue2&#x2F;3运行原理和区别;事件循环机制</a></li>
-<li><a href="/2024/02/28/Interview/Vue-2/">vue</a></li>
-<li><a href="/2025/07/21/Interview/uniapp/">uniapp</a></li>
-<li><a href="/2025/07/21/Interview/wxMini/">微信小程序</a></li>
-<li><a href="/2025/07/15/Interview/react-0/">React</a></li>
-<li><a href="/2024/04/10/Interview/React-1/">React-1</a></li>
-<li><a href="/2024/02/28/Interview/React-2/">React-2</a></li>
-<li><a href="/2024/04/13/Interview/React-3/">React-3</a></li>
-<li><a href="/2024/03/13/Interview/React-4/">React-4</a></li>
-<li><a href="/2024/04/10/Interview/DayStudy-3/">微信小程序</a></li>
-<li><a href="/2024/03/04/Interview/httpInterviewQuestion/">HTTP</a></li>
-<li><a href="/2024/03/01/Interview/GitInterviewQuestion/">Git</a></li>
-<li><a href="/2024/02/29/Interview/WebpackInterviewQuestion/">webpack</a></li>
-<li><a href="/2025/03/25/Interview/OftenMeetTest/">常见问题合集</a></li>
+                <h2 id="1-UniApp-是什么？它的运行机制是怎样的？"><a href="#1-UniApp-是什么？它的运行机制是怎样的？" class="headerlink" title="1. UniApp 是什么？它的运行机制是怎样的？"></a>1. UniApp 是什么？它的运行机制是怎样的？</h2><p>UniApp 是基于 Vue.js 的跨平台框架，一套代码可以编译到多个平台（如微信小程序、App、H5等）。<br>它运行机制分为两类：<br>H5<br>直接运行在浏览器中，使用 Vue + Web 标准<br>小程序<br>编译为各类小程序语法（如微信 wxml + wxss + js）<br>App（vue）<br>运行在 WebView 中，前端用 Vue，底层调用原生能力<br>App（nvue）<br>使用 Weex 渲染引擎，组件和样式原生渲染，性能更高</p>
+<h2 id="2-HBuilderX-与-CLI-区别？"><a href="#2-HBuilderX-与-CLI-区别？" class="headerlink" title="2. HBuilderX 与 CLI 区别？"></a>2. HBuilderX 与 CLI 区别？</h2><h2 id="3-UniApp-的组件通信方式有哪些？"><a href="#3-UniApp-的组件通信方式有哪些？" class="headerlink" title="3. UniApp 的组件通信方式有哪些？"></a>3. UniApp 的组件通信方式有哪些？</h2><pre><code class="hljs">•	props / emit（父子）
+•	$refs（直接操作子组件）
+•	Vuex / Pinia（状态管理）
+•	eventChannel（页面跳转传参）
+•	uni.$on / uni.$emit（全局事件总线）
+•	provide / inject（依赖注入）
+</code></pre>
+<h2 id="4-如何实现页面之间传值？"><a href="#4-如何实现页面之间传值？" class="headerlink" title="4. 如何实现页面之间传值？"></a>4. 如何实现页面之间传值？</h2><ol>
+<li>页面跳转时传参：uni.navigateTo({ url: ‘&#x2F;pages&#x2F;detail?id&#x3D;1’ })</li>
+<li>目标页 onLoad 中接收：this.$route.query 或 options.id</li>
+<li>使用 eventChannel 更灵活：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-comment">// A 页面</span><br>uni<span class="hljs-selector-class">.navigateTo</span>(&#123;<br>  url: <span class="hljs-string">&#x27;/pages/B&#x27;</span>,<br>  success: res =&gt; &#123;<br>    res<span class="hljs-selector-class">.eventChannel</span><span class="hljs-selector-class">.emit</span>(<span class="hljs-string">&#x27;sendData&#x27;</span>, &#123; msg: <span class="hljs-string">&#x27;Hello&#x27;</span> &#125;)<br>  &#125;<br>&#125;)<br><br><span class="hljs-comment">// B 页面</span><br><span class="hljs-function"><span class="hljs-title">onLoad</span><span class="hljs-params">()</span></span> &#123;<br>  const channel = this<span class="hljs-selector-class">.getOpenerEventChannel</span>()<br>  channel<span class="hljs-selector-class">.on</span>(<span class="hljs-string">&#x27;sendData&#x27;</span>, data =&gt; &#123;<br>    console<span class="hljs-selector-class">.log</span>(data.msg)<br>  &#125;)<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
+<h2 id="5-如何实现一个全局登录弹窗？"><a href="#5-如何实现一个全局登录弹窗？" class="headerlink" title="5. 如何实现一个全局登录弹窗？"></a>5. 如何实现一个全局登录弹窗？</h2><pre><code class="hljs">•	在 App.vue 中定义 &lt;login-popup v-if=&quot;!isLogin&quot; /&gt;
+•	使用 Vuex/Pinia 管理登录状态
+•	拦截未登录操作，统一调出登录弹窗组件
+</code></pre>
+<h2 id="6-怎么调用原生功能？"><a href="#6-怎么调用原生功能？" class="headerlink" title="6. 怎么调用原生功能？"></a>6. 怎么调用原生功能？</h2><p>小程序平台：使用各平台 API，如 wx.login、tt.getLocation 等<br>    •	App 平台：<br>    •	使用 plus API（如 plus.camera、plus.runtime.openURL()）<br>    •	也可封装原生插件（通过 uni_modules）</p>
+<h2 id="7-如何优化长列表性能？"><a href="#7-如何优化长列表性能？" class="headerlink" title="7. 如何优化长列表性能？"></a>7. 如何优化长列表性能？</h2><pre><code class="hljs">•	使用虚拟列表方案（如 nvue 中的 recycle-list）
+•	分批加载（分页）
+•	图片懒加载（lazy-load）
+•	小程序中避免 setData 频繁更新
+</code></pre>
+<h2 id="8-App-中-H5-性能不佳怎么办？"><a href="#8-App-中-H5-性能不佳怎么办？" class="headerlink" title="8. App 中 H5 性能不佳怎么办？"></a>8. App 中 H5 性能不佳怎么办？</h2><pre><code class="hljs">•	改用 nvue 页面提升性能（原生渲染）
+•	减少 dom 层级和图片体积
+•	拆分页面避免单页过大
+•	尽量使用 v-show 替代 v-if
+</code></pre>
+<h2 id="9-小程序白屏或卡顿的原因？"><a href="#9-小程序白屏或卡顿的原因？" class="headerlink" title="9. 小程序白屏或卡顿的原因？"></a>9. 小程序白屏或卡顿的原因？</h2><pre><code class="hljs">•	页面过大（超出组件树深度）
+•	动态渲染太多数据 → 使用分段渲染
+•	图片太多 / 未压缩
+•	setData 次数太多
+•	使用第三方 UI 框架未按需引入
+</code></pre>
+<h2 id="10-如何打包-App？"><a href="#10-如何打包-App？" class="headerlink" title="10. 如何打包 App？"></a>10. 如何打包 App？</h2><p>方法一：使用 HBuilderX：<br>    •	选择【发行】 → 【原生App云打包】<br>    •	填写包名、应用名、证书、权限等<br>    •	自动生成 Android 或 iOS 安装包（apk、ipa）<br>方法二：本地打包：<br>    •	使用 CLI → npm run build:app-plus<br>    •	使用 Android Studio 或 Xcode 打包</p>
+<h2 id="11-nvue-和-vue-页面区别？"><a href="#11-nvue-和-vue-页面区别？" class="headerlink" title="11.  nvue 和 vue 页面区别？"></a>11.  nvue 和 vue 页面区别？</h2><h2 id="12-如何判断当前运行平台？"><a href="#12-如何判断当前运行平台？" class="headerlink" title="12.  如何判断当前运行平台？"></a>12.  如何判断当前运行平台？</h2><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-comment">// 全局判断</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(uni.getSystemInfoSync().platform) <span class="hljs-comment">// ios, android, devtools</span><br><br><span class="hljs-comment">// 页面中通过条件编译</span><br><span class="hljs-comment">// #ifdef APP-PLUS</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;在App中&#x27;</span>)<br><span class="hljs-comment">// #endif</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="13-UniApp-跨平台原理简述"><a href="#13-UniApp-跨平台原理简述" class="headerlink" title="13. UniApp 跨平台原理简述"></a>13. UniApp 跨平台原理简述</h2><pre><code class="hljs">•	编译阶段根据平台进行模板转换
+•	对样式、标签进行平台适配
+•	JS 逻辑部分运行在 JS 引擎内（如 App 用 JSCore、浏览器用 V8）
+•	不同平台运行时自动接入对应 API（小程序转为 wx.xxx，App 转为 plus.xxx）
+</code></pre>
+<h2 id="14-uniapp-生命周期"><a href="#14-uniapp-生命周期" class="headerlink" title="14. uniapp 生命周期"></a>14. uniapp 生命周期</h2><ol>
+<li>页面生命周期（页面级）:<br>onLoad(options)<br>页面加载时触发，参数为上个页面传递的参数<br>onShow()<br>页面显示时触发（进入页面或切回页面）<br>onReady()<br>页面初次渲染完成后触发<br>onHide()<br>页面隐藏时触发（如跳转到其他页面）<br>onUnload()<br>页面卸载时触发（如返回上一级页面）</li>
+<li>App 生命周期（仅 App.vue）<br>用于监听整个 App 的生命周期，只在 App.vue 中有效：<br>onLaunch(options)<br>初始化完成时触发，全局只触发一次<br>onShow(options)<br>应用启动或从后台进入前台时触发<br>onHide()<br>应用从前台进入后台时触发</li>
+<li>组件生命周期（<code>&lt;script&gt;</code> 中）<br>beforeCreate()<br>组件实例刚创建<br>created()<br>组件实例已创建<br>beforeMount()<br>DOM 挂载前<br>mounted()<br>DOM 挂载完成<br>beforeUpdate()<br>数据更新前<br>updated()<br>数据更新后<br>beforeDestroy()<br>组件销毁前（已废弃）<br>destroyed()<br>组件销毁后（已废弃）<br>Vue3 中建议使用 onBeforeUnmount 和 onUnmounted 替代上面两个。</li>
+<li>特殊生命周期（小程序 &#x2F; App 特有）<br>onPullDownRefresh()<br>下拉刷新回调<br>onReachBottom()<br>页面触底事件<br>onPageScroll(obj)<br>页面滚动触发<br>onShareAppMessage()<br>用户点击右上角分享时触发（小程序）<br>onTabItemTap(obj)<br>点击 tab 项触发</li>
+</ol>
+<h2 id="15-UniApp-和-Vue-的关系？"><a href="#15-UniApp-和-Vue-的关系？" class="headerlink" title="15. UniApp 和 Vue 的关系？"></a>15. UniApp 和 Vue 的关系？</h2><p>答：UniApp 是基于 Vue 2（或通过插件支持 Vue 3）的跨平台框架，使用 Vue 语法书写逻辑，但编译时通过 uni compiler 转为各平台代码。</p>
+<h2 id="16-UniApp-的条件编译是如何实现的？"><a href="#16-UniApp-的条件编译是如何实现的？" class="headerlink" title="16. UniApp 的条件编译是如何实现的？"></a>16. UniApp 的条件编译是如何实现的？</h2><p>使用 #ifdef &#x2F; #ifndef 标签来控制平台特有代码，例如：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- 仅在H5中显示 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>通用内容<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-comment">&lt;!-- #ifdef H5 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>H5 特有内容<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-comment">&lt;!-- #endif --&gt;</span><br></code></pre></td></tr></table></figure>
+<h2 id="17-怎么进行-App-的离线打包？"><a href="#17-怎么进行-App-的离线打包？" class="headerlink" title="17. 怎么进行 App 的离线打包？"></a>17. 怎么进行 App 的离线打包？</h2><pre><code class="hljs">•	使用 HBuilderX → 发行 → 原生App-云打包。
+•	或者使用 cli + 自定义基座进行离线打包（需使用 SDK 编译）。
+</code></pre>
+<h2 id="18-怎么发布到-App-Store-或-Android-商店？"><a href="#18-怎么发布到-App-Store-或-Android-商店？" class="headerlink" title="18. 怎么发布到 App Store 或 Android 商店？"></a>18. 怎么发布到 App Store 或 Android 商店？</h2><pre><code class="hljs">1.	使用云打包生成 .apk / .ipa 文件；
+2.	Android 提交至：华为、小米、应用宝等；
+3.	iOS 需有开发者账号，上传至 App Store Connect 并通过审核。
+</code></pre>
 
                 
               </div>
@@ -303,27 +342,6 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
 </div>
@@ -334,8 +352,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>前端 知识 整理</div>
-      <div>https://easywz.github.io/2024/04/20/Interview/EveryDayStudy/</div>
+      <div>uniapp</div>
+      <div>https://easywz.github.io/2025/07/21/Interview/uniapp/</div>
     </div>
     <div class="license-meta">
       
@@ -347,7 +365,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月20日</div>
+          <div>2025年7月21日</div>
         </div>
       
       
@@ -374,29 +392,6 @@
 
 
 
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2024/08/19/UI-design/PhotoShop/PSBasicUnderstanding/" title="PS 初窥门径">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">PS 初窥门径</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2024/03/07/Front-end/JavaScript/JsEventLoop/" title="JsEventLoop（JavaScript 事件循环）">
-                        <span class="hidden-mobile">JsEventLoop（JavaScript 事件循环）</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
               
             </div>
 
