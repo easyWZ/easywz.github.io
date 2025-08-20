@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/index/bk.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wang zou">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="使React应用 更简单 Next.js 是一个轻量级的 React 服务端渲染应用框架。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NEXT.JS">
+<meta property="og:url" content="https://easywz.github.io/2025/08/19/Front-end/JavaScript/NextJs/index.html">
+<meta property="og:site_name" content="WZ&#39;s blog">
+<meta property="og:description" content="使React应用 更简单 Next.js 是一个轻量级的 React 服务端渲染应用框架。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://easywz.github.io/img/index/nextjs.png">
+<meta property="article:published_time" content="2025-08-19T01:58:13.000Z">
+<meta property="article:modified_time" content="2025-08-19T08:54:25.000Z">
+<meta property="article:author" content="wang zou">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://easywz.github.io/img/index/nextjs.png">
+  
+  
+  
+  <title>NEXT.JS - WZ&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"easywz.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>人生在勤，不索何获</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/index/home-1.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="NEXT.JS"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-19 09:58" pubdate>
+          2025年8月19日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">NEXT.JS</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><a target="_blank" rel="noopener" href="https://www.nextjs.cn/docs/getting-started">官方文档</a></p>
+<h1 id="what"><a href="#what" class="headerlink" title="what"></a>what</h1><p>Next.js 是目前最流行的 React 全栈框架，它集成了服务器端渲染（SSR）和静态生成（SSG），能够提高性能和 SEO，特别适合构建高效、动态的 Web 应用</p>
+<h1 id="快速安装"><a href="#快速安装" class="headerlink" title="快速安装"></a>快速安装</h1><p>脚手架启动： 截止目前2025&#x2F;8&#x2F;19日版本需求: node &lt; 20</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-string">npx</span> <span class="hljs-built_in">create-next-app@latest</span><br><span class="hljs-comment"># or</span><br><span class="hljs-string">yarn</span> <span class="hljs-string">create</span> <span class="hljs-string">next-app</span><br></code></pre></td></tr></table></figure>
+<h1 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h1><p>在 Next.js 中，一个 page（页面） 就是一个从 .js、jsx、.ts 或 .tsx 文件导出（export）的 React 组件 ，这些文件存放在 pages 目录下。每个 page（页面）都使用其文件名作为路由（route）。<br>实际操作：<br>手动创建pages目录，与src同级，如下创建pages&#x2F;about.tsx</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">about</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> about;<br></code></pre></td></tr></table></figure>
+<p>则可直接通过&#x2F;about访问该页面，注：首次添加pages需重启项目</p>
+<h2 id="具有动态路由的页面"><a href="#具有动态路由的页面" class="headerlink" title="具有动态路由的页面"></a>具有动态路由的页面</h2><p>Next.js 支持具有动态路由的 pages（页面）。例如，如果你创建了一个命名为 pages&#x2F;posts&#x2F;[id].js 的文件，那么就可以通过 posts&#x2F;1、posts&#x2F;2 等类似的路径进行访问。<br>实际操作：<br>pages目录下创建post文件夹内部创建名称为<code>[pid].tsx</code>,编写代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> &#123; useRouter &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/router&#x27;</span><br><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">Post</span> = (<span class="hljs-params"></span>) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> router = <span class="hljs-title function_">useRouter</span>()<br>  <span class="hljs-keyword">const</span> &#123; pid &#125; = router.<span class="hljs-property">query</span><br><br>  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Post: &#123;pid&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Post</span><br></code></pre></td></tr></table></figure>
+<p>则可通过<code>/post/1</code>访问到该页面</p>
+<h2 id="预渲染"><a href="#预渲染" class="headerlink" title="预渲染"></a>预渲染</h2><p>默认情况下，Next.js 将 预渲染 每个 page（页面）。这意味着 Next.js 会预先为每个页面生成 HTML 文件，而不是由客户端 JavaScript 来完成。预渲染可以带来更好的性能和 SEO 效果。</p>
+<p>每个生成的 HTML 文件都与该页面所需的最少 JavaScript 代码相关联。当浏览器加载一个 page（页面）时，其 JavaScript 代码将运行并使页面完全具有交互性。（此过程称为 水合（hydration）。）</p>
+<h2 id="两种形式的预渲染"><a href="#两种形式的预渲染" class="headerlink" title="两种形式的预渲染"></a>两种形式的预渲染</h2><p>Next.js 具有两种形式的预渲染： 静态生成（Static Generation） 和 服务器端渲染（Server-side Rendering）。这两种方式的不同之处在于为 page（页面）生成 HTML 页面的 时机 。</p>
+<ul>
+<li><strong>静态生成 （推荐）</strong>：HTML 在 构建时 生成，并在每次页面请求（request）时重用。</li>
+<li><strong>服务器端渲染</strong>：在 每次页面请求（request）时 重新生成 HTML。<br>重要的是，Next.js 允许你为每个页面 选择 预渲染的方式。你可以创建一个 “混合渲染” 的Next.js 应用程序：对大多数页面使用“静态生成”，同时对其它页面使用“服务器端渲染”。</li>
+</ul>
+<p>出于性能考虑，相对服务器端渲染，更推荐使用 静态生成 。 CDN 可以在没有额外配置的情况下缓存静态生成的页面以提高性能。但是，在某些情况下，服务器端渲染可能是唯一的选择。</p>
+<p>你还可以将 客户端渲染 与静态生成或服务器端渲染一起使用。这意味着页面的某些部分可以完全由客户端 JavaScript 呈现。</p>
+<p>如果一个页面使用了 静态生成，在 构建时（build time） 将生成此页面对应的 HTML 文件 。这意味着在生产环境中，运行 next build 时将生成该页面对应的 HTML 文件。然后，此 HTML 文件将在每个页面请求时被重用，还可以被 CDN 缓存。</p>
+<p>在 Next.js 中，你可以静态生成 带有或不带有数据 的页面。接下来分别看看这两种情况：</p>
+<h3 id="静态生成"><a href="#静态生成" class="headerlink" title="静态生成"></a>静态生成</h3><h4 id="生成不带数据的静态页面"><a href="#生成不带数据的静态页面" class="headerlink" title="生成不带数据的静态页面"></a>生成不带数据的静态页面</h4><p>默认情况下，Next.js 使用 “静态生成” 来预渲染页面但不涉及获取数据。如下例所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">About</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">About</span><br></code></pre></td></tr></table></figure>
+<p>请注意，此页面在预渲染时不需要获取任何外部数据。在这种情况下，Next.js 只需在构建时为每个页面生成一个 HTML 文件即可。</p>
+<h4 id="需要获取数据的静态生成"><a href="#需要获取数据的静态生成" class="headerlink" title="需要获取数据的静态生成"></a>需要获取数据的静态生成</h4><p>某些页面需要获取外部数据以进行预渲染。有两种情况，一种或两种都可能适用。在每种情况下，你都可以使用 Next.js 所提供的以下函数：</p>
+<ol>
+<li><strong>您的页面内容取决于外部数据</strong>：使用 getStaticProps。<ol>
+<li>例如： 您的博客页面可能需要从 CMS（内容管理系统）中获取博客文章列表。</li>
+<li>要在预渲染时获取此数据，Next.js 允许你从同一文件 <code>export</code>（导出） 一个名为 <code>getStaticProps</code> 的 <code>async（异步）</code> 函数。该函数在构建时被调用，并允许你在预渲染时将获取的数据作为 <code>props</code> 参数传递给页面。 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 需要获取 `posts`（通过调用 API ）</span><br><span class="hljs-comment">//       在此页面被预渲染之前</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Blog</span>(<span class="hljs-params">&#123; posts &#125;</span>) &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span></span><br><span class="language-xml">      &#123;posts.map((post) =&gt; (</span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&#123;post.key&#125;</span>&gt;</span>&#123;post.title&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="language-xml">      ))&#125;</span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span><br>  );<br>&#125;<br><br><span class="hljs-comment">// 此函数在构建时被调用</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getStaticProps</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// 调用外部 API 获取博文列表</span><br>  <span class="hljs-comment">//   const res = await fetch(&#x27;https://.../posts&#x27;)</span><br>  <span class="hljs-comment">//   const posts = await res.json()</span><br>  <span class="hljs-keyword">const</span> posts = [<br>    &#123; <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-attr">key</span>: <span class="hljs-number">1</span> &#125;,<br>    &#123; <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;world&quot;</span>, <span class="hljs-attr">key</span>: <span class="hljs-number">2</span> &#125;,<br>  ];<br><br>  <span class="hljs-comment">// 通过返回 &#123; props: &#123; posts &#125; &#125; 对象，Blog 组件</span><br>  <span class="hljs-comment">// 在构建时将接收到 `posts` 参数</span><br>  <span class="hljs-keyword">return</span> &#123;<br>    <span class="hljs-attr">props</span>: &#123;<br>      posts,<br>    &#125;,<br>  &#125;;<br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Blog</span>;<br><br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><strong>你的页面 paths（路径） 取决于外部数据</strong>：使用 getStaticPaths （通常还要同时使用 getStaticProps）。<ol>
+<li>Next.js 允许你创建具有 动态路由 的页面。例如，你可以创建一个名为 pages&#x2F;posts&#x2F;[id].js 的文件用以展示以 id 标识的单篇博客文章。当你访问 posts&#x2F;1 路径时将展示 id: 1 的博客文章。</li>
+<li>但是，在构建 id 所对应的内容时可能需要从外部获取数据。</li>
+<li>例如： 假设你只向数据库添加了一篇博客文章（标记为 id: 1）。这种情况下，你只想在构建时针对 posts&#x2F;1 进行预渲染。稍后，你又添加了第二篇文章，标记为 id: 2。这是，你希望对 posts&#x2F;2 也进行预渲染。因此，预渲染的页面 paths（路径） 取决于外部数据。</li>
+<li>为了解决这个问题，Next.js 允许你从动态页面（在这里是 pages&#x2F;posts&#x2F;[id].js）中 export（导出） 一个名为 getStaticPaths 的 async（异步） 函数。该函数在构建时被调用，并允许你指定要预渲染的路径。</li>
+<li>同样在 pages&#x2F;posts&#x2F;[id].js 中，你还需要export（导出） getStaticProps 以便可以获取 id 所对应的博客文章的数据并进行预渲染：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Post</span>(<span class="hljs-params">&#123; post &#125;</span>) &#123;<br>  <span class="hljs-comment">// Render post...</span><br>&#125;<br><br><span class="hljs-comment">// 此函数在构建时被调用</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getStaticPaths</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// 调用外部 API 获取博文列表</span><br>  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;https://.../posts&quot;</span>);<br>  <span class="hljs-keyword">const</span> posts = <span class="hljs-keyword">await</span> res.<span class="hljs-title function_">json</span>();<br><br>  <span class="hljs-comment">// 据博文列表生成所有需要预渲染的路径</span><br>  <span class="hljs-keyword">const</span> paths = posts.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">post</span>) =&gt;</span> (&#123;<br>    <span class="hljs-attr">params</span>: &#123; <span class="hljs-attr">id</span>: post.<span class="hljs-property">id</span> &#125;,<br>  &#125;));<br><br>  <span class="hljs-comment">// We&#x27;ll pre-render only these paths at build time.</span><br>  <span class="hljs-comment">// &#123; fallback: false &#125; means other routes should 404.</span><br>  <span class="hljs-keyword">return</span> &#123; paths, <span class="hljs-attr">fallback</span>: <span class="hljs-literal">false</span> &#125;;<br>&#125;<br><br><span class="hljs-comment">// 在构建时也会被调用</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getStaticProps</span>(<span class="hljs-params">&#123; params &#125;</span>) &#123;<br>  <span class="hljs-comment">// params 包含此片博文的 `id` 信息。</span><br>  <span class="hljs-comment">// 如果路由是 /posts/1，那么 params.id 就是 1</span><br>  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`https://.../posts/<span class="hljs-subst">$&#123;params.id&#125;</span>`</span>);<br>  <span class="hljs-keyword">const</span> post = <span class="hljs-keyword">await</span> res.<span class="hljs-title function_">json</span>();<br><br>  <span class="hljs-comment">// 通过 props 参数向页面传递博文的数据</span><br>  <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">props</span>: &#123; post &#125; &#125;;<br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Post</span>;<br><br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+<h4 id="什么时候应该使用静态生成？"><a href="#什么时候应该使用静态生成？" class="headerlink" title="什么时候应该使用静态生成？"></a>什么时候应该使用静态生成？</h4><p>“我可以在用户请求之前预先渲染此页面吗？” 如果答案是肯定的，则应选择“静态生成”。<br>包括：</p>
+<ul>
+<li>营销页面</li>
+<li>博客文章和个人简历</li>
+<li>电商产品列表</li>
+<li>帮助和文档</li>
+</ul>
+<h3 id="服务器端渲染"><a href="#服务器端渲染" class="headerlink" title="服务器端渲染"></a>服务器端渲染</h3><p>也被称为 “SSR” 或 “动态渲染”。<br>如果 page（页面）使用的是 服务器端渲染，则会在 每次页面请求时 重新生成页面的 HTML 。<br>要对 page（页面）使用服务器端渲染，你需要 export 一个名为 getServerSideProps 的 async 函数。服务器将在每次页面请求时调用此函数。</p>
+<p>例如，假设你的某个页面需要预渲染频繁更新的数据（从外部 API 获取）。你就可以编写 getServerSideProps 获取该数据并将其传递给 Page ，如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Page</span>(<span class="hljs-params">&#123; data &#125;</span>) &#123;<br>  <span class="hljs-comment">// Render data...</span><br>&#125;<br><br><span class="hljs-comment">// This gets called on every request</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getServerSideProps</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// Fetch data from external API</span><br>  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`https://.../data`</span>)<br>  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> res.<span class="hljs-title function_">json</span>()<br><br>  <span class="hljs-comment">// Pass data to the page via props</span><br>  <span class="hljs-keyword">return</span> &#123; <span class="hljs-attr">props</span>: &#123; data &#125; &#125;<br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Page</span><br></code></pre></td></tr></table></figure>
+<p>如你所见，<code>getServerSideProps</code> 类似于 <code>getStaticProps</code>，但两者的区别在于<code>getServerSideProps</code> 在每次页面请求时都会运行，而在构建时不运行。</p>
+<p>场景：新闻首页、股票行情、天气预报、电商商品详情页（价格&#x2F;库存实时变化）。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>静态生成（推荐）： HTML 是在 构建时（build time） 生成的，并重用于每个页面请求。要使页面使用“静态生成”，只需导出（export）页面组件或导出（export） getStaticProps 函数（如果需要还可以导出 getStaticPaths 函数）。对于可以在用户请求之前预先渲染的页面来说，这非常有用。你也可以将其与客户端渲染一起使用以便引入其他数据。</li>
+<li>服务器端渲染： HTML 是在 每个页面请求 时生成的。要设置某个页面使用服务器端渲染，请导出（export） getServerSideProps 函数。由于服务器端渲染会导致性能比“静态生成”慢，因此仅在绝对必要时才使用此功能。</li>
+</ul>
+<h1 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h1><p><a target="_blank" rel="noopener" href="https://www.nextjs.cn/docs/basic-features/data-fetching">用于获取预渲染数据的三个独特的 Next.js 函数</a></p>
+<ul>
+<li><code>getStaticProps</code>（静态生成）：在构建时获取数据。</li>
+<li><code>getStaticPaths</code>（静态生成）：指定动态路由，根据数据预渲染页面。</li>
+<li><code>getServerSideProps</code>（服务器端渲染）：每次请求时获取数据。</li>
+</ul>
+<p class="note note-info">欲知后事如何，且听下回分解</p>
+
+
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>NEXT.JS</div>
+      <div>https://easywz.github.io/2025/08/19/Front-end/JavaScript/NextJs/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wang zou</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/10/28/Resources/IELTSvocabulary/" title="雅思必备词汇 &amp;&amp; 计算机英语">
+                        <span class="hidden-mobile">雅思必备词汇 &amp;&amp; 计算机英语</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/outdate.js"></script><!-- hexo injector body_end end --></body>
+</html>
