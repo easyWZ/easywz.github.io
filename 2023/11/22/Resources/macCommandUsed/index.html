@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/mac.png">
 <meta property="article:published_time" content="2023-11-22T09:39:23.000Z">
-<meta property="article:modified_time" content="2025-08-26T08:43:21.892Z">
+<meta property="article:modified_time" content="2025-08-27T09:15:50.506Z">
 <meta property="article:author" content="汪邹">
 <meta property="article:tag" content="mac">
 <meta name="twitter:card" content="summary_large_image">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          297 字
+          447 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -278,7 +278,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年8月26日 下午
+                    本文最后更新于 2025年8月27日 下午
                   
                 
               </p>
@@ -316,7 +316,8 @@
 <li><code>ls</code> 文件内部列表展示</li>
 <li><code>cd</code> 进入内部某个对象 可按tab健自动补全</li>
 </ol>
-<h3 id="10-启动-停止-重启-Apache"><a href="#10-启动-停止-重启-Apache" class="headerlink" title="10  启动&#x2F;停止&#x2F;重启 Apache"></a>10  启动&#x2F;停止&#x2F;重启 Apache</h3>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs perl">brew list | <span class="hljs-keyword">grep</span> mysql              <span class="hljs-comment">#查看安装的mysql 有输出即为安装 无输出即为未安装</span><br><br>brew services list | <span class="hljs-keyword">grep</span> mysql     <span class="hljs-comment">#查看mysql服务状态 stopped/started 表示服务状态</span><br><br>brew install mysql                  <span class="hljs-comment">#安装mysql</span><br><br>mysql --version                     <span class="hljs-comment">#查看mysql版本</span><br><br>brew services start mysql           <span class="hljs-comment">#启动mysql服务</span><br><br>brew services stop mysql            <span class="hljs-comment">#停止mysql服务</span><br><br>mysql -u root -p                    <span class="hljs-comment">#进入mysql 密码默认为空/root</span><br><br>brew install nginx php              <span class="hljs-comment">#安装nginx php</span><br>brew uninstall nginx                <span class="hljs-comment">#卸载nginx</span><br><br>brew services start nginx php       <span class="hljs-comment">#启动nginx服务 访问 http://localhost:8080（默认端口），看到欢迎页面即成功。</span><br>brew services start php<br><br>brew list | <span class="hljs-keyword">grep</span> nginx              <span class="hljs-comment">#检查是否通过 Homebrew 安装 </span><br><br>brew info nginx                     <span class="hljs-comment">#查看nginx安装信息 /opt/homebrew/Cellar/nginx/1.29.1</span><br><br>brew services list | <span class="hljs-keyword">grep</span> nginx     <span class="hljs-comment">#查看nginx服务状态</span><br><br>ps aux | <span class="hljs-keyword">grep</span> php-fpm               <span class="hljs-comment">#查看php-fpm服务状态</span><br><br>brew services restart nginx         <span class="hljs-comment">#重启nginx服务</span><br><br>brew services list | <span class="hljs-keyword">grep</span> php       <span class="hljs-comment">#查看php服务状态</span><br>brew services start php@8.<span class="hljs-number">3</span>         <span class="hljs-comment">#启动php服务</span><br><br></code></pre></td></tr></table></figure>
+
                 
               </div>
             
@@ -380,7 +381,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年8月26日</div>
+          <div>2025年8月27日</div>
         </div>
       
       
