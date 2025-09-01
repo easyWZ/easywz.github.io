@@ -75,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"easywz.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"easywz.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -423,7 +423,7 @@
 <li>代码块<ol>
 <li><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符(<strong>Tab键</strong>)。 也可以用 <code>```</code> 包裹一段代码，并指定一种语言（也可以不指定）</p>
 </li>
-<li><p><strong>(<code>```内容```</code>)</strong><br> <img src="/img/js/17004620062132.jpg"></p>
+<li><p><strong>(<code>```内容```</code>)</strong><br> <img src="/img/js/17004620062132.jpg" srcset="/img/loading.gif" lazyload></p>
  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;RUNOOB&#x27;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在使用该语法时开头之前必须要有一行空行，若要标记语言则在开头语法加一个空格然后声明语言类型(具体如图所示)，既然开头有要求自然结束也有要求的。结束时切忌不要在结束标签后加空格，否则该标签未关闭。<strong>关闭则直接回车换两行即可</strong>。</p>
@@ -463,9 +463,9 @@
 </li>
 <li><h3 id="9、图片"><a href="#9、图片" class="headerlink" title="9、图片"></a>9、<a id="preface">图片</a></h3><ol>
 <li>要<strong>添加图像</strong>，请使用感叹号 (<code>!</code>), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">![这是图片](https:<span class="hljs-regexp">//m</span>arkdown.com.cn<span class="hljs-regexp">/assets/img</span>/philly-magic-garden.<span class="hljs-number">9</span>c0b4415.jpg <span class="hljs-string">&quot;Magic Gardens&quot;</span>) <br></code></pre></td></tr></table></figure>
- <img src="https://markdown.com.cn/assets/img/philly-magic-garden.9c0b4415.jpg" alt="这是图片" title="Magic Gardens"></li>
+ <img src="https://markdown.com.cn/assets/img/philly-magic-garden.9c0b4415.jpg" srcset="/img/loading.gif" lazyload alt="这是图片" title="Magic Gardens"></li>
 <li>给<strong>图片增加链接</strong>，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">[![沙漠中的岩石图片]<span class="hljs-params">(https://tse3-mm.cn.bing.net/th/id/OIP-C.ECTYUcRzB9FMRqYOYvZnSQHaEK?<span class="hljs-attr">w</span>=308&amp;<span class="hljs-attr">h</span>=180&amp;<span class="hljs-attr">c</span>=7&amp;<span class="hljs-attr">r</span>=0&amp;<span class="hljs-attr">o</span>=5&amp;<span class="hljs-attr">dpr</span>=2&amp;<span class="hljs-attr">pid</span>=1.7 &quot;Shiprock&quot;)</span>]<span class="hljs-params">(https://markdown.com.cn)</span><br></code></pre></td></tr></table></figure>
- <a target="_blank" rel="noopener" href="https://markdown.com.cn/"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.ECTYUcRzB9FMRqYOYvZnSQHaEK?w=308&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="沙漠中的岩石图片" title="Shiprock"></a></li>
+ <a target="_blank" rel="noopener" href="https://markdown.com.cn/"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.ECTYUcRzB9FMRqYOYvZnSQHaEK?w=308&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" srcset="/img/loading.gif" lazyload alt="沙漠中的岩石图片" title="Shiprock"></a></li>
 </ol>
 </li>
 <li><h3 id="10、表格"><a href="#10、表格" class="headerlink" title="10、表格"></a>10、表格</h3></li>
@@ -902,6 +902,10 @@
 
 
 
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
