@@ -7,7 +7,7 @@
 //     if (times.length === 0) { return; }
 //     let posts = document.getElementsByClassName('post-content');
 //     if (posts.length === 0) { return; }
-  
+
 //     // 获取系统当前的时间
 //     let pubTime = new Date(times[0].dateTime);  /* 文章发布时间戳 */
 //     let now = Date.now()  /* 当前时间戳 */
@@ -25,3 +25,25 @@
 //           '</div>' + posts[0].innerHTML;
 //       }
 //     };
+document.addEventListener("DOMContentLoaded", function () {
+  // 拦截文档内所有锚点点击
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault(); // 阻止默认跳转行为
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // 计算滚动位置，减去固定栏高度
+        const targetPosition = targetElement.offsetTop + 500; // 你的固定导航栏高度
+        // 平滑滚动到目标位置
+        window.scrollTo({
+          top: targetPosition,
+        //   behavior: "smooth",
+        });
+        // 可选：更新浏览器地址栏的哈希值
+        history.replaceState(null, null, targetId);
+      }
+    });
+  });
+});
