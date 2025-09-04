@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/index/interview.jpeg">
 <meta property="article:published_time" content="2024-03-01T03:13:42.000Z">
-<meta property="article:modified_time" content="2025-09-04T01:31:26.348Z">
+<meta property="article:modified_time" content="2025-09-04T02:54:27.989Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/index/interview.jpeg">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          2.5k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          18 分钟
+          21 分钟
         
       </span>
     
@@ -285,7 +285,162 @@
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7122755913043148813">资料一</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/nobody_1/article/details/88956315">资料二</a></p>
+                <h3 id="常用命令速查"><a href="#常用命令速查" class="headerlink" title="常用命令速查"></a>常用命令速查</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>基础配置</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>git --version</code></td>
+<td>查看git版本</td>
+</tr>
+<tr>
+<td><code>git config --global user.name &quot;Your Name&quot;</code></td>
+<td>设置用户名（全局）</td>
+</tr>
+<tr>
+<td><code>git config --global user.email &quot;email@example.com&quot;</code></td>
+<td>设置邮箱（全局）</td>
+</tr>
+<tr>
+<td><code>git config --list</code></td>
+<td>查看配置</td>
+</tr>
+<tr>
+<td><strong>仓库操作</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>git init</code></td>
+<td>初始化新仓库</td>
+</tr>
+<tr>
+<td><code>git clone &lt;url&gt;</code></td>
+<td>克隆远程仓库</td>
+</tr>
+<tr>
+<td><code>git remote -v</code></td>
+<td>查看远程仓库地址</td>
+</tr>
+<tr>
+<td><strong>分支管理</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>git branch</code></td>
+<td>查看本地分支</td>
+</tr>
+<tr>
+<td><code>git branch &lt;name&gt;</code></td>
+<td>创建新分支</td>
+</tr>
+<tr>
+<td><code>git checkout &lt;branch&gt;</code></td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td><code>git checkout -b &lt;new-branch&gt;</code></td>
+<td>创建并切换分支</td>
+</tr>
+<tr>
+<td><code>git merge &lt;branch&gt;</code></td>
+<td>合并分支</td>
+</tr>
+<tr>
+<td><code>git branch -d &lt;branch&gt;</code></td>
+<td>删除分支</td>
+</tr>
+<tr>
+<td><strong>代码提交</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>查看状态(文件&#x2F;资源修改)</td>
+</tr>
+<tr>
+<td><code>git add &lt;file&gt;</code></td>
+<td>添加单个文件到暂存区</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>添加所有修改到暂存区</td>
+</tr>
+<tr>
+<td><code>git commit -m &quot;提交说明&quot;</code></td>
+<td>提交到本地仓库</td>
+</tr>
+<tr>
+<td><code>git commit --amend</code></td>
+<td>修改上次提交（未push时）</td>
+</tr>
+<tr>
+<td><code>git stash</code><br> <code>git stash pop</code></td>
+<td>暂存当前修改（临时切换分支）</td>
+</tr>
+<tr>
+<td><strong>远程同步</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>git push origin &lt;branch&gt;</code></td>
+<td>推送到远程</td>
+</tr>
+<tr>
+<td><code>git pull origin &lt;branch&gt;</code></td>
+<td>拉取远程更新</td>
+</tr>
+<tr>
+<td><code>git fetch</code></td>
+<td>获取远程更新（不自动合并）</td>
+</tr>
+<tr>
+<td><strong>版本控制</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>git log</code></td>
+<td>查看提交历史</td>
+</tr>
+<tr>
+<td><code>git log --oneline</code></td>
+<td>简洁版历史</td>
+</tr>
+<tr>
+<td><code>git show &lt;commit-id&gt;</code></td>
+<td>查看某次提交的改动</td>
+</tr>
+<tr>
+<td><code>git diff</code></td>
+<td>查看未暂存的修改</td>
+</tr>
+<tr>
+<td><code>git reset &lt;file&gt;</code></td>
+<td>取消暂存</td>
+</tr>
+<tr>
+<td><code>git reset --hard HEAD</code></td>
+<td>丢弃所有本地修改</td>
+</tr>
+<tr>
+<td><code>git reset HEAD~1</code></td>
+<td>撤销本地提交（未push）</td>
+</tr>
+<tr>
+<td><code>git push -f origin &lt;branch&gt;</code></td>
+<td>强制推送（慎用！）</td>
+</tr>
+<tr>
+<td><code>git tag v1.0</code> <br> <code>git push origin --tags</code></td>
+<td>创建标签</td>
+</tr>
+</tbody></table>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
 <li><a href="#question1">常用git命令</a></li>
 <li><a href="#question2">提交时产生冲突，如何产生如何解决</a></li>
