@@ -8,8 +8,8 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/index/bk.png">
-  <link rel="icon" href="/img/index/bk.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
+  <link rel="icon" href="/img/icons/bk.png">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/hexo.webp">
 <meta property="article:published_time" content="2023-11-15T09:35:51.000Z">
-<meta property="article:modified_time" content="2025-09-04T01:27:29.068Z">
+<meta property="article:modified_time" content="2025-09-05T03:23:40.059Z">
 <meta property="article:author" content="汪邹">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          530 字
+          697 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -278,7 +278,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年9月4日 上午
+                    本文最后更新于 2025年9月5日 上午
                   
                 
               </p>
@@ -326,12 +326,12 @@
 </li>
 <li><p><strong>branch为上传分支，git新建项目时默认为main需切换分支或改为main</strong></p>
 <ol>
-<li><img src="/img/hexo/hexo-changeGitBranch.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/content/hexo-changeGitBranch.webp" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
 <li><p><strong>确认git发布分支是否为当前上传分支，不是则切换</strong></p>
 <ol>
-<li><img src="/img/hexo/hexo-sureGitBranch.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/content/hexo-sureGitBranch.webp" srcset="/img/loading.gif" lazyload></li>
 </ol>
 </li>
 </ol>
@@ -377,7 +377,7 @@
 </ol>
 </li>
 <li>hexo 更换网站小图标 <ol>
-<li>配置文件中 <strong><code>favicon: /img/index/bk.png </code></strong></li>
+<li>配置文件中 <strong><code>favicon: /img/icons/bk.png </code></strong></li>
 </ol>
 </li>
 <li>hexo 指定子文件夹下创建文章<ol>
@@ -410,6 +410,18 @@
 </li>
 </ol>
 </li>
+</ol>
+</li>
+</ol>
+<h3 id="补充问题-hexo-提交到GitHub"><a href="#补充问题-hexo-提交到GitHub" class="headerlink" title="补充问题 hexo 提交到GitHub"></a>补充问题 hexo 提交到GitHub</h3><ol>
+<li>该项目提交到GitHub使用非全局用户名和邮箱<ol>
+<li>场景：个人账号和公司帐号不一致，提交时用户名和邮箱不一致，导致提交记录混乱。</li>
+<li>解决方法<ol>
+<li>需要在Hexo博客目录下的 .deploy_git 文件夹内设置局部配置<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config user.name 你的Github用户名<br>git config user.email 你的Github邮箱<br></code></pre></td></tr></table></figure></li>
+<li>或者找到 .deploy_git 文件夹下 config 文件，在里面添加<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">[user]<br>	name = 你的Github用户名<br>	email = 你的Github邮箱<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>注意：若执行<code>hexo clean</code>命令，则会清除缓存文件 (db.json) 和已生成的静态文件 (public)，包括 .deploy_git 文件夹下的配置。<strong>需重新配置</strong>。</li>
 </ol>
 </li>
 </ol>
@@ -477,7 +489,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年9月4日</div>
+          <div>2025年9月5日</div>
         </div>
       
       
