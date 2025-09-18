@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>js数据结构-Map和Set详解</title>
+    <link href="/2025/09/09/Front-end/JavaScript/SetMap/"/>
+    <url>/2025/09/09/Front-end/JavaScript/SetMap/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h4><p>Map 是一种键值对的集合，与普通对象(Object)不同，Map 的键可以是任意类型（包括对象、函数等）。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Nginx</title>
     <link href="/2025/09/03/Back-end/nginx/"/>
     <url>/2025/09/03/Back-end/nginx/</url>
