@@ -21,21 +21,21 @@
   
     <meta name="description" content="Algorithms + Data Structures &#x3D; Programs 提升算法与数据结构能力,锻炼逻辑思维和问题解决能力,熟悉编程语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 每日一刷">
+<meta property="og:title" content="算法">
 <meta property="og:url" content="https://easywz.github.io/2024/10/21/Front-end/JavaScript/TheoreticalKnowledge/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
 <meta property="og:description" content="Algorithms + Data Structures &#x3D; Programs 提升算法与数据结构能力,锻炼逻辑思维和问题解决能力,熟悉编程语言">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/sf.webp">
 <meta property="article:published_time" content="2024-10-21T02:03:17.000Z">
-<meta property="article:modified_time" content="2025-09-04T01:33:02.098Z">
+<meta property="article:modified_time" content="2025-09-25T09:18:57.665Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/webp/sf.webp">
   
   
   
-  <title>LeetCode 每日一刷 - WZ&#39;s blog</title>
+  <title>算法 - WZ&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="LeetCode 每日一刷"></span>
+            <span id="subtitle" data-typed-text="算法"></span>
           
         </div>
 
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          2.4k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          10 分钟
+          21 分钟
         
       </span>
     
@@ -272,12 +272,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">LeetCode 每日一刷</h1>
+            <h1 id="seo-header">算法</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年9月4日 上午
+                    本文最后更新于 2025年9月25日 下午
                   
                 
               </p>
@@ -285,7 +285,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="时间和空间复杂度"><a href="#时间和空间复杂度" class="headerlink" title="时间和空间复杂度"></a>时间和空间复杂度</h1><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>时间复杂度是对算法执行过程中基本操作（例如比较、赋值等）执行次数的量度。它衡量了输入数据规模（通常以 n 表示）增加时，算法运行时间增长的趋势。</p>
+                <h1 id="一、时间和空间复杂度"><a href="#一、时间和空间复杂度" class="headerlink" title="一、时间和空间复杂度"></a>一、时间和空间复杂度</h1><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>时间复杂度是对算法执行过程中基本操作（例如比较、赋值等）执行次数的量度。它衡量了输入数据规模（通常以 n 表示）增加时，算法运行时间增长的趋势。</p>
 <h3 id="常见的表示"><a href="#常见的表示" class="headerlink" title="常见的表示"></a>常见的表示</h3><ol>
 <li><h4 id="常数时间复杂度O-1"><a href="#常数时间复杂度O-1" class="headerlink" title="常数时间复杂度O(1)"></a>常数时间复杂度O(1)</h4><ol>
 <li>无论输入规模多大，算法的运行时间都是恒定的。</li>
@@ -334,7 +334,69 @@
 </li>
 <li>O(n^2)：算法所需的空间随着输入规模的平方增长，通常出现在涉及二维数组等数据结构时。</li>
 </ol>
-<h1 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h1><h2 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p>
+<h1 id="二、基本算法思想"><a href="#二、基本算法思想" class="headerlink" title="二、基本算法思想"></a>二、基本算法思想</h1><h2 id="1-枚举法"><a href="#1-枚举法" class="headerlink" title="1. 枚举法"></a>1. 枚举法</h2><ol>
+<li>这是最直接、最简单的方法，也被称为“穷举法”。即<strong>列举出问题所有可能的解，然后一一验证，直到找到满足条件的解为止</strong></li>
+<li>优点：简单粗暴，几乎能解决所有问题（只要时间允许）。</li>
+<li>缺点：效率通常极低，当问题规模（n）变大时，计算时间会呈爆炸式增长。</li>
+<li>示例：<ol>
+<li>百钱百鸡问题：（鸡翁一，值钱五；鸡母一，值钱三；鸡雏三，值钱一；百钱买百鸡，则翁、母、雏各几何？）<ol>
+<li>翻译：用100块钱买100只鸡，公鸡5块1只，母鸡3块1只，小鸡1块3只，问各买几只？</li>
+<li>暴力法就是遍历所有公鸡、母鸡、小鸡数量的组合（从0到100），检查哪种组合满足总钱数和总只数的要求。</li>
+</ol>
+</li>
+<li>密码破解：尝试所有可能的密码组合。</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-分治法"><a href="#2-分治法" class="headerlink" title="2. 分治法"></a>2. 分治法</h2><ol>
+<li>“分而治之”是解决复杂问题的强大策略。核心思想是：<strong>将一个规模为 n 的大问题，分解成 k 个规模较小的子问题，这些子问题相互独立且与原问题形式相同。递归地解决这些子问题，然后将子问题的解合并起来，就得到原问题的解。</strong></li>
+<li>步骤即为：分解 -&gt; 解决子问题 -&gt; 合并。</li>
+<li>示例<ol>
+<li><strong>归并排序</strong>：将待排序数组一分为二，分别对左右两个子数组进行排序（递归进行），最后将两个已排序的子数组合并成一个有序数组。</li>
+<li><strong>快速排序</strong>：选择一个基准元素，将数组分成“比基准小”和“比基准大”的两部分，再对这两部分递归进行快速排序。</li>
+<li><strong>二分查找</strong>：在有序数组中，每次都通过与中间元素的比较，将待查找区间缩小一半，直到找到目标或区间为空。</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-贪心算法"><a href="#3-贪心算法" class="headerlink" title="3. 贪心算法"></a>3. 贪心算法</h2><ol>
+<li>贪心算法在每一步选择中都采取在当前状态下最好或最优（即最有利）的选择。核心思想即<strong>希望通过一系列局部最优选择，从而导致全局最优解。</strong></li>
+<li>优点：效率高，通常时间复杂度低。</li>
+<li>缺点：不是所有问题都能得到全局最优解。它目光短浅，无法回退。</li>
+<li>示例：<ol>
+<li>找零钱问题：用最少张数的纸币凑出某个金额。在人民币体系下（有100, 50, 20, 10, 5, 1元），贪心策略是每次都选择不超过剩余金额的最大面额纸币。</li>
+<li>霍夫曼编码：一种用于数据压缩的算法，通过构造最优二叉树，让出现频率高的字符使用更短的编码。</li>
+</ol>
+</li>
+</ol>
+<h2 id="4-动态规划"><a href="#4-动态规划" class="headerlink" title="4. 动态规划"></a>4. 动态规划</h2><ol>
+<li>动态规划是解决具有重叠子问题和最优子结构性质问题的利器。</li>
+<li>核心思想：<strong>将复杂问题分解为相对简单的子问题，但不同于分治法，动态规划的子问题往往是重叠的。为了避免重复计算，它会保存子问题的解（通常用数组或字典），在需要时直接查找，从而大大提高效率。这是一种“用空间换时间”的思想。</strong></li>
+<li>步骤：<ol>
+<li>定义状态：找出问题中的变量，定义状态（通常用一个数组 dp[i] 来表示）。</li>
+<li>建立状态转移方程：找出状态之间的关系式，即如何从已知状态推导出未知状态。</li>
+<li>确定初始条件和边界。</li>
+<li>计算顺序：从小到大或从大到小计算状态。</li>
+</ol>
+</li>
+<li>示例<ol>
+<li>斐波那契数列：F(n) &#x3D; F(n-1) + F(n-2)。直接递归计算会重复计算大量子问题，而动态规划用一个数组存储已经计算过的 F(i)。</li>
+<li>背包问题：给定一组物品的重量和价值，在限定的总重量内，如何选择物品使得总价值最大。</li>
+<li>最短路径问题。</li>
+</ol>
+</li>
+</ol>
+<h2 id="5-回溯法"><a href="#5-回溯法" class="headerlink" title="5. 回溯法"></a>5. 回溯法</h2><ol>
+<li>回溯法是一种通过试错来寻找所有（或部分）解的算法。当它发现某一步骤不能得到有效的解时，它将取消上一步甚至上几步的计算，再通过其他的可能路径继续寻找。</li>
+<li>核心思想：<strong>“前进，失败，回溯，再尝试”。它是一种系统性的搜索技术，通常用递归来实现。</strong></li>
+<li>特点：比暴力枚举聪明，因为它会在发现当前路径不可能成功时提前放弃（称为“剪枝”）。</li>
+<li>示例：<ol>
+<li>八皇后问题：在8×8的国际象棋棋盘上摆放8个皇后，使其不能互相攻击（即任意两个皇后都不能处于同一行、同一列或同一斜线上）。回溯法会尝试在第一行放一个皇后，然后在第二行安全位置放一个，如此继续。如果某一行没有安全位置，就回溯到上一行，移动皇后的位置再试。</li>
+<li>数独求解。</li>
+<li>全排列问题。</li>
+</ol>
+</li>
+</ol>
+<h1 id="实践：LeetCode刷题"><a href="#实践：LeetCode刷题" class="headerlink" title="实践：LeetCode刷题"></a>实践：LeetCode刷题</h1><h2 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p>
 <p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
 <p>你可以按任意顺序返回答案。</p>
 <h3 id="解析示例"><a href="#解析示例" class="headerlink" title="解析示例"></a>解析示例</h3><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：nums = <span class="hljs-comment">[2,7,11,15]</span>, target = 9<br>输出：<span class="hljs-comment">[0,1]</span><br>解释：因为 nums<span class="hljs-comment">[0]</span> + nums<span class="hljs-comment">[1]</span> == 9 ，返回 <span class="hljs-comment">[0, 1]</span> 。<br><br>输入：nums = <span class="hljs-comment">[3,2,4]</span>, target = 6<br>输出：<span class="hljs-comment">[1,2]</span><br><br>输入：nums = <span class="hljs-comment">[3,3]</span>, target = 6<br>输出：<span class="hljs-comment">[0,1]</span><br></code></pre></td></tr></table></figure>
@@ -363,7 +425,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>LeetCode 每日一刷</div>
+      <div>算法</div>
       <div>https://easywz.github.io/2024/10/21/Front-end/JavaScript/TheoreticalKnowledge/</div>
     </div>
     <div class="license-meta">
@@ -382,7 +444,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年9月4日</div>
+          <div>2025年9月25日</div>
         </div>
       
       
@@ -413,9 +475,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/19/Front-end/React/NextJs/" title="NEXT.JS">
+                      <a href="/2024/10/28/Resources/IELTSvocabulary/" title="雅思必备词汇 &amp;&amp; 计算机英语">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">NEXT.JS</span>
+                        <span class="hidden-mobile">雅思必备词汇 &amp;&amp; 计算机英语</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
