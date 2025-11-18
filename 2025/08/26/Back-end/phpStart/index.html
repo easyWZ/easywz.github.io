@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/php.webp">
 <meta property="article:published_time" content="2025-08-26T08:59:42.000Z">
-<meta property="article:modified_time" content="2025-11-03T03:35:05.458Z">
+<meta property="article:modified_time" content="2025-11-18T00:46:38.606Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/webp/php.webp">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          2k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          14 分钟
+          17 分钟
         
       </span>
     
@@ -277,7 +277,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年11月3日 中午
+                    本文最后更新于 2025年11月18日 早上
                   
                 
               </p>
@@ -343,11 +343,55 @@
 <p>同时存在两个 MySQL 服务 怎么解决</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash"> <span class="hljs-comment"># 停止所有MySQL相关服务</span><br>brew services stop mysql<br>brew services stop mysql@8.0<br><span class="hljs-comment"># 强制终止残留进程（如果存在）</span><br>pkill -f mysqld<br><span class="hljs-comment"># 删除冲突的plist文件（谨慎操作）</span><br><span class="hljs-built_in">rm</span> -f ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist<br><span class="hljs-built_in">rm</span> -f ~/Library/LaunchAgents/homebrew.mxcl.mysql@8.0.plist<br><br><span class="hljs-comment"># 重新创建服务文件</span><br>brew services cleanup<br><br><span class="hljs-comment"># 方案1：使用mysql@8.0（推荐）</span><br>brew <span class="hljs-built_in">unlink</span> mysql 2&gt;/dev/null  <span class="hljs-comment"># 移除旧版本链接</span><br>brew <span class="hljs-built_in">link</span> --force mysql@8.0<br>brew services start mysql@8.0<br><br><span class="hljs-comment"># 检查服务状态（应只有1个started）</span><br>brew services list | grep mysql<br><br><span class="hljs-comment"># 检查端口占用（应为3306）</span><br>lsof -i :3306<br><br><span class="hljs-comment"># 检查日志（无错误信息）</span><br><span class="hljs-built_in">tail</span> -f /opt/homebrew/var/mysql/$(<span class="hljs-built_in">whoami</span>).err<br><br></code></pre></td></tr></table></figure>
 
-<h1 id="4-thinkAdmin后台搭建"><a href="#4-thinkAdmin后台搭建" class="headerlink" title="4. thinkAdmin后台搭建"></a>4. thinkAdmin后台搭建</h1><ol>
+<h1 id="4-Filament-后台安装"><a href="#4-Filament-后台安装" class="headerlink" title="4. Filament 后台安装"></a>4. Filament 后台安装</h1><ol>
+<li>通过 Composer<ol>
+<li>在终端中运行：<code>composer create-project kanekescom/filamentum your-project-name</code>。</li>
+<li>进入项目目录：<code>cd your-project-name</code>。</li>
+</ol>
+</li>
+<li>配置环境文件<ol>
+<li>在 .env 文件中配置数据库连接信息（如 DB_DATABASE, DB_USERNAME, DB_PASSWORD）。</li>
+</ol>
+</li>
+<li>生成应用密钥<ol>
+<li>在终端中运行<code>php artisan key:generate</code>。创建一个安全的加密密钥。</li>
+</ol>
+</li>
+<li>运行数据库迁移<ol>
+<li><code>php artisan migrate</code></li>
+</ol>
+</li>
+<li>如果出现错误 从检查路由开始排查<ol>
+<li><code>php artisan route:list</code></li>
+<li><code>php artisan --version</code> 验证Laravel版本</li>
+<li>对于 Laravel 11 及更高版本，建议安装 Filament v4 <code>composer require filament/filament:&quot;^4.0&quot; -W</code> 这里的 -W 参数允许Composer更新所有相关依赖的版本，对于解决潜在的依赖冲突非常有帮助</li>
+<li><code>php artisan filament:install --panels</code> 安装 Filament 面板,一般紧跟上面步骤</li>
+<li>清除所有缓存并重新尝试 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-meta"># 清除所有缓存</span><br>php artisan config:<span class="hljs-keyword">clear</span><br>php artisan cache:<span class="hljs-keyword">clear</span><br>php artisan route:<span class="hljs-keyword">clear</span><br>php artisan <span class="hljs-built_in">view</span>:<span class="hljs-keyword">clear</span><br><br><span class="hljs-meta"># 重新生成自动加载</span><br>composer dump-autoload<br><br><span class="hljs-meta"># 再次检查路由</span><br>php artisan route:list<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>创建初始用户<ol>
+<li>数据库默认创建几个特定权限的角色 <code>php artisan db:seed</code></li>
+<li>重新初始化数据库和用户数据 <code>php artisan migrate:fresh --seed</code></li>
+<li>手动创建一个全新的管理员账户<code>php artisan make:filament-user</code> 根据命令提示，输入用户名、邮箱和密码，即可创建一个新的用户</li>
+</ol>
+</li>
+<li>启动开发服务器<ol>
+<li><code>php artisan serve</code></li>
+<li>根据提示信息访问连接，一般默认为<code>http://127.0.0.1:8000/admin</code></li>
+</ol>
+</li>
+<li>可选配置(.env 文件中进行修改)<ol>
+<li><code>FILAMENTUM_PATH=app</code>修改访问后台的URL路径，例如改为 admin 或 dashboard</li>
+<li><code>FILAMENTUM_REGISTRATION=false FILAMENTUM_PASSWORD_RESET=true</code>控制用户注册、密码重置等功能是否开启</li>
+</ol>
+</li>
+<li>进入后台之后默认只显示Dashboard模块，要丰富后台内容，需要创建资源来管理模型，或者自定义页面</li>
+</ol>
+<h1 id="5-thinkAdmin后台搭建"><a href="#5-thinkAdmin后台搭建" class="headerlink" title="5. thinkAdmin后台搭建"></a>5. thinkAdmin后台搭建</h1><ol>
 <li>通过源码安装：（ 默认安装 admin、wechat 两个模块 ）<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs clean">### 下载项目（ 需要在英文目录下面执行 ）<br># git clone https:<span class="hljs-comment">//github.com/zoujingli/ThinkAdmin</span><br>git clone https:<span class="hljs-comment">//gitee.com/zoujingli/ThinkAdmin</span><br><br>### 进入项目根目录<br>cd ThinkAdmin<br><br>### 安装项目依赖组件<br>composer install --optimize-autoloader<br><br>### 数据库初始化并安装<br>### 默认使用 Sqlite 数据库，若使用其他数据库请修改配置后再执行<br>php think migrate:run<br><br>### 开启PHP内置WEB服务<br>### 默认后台登录账号及密码都是 admin<br>php think run --host <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><br></code></pre></td></tr></table></figure></li>
 <li>nginx配置启动 访问 <a target="_blank" rel="noopener" href="http://localhost/">http://localhost/</a> 即可访问后台<br><code>http://localhost/admin/login.html</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs bash">worker_processes  1;<br><br>events &#123;<br>    worker_connections  1024;<br>&#125;<br><br>http &#123;<br>    include       mime.types;<br>    default_type  application/octet-stream;<br>    sendfile        on;<br>    keepalive_timeout  65;<br><br>    server &#123;<br>        listen       80;<br>        server_name  localhost;<br>        root /opt/homebrew/var/www/ThinkAdmin/public;  <span class="hljs-comment"># 网站根目录</span><br>        index index.php index.html index.htm;<br><br>        location / &#123;<br>            try_files <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.php?<span class="hljs-variable">$query_string</span>;<br>    <br>            <span class="hljs-comment"># ThinkPHP专用规则</span><br>            <span class="hljs-keyword">if</span> (!-e <span class="hljs-variable">$request_filename</span>) &#123;<br>                  rewrite ^(.*)$ /index.php?s=<span class="hljs-variable">$1</span> last;<br>                  <span class="hljs-built_in">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment"># redirect server error pages to the static page /50x.html</span><br>        <span class="hljs-comment">#</span><br>        error_page   500 502 503 504  /50x.html;<br>        location = /50x.html &#123;<br>            root   html;<br>        &#125;<br><br>        <span class="hljs-comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span><br>        <span class="hljs-comment">#</span><br>        location ~ \.php$ &#123;<br>          <span class="hljs-comment"># root            /opt/homebrew/var/www;</span><br>          fastcgi_pass    127.0.0.1:9000;<br>          fastcgi_index   index.php;<br>          fastcgi_param   SCRIPT_FILENAME $document_root<span class="hljs-variable">$fastcgi_script_name</span>;<br>          include         fastcgi_params;<br>          <span class="hljs-comment"># include /opt/homebrew/etc/nginx/fastcgi_params;</span><br><br>          <span class="hljs-comment"># ThinkPHP特殊配置</span><br>          fastcgi_split_path_info ^(.+\.php)(/.+)$;<br>          fastcgi_param PATH_INFO <span class="hljs-variable">$fastcgi_path_info</span>;<br>        &#125;<br><br>        <span class="hljs-comment"># 静态资源缓存</span><br>        location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg)$ &#123;<br>            expires 1y;<br>            add_header Cache-Control <span class="hljs-string">&quot;public&quot;</span>;<br>        &#125;<br>    &#125;<br>    include servers/*;<br>&#125;<br><br></code></pre></td></tr></table></figure></li>
 </ol>
-<h1 id="5-yamecent-admin后台系统安装"><a href="#5-yamecent-admin后台系统安装" class="headerlink" title="5. yamecent-admin后台系统安装"></a>5. yamecent-admin后台系统安装</h1><ol>
+<h1 id="6-yamecent-admin后台系统安装"><a href="#6-yamecent-admin后台系统安装" class="headerlink" title="6. yamecent-admin后台系统安装"></a>6. yamecent-admin后台系统安装</h1><ol>
 <li>克隆代码库 <code>git clone https://github.com/woann/yamecent-admin.git</code></li>
 <li>进入项目目录并安装 Laravel 框架及其依赖库：<ol>
 <li>运行<code>composer --version</code>查看composer版本，检查是否和现有php冲突</li>
@@ -365,7 +409,7 @@
 </ol>
 </li>
 </ol>
-<h1 id="6-catchAdmin-安装"><a href="#6-catchAdmin-安装" class="headerlink" title="6. catchAdmin 安装"></a>6. catchAdmin 安装</h1><p>安装后端部分</p>
+<h1 id="7-catchAdmin-安装"><a href="#7-catchAdmin-安装" class="headerlink" title="7. catchAdmin 安装"></a>7. catchAdmin 安装</h1><p>安装后端部分</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://gitee.com/jaguarjack/catchAdmin.git<br><span class="hljs-built_in">cd</span> catchAdmin<br></code></pre></td></tr></table></figure>
 <p>有时，Composer 镜像源可能存在同步延迟，导致无法获取到最新的包版本。您可以尝试切换回官方源。<code>composer config -g --unset repos.packagist</code></p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">composer <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
@@ -405,7 +449,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年11月3日</div>
+          <div>2025年11月18日</div>
         </div>
       
       
