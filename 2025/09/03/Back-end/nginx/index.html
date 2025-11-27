@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/nginx.webp">
 <meta property="article:published_time" content="2025-09-03T01:26:10.000Z">
-<meta property="article:modified_time" content="2025-11-24T09:25:05.431Z">
+<meta property="article:modified_time" content="2025-11-27T01:28:57.609Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/webp/nginx.webp">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          459 字
+          455 字
         
       </span>
     
@@ -277,7 +277,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年11月24日 下午
+                    本文最后更新于 2025年11月27日 上午
                   
                 
               </p>
@@ -312,7 +312,7 @@
 </li>
 <li>Nginx配置HTTPS<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;  <span class="hljs-comment"># 启用SSL监听443端口</span><br>    <span class="hljs-attribute">server_name</span> your_domain.com;<br><br>    <span class="hljs-comment"># 证书路径配置</span><br>    <span class="hljs-attribute">ssl_certificate</span> /etc/nginx/ssl/your_domain.crt;<br>    <span class="hljs-attribute">ssl_certificate_key</span> /etc/nginx/ssl/your_domain.key;<br><br>    <span class="hljs-comment"># SSL优化参数</span><br>    <span class="hljs-attribute">ssl_protocols</span> TLSv1.<span class="hljs-number">2</span> TLSv1.<span class="hljs-number">3</span>;<br>    <span class="hljs-attribute">ssl_ciphers</span> HIGH:!aNULL:!MD5;<br>    <span class="hljs-attribute">ssl_prefer_server_ciphers</span> <span class="hljs-literal">on</span>;<br>    <span class="hljs-attribute">ssl_session_cache</span> shared:SSL:<span class="hljs-number">10m</span>;<br>    <span class="hljs-attribute">ssl_session_timeout</span> <span class="hljs-number">10m</span>;<br><br>    <span class="hljs-comment"># 其他配置（如反向代理）</span><br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">proxy_pass</span> http://localhost:3000;<br>        <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$host</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment"># HTTP强制跳转HTTPS（可选）</span><br><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">server_name</span> your_domain.com;<br>    <span class="hljs-attribute">return</span> <span class="hljs-number">301</span> https://<span class="hljs-variable">$host</span><span class="hljs-variable">$request_uri</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<p class="note note-info">故事进程已挂起，续集正在渲染管道中</p>
+<p class="note note-info">预知后事如何 请看下回分解</p>
                 
               </div>
             
@@ -369,7 +369,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年11月24日</div>
+          <div>2025年11月27日</div>
         </div>
       
       

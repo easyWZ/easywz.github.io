@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/mapSet.webp">
 <meta property="article:published_time" content="2025-09-09T08:43:22.000Z">
-<meta property="article:modified_time" content="2025-11-24T09:26:59.869Z">
+<meta property="article:modified_time" content="2025-11-27T01:28:57.626Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/webp/mapSet.webp">
@@ -277,7 +277,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年11月24日 下午
+                    本文最后更新于 2025年11月27日 上午
                   
                 
               </p>
@@ -300,7 +300,7 @@
 
 <h4 id="使用-Set-实现交集、并集、差集"><a href="#使用-Set-实现交集、并集、差集" class="headerlink" title="使用 Set 实现交集、并集、差集"></a>使用 Set 实现交集、并集、差集</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> setA = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]);<br><span class="hljs-keyword">const</span> setB = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]);<br><br><span class="hljs-comment">// 并集</span><br><span class="hljs-keyword">const</span> union = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([...setA, ...setB]);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>([...union]); <span class="hljs-comment">// [1, 2, 3, 4, 5, 6]</span><br><br><span class="hljs-comment">// 交集</span><br><span class="hljs-keyword">const</span> intersection = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([...setA].<span class="hljs-title function_">filter</span>(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> setB.<span class="hljs-title function_">has</span>(x)));<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>([...intersection]); <span class="hljs-comment">// [3, 4]</span><br><br><span class="hljs-comment">// 差集 (A - B)</span><br><span class="hljs-keyword">const</span> difference = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([...setA].<span class="hljs-title function_">filter</span>(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> !setB.<span class="hljs-title function_">has</span>(x)));<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>([...difference]); <span class="hljs-comment">// [1, 2]</span><br></code></pre></td></tr></table></figure>
 
-<!-- <p class="note note-info">故事进程已挂起，续集正在渲染管道中</p> -->
+<!-- <p class="note note-info">预知后事如何 请看下回分解</p> -->
                 
               </div>
             
@@ -357,7 +357,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年11月24日</div>
+          <div>2025年11月27日</div>
         </div>
       
       
