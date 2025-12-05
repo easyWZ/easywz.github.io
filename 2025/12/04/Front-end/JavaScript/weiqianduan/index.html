@@ -22,13 +22,13 @@
     <meta name="description" content="微前端是一种将前端整体应用拆分为多个更小、更独立模块的架构风格。每个模块（通常称为“微应用”或“子应用”）都可以由不同的团队独立开发、测试、部署，并最终组合成一个完整的应用呈现给用户。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微前端">
-<meta property="og:url" content="https://easywz.github.io/2025/12/04/Front-end/JavaScript/weiqianduan/index.html">
+<meta property="og:url" content="https://easywz.github.io/2025/12/04/Front-end/JavaScript/weiQianDuan/index.html">
 <meta property="og:site_name" content="WZ&#39;s blog">
 <meta property="og:description" content="微前端是一种将前端整体应用拆分为多个更小、更独立模块的架构风格。每个模块（通常称为“微应用”或“子应用”）都可以由不同的团队独立开发、测试、部署，并最终组合成一个完整的应用呈现给用户。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/weiqianduan.webp">
 <meta property="article:published_time" content="2025-12-04T02:18:05.000Z">
-<meta property="article:modified_time" content="2025-12-04T09:30:19.908Z">
+<meta property="article:modified_time" content="2025-12-05T03:23:38.672Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/webp/weiqianduan.webp">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.6k 字
+          3.9k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          22 分钟
+          33 分钟
         
       </span>
     
@@ -277,7 +277,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年12月4日 下午
+                    本文最后更新于 2025年12月5日 上午
                   
                 
               </p>
@@ -285,9 +285,9 @@
             
               <div class="markdown-body">
                 
-                <h3 id="微前端"><a href="#微前端" class="headerlink" title="微前端"></a>微前端</h3><p>微前端是一种将前端整体应用拆分为多个更小、更独立模块的架构风格。每个模块（通常称为“微应用”或“子应用”）都可以由不同的团队独立开发、测试、部署，并最终组合成一个完整的应用呈现给用户。</p>
+                <h1 id="微前端"><a href="#微前端" class="headerlink" title="微前端"></a>微前端</h1><p>微前端是一种将前端整体应用拆分为多个更小、更独立模块的架构风格。每个模块（通常称为“微应用”或“子应用”）都可以由不同的团队独立开发、测试、部署，并最终组合成一个完整的应用呈现给用户。</p>
 <p>简单来说，你可以把它理解为<strong>前端领域的“微服务”</strong>。</p>
-<h4 id="1-因何产生"><a href="#1-因何产生" class="headerlink" title="1. 因何产生"></a>1. 因何产生</h4><p>在传统的“单体前端”架构中，随着项目变大，会遇到一些典型难题: </p>
+<h2 id="1-因何产生"><a href="#1-因何产生" class="headerlink" title="1. 因何产生"></a>1. 因何产生</h2><p>在传统的“单体前端”架构中，随着项目变大，会遇到一些典型难题: </p>
 <ul>
 <li><strong>代码库膨胀</strong>：所有功能都在一个项目里，代码变得庞大、复杂，启动和构建速度极慢</li>
 <li><strong>团队协作低效</strong>：多个团队在同一个代码库上工作，技术栈必须统一，上线流程互相掣肘</li>
@@ -299,9 +299,10 @@
 <li><strong>技术栈无关</strong>：主应用不限制子应用的技术栈，React、Vue、Angular、甚至jQuery可以共存</li>
 <li><strong>运行时集成</strong>：子应用通常作为独立的模块，在浏览器运行时动态组合</li>
 </ul>
-<h4 id="2-工作原理"><a href="#2-工作原理" class="headerlink" title="2. 工作原理"></a>2. 工作原理</h4><p>微前端的工作原理，本质上是<strong>主应用作为“调度中心”</strong>，根据路由规则，<strong>动态调度、管理和协调多个完全独立的子应用在浏览器中加载、运行和卸载</strong>。它通过一系列技术手段（沙箱、样式隔离等）确保这些独立应用能无缝、无冲突地共存。</p>
+<h2 id="2-工作原理"><a href="#2-工作原理" class="headerlink" title="2. 工作原理"></a>2. 工作原理</h2><p>微前端的工作原理，本质上是<strong>主应用作为“调度中心”</strong>，根据路由规则，<strong>动态调度、管理和协调多个完全独立的子应用在浏览器中加载、运行和卸载</strong>。它通过一系列技术手段（沙箱、样式隔离等）确保这些独立应用能无缝、无冲突地共存。</p>
 <ol>
-<li><strong>应用隔离（沙箱）</strong><ol>
+<li><p><strong>应用隔离（沙箱）</strong></p>
+<ol>
 <li><strong>JS沙箱</strong>：这是核心机制。框架会创建一个隔离的JavaScript运行环境（沙箱），主要做两件事：<ol>
 <li><strong>快照&#x2F;恢复</strong>：在子应用加载前，对 window 等全局对象拍照；在子应用卸载时，还原现场，并清理子应用新增的全局变量。</li>
 <li><strong>代理&#x2F;劫持</strong>：通过 Proxy 等技术，创建一个假的 window 对象给子应用使用。子应用的所有修改实际上作用于这个代理对象，不会真正污染全局。</li>
@@ -314,17 +315,22 @@
 </li>
 </ol>
 </li>
-<li><strong>应用通信</strong><ol>
+<li><p><strong>应用通信</strong></p>
+<ol>
 <li>基于CustomEvent的发布订阅：主应用作为事件中心，子应用触发和监听自定义事件。</li>
 <li>状态共享：维护一个全局的、约定格式的状态对象（如通过 initGlobalState），主应用和子应用都可以监听和修改。</li>
 <li>将通信降至最低：最佳实践是尽量减少应用间通信，优先考虑通过URL参数或路由状态来传递信息</li>
 </ol>
 </li>
-<li><strong>资源加载与执行</strong><br> 子应用需要按约定暴露生命周期钩子函数（如 bootstrap, mount, unmount），主应用在恰当的时机（如路由匹配时）通过 fetch 获取子应用的入口文件（通常是一个JavaScript和一个CSS文件），然后动态执行这些脚本，调用其生命周期函数，完成挂载。</li>
-<li>以qiankun为例：看以下配置 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// 主应用 main-app</span><br>import &#123; registerMicroApps, start &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;qiankun&#x27;</span>;<br><br><span class="hljs-comment">// 1. 注册子应用</span><br><span class="hljs-title function_ invoke__">registerMicroApps</span>([<br>  &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;react-app&#x27;</span>, // 子应用名称<br>    <span class="hljs-attr">entry</span>: <span class="hljs-string">&#x27;//localhost:7100&#x27;</span>, // 子应用独立运行的地址<br>    <span class="hljs-attr">container</span>: <span class="hljs-string">&#x27;#subapp-container&#x27;</span>, // 主应用中用于挂载的容器<br>    <span class="hljs-attr">activeRule</span>: <span class="hljs-string">&#x27;/react&#x27;</span>, // 激活路由规则<br>  &#125;,<br>  &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;vue-app&#x27;</span>,<br>    <span class="hljs-attr">entry</span>: <span class="hljs-string">&#x27;//localhost:7200&#x27;</span>,<br>    <span class="hljs-attr">container</span>: <span class="hljs-string">&#x27;#subapp-container&#x27;</span>,<br>    <span class="hljs-attr">activeRule</span>: <span class="hljs-string">&#x27;/vue&#x27;</span>,<br>  &#125;<br>]);<br><br><span class="hljs-comment">// 2. 启动微前端框架</span><br><span class="hljs-title function_ invoke__">start</span>();<br></code></pre></td></tr></table></figure>
-访问 <code>/react</code> 路径时，qiankun 会自动加载 <code>//localhost:7100</code> 下的资源，将其挂载到<code>#subapp-container</code> 这个 <code>&lt;div&gt;</code> 中。</li>
+<li><p><strong>资源加载与执行</strong></p>
+<p> 子应用需要按约定暴露生命周期钩子函数（如 bootstrap, mount, unmount），主应用在恰当的时机（如路由匹配时）通过 fetch 获取子应用的入口文件（通常是一个JavaScript和一个CSS文件），然后动态执行这些脚本，调用其生命周期函数，完成挂载。</p>
+</li>
+<li><p>以qiankun为例：看以下配置</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// 主应用 main-app</span><br>import &#123; registerMicroApps, start &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;qiankun&#x27;</span>;<br><br><span class="hljs-comment">// 1. 注册子应用</span><br><span class="hljs-title function_ invoke__">registerMicroApps</span>([<br>  &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;react-app&#x27;</span>, // 子应用名称<br>    <span class="hljs-attr">entry</span>: <span class="hljs-string">&#x27;//localhost:7100&#x27;</span>, // 子应用独立运行的地址<br>    <span class="hljs-attr">container</span>: <span class="hljs-string">&#x27;#subapp-container&#x27;</span>, // 主应用中用于挂载的容器<br>    <span class="hljs-attr">activeRule</span>: <span class="hljs-string">&#x27;/react&#x27;</span>, // 激活路由规则<br>  &#125;,<br>  &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;vue-app&#x27;</span>,<br>    <span class="hljs-attr">entry</span>: <span class="hljs-string">&#x27;//localhost:7200&#x27;</span>,<br>    <span class="hljs-attr">container</span>: <span class="hljs-string">&#x27;#subapp-container&#x27;</span>,<br>    <span class="hljs-attr">activeRule</span>: <span class="hljs-string">&#x27;/vue&#x27;</span>,<br>  &#125;<br>]);<br><br><span class="hljs-comment">// 2. 启动微前端框架</span><br><span class="hljs-title function_ invoke__">start</span>();<br></code></pre></td></tr></table></figure>
+<p>访问 <code>/react</code> 路径时，qiankun 会自动加载 <code>//localhost:7100</code> 下的资源，将其挂载到<code>#subapp-container</code> 这个 <code>&lt;div&gt;</code> 中。</p>
+</li>
 </ol>
-<h3 id="微前端框架"><a href="#微前端框架" class="headerlink" title="微前端框架"></a>微前端框架</h3><h4 id="1-市面上主流的微前端框架"><a href="#1-市面上主流的微前端框架" class="headerlink" title="1. 市面上主流的微前端框架"></a>1. 市面上主流的微前端框架</h4><table>
+<h1 id="微前端框架"><a href="#微前端框架" class="headerlink" title="微前端框架"></a>微前端框架</h1><h2 id="1-市面上主流的微前端框架"><a href="#1-市面上主流的微前端框架" class="headerlink" title="1. 市面上主流的微前端框架"></a>1. 市面上主流的微前端框架</h2><table>
 <thead>
 <tr>
 <th>框架</th>
@@ -377,49 +383,129 @@
 <td>整体生态和社区讨论热度相对传统方案略低。</td>
 </tr>
 </tbody></table>
-<h4 id="2-根据需求选择对应的技术框架"><a href="#2-根据需求选择对应的技术框架" class="headerlink" title="2. 根据需求选择对应的技术框架"></a>2. 根据需求选择对应的技术框架</h4><ul>
+<h2 id="2-根据需求选择对应的技术框架"><a href="#2-根据需求选择对应的技术框架" class="headerlink" title="2. 根据需求选择对应的技术框架"></a>2. 根据需求选择对应的技术框架</h2><ul>
 <li><strong>追求稳定与生态</strong>：若团队技术栈偏传统（如Webpack+React），需要成熟方案，<strong>qiankun</strong> 仍是可靠选择，但需注意社区动态。</li>
 <li><strong>强调开箱即用与隔离安全</strong>：如果项目涉及嵌入不可控的第三方页面（如SaaS系统），或对子应用保活、样式彻底隔离有强需求，<strong>无界 (Wujie)</strong> 非常合适</li>
 <li><strong>技术栈现代且追求灵活集成</strong>：如果你的主、子应用都基于 Vite + Vue3&#x2F;React 等现代架构，且希望更灵活地共享组件和模块（而非整个应用），<strong>模块联邦</strong> 或 <strong>Micro-App</strong> 是更“原生”和轻量的选择</li>
 <li><strong>需要高度定制化或作为学习基础</strong>：如果你希望对微前端有完全的控制权，或用于研究学习，可以从 <strong>Single-SPA</strong> 开始。</li>
 </ul>
-<h3 id="qiankun"><a href="#qiankun" class="headerlink" title="qiankun"></a>qiankun</h3><h4 id="1-qiankun-对微前端的定义"><a href="#1-qiankun-对微前端的定义" class="headerlink" title="1. qiankun 对微前端的定义"></a>1. qiankun 对微前端的定义</h4><p>微前端是一种多个团队通过独立发布功能的方式来共同构建现代化 web 应用的技术手段及方法策略。</p>
-<h4 id="2-qiankun-的核心设计理念"><a href="#2-qiankun-的核心设计理念" class="headerlink" title="2. qiankun 的核心设计理念"></a>2. qiankun 的核心设计理念</h4><ol>
-<li>简单<br>由于主应用微应用都能做到技术栈无关，qiankun 对于用户而言只是一个类似 jQuery 的库，你需要调用几个 qiankun 的 API 即可完成应用的微前端改造。同时由于 qiankun 的 HTML entry 及沙箱的设计，使得微应用的接入像使用 iframe 一样简单。</li>
-<li>解耦&#x2F;技术栈无关<br>微前端的核心目标是将巨石应用拆解成若干可以自治的松耦合微应用，而 qiankun 的诸多设计均是秉持这一原则，如 HTML entry、沙箱、应用间通信等。这样才能确保微应用真正具备 独立开发、独立运行 的能力。</li>
+<h1 id="qiankun"><a href="#qiankun" class="headerlink" title="qiankun"></a>qiankun</h1><p><a target="_blank" rel="noopener" href="https://qiankun.umijs.org/zh/guide/getting-started">qiankun官方文档快速上手</a></p>
+<h2 id="1-qiankun-对微前端的定义"><a href="#1-qiankun-对微前端的定义" class="headerlink" title="1. qiankun 对微前端的定义"></a>1. qiankun 对微前端的定义</h2><p>微前端是一种多个团队通过独立发布功能的方式来共同构建现代化 web 应用的技术手段及方法策略。</p>
+<h2 id="2-qiankun-的核心设计理念"><a href="#2-qiankun-的核心设计理念" class="headerlink" title="2. qiankun 的核心设计理念"></a>2. qiankun 的核心设计理念</h2><ul>
+<li><p><strong>简单</strong></p>
+<p>  由于主应用微应用都能做到技术栈无关，qiankun 对于用户而言只是一个类似 jQuery 的库，你需要调用几个 qiankun 的 API 即可完成应用的微前端改造。同时由于 qiankun 的 HTML entry 及沙箱的设计，使得微应用的接入像使用 iframe 一样简单。</p>
+</li>
+<li><p><strong>解耦&#x2F;技术栈无关</strong></p>
+<p>  微前端的核心目标是将巨石应用拆解成若干可以自治的松耦合微应用，而 qiankun 的诸多设计均是秉持这一原则，如 HTML entry、沙箱、应用间通信等。这样才能确保微应用真正具备 独立开发、独立运行 的能力。</p>
+</li>
+</ul>
+<h2 id="3-qiankun-的特性"><a href="#3-qiankun-的特性" class="headerlink" title="3. qiankun 的特性"></a>3. qiankun 的特性</h2><ol>
+<li>基于 single-spa 封装，提供了更加开箱即用的 API。</li>
+<li>技术栈无关，任意技术栈的应用均可 使用&#x2F;接入，不论是 React&#x2F;Vue&#x2F;Angular&#x2F;JQuery 还是其他等框架。</li>
+<li>HTML Entry 接入方式，让你接入微应用像使用 iframe 一样简单。</li>
+<li>​样式隔离，确保微应用之间样式互相不干扰。</li>
+<li>JS 沙箱，确保微应用之间 全局变量&#x2F;事件 不冲突。</li>
+<li>资源预加载，在浏览器空闲时间预加载未打开的微应用资源，加速微应用打开速度。</li>
+<li>umi 插件，提供了 @umijs&#x2F;plugin-qiankun 供 umi 应用一键切换成微前端架构系统。</li>
 </ol>
-<h4 id="3-为什么不使用-iframe"><a href="#3-为什么不使用-iframe" class="headerlink" title="3. 为什么不使用 iframe"></a>3. 为什么不使用 iframe</h4><p>qiankun的社区回答：</p>
-<ol>
+<h2 id="4-为什么不使用-iframe"><a href="#4-为什么不使用-iframe" class="headerlink" title="4. 为什么不使用 iframe"></a>4. 为什么不使用 iframe</h2><h3 id="1-qiankun关于iframe的社区回答："><a href="#1-qiankun关于iframe的社区回答：" class="headerlink" title="1. qiankun关于iframe的社区回答："></a>1. qiankun关于iframe的社区回答：</h3><ol>
 <li>url 不同步。浏览器刷新 iframe url 状态丢失、后退前进按钮无法使用。</li>
 <li>UI 不同步，DOM 结构不共享。想象一下屏幕右下角 1&#x2F;4 的 iframe 里来一个带遮罩层的弹框，同时我们要求这个弹框要浏览器居中显示，还要浏览器 resize 时自动居中..</li>
 <li>全局上下文完全隔离，内存变量不共享。iframe 内外系统的通信、数据同步等需求，主应用的 cookie 要透传到根域名都不同的子应用中实现免登效果。</li>
 <li>慢。每次子应用进入都是一次浏览器上下文重建、资源重新加载的过程。</li>
 </ol>
-<p>由此延伸出的问题：iframe的优劣势</p>
+<h3 id="2-iframe的优劣势"><a href="#2-iframe的优劣势" class="headerlink" title="2. iframe的优劣势"></a>2. iframe的优劣势</h3><ol>
+<li><p><strong>优点</strong>（iframe非常适合集成那些你“不想管也管不了”的独立应用）</p>
 <ol>
-<li><strong>优点</strong>（iframe非常适合集成那些你“不想管也管不了”的独立应用）<ol>
 <li><strong>无与伦比的隔离性</strong>：这是其最大的价值。当你需要嵌入一个完全不受信任的第三方页面（比如来自另一家公司的工具），或者嵌入一个使用老旧技术栈、可能产生全局污染的内部系统时，iframe是最安全、最省事的选择，它能确保你的主应用稳如泰山</li>
 <li><strong>极致的技术栈无关性</strong>：无论子应用是用什么技术开发的，只要能独立运行并提供URL，iframe就能嵌入。这使其成为低成本整合遗留系统的最佳途径。</li>
 </ol>
 </li>
-<li>劣势<ol>
-<li>割裂的用户体验：<ul>
-<li>路由不同步：iframe内部的页面跳转不会改变主应用的URL，反之亦然。这导致浏览器的前进&#x2F;后退按钮行为异常，用户也难以复制和分享链接到特定子页面。</li>
-<li>UI&#x2F;UX不一致：子应用有独立的滚动条、无法覆盖全屏的弹窗、无法跨iframe拖拽元素等，都让用户感觉在使用两个不同的软件。</li>
+<li><p><strong>劣势</strong></p>
+<ol>
+<li><strong>割裂的用户体验</strong>：<ul>
+<li><strong>路由不同步</strong>：iframe内部的页面跳转不会改变主应用的URL，反之亦然。这导致浏览器的前进&#x2F;后退按钮行为异常，用户也难以复制和分享链接到特定子页面。</li>
+<li><strong>UI&#x2F;UX不一致</strong>：子应用有独立的滚动条、无法覆盖全屏的弹窗、无法跨iframe拖拽元素等，都让用户感觉在使用两个不同的软件。</li>
 </ul>
 </li>
-<li>高昂的性能与状态成本：每个iframe都是一个完整的文档环境，内存和CPU开销远大于普通的DOM节点。最大的痛点在于状态无法保持：iframe一旦刷新或重新加载，其内部的所有状态（如表单填写内容、弹窗打开状态）都会丢失。</li>
-<li>复杂的开发与通信：主应用与iframe内子应用的任何交互，都必须通过 window.postMessage API进行消息传递，这是一种异步、事件驱动的通信方式，开发、调试和维护都比直接函数调用要复杂得多</li>
+<li><strong>高昂的性能与状态成本</strong>：每个iframe都是一个完整的文档环境，内存和CPU开销远大于普通的DOM节点。最大的痛点在于状态无法保持：iframe一旦刷新或重新加载，其内部的所有状态（如表单填写内容、弹窗打开状态）都会丢失。</li>
+<li><strong>复杂的开发与通信</strong>：主应用与iframe内子应用的任何交互，都必须通过 window.postMessage API进行消息传递，这是一种异步、事件驱动的通信方式，开发、调试和维护都比直接函数调用要复杂得多</li>
 </ol>
 </li>
 </ol>
-
+<h3 id="3-现代框架如何解决这些问题"><a href="#3-现代框架如何解决这些问题" class="headerlink" title="3. 现代框架如何解决这些问题"></a>3. 现代框架如何解决这些问题</h3><ol>
+<li>URL同步与路由状态丢失<ul>
+<li>传统iframe问题：iframe的URL与主应用URL独立，刷新或前进后退混乱。</li>
+<li>解决方案：主应用统一接管路由。<ol>
+<li><strong>路由劫持</strong>：主应用监听浏览器URL变化（如Hash或History模式）。当路由匹配到某个子应用时，主动通知该子应用，并传递路由信息（如&#x2F;user&#x2F;123）。</li>
+<li><strong>状态同步</strong>：子应用内部的路由库（如Vue Router, React Router）被改造，使其不再直接监听 <code>window.location</code>，而是接收来自主应用的路由信息并更新内部状态。</li>
+</ol>
+</li>
+<li>效果：浏览器地址栏始终显示主应用URL（如 <code>https://main.com/#/app-vue/user/123</code>），刷新后主应用能根据URL重新激活正确的子应用及其状态，前进后退按钮正常工作。</li>
+</ul>
+</li>
+<li>UI与DOM集成<ul>
+<li>传统iframe问题：弹窗、遮罩被限制在iframe矩形框内，无法实现全局UI。</li>
+<li>解决方案：DOM“搬运”与样式重写。<ol>
+<li>静态资源重写：框架在加载子应用的CSS文件时，会将其所有选择器添加一个特定的前缀（如 <code>div -&gt; [data-qiankun-app1] div</code>），确保样式只作用于主应用为它分配的容器内，不会污染全局。</li>
+<li>动态DOM搬运：对于需要全局显示的组件（如你的居中弹窗），框架可以通过组件化的方式暴露接口。例如，子应用调用 <code>window.mainApp.openModal()</code> 方法，将弹窗的组件定义和所需数据传递给主应用，由主应用在全局容器中渲染。像无界等框架甚至可以自动将子应用创建的Modal等元素“提”至主应用body下，实现视觉突破。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>全局上下文隔离与通信<ul>
+<li>传统iframe问题：完全隔离导致通信困难，Cookie无法共享。</li>
+<li>解决方案：巧妙的“沙箱”与“代理”。<ul>
+<li>JS沙箱：框架（如qiankun、无界）会为每个子应用创建一个伪造的、被代理的全局对象（如 window、document）。子应用对“全局变量”的修改实际作用于这个代理对象上。当子应用切换或卸载时，这个代理对象会被清空或销毁，从而实现完美隔离和状态重置。</li>
+<li>通信机制：提供优雅的API，如基于CustomEvent的发布订阅，或维护一个全局的、可观察的store，主应用和子应用都可以安全地读写和监听。</li>
+<li>登录态共享（Cookie透传）：这是网络层问题。常用方案是：<ul>
+<li>主应用代理：主应用提供一个&#x2F;api&#x2F;proxy&#x2F;*接口，子应用的所有请求都发给主应用，由主应用（同域名）携带Cookie转发给后端，后端响应再传回子应用。</li>
+<li>SSO与Token：更现代的方案是采用单点登录。主应用登录后，将获取的Token（如JWT）通过安全方式（如沙箱内的全局变量）传递给子应用，子应用用自己的域名请求时，在Authorization头中携带此Token完成认证，完全规避Cookie域名限制。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>慢：上下文重建与资源重载<ul>
+<li>传统iframe问题：每次进入都需重建上下文、重新加载所有资源。</li>
+<li>解决方案：应用保活与预加载。<ul>
+<li>应用保活：这是现代框架的关键优化。<strong>当用户从“子应用A”切换到“子应用B”时，框架并不销毁A的沙箱和DOM，而是将其从视图中隐藏。当切回A时，直接显示，实现瞬间恢复，所有内存状态（如变量、打开的表单）都得以保留</strong>。</li>
+<li>资源预加载：在浏览器空闲时，或根据路由预测，<strong>提前加载</strong>子应用的JS和CSS文件到内存缓存中，当真正激活时直接执行，消除网络延迟。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>这些能力被整合在 qiankun、无界、Micro-App 等框架中。其中，无界的方案尤为独特：它<strong>底层仍使用iframe以获得最强的原生隔离性，但通过代理iframe的document到主应用，让子应用代码实际上在主应用的DOM树中运行</strong>，从而完美解决了UI割裂、通信困难、URL不同步等问题，可以理解为“一个体验像原生组件、但隔离性像iframe的混合体”。</li>
+</ol>
+<!-- [无界官方文档](https://wujie-micro.github.io/doc/) -->
                 
               </div>
             
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
 </div>
@@ -431,7 +517,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>微前端</div>
-      <div>https://easywz.github.io/2025/12/04/Front-end/JavaScript/weiqianduan/</div>
+      <div>https://easywz.github.io/2025/12/04/Front-end/JavaScript/weiQianDuan/</div>
     </div>
     <div class="license-meta">
       
@@ -449,7 +535,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年12月4日</div>
+          <div>2025年12月5日</div>
         </div>
       
       
