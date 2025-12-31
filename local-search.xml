@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Laravel - PHP Web 开发框架</title>
+    <link href="/2025/12/29/Back-end/laravel/"/>
+    <url>/2025/12/29/Back-end/laravel/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.laravel.wiki/installation">官网文档</a></p><h3 id="前置安装"><a href="#前置安装" class="headerlink" title="前置安装"></a>前置安装</h3><ol><li>本地需安装 <code>PHP</code>、<code>Composer</code> 和 <code>Laravel</code> 安装器</li><li>通过 Composer 安装 Laravel 安装器  <strong><code>composer global require laravel/installer</code></strong></li><li>添加系统路径 辨识 laravel 命令 (macOS 举例)<ol><li>查找 composer 路径 <strong><code>composer global about</code></strong> 指向<code>/Users/wangzou/.composer/vendor/bin</code></li><li><code>vim ~/.zshrc</code> 添加 <strong><code>export PATH=&quot;$PATH:/Users/wangzou/.composer/vendor/bin&quot;</code></strong></li><li><code>source ~/.zshrc</code></li><li><strong><code>laravel -v</code></strong> 查看版本号</li></ol></li></ol><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><ol><li><strong><code>laravel new laravel-demo</code></strong></li><li>按自己需求安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 前端框架选择<br>1. Which starter kit would you like to install? Vue<br>// 认证选择 laravel 内置认证框架，<br>2. Which authentication provider <span class="hljs-keyword">do</span> you prefer? Laravel<span class="hljs-string">&#x27;s built-in authentication</span><br><span class="hljs-string">// 测试框架选择</span><br><span class="hljs-string">3. Which testing framework do you prefer? Pest</span><br><span class="hljs-string">// 安装AI辅助开发工具</span><br><span class="hljs-string">4. Do you want to install Laravel Boost to improve AI assisted coding? Yes </span><br></code></pre></td></tr></table></figure></li><li>数据库和迁移<ol><li>配置 <code>.env</code> 配置文件 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">DB_CONNECTION=mysql<br>DB_HOST=127.0.0.1<br>DB_PORT=3306<br>DB_DATABASE=laravel<br>DB_USERNAME=root<br>DB_PASSWORD=123456<br></code></pre></td></tr></table></figure></li><li>使用 SQLite 以外的数据库，则需要创建数据库并运行应用的数据库迁移：<ol><li><strong><code>php artisan migrate</code></strong></li></ol></li></ol></li><li>启动项目<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> example-app<br>npm install &amp;&amp; npm run build<br>composer run dev<br></code></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>微前端</title>
     <link href="/2025/12/04/Front-end/JavaScript/WeiQianDuanBase/"/>
     <url>/2025/12/04/Front-end/JavaScript/WeiQianDuanBase/</url>
