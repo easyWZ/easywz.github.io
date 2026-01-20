@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/java.webp">
 <meta property="article:published_time" content="2026-01-19T06:37:43.000Z">
-<meta property="article:modified_time" content="2026-01-19T08:51:28.551Z">
+<meta property="article:modified_time" content="2026-01-20T09:27:34.814Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/webp/java.webp">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.3k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          9 分钟
+          11 分钟
         
       </span>
     
@@ -277,7 +277,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2026年1月19日 下午
+                    本文最后更新于 2026年1月20日 下午
                   
                 
               </p>
@@ -338,7 +338,18 @@
 </ol>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
 <li>JDK 安装包下载：<br><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/">官网下载最新的稳定版JDK</a></li>
-<li>安装：<br><code>java version</code>  查看本地安装版本结果</li>
+<li>安装JDK</li>
+<li>查找本地java安装路径（macOS）执行命令 <strong><code>/usr/libexec/java_home</code></strong> 显示 <code>/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home</code></li>
+<li>查看所有已安装版本：执行命令 <strong><code>/usr/libexec/java_home -V</code></strong> 会列出所有已安装JDK的版本号和对应路径</li>
+<li><code>vim ~/.zshrc</code> 添加环境变量<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> JAVA_HOME=<span class="hljs-string">&quot;/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home&quot;</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$PATH</span>&quot;</span><br></code></pre></td></tr></table></figure></li>
+<li><code>source ~/.zshrc</code>更新文件</li>
+<li><strong><code>java -version</code></strong>  查看本地安装版本结果</li>
+</ol>
+<h1 id="第一个Java程序"><a href="#第一个Java程序" class="headerlink" title="第一个Java程序"></a>第一个Java程序</h1><ol>
+<li>创建文件 <strong><code>Hello.java</code></strong> 内容编写：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Hello</span> &#123;<br>   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>      System.out.println(<span class="hljs-string">&quot;Hello, world!&quot;</span>);<br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>在保存<code>Hello.java</code>的目录下执行命令 <strong><code>javac Hello.java</code></strong> 此命令会将Java源码编译成字节码文件 <strong><code>Hello.class</code></strong></li>
+<li>在此目录下执行命令 <strong><code>java Hello</code></strong> 就会看到输出 <strong><code>Hello, world!</code></strong></li>
+<li>java11 以后可以直接执行 <strong><code>java Hello.java</code></strong> 注意：在实际项目中，单个不依赖第三方库的Java源码是非常罕见的，所以，绝大多数情况下，我们无法直接运行一个Java源码文件，原因是它需要依赖其他的库。</li>
 </ol>
 
                 
@@ -376,7 +387,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年1月19日</div>
+          <div>2026年1月20日</div>
         </div>
       
       
