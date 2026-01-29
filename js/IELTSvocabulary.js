@@ -312,12 +312,114 @@ wordCardsData.push(
     translation: "我提了个建议，但他们不予理会。",
   },
   {
-    word: "cooidinate",
+    word: "coordinate",
     pronunciation: "/koʊ'ɔːrdɪneɪt/",
     meaning: "v. 协调，整合； 使一致 n. 坐标；套装",
     example: "The nursing staff coordinate smoothly.",
     translation: "护理人员之间协同配合得很顺畅。",
     appendInfo: ["co(共同)+ordin(顺序)+ate(使…) → 顺序相同的 → 并列的"],
+  },
+);
+// 2026/1/29 更新单词卡片数据对象
+wordCardsData.push(
+  {
+    word: "decade",
+    pronunciation: "/'dekeɪd/",
+    meaning: "n. 十年",
+    example: "He spent last decade in a small town in China.",
+    translation: "过去的十年里，他待在了中国的一个小镇上。",
+    appendInfo: [
+      "decade十年 century百年 millennium千年",
+      "several decades 数十年",
+    ],
+  },
+  {
+    word: "focus",
+    pronunciation: "/'foʊkəs/",
+    meaning: "v. （使）聚焦 n. 焦点；中心",
+    example: "The discussion focused on three main problems.",
+    translation: "讨论集中在三个主要问题上。",
+    appendInfo: ["focus(...)on/upon(使...)集中于..."],
+  },
+  {
+    word: "offset",
+    pronunciation: "/'ɔːfset/",
+    meaning: "v. 抵消；弥补；补偿 adj. 胶印的，平板印刷的",
+    example: "He raised the prices to offset the increased cost of materials.",
+    translation: "他提高售价以补偿材料增加的成本。",
+    appendInfo: [
+      "offset the loss 弥补损失",
+      "be offset by =compensate; compensate for 补偿",
+    ],
+  },
+  {
+    word: "huddle",
+    pronunciation: "/'hʌdl/",
+    meaning: "v. 挤作一团；聚集 n. 杂乱的一堆；聚在一起的一群人",
+    example: "The girl huddled in a corner and started weeping.",
+    translation: "这个女孩蜷缩在角落，哭了起来。",
+    appendInfo: [
+      "huddle up  集合，蜷缩",
+      "huddle together 挤作一团 huddle up 卷缩",
+    ],
+  },
+  {
+    word: "turret",
+    pronunciation: "/'tɜːrət/",
+    meaning: "n. 塔楼，角塔",
+    example: "Our house has a turret you can’t get into from inside.",
+    translation: "我们这座房子有个角楼，从房子里面进不去。",
+    appendInfo: ["tower->tur->塔    r->无义 et->表示小的后缀"],
+  },
+  {
+    word: "attraction",
+    pronunciation: "/ə'trækʃn/",
+    meaning: "n. 吸引，吸引力；有吸引力的人或事物",
+    example:
+      "They fell in love so quickly for they had a very strong attraction towards each other.",
+    translation: "他们一见钟情，因为他们对彼此都有很强的吸引力。",
+    appendInfo: ["attract [ə'trækt]    vt. 吸引；引起 vi. 吸引；有吸引力"],
+  },
+  {
+    word: "ecology",
+    pronunciation: "/i'kɑːlədʒi/",
+    meaning: "n. 生态；生态学",
+    example: "Concern about ecology is a recent development.",
+    translation: "对生态学的关心是最近才有的事。",
+    appendInfo: ["ecological 生态学的、生态的", "biology n. 生物学"],
+  },
+  {
+    word: "overall",
+    pronunciation: "/ˌoʊvər'ɔːl/",
+    meaning:
+      "adv. 全部；总计；一般来说；大致上 n. 外套；罩衣；工装服；连身工作服 adj. 全面的；综合的；总体的",
+    example:
+      "There will be winners in each of three age groups, and one overall winner.",
+    translation: "三个年龄组将各产生一名优胜者，另有一位总优胜者。",
+    appendInfo: [
+      "over(从头到尾)+all(所有的) → 全面的，综合的",
+      "overalls 工作服",
+    ],
+  },
+  {
+    word: "former",
+    pronunciation: "/'fɔːrmər/",
+    meaning: "adj. 在前的 n. 前者",
+    example: "the countries of the former Soviet Union",
+    translation: "前苏联加盟共和国",
+    appendInfo: [
+      "former 前者 latter 后者",
+      "form（形成）+er（人，物）——已形成的东西——在前的",
+    ],
+  },
+  {
+    word: "invalid",
+    pronunciation: "/ɪn'vælɪd/",
+    meaning:
+      "adj. （法律上）无效的，不合法的；（观点）站不住脚的 n. 病人，久病衰弱者",
+    example: "People with invalid papers are deported to another country.",
+    translation: "持无效证件的人被驱逐到别国。",
+    appendInfo: ["反义词 valid 有效的", "be invalided out 免除义务"],
   },
   {
     word: "",
@@ -325,9 +427,9 @@ wordCardsData.push(
     meaning: "",
     example: "",
     translation: "",
+    appendInfo: [],
   },
 );
-// 2026/1/29 更新单词卡片数据对象
 
 // 创建单词卡片的函数
 function createWordCards() {
