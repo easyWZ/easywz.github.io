@@ -421,6 +421,94 @@ wordCardsData.push(
     translation: "持无效证件的人被驱逐到别国。",
     appendInfo: ["反义词 valid 有效的", "be invalided out 免除义务"],
   },
+);
+// 2026/1/30 更新单词卡片数据对象
+wordCardsData.push(
+  {
+    word: "crash",
+    pronunciation: "/kræʃ/",
+    meaning:
+      "n. 崩溃；撞车，相撞；巨大声响；（飞机的）坠毁；（某物价值或价格的）暴跌；狂跌 v. 猛撞，撞击；发出巨响；崩溃；〔股市或股票〕狂跌，暴跌",
+    example: "The great financial crash in 1929 ruined international trade.",
+    translation: "1929年的经济大萧条摧毁了国际贸易.",
+    appendInfo: ["crash into 与....相撞", "financial crash:金融危机"],
+  },
+  {
+    word: "cell",
+    pronunciation: "/sel/",
+    meaning: "n. 细胞；牢房；手机",
+    example: "the nucleus of a cell",
+    translation: "细胞核",
+    appendInfo: ["blood cell 血细胞", "prison /gaol /jail cell 牢房"],
+  },
+  {
+    word: "output",
+    pronunciation: "/'aʊtpʊt/",
+    meaning: "n. 产量；输出信息，输出功率 v. 输出（信息）",
+    example: "Manufacturing output has increased by 8%.",
+    translation: "制造业产量增长了8%。",
+    appendInfo: [],
+  },
+  {
+    word: "migrant",
+    pronunciation: "/'maɪɡrənt/",
+    meaning: "n. 移居者；迁徙动物 adj. 迁移的；迁徙的",
+    example:
+      "Many migrant families face significant challenges when adjusting to life in a new country.",
+    translation: "许多移民家庭在适应新国家的生活时面临重重挑战。",
+    appendInfo: ["migrant workers（农民工）"],
+  },
+  {
+    word: "consolation",
+    pronunciation: "/ˌkɑːnsə'leɪʃn/",
+    meaning: "n. 安慰；慰问",
+    example:
+      "If it's of any consolation to you, you are not the only one losing money",
+    translation: "不仅仅只有你一个人损失了金钱，这也许能让你略感安慰。",
+    appendInfo: ["console   v   安慰"],
+  },
+  {
+    word: "teem",
+    pronunciation: "/tiːm/",
+    meaning: "v. 充满；大量出现；下大雨",
+    example: "It's been teeming down all night.",
+    translation: "倾盆大雨下了一整夜。",
+    appendInfo: [],
+  },
+  {
+    word: "collection",
+    pronunciation: "/kə'lekʃn/",
+    meaning: "n. 收藏品，收集物；收集，采集",
+    example: "Tom's collection of oil paintings has been stolen.",
+    translation: "汤姆收藏的油画失窃了。",
+    appendInfo: [],
+  },
+  {
+    word: "channel",
+    pronunciation: "/'tʃænl/",
+    meaning: "n. 海峡；频道；手段，渠道",
+    example: "What's on Channel 4 tonight?",
+    translation: "电视四台今晚有什么节目？",
+    appendInfo: ["canal 运河 channel 海峡"],
+  },
+  {
+    word: "calf",
+    pronunciation: "/kæf/",
+    meaning: "n. 牛犊，幼崽",
+    example: "How many calves were given birth by the cow?",
+    translation: "这只奶牛生了几只牛犊？",
+    appendInfo: ["calves 复数"],
+  },
+  {
+    word: "cylinder",
+    pronunciation: "/'sɪlɪndər/",
+    meaning: "n. 圆柱体；圆筒状物；（发动机的）气缸",
+    example: "The cylinder is a crucial part of the washing machine.",
+    translation: "滚筒是洗衣机必不可少的部分。",
+    appendInfo: [
+      "cycle → cyl ； inter → inder   cyl+inder →里面有一定空间的圆形 → 圆筒",
+    ],
+  },
   {
     word: "",
     pronunciation: "",
