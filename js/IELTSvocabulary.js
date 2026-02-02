@@ -518,6 +518,114 @@ wordCardsData.push(
     appendInfo: [],
   },
 );
+// 2026/2/2 更新单词卡片数据对象
+wordCardsData.push(
+  {
+    word: "promote",
+    pronunciation: "/prə'moʊt/",
+    meaning: "v. 促进，提升；升迁；促销",
+    example: "policies to promote economic growth",
+    translation: "促进经济增长的政策",
+    appendInfo: ["get promoted  升职", "advance近义词"],
+  },
+  {
+    word: "associate",
+    pronunciation: "/ə'soʊʃieɪt/",
+    meaning:
+      "v. 联系，联想 n. 同事；合作人；伙伴 adj. （等级或头衔）副的；准的",
+    example: "I always associate the smell of baking with my childhood.",
+    translation: "一闻到烘烤食物的味道我就想起了童年。",
+    appendInfo: [
+      "这些名词均有“同事，伙伴”之意。",
+      "associate: 普通用词，侧重指在利害关系上密切相关。",
+      "companion: 指陪伴他人的人，即同伴或陪伴。",
+      "comrade: 指具有共同的事业、利益关系相一致的人。",
+      "colleague: 一般用于对同事的正式称呼，基本上专用在职业关系上。",
+      "fellow: 多用复数形式，指一块住、生活或同行共事的人。",
+      "partner: 指事业中处于合伙关系的人，或指婚姻、游戏、跳舞中的另一方。",
+    ],
+  },
+  {
+    word: "bar",
+    pronunciation: "/bɑːr/",
+    meaning:
+      "n. 条, 杆, 棒, 棍; 酒吧; 吧台; 栅, 栏, 障碍(物); 律师职业 v. 闩上; 阻拦, 拦住; 妨碍; 禁止 prep. 除…外",
+    example: "We met at a bar called the Flamingo.",
+    translation: "我们在一家名为“火烈鸟”的酒吧相遇。",
+    appendInfo: ["bar none 独一无二"],
+  },
+  {
+    word: "throughout",
+    pronunciation: "/θruː'aʊt/",
+    meaning: "prep. 遍及，贯穿  adv. 到处，自始至终",
+    example: "The museum is open daily throughout the year.",
+    translation: "这个博物馆一年到头每天都开放。",
+    appendInfo: ["throughout the world", "穿过出口-就是贯穿"],
+  },
+  {
+    word: "mechanism",
+    pronunciation: "/'mekənɪzəm/",
+    meaning: "n. 机械装置，机件；方法，机制；体制",
+    example:
+      "The college has established an effective student support mechanism.",
+    translation: "这所大学已经建立了有效的学生支持机制。",
+    appendInfo: ["mechanism 机械", "mechanical 机械的", "machine 机械"],
+  },
+  {
+    word: "tend",
+    pronunciation: "/tend/",
+    meaning: "v. 倾向（于）；容易表现出（某种特性）；照料",
+    example: "When I'm tired, I tend to make mistakes.",
+    translation: "我累了就容易出错。",
+    appendInfo: ["1.tend to do sth   通常是；往往会"],
+  },
+  {
+    word: "category",
+    pronunciation: "/'kætəɡɔːri/",
+    meaning: "n. 种类，类别",
+    example: "We are divided into several categories by grades.",
+    translation: "按照成绩，我们被划分成好几个类别。",
+    appendInfo: [],
+  },
+  {
+    word: "beverage",
+    pronunciation: "/'bevərɪdʒ/",
+    meaning: "n. 饮料",
+    example:
+      "Alcoholic beverages can only be sold to adults according to the new law.",
+    translation: "新颁布的法律规定酒精饮料仅向成年人出售。",
+    appendInfo: ["bever(饮）+-age（名词后缀表集合）=所有饮用东西=饮料"],
+  },
+  {
+    word: "mental",
+    pronunciation: "/'mentl/",
+    meaning: "adj. 精神的，心理的；脑力的 n. 精神病患者",
+    example: "Do you have a mental picture of what it will look like?",
+    translation: "在你脑子里它会是什么样子？",
+    appendInfo: [
+      "metal n.金属",
+      "mentally ['mentəli] adv. 精神上，智力上；心理上",
+    ],
+  },
+  {
+    word: "flavour",
+    pronunciation: "/'fleɪvər/",
+    meaning:
+      "n. （食物或饮料的）味道；特点，特色 v. 给（食物或饮料）调味；加味于",
+    example:
+      "Onions smell so awful that I can never stand the flavour of them.",
+    translation: "洋葱太难闻了，我无法忍受它们的味道。",
+    appendInfo: ["the flavour of.. ..的味道"],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+);
 
 // 创建单词卡片的函数
 function createWordCards() {
