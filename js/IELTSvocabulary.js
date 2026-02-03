@@ -509,14 +509,6 @@ wordCardsData.push(
       "cycle → cyl ； inter → inder   cyl+inder →里面有一定空间的圆形 → 圆筒",
     ],
   },
-  {
-    word: "",
-    pronunciation: "",
-    meaning: "",
-    example: "",
-    translation: "",
-    appendInfo: [],
-  },
 );
 // 2026/2/2 更新单词卡片数据对象
 wordCardsData.push(
@@ -616,6 +608,98 @@ wordCardsData.push(
       "Onions smell so awful that I can never stand the flavour of them.",
     translation: "洋葱太难闻了，我无法忍受它们的味道。",
     appendInfo: ["the flavour of.. ..的味道"],
+  },
+);
+// 2026/2/3 更新单词卡片数据对象
+wordCardsData.push(
+  {
+    word: "relate",
+    pronunciation: "/rɪ'leɪt/",
+    meaning: "v. 找到联系，使互相联系；讲述，叙述",
+    example: "In the future, pay increases will be related to productivity.",
+    translation: "以后，工资的增加将和业绩挂钩。",
+    appendInfo: [
+      "relation [ri'leiʃən] n. 关系；亲属关系；叙述；故事",
+      "relationship [ri'leiʃənʃip] n. 关联；关系",
+    ],
+  },
+  {
+    word: "flat",
+    pronunciation: "/flæt/",
+    meaning:
+      "adj. 水平的；平坦的；平滑的；枯燥的；无趣的；缺乏热情的；不景气的；萧条的；生意清淡的（价格）固定的；瘪的；扁平的；平淡的；单调的；断然的；绝对的 n. 一套房间；公寓；单元房",
+    example: "People used to think the earth was flat.",
+    translation: "人们曾经认为地球是平的。",
+    appendInfo: ["flat out精疲力竭, 疲惫的"],
+  },
+  {
+    word: "transparent",
+    pronunciation: "/træns'pærənt/",
+    meaning: "adj. 透明的；明显的；（谎言、借口等）易识破的",
+    example: "The insect's wings are almost transparent.",
+    translation: "这昆虫的翅膀几乎是透明的。",
+    appendInfo: ["transparent sincerity. 无比的坦诚"],
+  },
+  {
+    word: "pressure",
+    pronunciation: "/'preʃər/",
+    meaning:
+      "n. 压力，困扰；（物理上的）压力，压强；紧迫，催促 v. 对…施压，强迫",
+    example: "The water pressure may need adjusting.",
+    translation: "水压可能需要调整。",
+    appendInfo: ["put pressure on sb to do 给某人压力，不得不做某事"],
+  },
+  {
+    word: "slip",
+    pronunciation: "/slɪp/",
+    meaning: "v. 滑倒，滑落；溜走；下降，退步 n. 疏漏；纸片，纸条；摔倒",
+    example: "As I ran up the stairs, my foot slipped and I fell.",
+    translation: "我跑上楼梯时失脚摔倒了。",
+    appendInfo: ["slip your mind/memory  被遗忘", "slip out 溜出去  "],
+  },
+  {
+    word: "entire",
+    pronunciation: "/ɪn'taɪər/",
+    meaning: "adj. 全部的，整个的",
+    example: "The entire village was destroyed.",
+    translation: "整个村庄都给毁了。",
+    appendInfo: [],
+  },
+  {
+    word: "melt",
+    pronunciation: "/melt/",
+    meaning: "v. （使）融化；（使）溶解；（生气后）变得心软",
+    example: "The snow that covered the city finally melted in the sun.",
+    translation: "覆盖着整个城市的雪终于在阳光下融化了。",
+    appendInfo: ["dissolve 溶解", "melt away: 消融, 散去"],
+  },
+  {
+    word: "position",
+    pronunciation: "/pə'zɪʃn/",
+    meaning: "n. 位置；地位；职务；立场",
+    example: "Where would be the best position for the lights?",
+    translation: "这些灯装在什么位置最好？",
+    appendInfo: [],
+  },
+  {
+    word: "emergency",
+    pronunciation: "/i'mɜːrdʒənsi/",
+    meaning: "n. 紧急情况，不测事件",
+    example:
+      "The government has declared a state of emergency following the earthquake.",
+    translation: "地震发生后政府已宣布进入紧急状态。",
+    appendInfo: ["emergency room 急诊室"],
+  },
+  {
+    word: "typical",
+    pronunciation: "/'tɪpɪkl/",
+    meaning: "adj. 典型的，有代表性的；不出所料的，一贯的",
+    example: "This is a typical example of Roman pottery.",
+    translation: "这是一件典型的罗马陶器。",
+    appendInfo: [
+      "typic adj. 典型的,象征性的",
+      "tropical ['trɔpikəl] adj. 热带的；酷热的；热情的",
+    ],
   },
   {
     word: "",
