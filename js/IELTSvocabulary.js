@@ -701,6 +701,93 @@ wordCardsData.push(
       "tropical ['trɔpikəl] adj. 热带的；酷热的；热情的",
     ],
   },
+);
+// 2026/2/4 更新单词卡片数据对象
+wordCardsData.push(
+  {
+    word: "approach",
+    pronunciation: "/ə'proʊtʃ/",
+    meaning:
+      "v. （在距离或时间上）靠近，接近；接洽；建议；要求；（在数额、水平或质量上）接近；着手处理；对付 n. （待人接物或思考问题的）方式，方法，态度；（距离和时间上的）靠近，接近；接洽；建议；通路；路径；道路",
+    example: "We heard the sound of an approaching car.",
+    translation: "一辆汽车驶近过来，我们听到了它的声音。",
+    appendInfo: ["道路 the approach to ", "approach to sth 接近某物"],
+  },
+  {
+    word: "display",
+    pronunciation: "/dɪ'spleɪ/",
+    meaning: "v. 展示；显示，表现 n. 显示，陈列",
+    example:
+      "The exhibition gives artists an opportunity to display their paintings.",
+    translation: "这次展览给了画家展示画作的机会。",
+    appendInfo: [],
+  },
+  {
+    word: "stimulus",
+    pronunciation: "/'stɪmjuləs/",
+    meaning: "n. 刺激（物）；促进因素",
+    example:
+      "The government resorted to tax deductions as stimulus which the slow economy needed.",
+    translation: "政府采取减税措施为不景气的经济带来了其所需的刺激。",
+    appendInfo: [],
+  },
+  {
+    word: "specific",
+    pronunciation: "/spə'sɪfɪk/",
+    meaning:
+      "adj. 明确的, 确切的; 具体的; 特定的, 特有的 n. 特性, 特色; [复]详情, 细节",
+    example: "I gave you specific instructions.",
+    translation: "我给过你明确的指示。",
+    appendInfo: ["specific title 特殊职位"],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
   {
     word: "",
     pronunciation: "",
