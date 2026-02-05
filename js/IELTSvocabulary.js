@@ -834,6 +834,52 @@ wordCardsData.push(
     appendInfo: ["in session 在开会，在开庭"],
   },
   {
+    word: "reinforce",
+    pronunciation: "/ˌriːɪn'fɔːrs/",
+    meaning: "v. 加强，加固；强化",
+    example:
+      "She reinforced her opinion that robots will never replace human beings.",
+    translation: "她重申了她的观点，即机器人永远不会取代人类。",
+    appendInfo: [
+      "reinforcement：强化物",
+      "re + in + force = 又 + in + 力量 =加固（再次增加力量）",
+    ],
+  },
+  {
+    word: "challenge",
+    pronunciation: "/'tʃælɪndʒ/",
+    meaning:
+      "n. 挑战，考验； 挑战书；质询，质疑；异议 v. 质疑； 向…挑战；盘问；考验；拒绝，反对",
+    example: "This career offers a challenge.",
+    translation: "这份职业具有挑战性。",
+    appendInfo: [" to challenge sb 向某人挑战"],
+  },
+  {
+    word: "opportunity",
+    pronunciation: "/ˌɑːpər'tuːnəti/",
+    meaning: "n. 机会，良机",
+    example:
+      "The reporter grasped a rare opportunity to interview the president.",
+    translation: "这名记者抓住了一次采访总统的珍贵机会。",
+    appendInfo: ["opportunity knocks only once 千载难逢的机会"],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
     word: "",
     pronunciation: "",
     meaning: "",
@@ -849,6 +895,8 @@ function createWordCards() {
   if (!container) return;
   // 过滤掉空单词数据
   wordCardsData = wordCardsData.filter((item) => item.word);
+  // 乱序
+  wordCardsData.sort(() => Math.random() - 0.5);
   // 遍历单词数据，创建卡片元素
   wordCardsData.forEach((wordData, index) => {
     const cardDiv = document.createElement("div");
