@@ -863,21 +863,133 @@ wordCardsData.push(
     translation: "这名记者抓住了一次采访总统的珍贵机会。",
     appendInfo: ["opportunity knocks only once 千载难逢的机会"],
   },
+);
+// 2026/2/6
+wordCardsData.push(
   {
-    word: "",
-    pronunciation: "",
-    meaning: "",
-    example: "",
-    translation: "",
+    word: "medium",
+    pronunciation: "/'miːdiəm/",
+    meaning: "adj. 适中的，中等的 n. 方法，媒介",
+    example: "Do you mean the girl of medium height?",
+    translation: "你是说那个中等身高的女孩吗？",
     appendInfo: [],
   },
   {
-    word: "",
-    pronunciation: "",
-    meaning: "",
-    example: "",
-    translation: "",
+    word: "defeat",
+    pronunciation: "/dɪ'fiːt/",
+    meaning: "v. 击败, 战胜; 挫败; 使落空 n. 击败; 战败; 失败",
+    example: "He defeated the champion in three sets.",
+    translation: "他三盘击败了冠军。",
+    appendInfo: ["successor and defeat 成败"],
+  },
+  {
+    word: "outdo",
+    pronunciation: "/ˌaʊt'duː/",
+    meaning: "v. 超越，胜过",
+    example: "He is ambitious to outdo everybody else in the class.",
+    translation: "他立志超过班里的每一个人。",
     appendInfo: [],
+  },
+  {
+    word: "calorie",
+    pronunciation: "/'kæləri/",
+    meaning: "n. 卡（路里）",
+    example: "There are about 78 calories in an egg.",
+    translation: "一个鸡蛋大约有78卡路里的热量。",
+    appendInfo: [],
+  },
+  {
+    word: "gear",
+    pronunciation: "/ɡɪr/",
+    meaning:
+      "n. 排挡；齿轮；传动装置;（某种活动的）设备，用具；衣服 v. 用齿轮连接；（使）适合，使适应；（使）准备好 adj. 时髦的；好极了",
+    example: "Careless use of the clutch may damage the gears.",
+    translation: "离合器使用不慎可能会损坏传动装置。",
+    appendInfo: ["out of gear 情绪失控"],
+  },
+  {
+    word: "benefit",
+    pronunciation: "/'benɪfɪt/",
+    meaning: "n. 利益；好处 v. 有益于；得益",
+    example: "The new regulations will be of benefit to everyone concerned.",
+    translation: "新规章将使所有有关人员受益。",
+    appendInfo: [
+      "for the benefit of 为了...的利益。be of benefit to sb./sth. 对...有益",
+    ],
+  },
+  {
+    word: "spectrum",
+    pronunciation: "/'spektrəm/",
+    meaning: "n. 光谱，声谱，频谱；范围，幅度；系列，层次",
+    example: "Red and violet are at opposite ends of the spectrum.",
+    translation: "红色和紫色位于光谱的两端。",
+    appendInfo: ["at both ends of the political spectrum “政治上的左右两派” "],
+  },
+  {
+    word: "goal",
+    pronunciation: "/ɡoʊl/",
+    meaning: "n. 目标",
+    example: "His goal is to find a job in an international company.",
+    translation: "他的目标是找到一份在外企的工作。",
+    appendInfo: ["指比较明确的，近期的目标。同义词：aim,end,purpose,objective"],
+  },
+  {
+    word: "scale",
+    pronunciation: "/skeɪl/",
+    meaning: "n. 规模；刻度；级别；比例尺 v. 改变（图片等的）比例，缩放；攀登",
+    example: "He wants to sell his goods on a larger scale.",
+    translation: "他想在更大的规模上销售他的货物。",
+    appendInfo: ["on a large scale大规模地，大范围地"],
+  },
+  {
+    word: "expectation",
+    pronunciation: "/ˌekspek'teɪʃn/",
+    meaning: "n. 期待，期望，预期",
+    example: "Her performance did not live up to our expectations.",
+    translation: "她的表现没有达到我们的预期。",
+    appendInfo: ["in expectation of...以期待。。。"],
+  },
+  {
+    word: "motivate",
+    pronunciation: "/'moʊtɪveɪt/",
+    meaning: "v. 激励，激发积极性",
+    example: "He's good at motivating students to work hard.",
+    translation: "他很擅长激励学生努力学习。",
+    appendInfo: ["motive n 动机", "motivated adj. 有积极性的"],
+  },
+  {
+    word: "breed",
+    pronunciation: "/briːd/",
+    meaning: "n. 品种; 类型 v. 饲养; 繁殖; 养育, 教育; 酿成, 导致",
+    example: "His horse is of the best breed.",
+    translation: "他的马是最好的品种。",
+    appendInfo: ["brood 孵蛋，沉思"],
+  },
+  {
+    word: "emback",
+    pronunciation: "/ɪm'bɑːrk/",
+    meaning: "v. （使）上船或飞机；（使）从事",
+    example: "After a short break, he was ready to embark on a new adventure.",
+    translation: "在短暂休息之后，他做好了开始一段新冒险的准备。",
+    appendInfo: ["embark on/upon 着手做"],
+  },
+  {
+    word: "switch",
+    pronunciation: "/swɪtʃ/",
+    meaning:
+      "v. 调换, 交换; 调动, 调任; 改变, 转变; 用开关把…开启(或关掉) n. 开关; 电闸; 改变, 转变; 道岔; 细软枝条",
+    example: "The dates of the last two exams have been switched.",
+    translation: "最后两门考试的日期调换了。",
+    appendInfo: ["switch trade 转手贸易  "],
+  },
+  {
+    word: "optimism",
+    pronunciation: "/'ɑːptɪmɪzəm/",
+    meaning: "n. 乐观；乐观主义",
+    example:
+      "At the beginning of her career she was full of optimism but not now.",
+    translation: "她事业伊始十分乐观，但现在已今非昔比了。",
+    appendInfo: ["pessimism悲观主义", "optim-是'best'的词根"],
   },
   {
     word: "",
@@ -896,7 +1008,7 @@ function createWordCards() {
   // 过滤掉空单词数据
   wordCardsData = wordCardsData.filter((item) => item.word);
   // 乱序
-  wordCardsData.sort(() => Math.random() - 0.5);
+  // wordCardsData.sort(() => Math.random() - 0.5);
   // 遍历单词数据，创建卡片元素
   wordCardsData.forEach((wordData, index) => {
     const cardDiv = document.createElement("div");
