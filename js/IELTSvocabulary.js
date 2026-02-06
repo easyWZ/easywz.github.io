@@ -1008,7 +1008,7 @@ function createWordCards() {
   // 过滤掉空单词数据
   wordCardsData = wordCardsData.filter((item) => item.word);
   // 乱序
-  // wordCardsData.sort(() => Math.random() - 0.5);
+  wordCardsData.sort(() => Math.random() - 0.5);
   // 遍历单词数据，创建卡片元素
   wordCardsData.forEach((wordData, index) => {
     const cardDiv = document.createElement("div");
