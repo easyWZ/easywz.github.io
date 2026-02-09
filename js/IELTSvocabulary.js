@@ -991,6 +991,137 @@ wordCardsData.push(
     translation: "她事业伊始十分乐观，但现在已今非昔比了。",
     appendInfo: ["pessimism悲观主义", "optim-是'best'的词根"],
   },
+);
+// 2026/2/9 更新单词卡片数据对象
+wordCardsData.push(
+  {
+    word: "client",
+    pronunciation: "/'klaɪənt/",
+    meaning: "n. 客户；委托人；当事人；客户端",
+    example: "The company needs to focus on its biggest clients.",
+    translation: "该公司需要将重点放在最大的客户上。",
+    appendInfo: ["online client （银行的）网上客户  "],
+  },
+  {
+    word: "perform",
+    pronunciation: "/pərˈfɔːrm/",
+    meaning: "v. 做, 进行; 演出, 表演; 执行, 履行; 工作; 运行; 表现",
+    example: "She performs an important role in our organization.",
+    translation: "她在我们的组织中发挥着重要的作用。",
+    appendInfo: ["performance n.表演 -> perform 表演，执行"],
+  },
+  {
+    word: "intensity",
+    pronunciation: "/ɪn'tensəti/",
+    meaning:
+      "n. (思想、感情、活动等的)强烈, 剧烈, 紧张; (电、热、光等的)强度, 烈度; 色饱和度",
+    example:
+      "The intensity of heat from the sun can cause changes to our atmosphere.",
+    translation: "太阳的强热可能会导致我们的大气层发生变化。",
+    appendInfo: ["intense adj. 非常的, 紧张的, 强烈的"],
+  },
+  {
+    word: "impact",
+    pronunciation: "/'ɪmpækt/",
+    meaning: "n. 影响，作用，冲击 v. 对…产生影响",
+    example:
+      "Discharging polluted water into the ocean will have an impact on environment.",
+    translation: "把污水排放到海洋中会对环境产生影响。",
+    appendInfo: ["影响Effect/Influence/Impact"],
+  },
+  {
+    word: "individual",
+    pronunciation: "/ˌɪndɪ'vɪdʒuəl/",
+    meaning:
+      "adj. 单独的，独有的；个别的；一个人（使用）的；独特的，与众不同的 n. 个人，个体；某种类型的人",
+    example: "These styles can be adapted to suit individual tastes.",
+    translation: "这些式样均可改动以适应个人不同的爱好。",
+    appendInfo: [
+      "注意：individual指个别的，独特的；private指秘密的，私下的；personal特指个人的，亲自的，涉及隐私的，own则为自有的，特有的",
+    ],
+  },
+  {
+    word: "sheer",
+    pronunciation: "/ʃɪr/",
+    meaning:
+      "adj. 纯粹的，完全的；几乎垂直的，陡峭的 v. 突然变向 adj.（用来强调事物的大小、程度或数量）",
+    example:
+      "The area is under threat from the sheer number of tourists using it.",
+    translation: "这一地区由于游客人数太多而面临威胁。",
+    appendInfo: [
+      "sheer away from sth. 避开",
+      "shear v. 修剪",
+      "The sheer scale of manufacture is so huge, that is the issue 问题在于生产规模过于巨大。",
+    ],
+  },
+  {
+    word: "apply",
+    pronunciation: "/ə'plaɪ/",
+    meaning: "v. 应用，使用；申请",
+    example: "to apply to a company/university",
+    translation: "向公司/大学申请",
+    appendInfo: ["apply to适用于；申请 apply A to B 将A应用于B "],
+  },
+  {
+    word: "crucial",
+    pronunciation: "/'kruːʃl/",
+    meaning: "adj. 至关重要的；决定性的",
+    example:
+      "The reform of the healthcare system became a topic of crucial importance in the presidential election debate.",
+    translation: "医疗系统改革成了总统大选辩论中的至关重要的话题。",
+    appendInfo: [
+      "cruc(=cross十字)+ial:处于十字路口该选择何去何从- 关键的 至关重要的",
+    ],
+  },
+  {
+    word: "wrinkle",
+    pronunciation: "/'rɪŋkl/",
+    meaning: "n. 脸上的皱纹；皱褶，皱痕 v. 起皱纹；皱起；（使）起皱褶",
+    example: "She's beginning to get wrinkles around her eyes.",
+    translation: "她的眼角开始有皱纹了。",
+    appendInfo: ["wrinkle-free没有皱折（衣服）"],
+  },
+  {
+    word: "principle",
+    pronunciation: "/'prɪnsəpl/",
+    meaning: "n. 原则；原理",
+    example: "I refuse to lie about it; it's against my principles .",
+    translation: "我绝不为此事撒谎；那是违背我的原则的。",
+    appendInfo: ["in principle 原则上; on principle 依据（自己的）道德准则"],
+  },
+  {
+    word: "tough",
+    pronunciation: "/tʌf/",
+    meaning:
+      "adj. 坚韧的; 牢固的; 不嫩的, 老的; 强壮的; 坚强的; 强硬的; 困难的, 艰苦的 v. 〈美俚〉忍耐困难 n. 恶棍; 暴徒; 粗暴的人",
+    example: "a tough childhood",
+    translation: "苦难的童年",
+    appendInfo: ["tough it out [美国口语]勇敢地承受；坚持到底"],
+  },
+  {
+    word: "feedback",
+    pronunciation: "/'fiːdbæk/",
+    meaning: "n. 反馈；反馈信息",
+    example: "The feedback from your clients is crucial to improve your work.",
+    translation: "客户的反馈对改善你们的工作至关重要。",
+    appendInfo: [],
+  },
+  {
+    word: "fairly",
+    pronunciation: "/'ferli/",
+    meaning: "adv. 相当；尚可；公平地",
+    example: "I'm fairly sure that this is the right answer.",
+    translation: "我相当肯定这就是正确答案。",
+    appendInfo: ["fairly 和 rather 都表示 相当的，前者修饰褒义，后者修饰贬义"],
+  },
+  {
+    word: "classical",
+    pronunciation: "/'klæsɪkl/",
+    meaning: "adj. 古典的，经典的",
+    example: "the classical theory of unemployment",
+    translation: "传统的失业理论",
+    appendInfo: ["classic 最优秀的, 传统的, 古典的"],
+  },
   {
     word: "",
     pronunciation: "",
