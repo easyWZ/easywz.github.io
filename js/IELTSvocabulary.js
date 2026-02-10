@@ -1122,6 +1122,126 @@ wordCardsData.push(
     translation: "传统的失业理论",
     appendInfo: ["classic 最优秀的, 传统的, 古典的"],
   },
+);
+// 2026/2/10
+wordCardsData.push(
+  {
+    word: "simultaneously",
+    pronunciation: "/ˌsaɪməl'teɪnjəsli/",
+    meaning: "adv. 同时地",
+    example: "Students answered the teacher's question simultaneously.",
+    translation: "同学们同时回答了老师的问题。",
+    appendInfo: ["simult-相同的+aneous-时间=同时的"],
+  },
+  {
+    word: "split",
+    pronunciation: "/splɪt/",
+    meaning:
+      "vt. (过去式&过去分词:split)劈开; 切开; 撕裂; 分担; 分得; 使分裂; 使不团结; [化]分解; [核]使产生核裂变 vi. 被劈开; 裂开; 被撕裂; 破裂; 分裂; 断绝关系; 打成平局 n. 劈开; 分割; 裂口; 裂缝; 分裂; 派系; 裂片; 薄片; 劈叉; 平局",
+    example: "She split the class into groups of four.",
+    translation: "她按四人一组把全班分成若干小组。",
+    appendInfo: ["split up 分手"],
+  },
+  {
+    word: "interfere",
+    pronunciation: "/ˌɪntər'fɪr/",
+    meaning: "v. 干预，干涉；妨碍",
+    example: "I'm an adult now, so don't try to interfere with my decisions.",
+    translation: "我是一个成年人了，所以别想着干涉我做决定。",
+    appendInfo: ["interfere with sth ：1. 妨碍；干扰    2. 弄坏（器材等）"],
+  },
+  {
+    word: "nerve",
+    pronunciation: "/nɜːrv/",
+    meaning: "n. 神经；勇气，胆量",
+    example: "The man lit a cigarette to calm his nerves.",
+    translation: "这个男人点燃了一支烟来稳定情绪。",
+    appendInfo: ["have the nerve to do 敢于做"],
+  },
+  {
+    word: "belief",
+    pronunciation: "/bɪˈliːf/",
+    meaning: "n. 信仰，信条；相信",
+    example: "They refuse to eat meat because of religious beliefs.",
+    translation: "因为宗教信仰，他们拒绝吃肉。",
+    appendInfo: [
+      "beyond belief 难以置信 have great belief in sb 非常信任某人 shake one's belief 改变某人的想法",
+    ],
+  },
+  {
+    word: "strategy",
+    pronunciation: "/'strætədʒi/",
+    meaning: "n. 战略，策略",
+    example:
+      "The company is considering a change in marketing strategies to regain its market share.",
+    translation: "这家公司正在考虑转变营销策略，以重获市场份额。",
+    appendInfo: ["strategist 战略家 谋士 军师家"],
+  },
+  {
+    word: "regardless",
+    pronunciation: "/rɪ'ɡɑːrdləs/",
+    meaning: "adv. 不管，不顾；无论如何，不管怎样",
+    example: "She set out to visit him regardless of the risk.",
+    translation: "尽管有风险，她还是去探望他了。",
+    appendInfo: ["regardless of 不管；不顾"],
+  },
+  {
+    word: "positive",
+    pronunciation: "/'pɑːzətɪv/",
+    meaning:
+      "adj. 积极的, 乐观的, 正面的; 赞同的, 肯定的; 确信的; 绝对的; 正数的; 正极的; 阳性的 n. 优势, 优点; 阳性; 正极; 正数; 正片",
+    example: "She tried to be more positive about her new job.",
+    translation: "她力求对新工作更有信心。",
+    appendInfo: [],
+  },
+  {
+    word: "consist",
+    pronunciation: "/kən'sɪst/",
+    meaning: "v. 组成，构成；存在于",
+    example: "His breakfast consisted of whole wheat bread and a glass of milk.",
+    translation: "他的早餐由全麦面包和一杯牛奶组成。",
+    appendInfo: ["consist of 由。。。组成"],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
+  {
+    word: "",
+    pronunciation: "",
+    meaning: "",
+    example: "",
+    translation: "",
+    appendInfo: [],
+  },
   {
     word: "",
     pronunciation: "",
@@ -1139,7 +1259,7 @@ function createWordCards() {
   // 过滤掉空单词数据
   wordCardsData = wordCardsData.filter((item) => item.word);
   // 乱序
-  wordCardsData.sort(() => Math.random() - 0.5);
+  // wordCardsData.sort(() => Math.random() - 0.5);
   // 遍历单词数据，创建卡片元素
   wordCardsData.forEach((wordData, index) => {
     const cardDiv = document.createElement("div");
