@@ -9,7 +9,7 @@ function createWordCards() {
   // 过滤掉空单词数据
   wordCardsData = wordCardsData.filter((item) => item.word);
   // 乱序
-  wordCardsData.sort(() => Math.random() - 0.5);
+  // wordCardsData.sort(() => Math.random() - 0.5);
   // 遍历单词数据，创建卡片元素
   wordCardsData.forEach((wordData, index) => {
     const cardDiv = document.createElement("div");
@@ -29,7 +29,7 @@ function createWordCards() {
         <textarea placeholder=" 翻译该例句: ${wordData.example}"></textarea>
       </div>
       <button class="button-toggle" role="button" data-index="${index}">
-        点击展开/收起单词信息
+        展开/收起单词信息
       </button>
       <div class="hidden flex-column word-info">
         <section>读音: ${wordData.pronunciation}</section>
@@ -43,20 +43,30 @@ function createWordCards() {
 }
 
 // 切换单词信息显示/隐藏
-function toggleWordInfo(index) {
-  const infoDivs = document.querySelectorAll(".word-info");
-  if (infoDivs[index]) {
-    infoDivs[index].classList.toggle("hidden");
-  }
+function toggleWordInfo(index, eventName = "click") {
+  const infoDiv = document.querySelectorAll(".word-info")[index];
+  if (!infoDiv) return;
+
+  const actions = {
+    click: () => infoDiv.classList.toggle("hidden"),
+    mouseover: () => infoDiv.classList.remove("hidden"),
+    mouseout: () => infoDiv.classList.add("hidden"),
+  };
+
+  const action = actions[eventName];
+  if (action) action();
 }
 
-// 事件委托处理按钮点击
+// 事件委托处理按钮点击 add remove toggle
 function handleWordCardEvents() {
-  document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("button-toggle")) {
-      const index = parseInt(e.target.getAttribute("data-index"));
-      toggleWordInfo(index);
-    }
+  const triggerEvent = ["click", "mouseover", "mouseout"];
+  triggerEvent.forEach((event) => {
+    document.addEventListener(event, function (e) {
+      if (e.target.classList.contains("button-toggle")) {
+        const index = parseInt(e.target.getAttribute("data-index"));
+        toggleWordInfo(index, event);
+      }
+    });
   });
 }
 
