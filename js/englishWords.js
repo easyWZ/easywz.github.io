@@ -1239,7 +1239,7 @@ const englishWords = [
     translation: "",
     appendInfo: [],
   },
-  // 2026/3/4
+  // 2026/3/6
   {
     word: "",
     pronunciation: "",
