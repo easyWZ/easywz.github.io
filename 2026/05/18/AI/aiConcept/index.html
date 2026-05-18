@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
+  <link rel="icon" href="/img/icons/bk.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="汪邹">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="按时间顺序描述AI从诞生到现在的故事，包括早期的神经网络、专家系统，直到现在很火的深度学习。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人工智能（AI）简史">
+<meta property="og:url" content="https://easywz.github.io/2026/05/18/AI/aiConcept/index.html">
+<meta property="og:site_name" content="WZ&#39;s blog">
+<meta property="og:description" content="按时间顺序描述AI从诞生到现在的故事，包括早期的神经网络、专家系统，直到现在很火的深度学习。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://easywz.github.io/img/webp/AI.webp">
+<meta property="article:published_time" content="2026-05-18T02:16:47.000Z">
+<meta property="article:modified_time" content="2026-05-18T03:25:47.583Z">
+<meta property="article:author" content="汪邹">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://easywz.github.io/img/webp/AI.webp">
+  
+  
+  
+  <title>人工智能（AI）简史 - WZ&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"easywz.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>人生在勤，不索何获</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/webp/homeBg.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="人工智能（AI）简史"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-05-18 10:16" pubdate>
+          2026年5月18日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">人工智能（AI）简史</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2026年5月18日 上午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="人工智能（AI）简史"><a href="#人工智能（AI）简史" class="headerlink" title="人工智能（AI）简史"></a>人工智能（AI）简史</h2><hr>
+<h3 id="早期萌芽（1940-1950年代）"><a href="#早期萌芽（1940-1950年代）" class="headerlink" title="早期萌芽（1940-1950年代）"></a>早期萌芽（1940-1950年代）</h3><p><strong>1943年</strong> · 人工神经网络概念诞生<br>沃伦·麦卡洛克（Warren McCulloch）和沃尔特·皮茨（Walter Pitts）发表《神经活动中内在思想的逻辑演算》，提出人工神经元模型。</p>
+<p><strong>1945年</strong> · 冯·诺依曼架构诞生<br>冯·诺依曼提出存储程序计算机体系结构，为AI发展奠定硬件基础。</p>
+<p><strong>1950年</strong> · 图灵测试问世<br>艾伦·图灵发表《计算机器与智能》，提出著名的”图灵测试”，探讨机器能否思考的哲学问题。<br><strong>图灵测试：“如果一台机器在对话中让人无法分辨它是人还是机器，就算智能”</strong></p>
+<p><strong>1956年</strong> · AI正式诞生<br>达特茅斯会议召开，约翰·麦卡锡首次提出”人工智能”（Artificial Intelligence）术语，标志AI领域正式确立。</p>
+<hr>
+<h3 id="黄金年代（1956-1974）"><a href="#黄金年代（1956-1974）" class="headerlink" title="黄金年代（1956-1974）"></a>黄金年代（1956-1974）</h3><p><strong>1957年</strong> · 第一个神经网络模型<br>弗兰克·罗森布拉特开发感知机（Perceptron），这是第一个能够自动学习的人工神经网络。</p>
+<p><strong>1966年</strong> · 自然语言处理起步<br>约瑟夫·维森鲍姆开发ELIZA聊天机器人，能够模拟罗杰斯式心理治疗对话。</p>
+<p><strong>1969年</strong> · 机器学习突破<br>马文·明斯基和西摩·派普特出版《感知器》，指出单层神经网络的局限性，推动AI研究转向更复杂的模型。</p>
+<hr>
+<h3 id="专家系统时代（1974-1988）"><a href="#专家系统时代（1974-1988）" class="headerlink" title="专家系统时代（1974-1988）"></a>专家系统时代（1974-1988）</h3><p><strong>1974年</strong> · MYCIN系统诞生<br>斯坦福大学开发MYCIN专家系统，能够诊断血液感染疾病，准确率达69%。</p>
+<p><strong>1980年</strong> · 商业AI兴起<br>数字设备公司（DEC）推出XCON专家系统，用于配置VAX计算机系统，标志AI开始商业化应用。</p>
+<p><strong>1986年</strong> · 反向传播算法复兴<br>大卫·鲁梅尔哈特等人重新发现反向传播算法，推动神经网络研究复苏。<br><strong>反向传播算法：让神经网络知道“错误”要往哪一层传播、怎么修改。</strong></p>
+<hr>
+<h3 id="互联网与数据驱动（1989-2010）"><a href="#互联网与数据驱动（1989-2010）" class="headerlink" title="互联网与数据驱动（1989-2010）"></a>互联网与数据驱动（1989-2010）</h3><p><strong>1997年</strong> · 深蓝战胜人类<br>IBM深蓝超级计算机击败国际象棋世界冠军卡斯帕罗夫，震惊世界。</p>
+<p><strong>1998年</strong> · 卷积神经网络CNN诞生<br>卷积神经网络（Convolutional Neural Network）是一种用于图像识别的神经网络，能够自动提取图像中的特征。<br>卷积神经网络：通过卷积层和池化层，能够自动学习图像中的特征，如边缘、纹理等。</p>
+<p><strong>2006年</strong> · 深度学习概念提出<br>杰弗里·辛顿提出”深度学习”概念，推动神经网络研究进入新时代。</p>
+<p><strong>2010年</strong> · ImageNet数据集发布<br>李飞飞团队发布ImageNet图像数据集，为计算机视觉研究提供海量训练数据。</p>
+<hr>
+<h3 id="深度学习革命（2012-至今）"><a href="#深度学习革命（2012-至今）" class="headerlink" title="深度学习革命（2012-至今）"></a>深度学习革命（2012-至今）</h3><p><strong>2012年</strong> · AlexNet引爆深度学习<br>Alex Krizhevsky等人的AlexNet用深度卷积神经网络在ImageNet图像识别大赛中夺冠，错误率一举从26%降到15%。学界和工业界彻底转向深度学习。</p>
+<p><strong>2014年</strong> · 生成对抗网络GAN诞生<br>生成对抗网络（Generative Adversarial Network）是一种用于生成新数据的神经网络，能够模拟人类的创作过程。<br>生成对抗网络：通过训练两个神经网络，一个生成器（Generator）和一个判别器（Discriminator），来生成新的数据。就像做假钞的和抓假钞的互相训练，最后假钞真到银行柜员都认不出。</p>
+<p><strong>2016年</strong> · AlphaGo震惊世界<br>DeepMind的AlphaGo击败围棋世界冠军李世石，展示深度学习在复杂策略游戏中的强大能力。</p>
+<p><strong>2017年</strong> · <strong>关键突破：Transformer</strong><br>Google大脑团队发表论文《Attention Is All You Need》，提出了Transformer架构，成为所有大模型的基础<br>核心创新：自注意力机制，能够处理长距离依赖关系，提升模型理解文本的能力。即：模型读句子时，会计算每个词与其他词的相关度（比如“它”指代“猫”）。</p>
+<p><strong>2018年</strong> · BERT刷新NLP记录<br>谷歌发布BERT模型，在11项NLP任务上刷新纪录，开启预训练语言模型时代。</p>
+<p><strong>2020年</strong> · GPT-3横空出世<br>OpenAI发布GPT-3，拥有1750亿参数，展现惊人的自然语言理解和生成能力。<br>衍生概念：<br>GPT-3的发布也让”大语言模型”一词家喻户晓。大模型 (Large Language Model, LLM)：本质上是一个通过海量数据训练，能理解和生成人类语言的巨型神经网络。</p>
+<p><strong>2022年</strong> · ChatGPT引爆AI热潮<br>ChatGPT发布，以对话式交互方式让AI技术普及到大众，开启生成式AI新纪元。<br>衍生概念：<br><strong>RLHF（人类反馈强化学习）</strong>：让人给模型的多个回答排序，用这些偏好来训练奖励模型，再优化LLM（让模型更“讨人喜欢”）</p>
+<p><strong>2023年</strong> · 多模态大模型爆发<br>GPT-4、Gemini等多模态大模型相继发布，AI能力从单一模态向多模态融合发展。<br>衍生概念：<br><strong>智能体 (AI Agent)</strong> 是指以大模型为“大脑”，具备自主规划、记忆和使用工具能力的智能程序</p>
+<p><strong>2026</strong><br>概念了解：<br><strong>RAG</strong>全称是 Retrieval-Augmented Generation（检索增强生成）：其核心思想是让大语言模型在回答问题前，先去外部知识库（比如你的公司文档）里“查资料”，再根据查到的资料来组织回答。</p>
+<hr>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>人工智能（AI）简史</div>
+      <div>https://easywz.github.io/2026/05/18/AI/aiConcept/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>汪邹</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年5月18日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年5月18日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/05/13/Resources/onlineWebsiteCollection/" title="在线资源导航">
+                        <span class="hidden-mobile">在线资源导航</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/scrollTop.js"></script><!-- hexo injector body_end end --></body>
+</html>
