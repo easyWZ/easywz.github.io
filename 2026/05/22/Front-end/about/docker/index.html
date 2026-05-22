@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
+  <link rel="icon" href="/img/icons/bk.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="汪邹">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Docker 是一个开源的「容器化」平台，可以把你的应用和它所需要的环境（代码、依赖、系统工具等）一起打包成一个“集装箱”。这个箱子可以在任何安装 Docker 的机器上一键运行，完全不受底层操作系统差异的影响。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker">
+<meta property="og:url" content="https://easywz.github.io/2026/05/22/Front-end/about/docker/index.html">
+<meta property="og:site_name" content="WZ&#39;s blog">
+<meta property="og:description" content="Docker 是一个开源的「容器化」平台，可以把你的应用和它所需要的环境（代码、依赖、系统工具等）一起打包成一个“集装箱”。这个箱子可以在任何安装 Docker 的机器上一键运行，完全不受底层操作系统差异的影响。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://easywz.github.io/img/webp/docker.webp">
+<meta property="article:published_time" content="2026-05-22T07:30:14.000Z">
+<meta property="article:modified_time" content="2026-05-22T09:11:51.130Z">
+<meta property="article:author" content="汪邹">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://easywz.github.io/img/webp/docker.webp">
+  
+  
+  
+  <title>Docker - WZ&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"easywz.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>人生在勤，不索何获</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/webp/homeBg.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Docker"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-05-22 15:30" pubdate>
+          2026年5月22日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Docker</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2026年5月22日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-Docker"><a href="#1-Docker" class="headerlink" title="1. Docker"></a>1. Docker</h1><p><strong>Docker 是一个开源的「容器化」平台，可以把你的应用和它所需要的环境（代码、依赖、系统工具等）一起打包成一个“集装箱”。这个箱子可以在任何安装 Docker 的机器上一键运行，完全不受底层操作系统差异的影响。</strong></p>
+<h2 id="Docker-能干什么？"><a href="#Docker-能干什么？" class="headerlink" title="Docker 能干什么？"></a>Docker 能干什么？</h2><ol>
+<li><strong>统一开发环境:</strong></li>
+</ol>
+<ul>
+<li>团队里有人用 macOS，有人用 Windows，有人用 Linux。写一个 Dockerfile + docker-compose.yml，所有人运行同样的命令就能获得完全一致的环境，再也不会出现“在我电脑上是好的啊”。</li>
+</ul>
+<ol start="2">
+<li><strong>简化应用部署:</strong></li>
+</ol>
+<ul>
+<li>传统部署需要手动安装 Node、Nginx、数据库，配置环境变量……Docker 只需：<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">docker build -t <span class="hljs-keyword">my</span>-app .<br>docker <span class="hljs-built_in">run</span> -d -p <span class="hljs-number">80</span>:<span class="hljs-number">80</span> <span class="hljs-keyword">my</span>-app   <br></code></pre></td></tr></table></figure></li>
+<li>镜像可以直接推送到仓库，在服务器上一键拉取运行。</li>
+</ul>
+<ol start="3">
+<li><strong>微服务架构:</strong></li>
+</ol>
+<ul>
+<li>每个服务（前端、后端、数据库、缓存）分别跑在自己的容器里，互相隔离又可以通过网络通信。用 docker-compose 可以一键启动整套系统。</li>
+</ul>
+<ol start="4">
+<li><strong>CI&#x2F;CD 流水线:</strong></li>
+</ol>
+<ul>
+<li>在 GitHub Actions、GitLab CI 等平台中，可以直接使用 Docker 容器作为构建环境。每次代码提交后自动创建干净的环境进行测试、打包，保证结果可重现。</li>
+</ul>
+<ol start="5">
+<li><strong>本地软件测试:</strong></li>
+</ol>
+<ul>
+<li>想试试 Nginx 最新版？<code>docker run -p 8080:80 nginx</code>。想跑一个 Redis？<code>docker run -p 6379:6379 redis</code>。用完直接删除容器，不留任何垃圾。</li>
+</ul>
+<ol start="6">
+<li><strong>数据库临时环境:</strong></li>
+</ol>
+<ul>
+<li>想跑一个 MySQL 数据库？<code>docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7</code>。想跑一个 PostgreSQL 数据库？<code>docker run -p 5432:5432 -e POSTGRES_PASSWORD=123456 -d postgres:14-alpine</code>。用完直接删除容器<code>docker rm -f</code>，不留任何垃圾。</li>
+</ul>
+<h1 id="2-Docker的安装"><a href="#2-Docker的安装" class="headerlink" title="2. Docker的安装"></a>2. Docker的安装</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://docker.it-docs.cn/get-started/introduction_get-Docker-desktop">下载Docker安装包</a></li>
+<li>配置国内镜像加速器:<ol>
+<li>点击屏幕顶部的 Docker 图标，在菜单中选择 <code>&quot;Settings&quot;</code> (设置)。</li>
+<li>在左侧菜单栏中找到 <code>&quot;Docker Engine&quot;</code> 并点击。</li>
+<li>在右侧的JSON配置框中，找到 <code>&quot;registry-mirrors&quot;</code> 这一项。如果它不存在，就手动添加。<ol>
+<li>2026年可用的国内加速源列表:</li>
+</ol>
+<ul>
+<li><code>https://docker.m.daocloud.io</code></li>
+<li><code>https://dockerproxy.com</code> (备选)</li>
+<li><code>https://docker.nju.edu.cn</code> (南京大学镜像站)</li>
+<li><code>https://docker.mirrors.ustc.edu.cn</code> (中科大镜像站)</li>
+</ul>
+</li>
+<li>配置好之后，点击界面右下角的 <code>&quot;Apply &amp; Restart&quot;</code> (应用并重启) 按钮。<br><img src="/img/content/docker-install.webp" srcset="/img/loading.gif" lazyload alt="docker-install"></li>
+</ol>
+</li>
+</ol>
+<h1 id="3-Docker的使用"><a href="#3-Docker的使用" class="headerlink" title="3. Docker的使用"></a>3. Docker的使用</h1><ol>
+<li><p>打开命令行终端并运行 docker run 命令来启动一个容器：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> run -d -p <span class="hljs-number">8080</span>:<span class="hljs-number">80</span> docker/welcome-to-docker<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>在浏览器中访问 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a><br> <img src="/img/content/docker-first.webp" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>使用 Docker Desktop 管理容器:</p>
+<ol>
+<li>点击屏幕顶部的 Docker 图标，在菜单中选择 <code>&quot;Containers&quot;</code> (容器)。</li>
+<li>你可以在容器列表中查看、启动、停止、重启、删除容器。<br> <img src="/img/content/docker-desktop.webp" srcset="/img/loading.gif" lazyload alt="alt text"></li>
+</ol>
+</li>
+</ol>
+<h1 id="4-使用容器进行开发"><a href="#4-使用容器进行开发" class="headerlink" title="4. 使用容器进行开发"></a>4. 使用容器进行开发</h1><p>安装好了了 Docker Desktop，可以准备进行一些应用程序开发，具体步骤：</p>
+<ol>
+<li>克隆并启动一个开发项目</li>
+<li>对后端和前端进行更改</li>
+<li>立即查看更改</li>
+</ol>
+<h2 id="1-官方文档demo启动项目"><a href="#1-官方文档demo启动项目" class="headerlink" title="1. 官方文档demo启动项目"></a>1. 官方文档demo启动项目</h2><ol>
+<li><p>clone示例项目（<a target="_blank" rel="noopener" href="https://codeload.github.com/docker/getting-started-todo-app/zip/refs/heads/main">或者下载zip包</a>）并在终端进入该项目：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/docker/getting-<span class="hljs-literal">started</span>-todo-app<br>cd getting-<span class="hljs-literal">started</span>-todo-app<br></code></pre></td></tr></table></figure></li>
+<li><p>有了项目后使用 Docker Compose 启动开发环境。<br><code>docker compose watch</code><br>将看到显示正在拉取容器镜像、正在启动容器等的输出:<br><img src="/img/content/docker-compose.webp" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+</li>
+<li><p>安装完 在浏览器中打开 <a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a><br> <img src="/img/content/docker-todo.webp" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+</li>
+<li><p>环境里有什么？</p>
+</li>
+</ol>
+<p><img src="/img/content/docker-desktop-1.webp" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<p>现在环境已经启动并运行，里面实际上有什么？从高层次来看，有几个容器（或进程），每个容器都为应用程序提供特定的功能：</p>
+<ul>
+<li>React 前端 - 一个运行 React 开发服务器的 Node 容器，使用 Vite。</li>
+<li>Node后端 - 后端提供了一个API，该API提供了检索、创建和删除待办事项的能力。</li>
+<li>MySQL数据库 - 用于存储项目列表的数据库。</li>
+<li>phpMyAdmin - 一个用于与数据库交互的基于Web的界面，可通过 <a target="_blank" rel="noopener" href="http://db.localhost/">http://db.localhost</a> 访问。</li>
+<li>Traefik 代理 - Traefik 是一个应用程序代理，可以将请求路由到正确的服务。它将所有针对 localhost&#x2F;api&#x2F;* 的请求发送到后端，将针对 localhost&#x2F;* 的请求发送到前端，然后将针对 db.localhost 的请求发送到 phpMyAdmin。这使得可以使用端口 80 访问所有应用程序（而不是为每个服务使用不同的端口）。</li>
+</ul>
+<p>在这个环境中，作为开发者的你无需安装或配置任何服务，无需填充数据库架构，无需配置数据库凭据，也无需其他操作。你只需要 Docker Desktop。其余的一切都会自动运行。</p>
+<h2 id="2-对应用进行更改"><a href="#2-对应用进行更改" class="headerlink" title="2. 对应用进行更改"></a>2. 对应用进行更改</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Docker</div>
+      <div>https://easywz.github.io/2026/05/22/Front-end/about/docker/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>汪邹</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年5月22日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年5月22日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/05/21/Front-end/about/PerformanceOptimization/" title="性能优化+SEO双引擎：前端开发者必备技能">
+                        <span class="hidden-mobile">性能优化+SEO双引擎：前端开发者必备技能</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/scrollTop.js"></script><!-- hexo injector body_end end --></body>
+</html>
