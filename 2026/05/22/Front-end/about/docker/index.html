@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/docker.webp">
 <meta property="article:published_time" content="2026-05-22T07:30:14.000Z">
-<meta property="article:modified_time" content="2026-05-22T09:11:51.130Z">
+<meta property="article:modified_time" content="2026-05-25T03:25:37.715Z">
 <meta property="article:author" content="汪邹">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://easywz.github.io/img/webp/docker.webp">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.5k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          10 分钟
+          13 分钟
         
       </span>
     
@@ -277,7 +277,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2026年5月22日 下午
+                    本文最后更新于 2026年5月25日 上午
                   
                 
               </p>
@@ -381,7 +381,24 @@
 <li>Traefik 代理 - Traefik 是一个应用程序代理，可以将请求路由到正确的服务。它将所有针对 localhost&#x2F;api&#x2F;* 的请求发送到后端，将针对 localhost&#x2F;* 的请求发送到前端，然后将针对 db.localhost 的请求发送到 phpMyAdmin。这使得可以使用端口 80 访问所有应用程序（而不是为每个服务使用不同的端口）。</li>
 </ul>
 <p>在这个环境中，作为开发者的你无需安装或配置任何服务，无需填充数据库架构，无需配置数据库凭据，也无需其他操作。你只需要 Docker Desktop。其余的一切都会自动运行。</p>
-<h2 id="2-对应用进行更改"><a href="#2-对应用进行更改" class="headerlink" title="2. 对应用进行更改"></a>2. 对应用进行更改</h2>
+<h2 id="2-对应用进行更改"><a href="#2-对应用进行更改" class="headerlink" title="2. 对应用进行更改"></a>2. 对应用进行更改</h2><p>直接修改本地<code>getting-started-todo-app-main</code>目录下的文件即可。</p>
+<h1 id="5-构建并推送第一个镜像"><a href="#5-构建并推送第一个镜像" class="headerlink" title="5.构建并推送第一个镜像"></a>5.构建并推送第一个镜像</h1><h2 id="什么是容器镜像"><a href="#什么是容器镜像" class="headerlink" title="什么是容器镜像"></a>什么是容器镜像</h2><ol>
+<li><p>容器镜像（Container Image）是用于创建容器的模板。每个容器镜像都有一个唯一的标识符，例如 <code>nginx:1.25-alpine</code>。镜像包含容器运行所需的所有文件和配置，以及启动容器的指令。</p>
+</li>
+<li><p>容器镜像，可以将它们视为一种标准化的软件包，其中包含了运行应用程序所需的一切，包括其文件、配置和依赖项。这些软件包随后可以被分发并与他人共享。</p>
+</li>
+</ol>
+<h2 id="Docker-Hub"><a href="#Docker-Hub" class="headerlink" title="Docker Hub"></a>Docker Hub</h2><p>Docker Hub 是一个免费的容器镜像仓库，用于存储、分发和共享容器镜像。</p>
+<p>上述demo项目中，就使用了以下来自 Docker Hub 的镜像，每个镜像都是 Docker 官方镜像：</p>
+<ul>
+<li><code>node:18-alpine</code> - 提供了一个 Node 环境，并作为您开发工作的基础。此镜像也用作最终应用程序镜像的基础。</li>
+<li><code>mysql:5.7</code> - 提供一个 MySQL 数据库来存储待办事项列表项</li>
+<li><code>phpmyadmin/phpmyadmin</code> - 提供 phpMyAdmin，一个基于 Web 的 MySQL 数据库管理界面</li>
+<li><code>traefik:2.9</code>  - 提供 Traefik，这是一个现代的 HTTP 反向代理和负载均衡器，根据路由规则将请求路由到适当的容器</li>
+<li><code>docker/welcome-to-docker</code> - 提供一个欢迎页面，用于介绍 Docker 和 Docker Compose</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docker.it-docs.cn/get-started/introduction_build-and-push-first-image">后续更新中</a></p>
+
                 
               </div>
             
@@ -417,7 +434,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年5月22日</div>
+          <div>2026年5月25日</div>
         </div>
       
       
