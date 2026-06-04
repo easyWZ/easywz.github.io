@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://easywz.github.io/img/webp/onlineSite.webp">
 <meta property="article:published_time" content="2026-05-13T06:52:16.000Z">
-<meta property="article:modified_time" content="2026-05-21T07:53:57.367Z">
+<meta property="article:modified_time" content="2026-06-04T07:40:52.332Z">
 <meta property="article:author" content="汪邹">
 <meta property="article:tag" content="资源">
 <meta property="article:tag" content="导航">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.9k 字
+          3.2k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          24 分钟
+          27 分钟
         
       </span>
     
@@ -279,7 +279,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2026年5月21日 下午
+                    本文最后更新于 2026年6月4日 下午
                   
                 
               </p>
@@ -350,7 +350,10 @@ const siteData = [
       { name: 'GitHub Copilot', badge: '（代码助手）', url: 'https://github.com/copilot', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/github.svg', desc: 'AI代码补全工具：集成IDE，智能生成代码建议。' },
       { name: 'Cursor', badge: '（AI编辑器）', url: 'https://www.cursor.com/', icon: '', isVideo: true, videoUrl: 'https://cursor.com/marketing-static/logo/logo-light-theme.mp4', desc: 'AI驱动的代码编辑器：支持代码理解和生成。' },
       { name: '即梦AI', badge: '（字节跳动）', url: 'https://jimeng.jianying.com/', icon: 'https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/common/images/dreamina-v5.ico', desc: '字节跳动AI创作平台：文生图、图生视频、数字人创作。' },
-      { name: 'ChatGPT', badge: '（OpenAI）', url: 'https://chat.openai.com/', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/openai.svg', desc: 'OpenAI对话模型：GPT-4与DALL-E图像生成。' }
+      { name: 'ChatGPT', badge: '（OpenAI）', url: 'https://chat.openai.com/', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/openai.svg', desc: 'OpenAI对话模型：GPT-4与DALL-E图像生成。' },
+      { name: '秒哒', badge: '（网页小程序app）', url: 'https://www.miaoda.cn/', icon: 'https://resource-static.cdn.bcebos.com/img/favicon.png', desc: '一句话做应用' },
+      { name: 'Code Relay', badge: '（免费Token）', url: 'https://api.code-relay.com/console', icon: '', desc: '免费 API Token 服务：提供各类 AI 模型的免费调用额度。' },
+      { name: 'UniVibe', badge: '（免费Token）', url: 'https://www.univibe.cc/console/', icon: '', desc: 'UniVibe AI 对话平台：支持多模型切换的智能助手。' }
     ]
   },
   {
@@ -395,12 +398,13 @@ const siteData = [
       { name: '花瓣网', badge: '（灵感采集）', url: 'https://huaban.com/', icon: '', desc: '图片采集与分享社区：设计灵感收集与发现。' },
       { name: 'Animista', badge: '（CSS动画）', url: 'https://animista.net/', icon: '', desc: 'CSS 动画库：预设动画效果，一键复制代码。' },
       { name: 'uiVerse', badge: '（UI组件）', url: 'https://uiverse.io/', icon: '', desc: 'UI 组件库：精美的 CSS 组件与交互效果。' },
-      { name: 'EZ Remove', badge: '（AI去水印）', url: 'https://ezremove.ai/zh/watermark-remover/', icon: '', desc: 'AI 图片去水印工具：智能移除图片中的水印和杂物。' }
+      { name: 'EZ Remove', badge: '（AI去水印）', url: 'https://ezremove.ai/zh/watermark-remover/', icon: '', desc: 'AI 图片去水印工具：智能移除图片中的水印和杂物。' },
+      { name: 'Unicode符号', badge: '（箭头符号）', url: 'https://onlinetoolset.com/zh-cn/unicode-symbols/arrow-symbols', icon: '', desc: 'Unicode符号表：箭头符号及特殊字符复制工具。' }
     ]
   },
   {
     id: 'blogs',
-    name: '文章博客',
+    name: '文章',
     sites: [
       { name: '知乎', badge: '（问答社区）', url: 'https://www.zhihu.com/', icon: 'https://static.zhihu.com/heifetz/favicon.ico', desc: '知乎：中文互联网最大的问答社区，涵盖科技、生活、娱乐等领域。' },
       { name: 'CSDN', badge: '（技术社区）', url: 'https://www.csdn.net/', icon: 'https://g.csdnimg.cn/static/logo/favicon32.ico', desc: 'CSDN：中国最大的IT技术社区，汇集大量技术博客和教程。' },
@@ -412,13 +416,30 @@ const siteData = [
     ]
   },
   {
+    id: 'english',
+    name: '英语',
+    sites: [
+      { name: '扇贝', badge: '（英语学习）', url: 'https://web.shanbay.com/web/main/index', icon: 'https://assets0.baydn.com/static/img/shanbay_favicon.png', desc: '扇贝英语：单词记忆、阅读训练、听力练习等英语学习工具。' },
+      { name: '可可英语', badge: '（词库）', url: 'https://bdc.kekenet.com/#/wordbooks', icon: 'https://bdc.kekenet.com/favicon.ico', desc: '可可英语词库：丰富的英语学习资源与单词书。' }
+    ]
+  },
+  {
+    id: 'music',
+    name: '音乐',
+    sites: [
+      { name: 'HiFiNi', badge: '（无损音乐）', url: 'https://www.hifini.com.cn/', icon: '', desc: 'HiFiNi 无损音乐论坛：高品质音乐分享与交流社区。' },
+      { name: 'LX Music', badge: '（开源播放器）', url: 'https://github.com/lyswhut/lx-music-mobile', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/github.svg', desc: 'LX Music 移动端：开源音乐播放器，支持多平台。' }
+    ]
+  },
+  {
     id: 'other',
-    name: '其他链接汇总网站',
+    name: '网站',
     sites: [
       { name: '影视导航', badge: '（影视资源）', url: 'https://yingshi.xiaok1.cn/', icon: '', desc: '影视资源导航汇总网站。' },
       { name: '站联', badge: '（综合导航）', url: 'https://www.zhanlian.net/', icon: '', desc: '综合资源导航网站。' },
       { name: 'SnapWC', badge: '（下载网上视频）', url: 'https://snapwc.com/zh', icon: '', desc: '网页快照工具：保存和分享网页截图。' },
-      { name: 'Momoyu', badge: '（新闻榜单总览）', url: 'https://momoyu.cc/', icon: '', desc: 'Momoyu 资源导航网站。' }
+      { name: 'Momoyu', badge: '（新闻榜单总览）', url: 'https://momoyu.cc/', icon: '', desc: 'Momoyu 资源导航网站。' },
+      { name: 'TopHub', badge: '（新闻聚合）', url: 'https://tophub.today/c/news', icon: '', desc: '热门资讯聚合平台：实时热点新闻与话题排行。' }
     ]
   }
 ];
@@ -617,7 +638,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年5月21日</div>
+          <div>2026年6月4日</div>
         </div>
       
       
