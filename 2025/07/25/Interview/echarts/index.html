@@ -306,7 +306,7 @@
 •	减少阴影、动画等开销
 •	开启 dataZoom 滚动加载
 </code></pre>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">series:</span> [&#123;<br>  <span class="hljs-attr">type:</span> <span class="hljs-string">&#x27;line&#x27;</span>,<br>  <span class="hljs-attr">data:</span> <span class="hljs-string">bigData</span>,<br>  <span class="hljs-attr">sampling:</span> <span class="hljs-string">&#x27;average&#x27;</span>,<br>  <span class="hljs-attr">large:</span> <span class="hljs-literal">true</span><br>&#125;]<br></code></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs nix"><span class="hljs-params">series:</span> [&#123;<br>  <span class="hljs-params">type:</span> &#x27;line&#x27;,<br>  <span class="hljs-params">data:</span> bigData,<br>  <span class="hljs-params">sampling:</span> &#x27;average&#x27;,<br>  <span class="hljs-params">large:</span> <span class="hljs-literal">true</span><br>&#125;]<br></code></pre></td></tr></table></figure>
 <h2 id="9-ECharts-图表数据更新的方式？"><a href="#9-ECharts-图表数据更新的方式？" class="headerlink" title="9. ECharts 图表数据更新的方式？"></a>9. ECharts 图表数据更新的方式？</h2><pre><code class="hljs">•	可以使用 setOption(newOption, true) 强制更新
 •	或者只更新部分数据（不销毁实例）
 </code></pre>

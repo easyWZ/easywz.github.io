@@ -644,7 +644,7 @@
 </ol>
 </li>
 <li><h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><ol>
-<li>语法：<code>arrayObject.concat(arrayX,arrayX,......,arrayX)</code> <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs haxe">let arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>let <span class="hljs-keyword">new</span><span class="hljs-type">Arr</span> = arr.concat([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// 合并数组</span><br>console.log(<span class="hljs-keyword">new</span><span class="hljs-type">Arr</span>); <span class="hljs-comment">// 输出: [1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure></li>
+<li>语法：<code>arrayObject.concat(arrayX,arrayX,......,arrayX)</code> <figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs openscad"><span class="hljs-built_in">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><span class="hljs-built_in">let</span> newArr = arr.<span class="hljs-built_in">concat</span>([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// 合并数组</span><br>console.<span class="hljs-built_in">log</span>(newArr); <span class="hljs-comment">// 输出: [1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure></li>
 <li>解析：连接两个或多个数组</li>
 <li>是否改变原数组: N</li>
 </ol>
@@ -723,7 +723,7 @@
 </ol>
 </li>
 <li><h3 id="spreadOperator"><a href="#spreadOperator" class="headerlink" title="spreadOperator"></a>spreadOperator</h3><ol>
-<li>语法 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs haxe">let arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>let <span class="hljs-keyword">new</span><span class="hljs-type">Arr</span> = [...arr, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]; <span class="hljs-comment">// 在末尾添加</span><br>console.log(<span class="hljs-keyword">new</span><span class="hljs-type">Arr</span>); <span class="hljs-comment">// 输出: [1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure></li>
+<li>语法 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><span class="hljs-keyword">let</span> newArr = [...arr, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]; <span class="hljs-comment">// 在末尾添加</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(newArr); <span class="hljs-comment">// 输出: [1, 2, 3, 4, 5]</span><br></code></pre></td></tr></table></figure></li>
 <li>解析: 扩展运算符 … 可以用于合并数组，创建新数组。</li>
 <li>是否改变原数组: N</li>
 </ol>
