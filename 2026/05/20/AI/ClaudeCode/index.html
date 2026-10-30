@@ -5,7 +5,7 @@
 
 
 
-<head>
+<head><link rel="preload" href="/fonts/iconfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preconnect" href="https://lib.baomitu.com" crossorigin><link rel="dns-prefetch" href="//lib.baomitu.com"><link rel="preload" as="image" href="/img/webp/homeBg.webp" type="image/webp" fetchpriority="high">
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
@@ -38,7 +38,7 @@
   
   <title>Claude Code 安装指南 - WZ&#39;s blog</title>
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
 
 
 
@@ -53,11 +53,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="/css/iconfont.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -82,12 +78,12 @@
     }
   </script>
   <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/js/color-schema.js"  defer></script>
   
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start --><script>(function(){try{var s=localStorage.getItem("Fluid_Color_Scheme");if(s==="dark"||s==="light"){document.documentElement.setAttribute("data-user-color-scheme",s)}}catch(e){}})();</script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -287,9 +283,9 @@
               <div class="markdown-body">
                 
                 <h2 id="一、安装-Claude-Code"><a href="#一、安装-Claude-Code" class="headerlink" title="一、安装 Claude Code"></a>一、安装 Claude Code</h2><h3 id="1-mac系统安装"><a href="#1-mac系统安装" class="headerlink" title="1. mac系统安装"></a>1. mac系统安装</h3><ol>
-<li><p><strong>macOS &#x2F; Linux 安装流程（在启动台搜索“终端”点击运行）</strong><br> <img src="/img/aiWebp/17792628437164.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p><strong>macOS &#x2F; Linux 安装流程（在启动台搜索“终端”点击运行）</strong><br> <img src="/img/aiWebp/17792628437164.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p><strong>输入命令<code>brew -v</code>查看你的机器是否已安装Homebrew（macOS软件包管理器）</strong><br> <img src="/img/aiWebp/17792642678324.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p><strong>输入命令<code>brew -v</code>查看你的机器是否已安装Homebrew（macOS软件包管理器）</strong><br> <img src="/img/aiWebp/17792642678324.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
 <li><p><strong>如果没有安装 Homebrew</strong> </p>
 <ol>
@@ -299,13 +295,13 @@
 <li>等待脚本自动完成安装和配置。整个过程通常只需几分钟</li>
 </ol>
 </li>
-<li><p><strong>安装好 Homebrew 后，接着输入命令 <code>brew install --cask claude-code</code></strong><br> <img src="/img/aiWebp/17792644079204.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p><strong>安装好 Homebrew 后，接着输入命令 <code>brew install --cask claude-code</code></strong><br> <img src="/img/aiWebp/17792644079204.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p><strong>等待安装完成后，可以输入命令验证 <code>claude --version</code> 显示版本号则表示安装成功.</strong><br> <img src="/img/aiWebp/17792646811382.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p><strong>等待安装完成后，可以输入命令验证 <code>claude --version</code> 显示版本号则表示安装成功.</strong><br> <img src="/img/aiWebp/17792646811382.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p><strong>启动：直接在终端中输入<code>claude</code> 会让你确认是否授权当前文件夹</strong><br> <img src="/img/aiWebp/17792649650377.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p><strong>启动：直接在终端中输入<code>claude</code> 会让你确认是否授权当前文件夹</strong><br> <img src="/img/aiWebp/17792649650377.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p><strong>按引导配置，配置完成后输入 &#x2F;login，浏览器将弹出授权窗口，登录你的 Claude 账号即可完成认证。（没有账号往下看 有免费版使用）</strong><br> <img src="/img/aiWebp/17792648861061.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p><strong>按引导配置，配置完成后输入 &#x2F;login，浏览器将弹出授权窗口，登录你的 Claude 账号即可完成认证。（没有账号往下看 有免费版使用）</strong><br> <img src="/img/aiWebp/17792648861061.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
 </ol>
 <h3 id="2-windows安装"><a href="#2-windows安装" class="headerlink" title="2. windows安装"></a>2. windows安装</h3><ol>
@@ -318,12 +314,12 @@
 <li>如果你能翻墙，直接运行命令 <code>irm https://claude.ai/install.ps1 | iex</code></li>
 <li>验证安装：安装成功后，关闭当前的PowerShell窗口，然后重新打开一个新的PowerShell窗口（无需管理员权限）。看上述mac安装第5步，后续是一样的。</li>
 </ol>
-<h2 id="二、安装-ccswitch"><a href="#二、安装-ccswitch" class="headerlink" title="二、安装 ccswitch"></a>二、安装 ccswitch</h2><p>点击前往下载安装： <a target="_blank" rel="noopener" href="https://www.ccswitch.io/zh/">https://www.ccswitch.io/zh/</a><br>软件作用：统一管理你的 AI 编程工具工作流<br><img src="/img/aiWebp/17792661950997.webp" srcset="/img/loading.gif" lazyload></p>
+<h2 id="二、安装-ccswitch"><a href="#二、安装-ccswitch" class="headerlink" title="二、安装 ccswitch"></a>二、安装 ccswitch</h2><p>点击前往下载安装： <a target="_blank" rel="noopener" href="https://www.ccswitch.io/zh/">https://www.ccswitch.io/zh/</a><br>软件作用：统一管理你的 AI 编程工具工作流<br><img src="/img/aiWebp/17792661950997.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 <h2 id="三、弄免费账号"><a href="#三、弄免费账号" class="headerlink" title="三、弄免费账号"></a>三、弄免费账号</h2><ol>
 <li>点击前往 <a target="_blank" rel="noopener" href="https://api.code-relay.com/console/token">https://api.code-relay.com/console/token</a> 没注册就微信扫码注册下</li>
-<li>点击添加令牌<br><img src="/img/aiWebp/17792663423598.webp" srcset="/img/loading.gif" lazyload></li>
-<li>输入名称，按你的余额设置额度，其他的默认就可以<br><img src="/img/aiWebp/17792664380068.webp" srcset="/img/loading.gif" lazyload></li>
-<li>复制你的令牌<br><img src="/img/aiWebp/17792664919006.webp" srcset="/img/loading.gif" lazyload></li>
+<li>点击添加令牌<br><img src="/img/aiWebp/17792663423598.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
+<li>输入名称，按你的余额设置额度，其他的默认就可以<br><img src="/img/aiWebp/17792664380068.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
+<li>复制你的令牌<br><img src="/img/aiWebp/17792664919006.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 <h2 id="四、启动claude"><a href="#四、启动claude" class="headerlink" title="四、启动claude"></a>四、启动claude</h2><h3 id="配置环境变量："><a href="#配置环境变量：" class="headerlink" title="配置环境变量："></a>配置环境变量：</h3><ol>
 <li><strong>mac系统打开终端输入(你的API_KEY替换成上面的令牌)</strong></li>
@@ -342,15 +338,15 @@
 </li>
 </ol>
 <h3 id="配置ccswitch"><a href="#配置ccswitch" class="headerlink" title="配置ccswitch"></a>配置ccswitch</h3><ol>
-<li><p>添加新供应商<br><img src="/img/aiWebp/17792671731003.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p>添加新供应商<br><img src="/img/aiWebp/17792671731003.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p>选择自定义配置<br><img src="/img/aiWebp/17792672132935.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p>选择自定义配置<br><img src="/img/aiWebp/17792672132935.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p>下拉输入信息<br> 供应商名称：Code Router（可自定义）<br> 官网链接：<a target="_blank" rel="noopener" href="https://api.code-relay.com/">https://api.code-relay.com</a><br> API Key：从控制台获取的密钥<br> 请求地址：<a target="_blank" rel="noopener" href="https://api.code-relay.com/">https://api.code-relay.com</a><br><img src="/img/aiWebp/17792673397570.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p>下拉输入信息<br> 供应商名称：Code Router（可自定义）<br> 官网链接：<a target="_blank" rel="noopener" href="https://api.code-relay.com/">https://api.code-relay.com</a><br> API Key：从控制台获取的密钥<br> 请求地址：<a target="_blank" rel="noopener" href="https://api.code-relay.com/">https://api.code-relay.com</a><br><img src="/img/aiWebp/17792673397570.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p>点击添加后 再点击启用<br><img src="/img/aiWebp/17792674540382.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p>点击添加后 再点击启用<br><img src="/img/aiWebp/17792674540382.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
-<li><p>进入终端（不论是mac还是windows）输入 <code>claude</code> 启动开始你的提问吧<br><img src="/img/aiWebp/17792676446894.webp" srcset="/img/loading.gif" lazyload></p>
+<li><p>进入终端（不论是mac还是windows）输入 <code>claude</code> 启动开始你的提问吧<br><img src="/img/aiWebp/17792676446894.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></p>
 </li>
 </ol>
 
@@ -448,7 +444,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/05/22/Front-end/about/docker/" title="Docker">
+                      <a href="/2026/05/22/Back-end/docker/" title="Docker">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">Docker</span>
                         <span class="visible-mobile">上一篇</span>
@@ -569,8 +565,8 @@
 
   <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="/vendor/nprogress/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="/vendor/nprogress/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -581,13 +577,13 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/vendor/jquery/jquery.min.js" ></script>
+<script  src="/vendor/bootstrap/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script  src="/vendor/typed/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;

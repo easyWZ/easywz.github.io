@@ -5,7 +5,7 @@
 
 
 
-<head>
+<head><link rel="preload" href="/fonts/iconfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" as="image" href="/img/webp/homeBg.webp" type="image/webp" fetchpriority="high">
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
@@ -31,7 +31,7 @@
   
   <title>WZ&#39;s blog</title>
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
 
 
 
@@ -40,22 +40,10 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="/css/iconfont.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
 
 
   <script id="fluid-configs">
@@ -69,12 +57,12 @@
     }
   </script>
   <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/js/color-schema.js"  defer></script>
   
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start --><script>(function(){try{var s=localStorage.getItem("Fluid_Color_Scheme");if(s==="dark"||s==="light"){document.documentElement.setAttribute("data-user-color-scheme",s)}}catch(e){}})();</script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -225,8 +213,56 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2023/11/20/Front-end/CSS/CSSofCommonlyUsed/" target="_self">
+          <img src="/img/webp/cssStyle.webp" srcset="/img/loading.gif" lazyload alt="快速复用-CSS常用样式模版" loading="lazy" decoding="async">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/20/Front-end/CSS/CSSofCommonlyUsed/" target="_self">
+          快速复用-CSS常用样式模版
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2023/11/20/Front-end/CSS/CSSofCommonlyUsed/" target="_self">
+        <div>
+          日常中多次使用的css属性,如超出省略号，滚动条自定义样式等
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-20 11:16" pubdate>
+              2023-11-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
+            
+              <a href="/tags/CSS/">#CSS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2023/11/20/Front-end/JavaScript/JsAbbreviation/" target="_self">
-          <img src="/img/webp/jsjx.webp" srcset="/img/loading.gif" lazyload alt="JavaScript 简写神技">
+          <img src="/img/webp/jsjx.webp" srcset="/img/loading.gif" lazyload alt="JavaScript 简写神技" loading="lazy" decoding="async">
         </a>
       </div>
     
@@ -274,7 +310,7 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2023/11/20/Resources/errorRecord/" target="_self">
-          <img src="/img/webp/error.webp" srcset="/img/loading.gif" lazyload alt="错/难题本">
+          <img src="/img/webp/error.webp" srcset="/img/loading.gif" lazyload alt="错/难题本" loading="lazy" decoding="async">
         </a>
       </div>
     
@@ -320,7 +356,7 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2023/11/16/Resources/markdownGrammar/" target="_self">
-          <img src="/img/webp/md.webp" srcset="/img/loading.gif" lazyload alt="markdown基础语法">
+          <img src="/img/webp/md.webp" srcset="/img/loading.gif" lazyload alt="markdown基础语法" loading="lazy" decoding="async">
         </a>
       </div>
     
@@ -366,7 +402,7 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2023/11/15/Front-end/Hexo/hexoStall/" target="_self">
-          <img src="/img/webp/hexo.webp" srcset="/img/loading.gif" lazyload alt="hexo的安装及git部署">
+          <img src="/img/webp/hexo.webp" srcset="/img/loading.gif" lazyload alt="hexo的安装及git部署" loading="lazy" decoding="async">
         </a>
       </div>
     
@@ -399,9 +435,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
-            
               <a href="/tags/Hexo/">#Hexo</a>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
             
               <a href="/tags/%E5%8D%9A%E5%AE%A2/">#博客</a>
             
@@ -472,8 +508,8 @@
 
   <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="/vendor/nprogress/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="/vendor/nprogress/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -484,13 +520,13 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/vendor/jquery/jquery.min.js" ></script>
+<script  src="/vendor/bootstrap/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script  src="/vendor/typed/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;

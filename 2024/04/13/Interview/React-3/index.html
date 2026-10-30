@@ -5,7 +5,7 @@
 
 
 
-<head>
+<head><link rel="preload" href="/fonts/iconfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preconnect" href="https://lib.baomitu.com" crossorigin><link rel="dns-prefetch" href="//lib.baomitu.com"><link rel="preload" as="image" href="/img/webp/homeBg.webp" type="image/webp" fetchpriority="high">
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
@@ -38,7 +38,7 @@
   
   <title>React - WZ&#39;s blog</title>
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
 
 
 
@@ -53,11 +53,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="/css/iconfont.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -82,12 +78,12 @@
     }
   </script>
   <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/js/color-schema.js"  defer></script>
   
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start --><script>(function(){try{var s=localStorage.getItem("Fluid_Color_Scheme");if(s==="dark"||s==="light"){document.documentElement.setAttribute("data-user-color-scheme",s)}}catch(e){}})();</script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -305,13 +301,13 @@
 <li>react本身并不强制使用JSX 本身可以利用creatElement（’div’,null,<code>hello$&#123;this.props.toWhat&#125;</code>）</li>
 <li>react需要将组件转化为dom树</li>
 <li>关注点分离 是面向对象的程序设计的核心概念</li>
-<li><img src="/img/js/17129876270527.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17129876270527.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 <li>babel插件如何实现jsx到js的编译</li>
 </ol>
 </li>
 <li><p>如何避免生命周期的坑</p>
 <ol>
-<li><img src="/img/js/17130868844247.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130868844247.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 <li>什么情况下会触发重新渲染<ol>
 <li>函数组件 react.memo处理</li>
 <li>react.Component<ol>
@@ -369,7 +365,7 @@
 </li>
 <li><p>类组件和函数组件有什么区别</p>
 <ol>
-<li><img src="/img/js/17130888699771.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130888699771.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 <li>区别<ol>
 <li>语法和写法：类组件是使用类的语法进行定义的，函数组件是使用函数的语法进行定义的。</li>
 <li>状态：类组件具有内部状态，可以通过 setState 来更新；函数组件是无状态的，它们的输出完全由其输入 props 决定。</li>
@@ -385,7 +381,7 @@
 <li>一个主题，多个场景</li>
 <li>把只做展示，独立运行，不额外增加功能的组件 无状态组件&#x2F;展示组件 代理组件</li>
 <li>处理业务逻辑与数据状态的组件 有状态组件</li>
-<li><img src="/img/js/17130898782037.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130898782037.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 <li>缺陷处理<ol>
 <li>通过向上层复制 社区解决方案：host nullreact status</li>
 <li>react.forwordrefluse</li>
@@ -403,14 +399,14 @@
 <li>事件委托</li>
 </ol>
 </li>
-<li><img src="/img/js/17130906263305.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130906263305.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 <li>更新队列</li>
 </ol>
 </li>
 <li><p>如何面向组件跨层级通信</p>
 <ol>
 <li>一个基本 多个场景</li>
-<li><img src="/img/js/17130912918871.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130912918871.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>列举一种react状态管理框架</p>
@@ -418,65 +414,65 @@
 <li>flux</li>
 <li>redux</li>
 <li>mobx</li>
-<li><img src="/img/js/17130918644415.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130918644415.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>Vritual DOM工作原理</p>
 <ol>
-<li><img src="/img/js/17130923081810.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130923081810.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>与其他框架相比 react diff算法有何不同</p>
 <ol>
-<li><img src="/img/js/17130927335611.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17130927335611.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>react的渲染流程</p>
 <ol>
-<li><img src="/img/js/17131015620178.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131015620178.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>react的渲染异常后果</p>
 <ol>
-<li><img src="/img/js/17131021090506.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131021090506.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>分析和调优性能瓶颈</p>
 <ol>
-<li><img src="/img/js/17131028206062.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131028206062.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>避免重复渲染</p>
 <ol>
 <li>长列表 - 虚拟滚动 react-virtualized react-window</li>
-<li><img src="/img/js/17131034976033.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131034976033.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>提升代码可维护性</p>
 <ol>
-<li><img src="/img/js/17131038610300.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131038610300.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>Hook使用限制</p>
 <ol>
-<li><img src="/img/js/17131046226224.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131046226224.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>useEffect useLayoutEffect区别</p>
 <ol>
-<li><img src="/img/js/17131052188753.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131052188753.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>Hook设计模式<br>1. </p>
 </li>
 <li><p>react-router实现原理</p>
 <ol>
-<li><img src="/img/js/17131065199237.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131065199237.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 <li><p>常用工具库</p>
 <ol>
-<li><img src="/img/js/17131070259194.jpg" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/js/17131070259194.jpg" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 </ol>
@@ -652,8 +648,8 @@
 
   <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="/vendor/nprogress/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="/vendor/nprogress/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -664,13 +660,13 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/vendor/jquery/jquery.min.js" ></script>
+<script  src="/vendor/bootstrap/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script  src="/vendor/typed/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;

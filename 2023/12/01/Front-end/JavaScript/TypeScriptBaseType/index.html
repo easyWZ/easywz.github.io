@@ -5,7 +5,7 @@
 
 
 
-<head>
+<head><link rel="preload" href="/fonts/iconfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preconnect" href="https://lib.baomitu.com" crossorigin><link rel="dns-prefetch" href="//lib.baomitu.com"><link rel="preload" as="image" href="/img/webp/homeBg.webp" type="image/webp" fetchpriority="high">
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
@@ -38,7 +38,7 @@
   
   <title>TypeScript - WZ&#39;s blog</title>
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
 
 
 
@@ -53,11 +53,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="/css/iconfont.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -82,12 +78,12 @@
     }
   </script>
   <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/js/color-schema.js"  defer></script>
   
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start --><script>(function(){try{var s=localStorage.getItem("Fluid_Color_Scheme");if(s==="dark"||s==="light"){document.documentElement.setAttribute("data-user-color-scheme",s)}}catch(e){}})();</script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -911,8 +907,8 @@
 
   <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="/vendor/nprogress/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="/vendor/nprogress/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -923,13 +919,13 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/vendor/jquery/jquery.min.js" ></script>
+<script  src="/vendor/bootstrap/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script  src="/vendor/typed/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;

@@ -5,7 +5,7 @@
 
 
 
-<head>
+<head><link rel="preload" href="/fonts/iconfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preconnect" href="https://lib.baomitu.com" crossorigin><link rel="dns-prefetch" href="//lib.baomitu.com"><link rel="preload" as="image" href="/img/webp/homeBg.webp" type="image/webp" fetchpriority="high">
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/bk.png">
@@ -38,7 +38,7 @@
   
   <title>React官方文档初解 - WZ&#39;s blog</title>
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
 
 
 
@@ -53,11 +53,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="/css/iconfont.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -82,12 +78,12 @@
     }
   </script>
   <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/js/color-schema.js"  defer></script>
   
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start --><script>(function(){try{var s=localStorage.getItem("Fluid_Color_Scheme");if(s==="dark"||s==="light"){document.documentElement.setAttribute("data-user-color-scheme",s)}}catch(e){}})();</script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -342,7 +338,7 @@
 <li><a target="_blank" rel="noopener" href="https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/">firefox</a></li>
 <li><a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil">edge</a></li>
 <li>现在，如果你访问一个用 React 构建 的网站，你将看到 Components 和 Profiler 面板。<ol>
-<li><img src="/img/content/react-1.webp" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/img/content/react-1.webp" srcset="/img/loading.gif" lazyload loading="lazy" decoding="async"></li>
 </ol>
 </li>
 </ol>
@@ -362,7 +358,7 @@
 </ol>
 </li>
 <li><h5 id="第三步：添加标签"><a href="#第三步：添加标签" class="headerlink" title="第三步：添加标签"></a>第三步：添加标签</h5><ol>
-<li>这个组件返回一个带有 src 和 alt 属性的 <img /> 标签。<img /> 写得像 HTML，但实际上是 JavaScript！这种语法被称为 <strong>JSX</strong>，它允许你在 JavaScript 中嵌入使用标签。</li>
+<li>这个组件返回一个带有 src 和 alt 属性的 <img / loading="lazy" decoding="async"> 标签。<img / loading="lazy" decoding="async"> 写得像 HTML，但实际上是 JavaScript！这种语法被称为 <strong>JSX</strong>，它允许你在 JavaScript 中嵌入使用标签。</li>
 <li>返回语句可以全写在一行上，如下面组件中所示：  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">return &lt;img src<span class="hljs-operator">=</span><span class="hljs-string">&quot;https://i.imgur.com/MK3eW3As.jpg&quot;</span> alt<span class="hljs-operator">=</span><span class="hljs-string">&quot;Katherine Johnson&quot;</span> /&gt;<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure></li>
 <li>但是，如果你的标签和 return 关键字不在同一行，则<strong>必须把它包裹在一对括号中</strong>，如下所示： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">return</span> (<br>      <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.imgur.com/MK3eW3As.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Katherine Johnson&quot;</span> /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>    );<br></code></pre></td></tr></table></figure>
 <ol>
@@ -434,7 +430,7 @@
 <li>JSX规则<ol>
 <li><h5 id="只能返回一个根元素"><a href="#只能返回一个根元素" class="headerlink" title="只能返回一个根元素"></a>只能返回一个根元素</h5></li>
 <li><h5 id="标签必须闭合"><a href="#标签必须闭合" class="headerlink" title="标签必须闭合"></a>标签必须闭合</h5><ol>
-<li><img> 这样的自闭合标签必须书写成 <img /> </li>
+<li><img loading="lazy" decoding="async"> 这样的自闭合标签必须书写成 <img / loading="lazy" decoding="async"> </li>
 <li><li>oranges 这样只有开始标签的元素必须带有闭合标签，需要改为 <li>oranges</li>。</li>
 </ol>
 </li>
@@ -868,8 +864,8 @@
 
   <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="/vendor/nprogress/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="/vendor/nprogress/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -880,13 +876,13 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/vendor/jquery/jquery.min.js" ></script>
+<script  src="/vendor/bootstrap/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script  src="/vendor/typed/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;
